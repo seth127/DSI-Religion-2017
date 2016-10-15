@@ -27,7 +27,7 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction import DictVectorizer
 import random
 import math
-#import igraph
+import igraph
 import scipy.spatial.distance as ssd
 
 

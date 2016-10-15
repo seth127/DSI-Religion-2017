@@ -1,0 +1,83 @@
+#install python 2.7
+
+########THIS ONE COMMAND MADE IT WORK FOR JUPYTER#########
+conda create -n py27 python=2.7 ipykernel
+
+# see which environments you have 
+conda info --envs
+
+#switch to different environment
+source activate py27 #py27 is the name of the new environment
+
+
+#### TO INSTALL NEW PACKAGES
+#switch to THE RIGHT environment
+source activate py27
+# then install with conda
+conda install [some package]
+# this works for most, but NOT for igraph (see notes below)
+
+
+###AFTER MAKING CHANGES (installing libraries, etc.)
+#export
+conda env export > py27env.yml
+
+#####ONLY IF I NEED TO MOVE TO ANOTHER COMPUTER, SERVER, ETC.
+#reload
+conda env create -f py27env.yml
+
+
+# came from:
+#http://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
+
+
+######### INSTALLING IGRAPH
+#this page: http://igraph.org/python/
+#you should just be able to do 
+pip install python-igraph #conda install... seems to not find it
+
+#however, you often run into some errors about the C compiler, so you have to
+## install homebrew: http://brew.sh
+#then run
+brew install homebrew/science/igraph
+brew install pkg-config
+# THEN...
+pip install python-igraph
+
+#####OR######
+## so you have to INSTALL XCODE from the app store
+###this didn't work for me, but apparently it should
+
+
+##########THIS IS THE VIRTUALENV VERSION THAT NEVER WORKED FOR ME#########
+#instal virtualenv
+pip install virtualenv
+
+#install virtualenvwrapper with these instructions:
+#https://virtualenvwrapper.readthedocs.io/en/latest/install.html
+
+pip install --user virtualenvwrapper
+
+# tweak this for mac: http://stackoverflow.com/questions/15101559/terminal-where-is-the-shell-start-up-file
+cat >> ~/.bash_profile
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Documents
+source /usr/local/bin/virtualenvwrapper.sh
+# press control+D
+# ^D
+
+# reload your bash
+source ~/.bash_profile
+
+
+mkvirtualenv -p python2.7 p2env
+
+
+
+
+#when I didn't include --user in the install command above, I got all sorts of probems...
+#/Users/Seth/anaconda/bin
+#cp -i /Users/Seth/anaconda/bin/virtualenvwrapper.sh /usr/local/bin/
+
+
+

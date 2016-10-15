@@ -11,3 +11,5 @@
 2093,"Rabbinic","./data_dsicap/Rabbinic/raw/light-one-candle.txt","train00"
 2094,"Rabbinic","./data_dsicap/Rabbinic/raw/benchmark-breach.txt","test04"
 2095,"Rabbinic","./data_dsicap/Rabbinic/raw/%5Bfield_dateline-date%5D-42.txt","train11"
+2096,"NawDawg","./data_dsicap/NaumanKhan/raw/naw_dawg.txt","train100"
+2097,"NawDawg","./data_dsicap/NaumanKhan/raw/yea_dawg.txt","train100"
