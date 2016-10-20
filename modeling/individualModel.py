@@ -42,7 +42,8 @@ def addRank(signalDF):
 
 #Get data frame for each cut
 #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
+#signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
+signalDF=pd.read_csv('signalsOutput/masterOutput.csv')
 
 signalDF=addRank(signalDF)
 
@@ -97,4 +98,4 @@ svmMAE=np.mean(np.abs(yActual-yPred))
             
 # create output csv
 signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-signalTestDF.to_csv('modelOutput1.csv')
+signalTestDF.to_csv('modelPredictions.csv')

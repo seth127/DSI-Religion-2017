@@ -46,12 +46,8 @@ def addRank(signalDF):
 
 #Get data frame for each cut
 #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-
-##tried this with my fake data, but it didn't work
-##sklearn error -- ValueError: Found array with 0 sample(s) (shape=(0, 8)) while a minimum of 1 is required.
-#signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/pythonOutput/TEST-coco_3_cv_3_netAng_30_sc_0FOFPM0/run0/masterOutput.csv')
-
+#signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
+signalDF=pd.read_csv('signalsOutput/masterOutput.csv')
 
 signalDF=addRank(signalDF)
 
@@ -120,4 +116,4 @@ print(svmMAE)
 
 # create output csv
 signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-signalTestDF.to_csv('modelOutput1.csv')
+signalTestDF.to_csv('modelPredictions.csv')
