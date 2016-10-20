@@ -7,6 +7,10 @@ Created on Tue May 31 16:32:44 2016
 Modeling grid search
 """
 
+##run these in terminal first:
+# cd Documents/DSI/Capstone/DSI-Religion-2017/modeling
+# 
+
 #Import packages
 import pandas as pd
 import numpy as np
@@ -44,6 +48,11 @@ def addRank(signalDF):
 #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
 signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
 
+##tried this with my fake data, but it didn't work
+##sklearn error -- ValueError: Found array with 0 sample(s) (shape=(0, 8)) while a minimum of 1 is required.
+#signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/pythonOutput/TEST-coco_3_cv_3_netAng_30_sc_0FOFPM0/run0/masterOutput.csv')
+
+
 signalDF=addRank(signalDF)
 
 #Set up modeling parameters
@@ -60,7 +69,8 @@ signalTrainDF=signalDF[signalDF['groupId'].isin(trainIndex)]
 signalTestDF=signalDF[signalDF['groupId'].isin(testIndex)]
 
 yActual=signalTestDF['rank'].tolist()
-
+print(str(signalTestDF.shape))
+print(signalTestDF)
                         
 
 #Random Forest Regressor
@@ -72,13 +82,20 @@ rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
 #Predict New Data
 yPred=rfModel.predict(signalTestDF[xList])
+print("%%%%\n" + "rf yPred" + "\n  --length: " + str(len(yPred)) + "\n%%%%")
+print(yPred)
 
 # save predictions in TestDF
 signalTestDF.loc[:,'rfPred'] = yPred.tolist()
 
 #Get accuracy
 rfAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
-rfMAE=np.mean(np.abs(yActual-yPred))        
+rfMAE=np.mean(np.abs(yActual-yPred))   
+print("%%%%\n" + "rfAccuracy:")
+print(rfAccuracy)
+print("%%%%\n" + "rfMAE:")
+print(rfMAE)
+
 #Perform same analysis with scaled data
 #Scale the data
 sc = StandardScaler()
@@ -90,11 +107,17 @@ signalSVR.fit(signalStdTrainDF[xList],signalTrainDF[yList])
 
 #Predict New Data
 yPred=signalSVR.predict(signalStdTestDF[xList])
+print("%%%%\n" + "SVR yPred" + "\n  --length: " + str(len(yPred)) + "\n%%%%")
+print(yPred)
 
 #Get accuracy
 svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
 svmMAE=np.mean(np.abs(yActual-yPred))
-            
+print("%%%%\n" + "svmAccuracy:")
+print(svmAccuracy)
+print("%%%%\n" + "svmMAE:")
+print(svmMAE)  
+
 # create output csv
 signalTestDF.loc[:,'svmPred'] = yPred.tolist()
 signalTestDF.to_csv('modelOutput1.csv')
