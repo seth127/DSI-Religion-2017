@@ -46,6 +46,9 @@ from sklearn.ensemble import RandomForestRegressor
 import time
 #from sknn import mlp
 
+#
+import getNewDocs as gnd
+
 #for generating id's for different test runs
 import random
 import string
@@ -152,7 +155,8 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA
     #'./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/fileSplits.csv'   
     #'./data_dsicap/test_train/fileSplits.csv'            
-    fileDF=pd.read_csv('./data_dsicap/test_train/fileSplits.csv') #################### WHERE THE NEW FILES ARE
+    #fileDF=pd.read_csv('./data_dsicap/test_train/fileSplits.csv') #################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF('./data_dsicap/fake_data/') ################################### WHERE THE NEW FILES ARE
     
     fileList=fileDF.values.tolist()
     #[print([fileList[i][1],fileList[i][2],fileList[i][3]]) for i in range(len(fileList))]
@@ -163,7 +167,7 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
     for i in range(len(fileList)):
         print(fileList[i])
 
-    fileList=[[fileList[i][1],fileList[i][2],fileList[i][3]] for i in range(len(fileList))]
+    fileList=[[fileList[i][0],fileList[i][1],fileList[i][2]] for i in range(len(fileList))]
     
     
     #Get set of subgroups

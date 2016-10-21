@@ -1,9 +1,8 @@
 WHAT NEEDS TO HAPPEN WITH newDocsModel.py
 
-## all the (new) files that run in the first part need to say 'test'
+set it up to take input parameters
 
-## it needs to get the signals and then, instead of saving them...
+set the modeling part to take paramPath to tell it where to get the training signals
 
-## it needs to bring the big files for training, rename all the 'test' to 'train'
-## then append the new testing signals to that DF
-## then run the model
+####
+then figure out why the signal generator spits out NaN for so many rows
