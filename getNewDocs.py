@@ -2,6 +2,12 @@ import pandas as pd
 import numpy as np
 import os
 
+import random
+import string
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+
 def newDocsToDF(rawPath): ### rawPath is where you folders of documemnts are, organized as [groupName]/raw/...
 	# get groups in 
 	groups = os.listdir(rawPath)

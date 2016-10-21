@@ -127,7 +127,7 @@ def textAnalysis(paramList):
     #Append outputs to masterOutput
     return(['_'.join(groupId)]+[len(subFileList),timeRun]+sentimentList+judgementAvg+[avgSD]+[avgEVC])   
 
-def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
+def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
     #####Raw File List Extract#####
     ###############################
@@ -140,8 +140,9 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
                     rawFileList.append([groupId,os.path.join(dirpath, filename)])
 
     #Make output directory
-    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
-    runDirectory='./pythonOutput/' + paramPath + '-' + id_generator()
+    #paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
+    #runDirectory='./pythonOutput/' + paramPath + '-' + runID
+    #runDirectory='./modelOutput/'
     #os.makedirs(runDirectory)
     end=time.time()
     print('finished loading packages after '+str(end-start)+' seconds')
@@ -159,13 +160,6 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
     fileDF=gnd.newDocsToDF('./data_dsicap/fake_data/') ################################### WHERE THE NEW FILES ARE
     
     fileList=fileDF.values.tolist()
-    #[print([fileList[i][1],fileList[i][2],fileList[i][3]]) for i in range(len(fileList))]
-
-    #print([fileList[12][1],fileList[12][2],fileList[12][3]])
-    #print(fileList[12])
-    print('%%%%%%%%\nPRINTING FILELIST\n%%%%%%')
-    for i in range(len(fileList)):
-        print(fileList[i])
 
     fileList=[[fileList[i][0],fileList[i][1],fileList[i][2]] for i in range(len(fileList))]
     
@@ -174,12 +168,12 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
     subgroupList=[ list(y) for y in set((x[0],x[2]) for x in fileList) ]
     
     #Make output directory
-    outputDirectory=runDirectory
-    os.makedirs(outputDirectory)
-    print(outputDirectory)
+    #outputDirectory=runDirectory
+    #os.makedirs(outputDirectory)
+    print('%%%%%%\nrunID: ' + runID + '\n%%%%%%')
     
     #Print file splits to runDirectory
-    fileDF.to_csv(outputDirectory+'/fileSplits.csv')
+    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
 
     end=time.time()
     print('finished randomly creating subgroups '+str(end-start)+' seconds')
@@ -197,53 +191,56 @@ def runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
     #Output that file 
-    ##outputDF.to_csv(outputDirectory+'/masterOutput.csv') #### used to save it
+    outputDF.to_csv(runDirectory+'signalOutput' + paramPath + '-' + runID + '.csv') #### used to save it
     #print(outputDF)
     outputDF['groupId'].replace('train','test1', regex=True, inplace=True) 
     return outputDF
 
 #Set inital conditions and run
-if __name__ == '__main__':
-    startTimeTotal=time.time()
-    rawPath = './data_dsicap/' ###############change this eventually
-    #groupList=['DorothyDay','JohnPiper','MehrBaba','NaumanKhan','PastorAnderson',
-    #   'Rabbinic','Shepherd','Unitarian','WBC']
-    groupList=['DorothyDay','NaumanKhan','Rabbinic','NawDawg']
-#    cocoWindow=int(sys.argv[1])
-#    cvWindow=int(sys.argv[2])
-#    startCount=int(sys.argv[3])
-#    netAngle=int(sys.argv[4])
-    cocoWindow=3
-    cvWindow=3
-    startCount=0
-    netAngle=30
-    groupSize=10
-#    testSplit=.3
-    targetWordCount=10
-    svdInt=50
-    simCount=1000
-    print('cocoWindow '+str(cocoWindow))
-    sys.stdout.flush()
-    print('cvWindow '+str(cvWindow))
-    sys.stdout.flush()
-    print('netAngle '+str(netAngle))
-    sys.stdout.flush()
-    print('startCount '+str(startCount))
-    sys.stdout.flush()
+#if __name__ == '__main__':
+startTimeTotal=time.time()
+rawPath = './data_dsicap/' ###############change this eventually
+runDirectory='./modelOutput/'
+#groupList=['DorothyDay','JohnPiper','MehrBaba','NaumanKhan','PastorAnderson',
+#   'Rabbinic','Shepherd','Unitarian','WBC']
+groupList=['DorothyDay','NaumanKhan','Rabbinic','NawDawg']
+#cocoWindow=int(sys.argv[1])
+#cvWindow=int(sys.argv[2])
+#startCount=int(sys.argv[3])
+#netAngle=int(sys.argv[4])
+cocoWindow=3
+cvWindow=3
+startCount=0
+netAngle=30
+groupSize=10
+#testSplit=.3
+targetWordCount=10
+svdInt=50
+simCount=1000
+print('cocoWindow '+str(cocoWindow))
+sys.stdout.flush()
+print('cvWindow '+str(cvWindow))
+sys.stdout.flush()
+print('netAngle '+str(netAngle))
+sys.stdout.flush()
+print('startCount '+str(startCount))
+sys.stdout.flush()
 
-    # define the file path with identifying parameters
-    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
-    
-    newTestDF = runMaster(rawPath,groupList,groupSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-    print('%%%%%%\nnewTestDF\n%%%%%%')
-    print(newTestDF.shape)
-    print('%%%%%%\nnewTestDF columns\n%%%%%%')
-    print(newTestDF.columns.values)
-    #print(newTestDF)
+# define the file path with identifying parameters
+paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
+# define the random ID for this run
+runID = id_generator()
 
-    endTimeTotal=time.time()
-    print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
-    sys.stdout.flush()
+newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,groupList,groupSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+print('%%%%%%\nnewTestDF\n%%%%%%')
+print(newTestDF.shape)
+print('%%%%%%\nnewTestDF columns\n%%%%%%')
+print(newTestDF.columns.values)
+#print(newTestDF)
+
+endTimeTotal=time.time()
+print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
+sys.stdout.flush()
 
 
 ################################
@@ -356,6 +353,6 @@ svmMAE=np.mean(np.abs(yActual-yPred))
             
 # create output csv
 signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-outputName = 'modelOutput/modelPredictions-' + paramPath + '-' + id_generator() + '.csv'
+outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
 print(outputName)
 signalTestDF.to_csv(outputName)
