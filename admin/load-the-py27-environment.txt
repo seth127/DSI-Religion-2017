@@ -1,0 +1,35 @@
+# the py27env.yml file should have everything you need
+# to tell your computer what to install to setup the environment
+# needed for our project. HOWEVER, iGraph is a pain in the ass so you 
+# might need to do the extra steps below.
+
+# open a terminal
+# navigate into the directory with the py27env.yml file (probably './DSI-Religion-2017/admin')
+# then call:
+conda env create -f py27env.yml
+
+# if you get an error from iGraph...
+######### INSTALLING IGRAPH
+# it should just load from the .yml file like everything else
+#however, you often run into some errors about the C compiler, so you have to:
+
+## install homebrew: http://brew.sh
+#then run
+brew install homebrew/science/igraph
+brew install pkg-config
+# THEN...
+pip install python-igraph
+
+# these instructions come from this page: http://igraph.org/python/
+# so check that if you have any problems.
+
+########## once everything is installed
+# see which environments you have (you should see py27 as an option)
+conda info --envs
+
+#to switch into the new environment (to run any of our code)
+source activate py27 
+# or just open a jupyter notebook and change the kernel to py27
+
+
+
