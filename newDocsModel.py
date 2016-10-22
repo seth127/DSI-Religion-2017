@@ -175,9 +175,9 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     #Print file splits to runDirectory
     fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
 
-    end=time.time()
-    print('finished randomly creating subgroups '+str(end-start)+' seconds')
-    sys.stdout.flush()        
+    #end=time.time()
+    #print('finished randomly creating subgroups '+str(end-start)+' seconds')
+    #sys.stdout.flush()        
     
     ################################
     #####Perform group analysis#####
@@ -196,7 +196,12 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     outputDF['groupId'].replace('train','test1', regex=True, inplace=True) 
     return outputDF
 
+############
+######################
 #Set inital conditions and run
+######################
+############
+
 #if __name__ == '__main__':
 startTimeTotal=time.time()
 rawPath = './data_dsicap/' ###############change this eventually
@@ -281,13 +286,19 @@ signalDF['groupId'].replace('test','train1', regex=True, inplace=True)
 
 print('%%%%%%\nsignalDF columns\n%%%%%%')
 print(signalDF.columns.values)
-print(signalDF.iloc[:5])
+#print(signalDF.iloc[:5])
 
 ######## NOW COMINE WITH NEW TESTING DF (signalDFL and newTestDF)
 signalDF = signalDF.append(newTestDF)
 
+print('tests pre-addRank')
+print(signalDF[signalDF['groupId'].str.contains("test")].shape)
+
 #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
 signalDF=addRank(signalDF)
+
+print('tests post-addRank pre-setup')
+print(signalDF[signalDF['groupId'].str.contains("test")].shape)
 
 
 #Set up modeling parameters
@@ -298,7 +309,7 @@ yList=['rank']
 signalDF=signalDF.dropna()
 
 print('tests post-setup')
-print(signalDF[signalDF['groupId'].str.contains("test")])
+print(signalDF[signalDF['groupId'].str.contains("test")].shape)
 
 
 #Set up test train splits
