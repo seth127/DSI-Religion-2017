@@ -132,12 +132,12 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     #####Raw File List Extract#####
     ###############################
 
-    rawFileList=[]
-    for groupId in groupList:
-        for dirpath, dirnames, filenames in os.walk(rawPath+groupId+'/raw'):
-            for filename in [f for f in filenames ]:
-                if '.txt' in filename:
-                    rawFileList.append([groupId,os.path.join(dirpath, filename)])
+    #rawFileList=[]
+    #for groupId in groupList:
+    #    for dirpath, dirnames, filenames in os.walk(rawPath+groupId+'/raw'):
+    #        for filename in [f for f in filenames ]:
+    #            if '.txt' in filename:
+    #                rawFileList.append([groupId,os.path.join(dirpath, filename)])
 
     #Make output directory
     #paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
@@ -157,7 +157,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     #'./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/fileSplits.csv'   
     #'./data_dsicap/test_train/fileSplits.csv'            
     #fileDF=pd.read_csv('./data_dsicap/test_train/fileSplits.csv') #################### WHERE THE NEW FILES ARE
-    fileDF=gnd.newDocsToDF('./data_dsicap/fake_data/') ################################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF('./data_dsicap/fake_data/', bin=5) ################################### WHERE THE NEW FILES ARE
     
     fileList=fileDF.values.tolist()
 
@@ -237,11 +237,6 @@ paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle
 runID = id_generator()
 
 newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,groupList,groupSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-print('%%%%%%\nnewTestDF\n%%%%%%')
-print(newTestDF.shape)
-print('%%%%%%\nnewTestDF columns\n%%%%%%')
-print(newTestDF.columns.values)
-#print(newTestDF)
 
 endTimeTotal=time.time()
 print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
@@ -283,10 +278,6 @@ signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc
 
 ### MAKES THEM ALL TRAINING
 signalDF['groupId'].replace('test','train1', regex=True, inplace=True) 
-
-print('%%%%%%\nsignalDF columns\n%%%%%%')
-print(signalDF.columns.values)
-#print(signalDF.iloc[:5])
 
 ######## NOW COMINE WITH NEW TESTING DF (signalDFL and newTestDF)
 signalDF = signalDF.append(newTestDF)
@@ -365,5 +356,5 @@ svmMAE=np.mean(np.abs(yActual-yPred))
 # create output csv
 signalTestDF.loc[:,'svmPred'] = yPred.tolist()
 outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
-print(outputName)
+print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
 signalTestDF.to_csv(outputName)
