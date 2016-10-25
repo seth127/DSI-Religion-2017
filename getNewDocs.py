@@ -14,15 +14,6 @@ def newDocsToDF(rawPath, bin=5): ### rawPath is where you folders of documemnts 
 	# remove these red herrings if necessary
 	naw = ['.DS_Store', 'test_train']
 	[groups.remove(x) for x in groups if x in naw]
-
-	# create list of all files in those directories
-	#rawFileList=[]
-	#for groupId in groups:
-	#	for dirpath, dirnames, filenames in os.walk(rawPath+groupId+'/raw'):
-	#		for filename in [f for f in filenames ]:
-	#			if '.txt' in filename:
-	#				rawFileList.append([groupId,os.path.join(dirpath, filename),'test-'+id_generator()])
-
 	#
 	rawFileList=[]
 	for groupId in groups:
