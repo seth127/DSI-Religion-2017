@@ -468,7 +468,11 @@ class lingualObject(object):
             targetDF.sort(['count'],inplace=True,ascending=False)
             
             #Create keywords based on startCount and wordCount
-            self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+            ##self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+            #STEM FIRST
+            keywordsRAW=list(targetDF['word'])[startCount:wordCount+startCount]
+
+            self.keywords=[stemmer.stem(word) for word in keywordsRAW]
         else:
             print('ERROR: Method not found')
     
