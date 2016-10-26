@@ -37,8 +37,11 @@ print(str(datetime.now()))
 print('finished loading packages after '+str(end-start)+' seconds')
 sys.stdout.flush()
 
-
 stemmer = nltk.stem.snowball.EnglishStemmer()
+
+#
+import getNewDocs as gnd
+
 
 ##### FOR THE MODELING
 from sklearn.preprocessing import StandardScaler
@@ -46,9 +49,6 @@ from sklearn import svm
 from sklearn.ensemble import RandomForestRegressor
 import time
 #from sknn import mlp
-
-#
-import getNewDocs as gnd
 
 #for generating id's for different test runs
 import random
@@ -167,7 +167,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     
     #Get set of subgroups
     subgroupList=[ list(y) for y in set((x[0],x[2]) for x in fileList) ]
-    
+
     #Make output directory
     #outputDirectory=runDirectory
     #os.makedirs(outputDirectory)

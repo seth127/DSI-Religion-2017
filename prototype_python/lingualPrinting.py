@@ -534,12 +534,12 @@ class lingualObject(object):
     def getSD(self,sim=1000):
         '''
         Function to generate monte carlo estimation of cosine similarity from
-        context vectors for each keywor
+        context vectors for each keyword
         
         Inputs
         ======
         sim: int
-            Number of simulations (default is 100)
+            Number of simulations (default is 1000)
         
         Attributes
         ==========
