@@ -12,7 +12,7 @@ def newDocsToDF(rawPath, bin=5): ### rawPath is where you folders of documemnts 
 	groups = os.listdir(rawPath)
 
 	# remove these red herrings if necessary
-	naw = ['.DS_Store', 'test_train']
+	naw = ['.DS_Store', 'test_train', 'norun', 'fake_data']
 	[groups.remove(x) for x in groups if x in naw]
 	#
 	rawFileList=[]
@@ -22,6 +22,7 @@ def newDocsToDF(rawPath, bin=5): ### rawPath is where you folders of documemnts 
 			filenames = [filename for filename in filenames if ".txt" in filename]
 			## create subgroups
 			filecount = len(filenames) # how many files are there in this groupId
+			print(filecount)
 			bincount = math.ceil(filecount/float(bin)) # how many bins do we need
 			subgroups = ['test' + str(num) for num in range(0,int(bincount))] # create bins
 			sglist = [x for item in subgroups for x in repeat(item, bin)] # make list of bins (copy each option 5x (or whatever you put in the bin=))

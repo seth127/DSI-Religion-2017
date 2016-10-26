@@ -556,12 +556,14 @@ class lingualObject(object):
         
         #Loop through each file and reduce context vectors to word based dictionary for faster lookups
         for fileName in self.fileList:
+            print(fileName)
             for word in self.cvDict[fileName].keys():
                 #Add word if not in keys
                 if word not in subCV.keys():
                     subCV[word]={}
                 for i in range(len(self.cvDict[fileName][word])):
                     subCV[word][len(subCV[word])+1]=self.cvDict[fileName][word][i+1]
+            print(self.cvDict[fileName].keys())
         
         #Loop through each keyword and calculate semantic density
         for searchWord in self.keywords:

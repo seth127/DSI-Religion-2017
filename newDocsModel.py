@@ -23,7 +23,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 sys.path.append('./prototype_python/')
-import lingual as la
+#import lingual as la
+import lingualPrinting as la
 import nltk
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
@@ -157,7 +158,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,groupList,groupSize,targetWor
     #'./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/fileSplits.csv'   
     #'./data_dsicap/test_train/fileSplits.csv'            
     #fileDF=pd.read_csv('./data_dsicap/test_train/fileSplits.csv') #################### WHERE THE NEW FILES ARE
-    fileDF=gnd.newDocsToDF('./data_dsicap/fake_data/', bin=5) ################################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF('./data_dsicap/', bin=5) ################################### WHERE THE NEW FILES ARE
     
     fileList=fileDF.values.tolist()
 
@@ -208,7 +209,7 @@ rawPath = './data_dsicap/' ###############change this eventually
 runDirectory='./modelOutput/'
 #groupList=['DorothyDay','JohnPiper','MehrBaba','NaumanKhan','PastorAnderson',
 #   'Rabbinic','Shepherd','Unitarian','WBC']
-groupList=['DorothyDay','NaumanKhan','Rabbinic','NawDawg']
+groupList=['DorothyDay','NaumanKhan','Rabbinic','NawDawg','SeaShepherds','IntegralYoga','Bahai']
 #cocoWindow=int(sys.argv[1])
 #cvWindow=int(sys.argv[2])
 #startCount=int(sys.argv[3])
@@ -258,8 +259,8 @@ startTime=time.time()
 def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFORE YOU TEST THEM
     #Add in group ranking
     groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-    'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg']
-    groupRankList=[1,2,3,4,4,4,6,7,8,4]
+    'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai']
+    groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6]
     
     groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
     
