@@ -21,7 +21,13 @@ ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyD
 DF <- merge(signalDF, ranks, by = "groupName")
 
 ## RANKINGS continuous
-ggplot(DF, aes(x=avgSD, y =judgementFrac, colour = groupRank)) + geom_point()
+mid = 4
+## zoomed in
+ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" )
+
+## scaled to 0 and 1
+ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1)
+
 
 
 ## RANKINGS discrete

@@ -79,7 +79,7 @@ def textAnalysis(paramList):
     
     #Get list of subfiles
     subFileList=[x[1] for x in fileList if x[0]==groupId[0] and x[2]==groupId[1]]
-
+    
     #Create lingual object
     loTest=la.lingualObject(subFileList)
 
@@ -134,15 +134,18 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF('./data_dsicap/', bin=5) ########################### WHERE THE NEW FILES ARE
-    
+    #fileDF=gnd.newDocsToDF('./data_dsicap/', bin=5) ########################### WHERE THE NEW FILES ARE
+    fileDF = pd.read_csv('./testingSD/olddata/fileSplits.csv')
+
+    print(fileDF)
+    print('%%%%\nTHIS IS WORKING!\n%%%%%%')
+
     fileList=fileDF.values.tolist()
 
     fileList=[[fileList[i][0],fileList[i][1],fileList[i][2]] for i in range(len(fileList))]
     
     #Get set of subgroups
     subgroupList=[ list(y) for y in set((x[0],x[2]) for x in fileList) ]
-    print(subgroupList)
 
     #Make output directory and print randomly generated ID for later reference
     #outputDirectory=runDirectory
