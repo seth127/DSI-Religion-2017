@@ -1,0 +1,73 @@
+#####################
+## TO LOGON FROM YOUR COMPUTER
+#####################
+
+#### cd into the DSI-Religion-2017 directory on your computer, 
+cd Documents/DSI/Capstone/DSI-Religion-2017/
+#### then...
+
+
+#to log on
+## the first time you may have to run...
+#chmod 400 AWS/DSI-Religion-t2Large1.pem.txt
+
+## THEN EACH TIME YOU WANT TO LOG ON:
+ssh -i AWS/DSI-Religion-t2Large1.pem.txt ec2-user@52.87.228.121
+
+#####################
+## DOING STUFF
+#####################
+
+# NOW PUT FILES UP THERE
+###RUN THIS FROM YOUR COMPUTER TERMINAL NOT AWS TERMINAL
+scp -i AWS/DSI-Religion-t2Large1.pem.txt {full file path on your computer} ec2-user@52.87.228.121:~/
+
+
+##### TO MAKE A NEW SCREEN, etc. (for leaving a job running while you log off)
+# first time just type
+screen
+#then to leave it
+ctrl+a #something
+ctrl+d #detach
+# then to look at it again
+screen -r
+
+# then leave it (So it keeps running)
+crtl+a
+crtl+d
+# then exit
+exit
+
+#### GET STUFF BACK OFF THE EC2
+scp -i ec2key.pem username@ec2ip:/path/to/file /path/to/destination/folder
+
+#get the filename
+readlink -f filename
+#/home/ec2-user/
+
+scp -i AWS/DSI-Religion-t2Large1.pem.txt ec2-user@52.87.228.121:/home/ec2-user/{filepath} /Users/Seth/...{destination}
+
+
+#####################
+## THE INITIAL SETUP 
+#####################
+
+## do all this to make sure you have python 2.7 setup with dev-tools etc.
+# http://www.lecloud.net/post/61401763496/install-update-to-python-27-and-latest-pip-on
+
+## then install Anaconda, but downloading the Linux 64-bit Python 2.7 installer from here:
+# https://www.continuum.io/downloads
+## and then running this command (on your computer terminal, not AWS) to upload it 
+scp -i AWS/DSI-Religion-t2Large1.pem.txt {path to file you downloaded}/Anaconda2-4.2.0-Linux-x86_64.sh ec2-user@52.87.228.121:~/
+#scp -i AWS/DSI-Religion-t2Large1.pem.txt /Users/Seth/Downloads/Anaconda2-4.2.0-Linux-x86_64.sh ec2-user@52.87.228.121:~/
+
+## then upload the environment file (for later use)
+scp -i AWS/DSI-Religion-t2Large1.pem.txt admin/py27env.yml ec2-user@52.87.228.121:~/
+
+## then go to AWS and run this to run the installer
+bash Anaconda2-4.2.0-Linux-x86_64.sh 
+
+## (then it tells you to log off and open a new terminal window, so you do, and then log back on) then...
+
+conda env create -f py27env.yml
+

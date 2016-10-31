@@ -1,12 +1,33 @@
 WHAT NEEDS TO HAPPEN WITH newDocsModel.py
 
-set it up to take input parameters
+####
+install iGraph on AWS 
 
-set the modeling part to take paramPath to tell it where to get the training signals
+###
+make TF-IDF keyword selector 
+--(we need to redo this in Python to standardize the stemming and stopword removal)
+	# - do one that is tf(wiki)/M(wiki) (and we would divide tf(doc) by this(?)) 
+		- ### abandoned this because the DTM we're working from doesn't have raw freq counts for terms because it's already a TFIDF
+	- do one that is IDF(wiki) (i.e. log(M(wiki)/docswithterm(wiki)) )
+		- this is basically traditional TF-IDF, except it'd be tf(doc) * IDF(wiki)
+		- also, we'd need a max IDF(wiki) score (for if the term wasn't in wiki)
+		- then you would multiply the term frequencies in a doc by the score in the lookup table
+- load the IDF (into a DF?)
+	- build the selector to take each word and do the TF-IDF tf(doc) * IDF(wiki)
+	- then spit out the top words for each doc so we can check them out
 
 ####
-then figure out why the signal generator spits out NaN for so many rows!!!!
+double check the stemming
+	- where they stemming the keywords before?
+	- what signals depend on stemming? could we just NOT do it at all?
 
-also, in the mean time, make it so that you can set the number of docs per bin 
-	it'll be in the getNewDocs where it generates random test-ID 
-	(generate only a certain number of IDs and dish them out)
+#####
+CHECK OUT THIS IDEA FOR CLUSTERING WORD SIMILARITY
+#####
+
+go to: https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html
+ then scroll down to the part that says "Hierarchical Clustering"
+
+
+
+ 

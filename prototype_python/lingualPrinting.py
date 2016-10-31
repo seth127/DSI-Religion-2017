@@ -292,7 +292,7 @@ class lingualObject(object):
         self.cocoDict={}
         self.TF={}
         self.docTF={}
-            
+
         #Loop through each file
         for fileName in self.fileList:
             for i in range(len(self.tokens[fileName])):
@@ -439,7 +439,11 @@ class lingualObject(object):
             targetDF.sort(['count'],inplace=True,ascending=False)
             
             #Create keywords based on startCount and wordCount
-            self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+            ###self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+            #STEM FIRST
+            keywordsRAW=list(targetDF['word'])[startCount:wordCount+startCount]
+
+            self.keywords=[stemmer.stem(word) for word in keywordsRAW]
             
         #Default to 'adjAdv'
         elif method=='adjAdv':
@@ -468,7 +472,19 @@ class lingualObject(object):
             targetDF.sort(['count'],inplace=True,ascending=False)
             
             #Create keywords based on startCount and wordCount
-            self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+            #self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+
+            ###
+            keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
+            #print(keyRaw)
+
+            keyStem=[stemmer.stem(word) for word in keyRaw] 
+            #print(keyStem)
+
+            self.keywords = keyStem
+
+
+
         else:
             print('ERROR: Method not found')
     

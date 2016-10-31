@@ -403,8 +403,47 @@ class lingualObject(object):
         self.keywordCount=wordCount
         self.keywordStar=startCount
         
+  
+        #Default to 'adjAdv'
+        if method=='adjAdv':
+            #Get total text string
+            txtString=''.join([x for x in self.rawText.values()])
+            
+            #Get total tag list
+            tagList=tagger.tag(nltk.word_tokenize(txtString))
+            
+            #Define target dict
+            targetDict={}
+            
+            #Loop through each tag in list and get count of tag and word
+            for tag in tagList:
+                if tag[1] in tagFilterList:
+                    word=str.lower(''.join([c for c in tag[0] if c not in string.punctuation]))
+                    #Filter out codecerrors
+                    if word != 'codecerror':
+                        try:
+                            targetDict[word]=targetDict[word]+1
+                        except:
+                            targetDict[word]=1
+        
+            #Create data frame with counts and sort
+            targetDF=pd.DataFrame([[k,v] for k,v in targetDict.items()],columns=['word','count'])
+            targetDF.sort(['count'],inplace=True,ascending=False)
+            
+            #Create keywords based on startCount and wordCount
+            ##self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
+
+                        ###
+            keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
+            #print(keyRaw)
+
+            keyStem=[stemmer.stem(word) for word in keyRaw] 
+            #print(keyStem)
+
+            self.keywords = keyStem
+
         #Judgement method
-        if method=='judgement':
+        elif method=='judgement':
             posList=nounList+tagFilterList
             #Define target dict
             targetDict={}
@@ -439,40 +478,17 @@ class lingualObject(object):
             targetDF.sort(['count'],inplace=True,ascending=False)
             
             #Create keywords based on startCount and wordCount
-            self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
-            
-        #Default to 'adjAdv'
-        elif method=='adjAdv':
-            #Get total text string
-            txtString=''.join([x for x in self.rawText.values()])
-            
-            #Get total tag list
-            tagList=tagger.tag(nltk.word_tokenize(txtString))
-            
-            #Define target dict
-            targetDict={}
-            
-            #Loop through each tag in list and get count of tag and word
-            for tag in tagList:
-                if tag[1] in tagFilterList:
-                    word=str.lower(''.join([c for c in tag[0] if c not in string.punctuation]))
-                    #Filter out codecerrors
-                    if word != 'codecerror':
-                        try:
-                            targetDict[word]=targetDict[word]+1
-                        except:
-                            targetDict[word]=1
-        
-            #Create data frame with counts and sort
-            targetDF=pd.DataFrame([[k,v] for k,v in targetDict.items()],columns=['word','count'])
-            targetDF.sort(['count'],inplace=True,ascending=False)
-            
-            #Create keywords based on startCount and wordCount
-            ##self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
-            #STEM FIRST
-            keywordsRAW=list(targetDF['word'])[startCount:wordCount+startCount]
+            #self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
 
-            self.keywords=[stemmer.stem(word) for word in keywordsRAW]
+                        ###
+            keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
+            #print(keyRaw)
+
+            keyStem=[stemmer.stem(word) for word in keyRaw] 
+            #print(keyStem)
+
+            self.keywords = keyStem
+
         else:
             print('ERROR: Method not found')
     
