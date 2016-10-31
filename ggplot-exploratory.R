@@ -8,7 +8,7 @@ for (i in 1:nrow(signalDF)) {
 }
 
 ### BY GROUP
-#ggplot(signalDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point()
+ggplot(signalDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point()
 
 ggplot(signalDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point()
 
@@ -20,6 +20,13 @@ ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyD
 
 DF <- merge(signalDF, ranks, by = "groupName")
 
+
+## RANKINGS discrete
+DF$rankDiscrete <- as.factor(DF$groupRank)
+ggplot(DF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point()
+
+
+
 ## RANKINGS continuous
 mid = 4
 ## zoomed in
@@ -29,9 +36,22 @@ ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_c
 ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1)
 
 
+##### OTHER VARIABLES
+## perPos vs. perNeg ######DIFFERENCE!!!!
+ggplot(DF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" )
 
-## RANKINGS discrete
-DF$rankDiscrete <- as.factor(DF$groupRank)
-ggplot(DF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point()
+## Judgements ######DIFFERENCE!!!!
+ggplot(DF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" )
 
+## Judgements by Group ######DIFFERENCE!!!!
+ggplot(DF, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point()
 
+## Judgements by RANK ######Not really a difference...
+ggplot(DF, aes(x=judgementFrac, y =judgementCount, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" )
+
+#####RANK ON X AXIS
+ggplot(DF, aes(x=perPos, y =groupRank)) + geom_point()
+ggplot(DF, aes(x=judgementCount, y =groupRank)) + geom_point()
+ggplot(DF, aes(x=judgementFrac, y =groupRank)) + geom_point()
+ggplot(DF, aes(x=avgSD, y =groupRank)) + geom_point()
+ggplot(DF, aes(x=avgEVC, y =groupRank)) + geom_point()
