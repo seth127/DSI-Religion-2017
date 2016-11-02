@@ -24,7 +24,7 @@ import pandas as pd
 from datetime import datetime
 sys.path.append('./prototype_python/')
 #import lingual as la
-import lingualPrinting as la
+import lingual as la
 import nltk
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
@@ -90,7 +90,17 @@ def textAnalysis(paramList):
     loTest.getDSM(svdInt)
     
     #Set keywords
-    loTest.setKeywords('adjAdv',targetWordCount,startCount)
+    #loTest.setKeywords('adjAdv',targetWordCount,startCount)
+
+    if sys.argv[1] != 'auto':
+        if sys.argv[5] == 'tfidf':
+            print('%%%%\nUSING TFIDF KEYWORDS')
+            loTest.setKeywords('tfidf',targetWordCount,startCount)
+            print(loTest.keywords)
+    else:
+        print('%%%%\nUSING ADJADV KEYWORDS')
+        loTest.setKeywords('adjAdv',targetWordCount,startCount)
+        print(loTest.keywords)
 
     #######################            
     ###Semantic analysis###

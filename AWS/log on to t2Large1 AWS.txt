@@ -37,6 +37,10 @@ find /Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/wiki-IDF/wiki-articles
 ##### NEXT WE RUN THE IDF
 scp -i AWS/DSI-Religion-t2Large1.pem.txt /Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/wiki-IDF/pythonIDF.py ec2-user@52.87.228.121:~/
 
+#######
+# 172-31-48-49
+######
+
 # and from the EC2 terminal:
 python pythonIDF.py wiki-articles-30k 5
 

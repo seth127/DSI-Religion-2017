@@ -1,0 +1,569 @@
+%%%%%%
+runID: NTH6KA
+%%%%%%
+%%%%
+USING ADJADV KEYWORDS
+./prototype_python/lingual.py:437: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  targetDF.sort(['count'],inplace=True,ascending=False)
+[u'not', u'when', 'so', u'how', u'where', u'mani', u'even', u'then', u'more', u'good']
+finished runningDorothyDay_test0 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'own', u'onli', u'then', u'alway', u'now', u'whi', u'even', u'steadi']
+finished runningIntegralYoga_test11 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'illeg', u'more', u'other', u'not', u'long', u'marin', u'few', u'much', u'last', u'also']
+finished runningSeaShepherds_test1 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'then', u'good', u'here', u'just', u'whi', u'even', 'so', u'how']
+finished runningIntegralYoga_test1 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'great', u'when', u'unto', 'so', u'such', u'now', u'same', u'also', u'even']
+finished runningWBC_test3 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', 'so', u'when', u'poor', u'also', u'more', u'great', u'other', u'onli', u'mani']
+finished runningDorothyDay_test4 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'spiritu', u'human', u'such', u'onli', u'physic', u'mani', u'just', u'univers', u'verili']
+finished runningBahai_test7 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'then', u'spiritu', u'when', 'so', u'more', u'even', u'onli', u'veri', u'great']
+finished runningIntegralYoga_test8 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'other', u'now', u'more', u'then', u'unto', 'so', u'most', u'onli']
+finished runningWBC_test8 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'thi', u'now', u'when', u'last', u'then', 'so', u'great', u'even', u'also']
+finished runningWBC_test7 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'present', 'as', u'far', u'now', u'consist', u'industri', u'doesnt', u'social', u'when']
+finished runningDorothyDay_test8 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', 'so', u'new', u'other', u'same', u'such', u'human', u'how', u'mani']
+finished runningBahai_test3 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'spiritu', u'even', u'then', 'so', u'how', u'more', u'also', u'own']
+finished runningIntegralYoga_test4 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', 'so', u'other', u'too', u'onli', u'good', u'poor', u'where', u'more']
+finished runningDorothyDay_test1 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'then', u'when', u'peac', u'even', u'good', u'pain', u'own', u'better', u'more']
+finished runningIntegralYoga_test10 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'now', u'when', 'so', u'danish', u'fish', u'more', u'just', u'mani', u'even']
+finished runningSeaShepherds_test2 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'whi', u'same', u'onli', u'other', u'even', u'happi', u'better', u'best', u'differ']
+finished runningIntegralYoga_test0 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'great', u'even', 'so', u'unto', u'now', u'also', u'own', u'other']
+finished runningWBC_test0 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', 'so', u'when', u'onli', u'poor', u'other', u'more', u'much', u'where', u'how']
+finished runningDorothyDay_test5 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'human', u'not', u'long', u'racial', u'other', u'even', u'same', 'so', u'onc', u'own']
+finished runningBahai_test6 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'now', u'unto', u'great', 'so', u'such', u'more', u'veri', u'even']
+finished runningWBC_test9 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', 'so', u'when', u'unto', u'then', u'onli', u'great', u'even', u'other', u'more']
+finished runningWBC_test4 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'human', u'other', u'new', u'strong', u'when', u'more', u'spiritu', u'sick', u'most']
+finished runningBahai_test2 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', 'so', u'whi', u'also', u'more', u'same', u'onli', u'entir', u'then']
+finished runningIntegralYoga_test7 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'intern', u'univers', u'human', u'not', u'most', u'ago', u'alway', u'spiritu', u'mani', u'how']
+finished runningBahai_test9 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'unto', u'how', 'so', u'even', u'such', u'great', u'now', u'then']
+finished runningWBC_test10 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'illeg', u'costa', u'rican', u'japanes', u'now', u'also', u'more', u'southern', u'intern']
+finished runningSeaShepherds_test3 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'then', u'when', 'so', u'mani', u'even', u'onli', u'how', u'alway', u'true']
+finished runningIntegralYoga_test3 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'thi', 'so', u'such', u'even', u'now', u'then', u'onli', u'unto']
+finished runningWBC_test1 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', 'so', u'mani', u'more', u'onli', u'great', u'where', u'much', u'poor']
+finished runningDorothyDay_test2 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'human', u'not', u'when', u'good', u'ration', u'spiritu', u'evil', 'so', u'intellectu', u'most']
+finished runningBahai_test5 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'even', 'so', u'now', u'how', u'then', u'also', u'more', u'where']
+finished runningWBC_test5 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'more', 'so', u'when', u'good', u'onli', u'how', u'now', u'poor', u'most']
+finished runningDorothyDay_test6 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'when', u'not', u'how', u'univers', u'other', u'human', 'so', u'well', u'such', u'most']
+finished runningBahai_test1 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'then', u'spiritu', u'own', 'so', u'true', u'onli', u'other', u'good']
+finished runningIntegralYoga_test6 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'human', u'poor', u'spiritu', u'great', u'when', u'other', u'better', 'so', u'new']
+finished runningBahai_test8 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'how', u'when', u'spiritu', u'much', u'even', u'littl', u'well', u'more', u'other']
+finished runningIntegralYoga_test2 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', 'so', u'onli', u'here', u'now', u'good', u'littl', u'social', u'other', u'where']
+finished runningDorothyDay_test3 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'same', u'not', u'new', u'human', u'spiritu', u'true', u'more', u'how', u'own', u'first']
+finished runningBahai_test4 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'fish', u'when', u'not', u'danish', u'other', u'more', u'now', u'most', u'new', u'whale']
+finished runningSeaShepherds_test0 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'other', 'so', u'now', u'more', u'dead', u'onli', u'great', u'own']
+finished runningWBC_test2 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', 'so', u'when', u'good', u'mani', u'how', u'onli', u'alway', u'too', u'littl']
+finished runningDorothyDay_test7 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'other', u'when', u'more', u'same', u'even', u'also', u'new', u'onli', u'togeth']
+finished runningBahai_test0 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'then', u'when', u'alway', u'how', u'more', u'here', u'other', u'differ', u'even']
+finished runningIntegralYoga_test9 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'when', u'last', u'now', u'where', u'great', u'even', u'then', 'so', u'more']
+finished runningWBC_test6 in 1.55876016617 seconds
+%%%%
+USING ADJADV KEYWORDS
+[u'not', u'then', u'when', u'physic', u'same', u'mani', u'good', u'alway', u'onli', 'so']
+finished runningIntegralYoga_test5 in 1.55876016617 seconds
+
+
+%%%%%%
+runID: LWD1GG
+%%%%%%
+%%%%
+USING TFIDF KEYWORDS
+['we', u'you', u'our', u'love', 'my', u'bread', u'poverti', u'tri', u'get', u'worker']
+finished runningDorothyDay_test0 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'mind', u'yoga', 'we', u'medit', u'want', u'surrend', u'our']
+finished runningIntegralYoga_test11 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'whale', u'codecerror', u'shepherd', u'save', 'we', u'illeg', u'whaler', u'diminish', u'marineland', u'japanes']
+finished runningSeaShepherds_test1 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'sri', 'we', u'swami', u'spiritu', 'me', u'spirit', u'mind']
+finished runningIntegralYoga_test1 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'lord', u'unto', u'you', u'thi', 'me', u'thou', u'hell', u'say']
+finished runningWBC_test3 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'our', 'my', u'too', u'worker', u'love', u'you', u'want', 'me', u'say']
+finished runningDorothyDay_test4 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'courag', u'you', 'we', u'your', u'virus', u'fear', u'uniti', u'prejudic', u'must']
+finished runningBahai_test7 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', 'om', u'say', u'whi', 'we', u'everyth', u'get', u'mind']
+finished runningIntegralYoga_test8 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', 's', u'babylon', u'thou', u'unto', 'my', 'we', u'sin', 'ie']
+finished runningWBC_test8 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', 'we', 's', u'you', 'my', u'christ', 'me', u'wit']
+finished runningWBC_test7 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'matern', u'cathol', u'job', u'care', u'sociolog', u'diocesan', u'thi', u'dioces', u'tell']
+finished runningDorothyDay_test8 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'color', 'we', u'skin', 'my', u'adam', u'fate', u'decre']
+finished runningBahai_test3 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', 'we', u'your', u'our', u'mind', u'yoga', u'everyth', u'should', u'happi']
+finished runningIntegralYoga_test4 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'want', u'love', u'peter', u'farm', u'our', u'maurin', u'tri', u'too']
+finished runningDorothyDay_test1 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', 'we', u'breath', u'prana', u'gurudev', u'fruit', u'pranayama', u'inhal']
+finished runningIntegralYoga_test10 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'whale', u'seaworld', 'we', u'hsus', u'danish', u'seal', u'slaughter', u'dolphin', u'fish']
+finished runningSeaShepherds_test2 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', 'we', u'happi', u'want', u'mind', u'everyth', u'better', u'our']
+finished runningIntegralYoga_test0 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', 's', u'god', u'you', 'ye', u'your', u'wbc', u'hath']
+finished runningWBC_test0 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'priest', u'our', u'get', u'you', u'talk', u'room', u'novena', u'your']
+finished runningDorothyDay_test5 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'perfect', 'we', u'skin', u'truth', u'man', u'realiti', u'everyon', u'divin', u'color']
+finished runningBahai_test6 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'unto', u'shall', 'we', u'hell', u'god', u'esau', 's', u'savor', 'me']
+finished runningWBC_test9 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'unto', 's', u'shall', u'say', u'sin', u'thou', u'thi', 'my', u'lord']
+finished runningWBC_test4 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'color', 'my', u'parent', u'consent', u'uniti', u'equal', 'we', u'sex', u'women']
+finished runningBahai_test2 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'yoga', 'we', u'mind', u'your', u'our', u'heaven', u'self', u'happi']
+finished runningIntegralYoga_test7 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'fear', u'hath', u'evil', 'ye', u'spirit', 'we', u'thing', u'your', u'god']
+finished runningBahai_test9 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'unto', u'fag', u'balaam', u'gibeah', u'shall', u'fagenabl', u'hath', u'noah', u'israel']
+finished runningWBC_test10 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', 'we', u'costa', u'shepherd', u'rican', u'coco', 'me', u'illeg', u'galapago', u'crew']
+finished runningSeaShepherds_test3 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'mind', u'medit', u'yoga', u'your', 'we', u'want', u'whi', u'asana']
+finished runningIntegralYoga_test3 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'jeroboam', 's', u'you', u'hell', u'unto', u'lord', u'god', u'fag']
+finished runningWBC_test1 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'get', u'our', u'say', 'fr', u'love', u'tri', 'me', u'communism']
+finished runningDorothyDay_test2 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'spirit', u'perfect', u'love', 'my', u'imperfect', u'weak', u'conting', u'creator', u'mind']
+finished runningBahai_test5 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', 'we', u'you', 's', u'baxter', 'ie', u'fag', 'me', u'unto']
+finished runningWBC_test5 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'our', u'get', u'labor', u'too', u'say', u'you', u'priest', u'factori']
+finished runningDorothyDay_test6 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'prophet', u'uniti', u'opinion', u'muhammad', u'christ', u'mose', u'divin', u'realiti', u'wire']
+finished runningBahai_test1 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'mind', u'yoga', 'we', u'clean', u'medit', u'breath', u'want']
+finished runningIntegralYoga_test6 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'sick', u'spank', u'punish', u'heal', u'your', u'excit', u'worship', u'craft', u'let']
+finished runningBahai_test8 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', 'me', 'my', 'we', u'arjuna', u'krishna', u'you', u'conch', u'yoga', u'mind']
+finished runningIntegralYoga_test2 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'labor', u'worker', u'our', u'dont', u'strike', 'me', u'get', u'manual', u'chapter']
+finished runningDorothyDay_test3 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'prejudic', 'we', u'your', u'our', u'realiti', u'faith', u'marriag', 'p']
+finished runningBahai_test4 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'greenpeac', u'your', u'seal', u'illeg', 'we', u'net', u'codecerror', u'dolphin', u'you', u'seaworld']
+finished runningSeaShepherds_test0 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'unto', u'lord', 'ie', 'ye', u'shall', u'amalek', u'thou', 'me', u'your']
+finished runningWBC_test2 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'our', u'you', u'worker', 'my', u'talk', u'thing', u'love', u'maurin', u'unemploy']
+finished runningDorothyDay_test7 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'thi', u'thou', u'thee', 'my', u'mankind', 'me', 'we', u'uniti', u'prophet']
+finished runningBahai_test0 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'guru', u'want', u'yoga', u'yogi', 'we', u'nice', u'feel']
+finished runningIntegralYoga_test9 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', 's', u'thee', u'god', u'hath', u'nebuchadnezzar', u'wit', u'lord']
+finished runningWBC_test6 in 1.56582212448 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'mantra', u'mind', u'yoga', 'we', u'hear', u'vibrat', u'hum']
+finished runningIntegralYoga_test5 in 1.56582212448 seconds
+
+
+%%%%%%
+runID: KW093C
+%%%%%%
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'communism', u'christ', u'picket', u'our', u'love', u'chapter', u'cathol', u'her']
+finished runningDorothyDay_test0 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'yoga', u'you', u'mind', u'your', u'feel', 'we', u'love', u'car', u'asana']
+finished runningIntegralYoga_test11 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'whale', u'codecerror', u'shepherd', u'costa', u'illeg', 'me', 'we', u'rican', u'coco', u'crew']
+finished runningSeaShepherds_test1 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'mind', u'medit', u'yoga', u'get', 'we', u'want', u'guru']
+finished runningIntegralYoga_test1 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', 's', u'thou', u'you', 'we', u'baxter', 'my', u'thi']
+finished runningWBC_test3 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'get', u'want', u'peter', u'maurin', u'love', u'chapter', u'farm', u'our']
+finished runningDorothyDay_test4 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'perfect', u'spank', u'punish', u'uniti', u'imagin', u'opinion', 'we', u'you', u'wire']
+finished runningBahai_test7 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'mind', u'self', u'yoga', u'know', 'we', u'yourself', u'everyth']
+finished runningIntegralYoga_test8 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'unto', u'shall', u'fag', u'sin', 'we', 'me', u'abomin', 's', u'god']
+finished runningWBC_test8 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', u'jeroboam', 's', 'ie', u'sodomit', u'esau', u'you', u'lord']
+finished runningWBC_test7 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'sharecropp', u'want', u'evict', '', u'tenant', u'relief', u'planter', u'cotton', u'room']
+finished runningDorothyDay_test8 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'prejudic', u'evil', u'want', u'fate', u'realiti', u'must', u'decre', u'poverti', 'we']
+finished runningBahai_test3 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'happi', 'we', u'yoga', u'yogavill', u'want', u'dedic', u'should']
+finished runningIntegralYoga_test4 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'our', u'you', 'my', u'bread', u'too', u'eat', u'christ', u'love', u'get']
+finished runningDorothyDay_test1 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'mind', u'yoga', u'your', 'we', u'arjuna', u'fruit', u'want', u'krishna']
+finished runningIntegralYoga_test10 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'whale', u'seaworld', 'we', u'hsus', u'orca', u'seal', u'slaughter', u'fish', u'marineland']
+finished runningSeaShepherds_test2 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', 'we', u'you', 'me', u'your', 'my', u'pain', u'our', u'everyth', u'mind']
+finished runningIntegralYoga_test0 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', u'lord', u'you', u'hath', u'amalek', u'hell', u'god', 'me']
+finished runningWBC_test0 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'labor', u'our', u'worker', u'you', u'manual', u'get', u'novena', u'unemploy', u'poverti']
+finished runningDorothyDay_test5 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'thi', u'thou', 'my', 'me', u'thee', 'we', u'heaven', u'hath', u'thing']
+finished runningBahai_test6 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', u'hath', 'ie', 'we', 's', 'my', u'thou', u'god']
+finished runningWBC_test9 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', 'we', u'unto', 's', u'lord', u'say', u'preach', u'wbc', u'judg']
+finished runningWBC_test4 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'sex', u'equal', u'women', u'tree', u'mankind', u'talk', u'gender', u'will', u'bounti']
+finished runningBahai_test2 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'want', 'we', 'me', u'yourself', u'happi', u'get', u'anyth']
+finished runningIntegralYoga_test7 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'spirit', u'skin', u'prejudic', u'you', u'color', u'virus', 'we', 'p', u'garden']
+finished runningBahai_test9 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'you', 's', u'shall', u'christ', 'me', u'satan', u'raid', u'topeka', u'unto']
+finished runningWBC_test10 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'greenpeac', u'your', u'seal', u'you', u'illeg', u'codecerror', u'shepherd', u'dolphin', u'net']
+finished runningSeaShepherds_test3 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'yoga', u'mind', 'om', 'we', u'your', u'whi', u'sutra', u'medit']
+finished runningIntegralYoga_test3 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', 's', u'unto', u'thee', u'wit', u'belov', u'sermon', u'god', u'say']
+finished runningWBC_test1 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'our', u'get', 'fr', u'strike', 'me', 'my', u'talk', u'too']
+finished runningDorothyDay_test2 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'sick', u'color', 'my', u'you', u'heal', u'excit', 'we', u'nerv', u'fill']
+finished runningBahai_test5 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', u'fag', 's', u'god', u'sermon', 'ie', u'wit', u'say']
+finished runningWBC_test5 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'our', u'you', 'me', u'dont', u'worker', u'get', u'tri', u'peter', u'say']
+finished runningDorothyDay_test6 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', 'we', u'realiti', u'faith', u'love', u'consent', u'parent', u'our', 'p', u'uniti']
+finished runningBahai_test1 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', 'we', u'mind', u'mantra', u'breath', u'prana', u'get', u'feel']
+finished runningIntegralYoga_test6 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'courag', 'we', 'ye', u'uniti', u'skin', u'your', u'heal', 'p', u'you']
+finished runningBahai_test8 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', 'we', u'yoga', u'mind', u'everyth', u'our', u'want', u'let']
+finished runningIntegralYoga_test2 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'worker', u'our', u'talk', u'labor', 'my', u'factori', u'say', u'love', u'priest']
+finished runningDorothyDay_test3 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', u'your', u'fear', 'my', u'marriag', 'we', u'our', u'friendship', u'coupl']
+finished runningBahai_test4 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'shepherd', u'codecerror', u'danish', u'whale', 'we', u'dog', u'illeg', u'galapago', u'vaquita', u'dolphin']
+finished runningSeaShepherds_test0 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', u'unto', 's', u'god', 'ye', u'your', u'lord', u'you', u'hath']
+finished runningWBC_test2 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['we', u'you', u'worker', u'priest', u'our', u'get', u'your', u'talk', 'me', u'say']
+finished runningDorothyDay_test7 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'prophet', u'spirit', u'muhammad', u'divin', u'worship', u'christ', u'mose', u'god', u'realiti']
+finished runningBahai_test0 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'you', 'we', u'your', u'sri', u'yoga', u'our', u'swami', u'spiritu', u'yogi']
+finished runningIntegralYoga_test9 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+['', u'shall', 'ye', u'babylon', u'your', u'you', u'unto', 's', u'jew', u'jer']
+finished runningWBC_test6 in 1.99120092392 seconds
+%%%%
+USING TFIDF KEYWORDS
+[u'codecerror', u'yoga', u'you', u'mind', 'we', u'your', u'want', u'asana', u'medit', u'spiritu']
+finished runningIntegralYoga_test5 in 1.99120092392 seconds
+
+
