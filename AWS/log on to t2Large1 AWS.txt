@@ -22,6 +22,23 @@ ssh -i AWS/DSI-Religion-t2Large1.pem.txt ec2-user@52.87.228.121
 ###RUN THIS FROM YOUR COMPUTER TERMINAL NOT AWS TERMINAL
 scp -i AWS/DSI-Religion-t2Large1.pem.txt {full file path on your computer} ec2-user@52.87.228.121:~/
 
+#TEST WIKI ARTICLE
+#scp -i AWS/DSI-Religion-t2Large1.pem.txt /Volumes/SethBoxMini/Silverchair/A1-taxonomy-project/wikipedia/json-wikipedia/wiki-articles/-_-_-album-.txt ec2-user@52.87.228.121:~/wiki-articles/
+
+#ALL THE WIKI ARTICLES
+###find $directory -type f -name '*' -exec mv {} $directory2/. \;
+#TO LIST ALL FILENAMES: 
+	#find wiki-IDF/wiki-i15-30k300 -type f -name '*' -exec 
+#TO MOVE THEM ALL TO EC2
+#find /Volumes/SethBoxMini/Silverchair/A1-taxonomy-project/wikipedia/json-wikipedia/wiki-articles -type f -name '*' -exec scp -i AWS/DSI-Religion-t2Large1.pem.txt {} ec2-user@52.87.228.121:~/wiki-articles/ \;
+
+find /Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/wiki-IDF/wiki-articles-30k -type f -name '*' -exec scp -i AWS/DSI-Religion-t2Large1.pem.txt {} ec2-user@52.87.228.121:~/wiki-articles-30k/ \;
+
+##### NEXT WE RUN THE IDF
+scp -i AWS/DSI-Religion-t2Large1.pem.txt /Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017/wiki-IDF/pythonIDF.py ec2-user@52.87.228.121:~/
+
+# and from the EC2 terminal:
+python pythonIDF.py wiki-articles-30k 5
 
 ##### TO MAKE A NEW SCREEN, etc. (for leaving a job running while you log off)
 # first time just type

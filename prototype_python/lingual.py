@@ -235,6 +235,7 @@ class lingualObject(object):
                         if tag[1] in nounList:
                             nounFlag=True
             self.judgements[fileName]=judgementList
+            
             #Create tokens
             #Convert all text to lower case
             textList=[word.lower() for word in tokenList]
