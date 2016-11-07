@@ -478,6 +478,36 @@ class lingualObject(object):
             ##
             self.keywords = freqit.iloc[startCount:wordCount+startCount].index.tolist()
 
+        elif method=='manual':
+            # get all tokens for the fileList
+            all_words = []
+            for toke in self.tokens.values():
+                all_words = all_words + toke
+
+            ## create FreqDF with word frequencies from fileList
+            freq = FreqDist(all_words) 
+            columns_obj = ["term", "freq"]
+            freqDF = pd.DataFrame(freq.items(), columns=columns_obj) # convert it to a data frame
+            freqDF = freqDF.set_index('term')
+            
+            ## merge freqDF with idf data frame
+            freqit = freqDF.join(self.idf[['idf', 'logidf']])
+            # replace null values with max
+            maxidf = max(freqit['idf'].dropna())
+            maxlogidf = max(freqit['logidf'].dropna())
+            freqit.loc[pd.isnull(freqit['idf']), 'idf'] = maxidf
+            freqit.loc[pd.isnull(freqit['logidf']), 'logidf'] = maxlogidf
+
+            ## create tfidf columns
+            freqit['tfidf'] = freqit['freq'] * freqit['idf']
+            freqit['logtfidf'] = freqit['freq'] * freqit['logidf']
+
+            ## order by tfidf weight
+            freqit = freqit.sort_values(by='tfidf', ascending=False) 
+
+            ##
+            self.keywords = freqit.iloc[startCount:wordCount+startCount].index.tolist()
+
         #Judgement method
         elif method=='judgement':
             posList=nounList+tagFilterList
