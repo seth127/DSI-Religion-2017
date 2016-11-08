@@ -43,6 +43,8 @@ tagger = PerceptronTagger()
 #Get sentimentWord dict and remove duplicates. Store in lists
 posFilePath='./refData/positive-words.txt'
 negFilePath='./refData/negative-words.txt'
+#Get manual keywords
+manualKeywordFilePath='./refData/manualKeywords.csv'
 #unicode doesn't work (is this in Python 2?!)
 posWords=list(set(unicode(open(posFilePath).read(), "utf-8", errors="ignore")))
 negWords=list(set(unicode(open(negFilePath).read(), "utf-8", errors="ignore")))
@@ -189,6 +191,11 @@ class lingualObject(object):
         self.tokens={}
         self.sentences={}
         self.judgements={}
+
+        #set the groupId
+        path = fileList[0]
+        path = path.split('/')
+        self.group = path[2]
         
         #extract raw text from each file in fileList and create tokens
         for fileName in fileList:   
@@ -479,34 +486,24 @@ class lingualObject(object):
             self.keywords = freqit.iloc[startCount:wordCount+startCount].index.tolist()
 
         elif method=='manual':
-            # get all tokens for the fileList
-            all_words = []
-            for toke in self.tokens.values():
-                all_words = all_words + toke
+            # Pull data from the csv file
+            #filepath = "/Users/samanthagarofalo/Documents/Data Science/Capstone/Keywords.csv"
 
-            ## create FreqDF with word frequencies from fileList
-            freq = FreqDist(all_words) 
-            columns_obj = ["term", "freq"]
-            freqDF = pd.DataFrame(freq.items(), columns=columns_obj) # convert it to a data frame
-            freqDF = freqDF.set_index('term')
-            
-            ## merge freqDF with idf data frame
-            freqit = freqDF.join(self.idf[['idf', 'logidf']])
-            # replace null values with max
-            maxidf = max(freqit['idf'].dropna())
-            maxlogidf = max(freqit['logidf'].dropna())
-            freqit.loc[pd.isnull(freqit['idf']), 'idf'] = maxidf
-            freqit.loc[pd.isnull(freqit['logidf']), 'logidf'] = maxlogidf
+            # Create dataframe with manually entered keywords
+            targetDF = pd.read_csv(manualKeywordFilePath)
 
-            ## create tfidf columns
-            freqit['tfidf'] = freqit['freq'] * freqit['idf']
-            freqit['logtfidf'] = freqit['freq'] * freqit['logidf']
+            # User input to select the group that we are looking at keywords for
+            #group = input("Which group would you like to look at? ")
+            try:
+                keywords = list(targetDF.Keywords[targetDF['Group'] == self.group])
+            except:
+                keywords = ['this didnt work']
 
-            ## order by tfidf weight
-            freqit = freqit.sort_values(by='tfidf', ascending=False) 
+            for element in keywords:
+                keywords = element.split(' ')
+                
+            self.keywords = keywords
 
-            ##
-            self.keywords = freqit.iloc[startCount:wordCount+startCount].index.tolist()
 
         #Judgement method
         elif method=='judgement':

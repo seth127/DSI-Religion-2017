@@ -14,6 +14,10 @@ conda env create -f py27env.yml
 #however, you often run into some errors about the C compiler, so you have to:
 
 ## install homebrew: http://brew.sh
+
+#switch into the new environment
+source activate py27 
+
 #then run
 brew install homebrew/science/igraph
 brew install pkg-config
