@@ -30,7 +30,9 @@ import random
 import math
 import igraph
 import scipy.spatial.distance as ssd
-
+from nltk.tag import pos_tag
+from nltk.tokenize import word_tokenize
+from collections import Counter
 
 #Local variable assignment
 
@@ -782,3 +784,22 @@ class lingualObject(object):
         #Get mean eigenvector centrality for words in target list
         meanEVC=np.mean([ev_centrality[i] for i in range(len(self.DSM.keys())) if self.DSM.keys()[i] in self.keywords])
         return(meanEVC)
+###################
+### Pronoun Count##
+###################
+    def get_pronouns(self,text):
+        pronouns= []
+        all_words = []
+            for toke in self.tokens.values():
+            all_words = all_words + toke
+        tokens = nltk.word_tokenize(all_words.lower())
+        text = nltk.Text(tokens)
+        tags = nltk.pos_tag(text)
+        for i in range(1,len(text)):
+            if tags[i][1] == 'PRP':
+                pronouns.append(tags[i][0])
+            elif tags[i][1] == 'PRP$':
+                pronouns.append(tags[i][0])
+        pronouns = (Counter(pronouns))
+
+
