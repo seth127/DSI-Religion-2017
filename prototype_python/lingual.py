@@ -482,8 +482,15 @@ class lingualObject(object):
             ## order by tfidf weight
             freqit = freqit.sort_values(by='tfidf', ascending=False) 
 
+            #filter out codecerror
+            keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
+            keywords = []
+            for word in keyslist:
+                if word != 'codecerror':
+                    keywords = keywords + [word]
+
             ##
-            self.keywords = freqit.iloc[startCount:wordCount+startCount].index.tolist()
+            self.keywords = keywords
 
         elif method=='manual':
             # Pull data from the csv file
@@ -496,13 +503,20 @@ class lingualObject(object):
             #group = input("Which group would you like to look at? ")
             try:
                 keywords = list(targetDF.Keywords[targetDF['Group'] == self.group])
+                #print(keywords)
             except:
                 keywords = ['this didnt work']
+                print(keywords)
 
             for element in keywords:
                 keywords = element.split(' ')
-                
-            self.keywords = keywords
+
+            if len(keywords) == 0:
+                print('%%%%\nNO KEYWORDS FOUND: using tfidf by default\n%%%%')
+                self.setKeywords(method='tfidf',wordCount=wordCount,startCount=startCount)
+
+            else:
+                self.keywords = keywords
 
 
         #Judgement method
