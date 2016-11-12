@@ -55,3 +55,7 @@ ggplot(DF, aes(x=judgementCount, y =groupRank)) + geom_point()
 ggplot(DF, aes(x=judgementFrac, y =groupRank)) + geom_point()
 ggplot(DF, aes(x=avgSD, y =groupRank)) + geom_point()
 ggplot(DF, aes(x=avgEVC, y =groupRank)) + geom_point()
+
+
+#### COMPARE TO NEW TFIDF METHODS
+newSignalDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)

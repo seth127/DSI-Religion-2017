@@ -486,7 +486,7 @@ class lingualObject(object):
             keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
             keywords = []
             for word in keyslist:
-                if word != 'codecerror':
+                if (word != 'codecerror') & (word != ''):
                     keywords = keywords + [word]
 
             ##

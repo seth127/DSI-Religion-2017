@@ -11,6 +11,14 @@ Created on Thu Jun  2 15:23:11 2016
 
 @author: nmvenuti
 """
+
+################
+#
+# 1) need to make this take in all the docs and split into training and testing
+#
+#
+###############3
+
 import time
 start=time.time()
 import sys, os
@@ -93,14 +101,15 @@ def textAnalysis(paramList):
     #loTest.setKeywords('adjAdv',targetWordCount,startCount)
 
     if sys.argv[1] != 'auto':
-        if sys.argv[5] == 'tfidf':
-            print('%%%%\nUSING TFIDF KEYWORDS')
-            loTest.setKeywords('tfidf',targetWordCount,startCount)
-            print(loTest.keywords)
-    else:
-        print('%%%%\nUSING ADJADV KEYWORDS')
-        loTest.setKeywords('adjAdv',targetWordCount,startCount)
+        print('%%%%\nUSING ' + sys.argv[5] + ' KEYWORDS')
+        loTest.setKeywords(sys.argv[5],targetWordCount,startCount)
         print(loTest.keywords)
+    else:
+        print('%%%%\nUSING TFIDF (auto) KEYWORDS')
+        loTest.setKeywords('tfidf',targetWordCount,startCount)
+        print(loTest.keywords)
+
+    keywordPicks = ', '.join(loTest.keywords)
 
     #######################            
     ###Semantic analysis###
@@ -136,7 +145,7 @@ def textAnalysis(paramList):
     sys.stdout.flush()
 
     #Append outputs to masterOutput
-    return(['_'.join(groupId)]+[len(subFileList),timeRun]+sentimentList+judgementAvg+[avgSD]+[avgEVC])   
+    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+judgementAvg+[avgSD]+[avgEVC])   
 
 def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
@@ -144,23 +153,23 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF('./data_dsicap/', bin=5, tt='test') ####################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/data_dsicap/', bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
     
+    #print randomly generated ID for later reference
+    print('%%%%%%\nrunID: ' + runID + '\n%%%%%%')
+    
+    #Write file splits to runDirectory
+    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
+
+    # create fileList and subgroupList
     fileList=fileDF.values.tolist()
 
     fileList=[[fileList[i][0],fileList[i][1],fileList[i][2]] for i in range(len(fileList))]
     
     #Get set of subgroups
     subgroupList=[ list(y) for y in set((x[0],x[2]) for x in fileList) ]
+    print('$$$ subgroupList $$$')
     print(subgroupList)
-
-    #Make output directory and print randomly generated ID for later reference
-    #outputDirectory=runDirectory
-    #os.makedirs(outputDirectory)
-    print('%%%%%%\nrunID: ' + runID + '\n%%%%%%')
-    
-    #Print file splits to runDirectory
-    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
     
     
     ################################
@@ -173,11 +182,10 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     #Run calculation 
     masterOutput=[textAnalysis(x) for x in paramList]  
     #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
-    #Output that file 
-    outputDF.to_csv(runDirectory+'signalOutput' + paramPath + '-' + runID + '.csv') #### used to save it
+    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
+    #Write that file for reference
+    outputDF.to_csv(runDirectory+'signalOutput' + paramPath + '-' + runID + '.csv') 
     #print(outputDF)
-    outputDF['groupId'].replace('train','test1', regex=True, inplace=True) 
     return outputDF
 
 
@@ -243,7 +251,8 @@ if __name__ == '__main__':
     # define the random ID for this run
     runID = id_generator()
 
-    newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    signalDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
@@ -257,26 +266,27 @@ if __name__ == '__main__':
 
     startTime=time.time()
 
-    #Get data frame for each cut
-    #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-    #signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-    signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/' + paramPath + '/run0/masterOutput.csv', index_col=0)
 
-    ### MAKES THEM ALL TRAINING
-    signalDF['groupId'].replace('test','train1', regex=True, inplace=True) 
+#######################
+### THE OLD WAY
+#######################
 
-    ######## NOW COMINE WITH NEW TESTING DF (signalDFL and newTestDF)
-    signalDF = signalDF.append(newTestDF)
+#    #Get data frame for each cut
+#    #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
+#    #signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
+#    signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/' + paramPath + '/run0/masterOutput.csv', index_col=0)
+#
+#    ### MAKES THEM ALL TRAINING
+#    signalDF['groupId'].replace('test','train1', regex=True, inplace=True) 
+#
+#    ######## NOW COMINE WITH NEW TESTING DF (signalDFL and newTestDF)
+#    signalDF = signalDF.append(newTestDF)
 
-    print('tests pre-addRank')
-    print(signalDF[signalDF['groupId'].str.contains("test")].shape)
+#######################
+#######################
 
     #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
     signalDF=addRank(signalDF)
-
-    print('tests post-addRank pre-setup')
-    print(signalDF[signalDF['groupId'].str.contains("test")].shape)
-
 
     #Set up modeling parameters
     xList=['perPos','perNeg','perPosDoc','perNegDoc','judgementFrac','judgementCount','avgSD', 'avgEVC']
@@ -284,10 +294,6 @@ if __name__ == '__main__':
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
     signalDF=signalDF.dropna()
-
-    print('tests post-setup')
-    print(signalDF[signalDF['groupId'].str.contains("test")].shape)
-
 
     #Set up test train splits
     trainIndex=[x for x in signalDF['groupId'] if 'train' in x]
