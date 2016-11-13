@@ -1,18 +1,27 @@
 setwd("~/Documents/DSI/Capstone/DSI-Religion-2017")
 library(ggplot2)
 
-signalDF <- read.csv('./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv', stringsAsFactors = F)
+aaDF <- read.csv('./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv', stringsAsFactors = F)
 
-for (i in 1:nrow(signalDF)) {
-  signalDF$groupName[i] <- unlist(strsplit(signalDF$groupId[i], "_"))[1]
+for (i in 1:nrow(aaDF)) {
+  aaDF$groupName[i] <- unlist(strsplit(aaDF$groupId[i], "_"))[1]
 }
 
 #### COMPARE TO NEW TFIDF METHODS
-newSignalDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
+idfDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
 
-for (i in 1:nrow(newSignalDF)) {
-  newSignalDF$groupName[i] <- unlist(strsplit(newSignalDF$groupId[i], "_"))[1]
+for (i in 1:nrow(idfDF)) {
+  idfDF$groupName[i] <- unlist(strsplit(idfDF$groupId[i], "_"))[1]
 }
+
+#### NoPro TFIDF (pronouns removed)
+npDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv', stringsAsFactors = F)
+
+for (i in 1:nrow(npDF)) {
+  npDF$groupName[i] <- unlist(strsplit(npDF$groupId[i], "_"))[1]
+}
+
+
 
 ### RANKINGS
 ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
@@ -20,100 +29,76 @@ ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyD
                                 'IntegralYoga','Bahai','ISIS'), 
                     groupRank=c(1,2,3,4,4,4,6,7,8,4,2,7,6,1))
 
-ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-               'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai'), 
-               groupRank=c(1,2,3,4,4,4,6,7,8,4,2,7,6))
 
 # add rankings
-DF <- merge(signalDF, ranks, by = "groupName")
-nDF <- merge(newSignalDF, ranks, by = "groupName")
+aaDF <- merge(aaDF, ranks, by = "groupName")
+idfDF <- merge(idfDF, ranks, by = "groupName")
+npDF <- merge(npDF, ranks, by = "groupName")
 ## RANKINGS discrete
-DF$rankDiscrete <- as.factor(DF$groupRank)
-nDF$rankDiscrete <- as.factor(nDF$groupRank)
+aaDF$rankDiscrete <- as.factor(aaDF$groupRank)
+idfDF$rankDiscrete <- as.factor(idfDF$groupRank)
+npDF$rankDiscrete <- as.factor(npDF$groupRank)
 
-
+par(mfrow=c(1,2))
 ### BY GROUP
-ggplot(signalDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+ggplot(npDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
 
-ggplot(signalDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
-
+ggplot(aaDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+ggplot(npDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
 
 ## RANKINGS discrete
-ggplot(DF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("TF-IDF")
+ggplot(npDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("TF-IDF")
 
 
 ## RANKINGS continuous
 mid = 4
 ## zoomed in
-ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
+ggplot(npDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
 
 ## scaled to 0 and 1
-ggplot(DF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1) + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1) + ggtitle("AdjAdv")
 
 
 ##### OTHER VARIABLES
 ## perPos vs. perNeg ######DIFFERENCE!!!!
-ggplot(DF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+#PROBLEM!!! #ggplot(idfDF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
 
 ## Judgements ######DIFFERENCE!!!!
-ggplot(DF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
 
 ## Judgements by Group ######DIFFERENCE!!!!
-ggplot(DF, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
 
 ## Judgements by RANK ######Not really a difference...
-ggplot(DF, aes(x=judgementFrac, y =judgementCount, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
-
-#####RANK ON X AXIS
-ggplot(DF, aes(x=perPos, y =groupRank)) + geom_point() + ggtitle("AdjAdv")
-ggplot(DF, aes(x=judgementCount, y =groupRank)) + geom_point() + ggtitle("AdjAdv")
-ggplot(DF, aes(x=judgementFrac, y =groupRank)) + geom_point() + ggtitle("AdjAdv")
-ggplot(DF, aes(x=avgSD, y =groupRank)) + geom_point() + ggtitle("AdjAdv")
-ggplot(DF, aes(x=avgEVC, y =groupRank)) + geom_point() + ggtitle("AdjAdv")
-
-##########################################
-#### COMPARE TO NEW TFIDF METHODS
+ggplot(aaDF, aes(x=judgementFrac, y =judgementCount, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("AdjAdv")
+ggplot(idfDF, aes(x=judgementFrac, y =judgementCount, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
 
 
-### BY GROUP
-ggplot(newSignalDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+##### BOXPLOTS
+### ADJADV
+ggplot(aaDF, aes(x =rankDiscrete, y=perPos)) + geom_boxplot() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x =rankDiscrete, y=judgementCount)) + geom_boxplot() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x =rankDiscrete, y=judgementFrac)) + geom_boxplot() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("AdjAdv")
+ggplot(aaDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("AdjAdv")
 
-ggplot(newSignalDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+### TFIDF
+ggplot(idfDF, aes(x =rankDiscrete, y=perPos)) + geom_boxplot() + ggtitle("TF-IDF")
+ggplot(idfDF, aes(x =rankDiscrete, y=judgementCount)) + geom_boxplot() + ggtitle("TF-IDF")
+ggplot(idfDF, aes(x =rankDiscrete, y=judgementFrac)) + geom_boxplot() + ggtitle("TF-IDF")
+ggplot(idfDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("TF-IDF")
+ggplot(idfDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("TF-IDF")
 
-
-
-## RANKINGS discrete
-nDF$rankDiscrete <- as.factor(nDF$groupRank)
-ggplot(nDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("TF-IDF")
-
-
-
-## RANKINGS continuous
-mid = 4
-## zoomed in
-ggplot(nDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
-
-## scaled to 0 and 1
-ggplot(nDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1) + ggtitle("TF-IDF")
-
-
-##### OTHER VARIABLES
-## perPos vs. perNeg ######DIFFERENCE!!!!
-ggplot(nDF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
-
-## Judgements ######DIFFERENCE!!!!
-ggplot(nDF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
-
-## Judgements by Group ######DIFFERENCE!!!!
-ggplot(nDF, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
-
-## Judgements by RANK ######Not really a difference...
-ggplot(nDF, aes(x=judgementFrac, y =judgementCount, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
-
-#####RANK ON X AXIS
-ggplot(nDF, aes(x=perPos, y =groupRank)) + geom_point() + ggtitle("TF-IDF")
-ggplot(nDF, aes(x=judgementCount, y =groupRank)) + geom_point() + ggtitle("TF-IDF")
-ggplot(nDF, aes(x=judgementFrac, y =groupRank)) + geom_point() + ggtitle("TF-IDF")
-ggplot(nDF, aes(x=avgSD, y =groupRank)) + geom_point() + ggtitle("TF-IDF")
-ggplot(nDF, aes(x=avgEVC, y =groupRank)) + geom_point() + ggtitle("TF-IDF")
-
+### NoPro
+ggplot(npDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("NoPro")
+ggplot(npDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("NoPro")

@@ -109,7 +109,12 @@ def randomBin(groupList,rawFileList,runDirectory,validations,testSplit,groupSize
 
 def drop_pronouns(textList):
     #print(textList)
-    tags = tagger.tag(textList)
+    try:
+        tags = tagger.tag(textList)
+    except:
+        print("%%%%%%\n!!!!!!!!!!!\nTAGGER FAILED\n!!!!!!!!!!!\n%%%%%%")
+        print(textList)
+        return textList
     keep = []
     for i in range(0,len(textList)):
         if (tags[i][1] != 'PRP') & (tags[i][1] != 'PRP$'):

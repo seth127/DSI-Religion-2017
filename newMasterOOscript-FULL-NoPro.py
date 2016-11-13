@@ -21,10 +21,10 @@ Created on Thu Jun  2 15:23:11 2016
 
 import time
 start=time.time()
-BIGSTART = time.time()
 import sys, os
 
 os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
+
 #from joblib import Parallel, delayed
 #import multiprocessing as mp
 import os.path
@@ -107,7 +107,7 @@ def textAnalysis(paramList):
         print(loTest.keywords)
     else:
         print('%%%%\nUSING TFIDF (auto) KEYWORDS')
-        loTest.setKeywords('tfidf',targetWordCount,startCount)
+        loTest.setKeywords('tfidfNoPro',targetWordCount,startCount)
         print(loTest.keywords)
 
     keywordPicks = ', '.join(loTest.keywords)
@@ -154,7 +154,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF('./data_dsicap_FULL/', bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF('./data_dsicap_FULL/', bin=10, tt='tt')
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n%%%%%%')
@@ -204,6 +204,7 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
     
     groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
     
+
     signalDF['groupName']=signalDF['groupId'].map(lambda x: x.split('_')[0]) # splits the name off the groupID column value
     
     signalDF=signalDF.merge(groupRankDF, on='groupName')
@@ -350,6 +351,4 @@ if __name__ == '__main__':
     signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    BIGEND = time.time()
-    print('full process took '+str(BIGEND-BIGSTART)+' seconds')
     signalTestDF.to_csv(outputName)
