@@ -8,14 +8,17 @@ for (i in 1:nrow(aaDF)) {
 }
 
 #### COMPARE TO NEW TFIDF METHODS
-idfDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
+idfDF <- read.csv('./modelOutput/signalOutputcoco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
 
 for (i in 1:nrow(idfDF)) {
   idfDF$groupName[i] <- unlist(strsplit(idfDF$groupId[i], "_"))[1]
 }
 
 #### NoPro TFIDF (pronouns removed)
-npDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv', stringsAsFactors = F)
+# new groups included
+npDF <- read.csv('./modelOutput/signalOutputcoco_3_cv_3_netAng_30_sc_0-TBXLWF.csv', stringsAsFactors = F)
+# just old groups
+#npDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv', stringsAsFactors = F)
 
 for (i in 1:nrow(npDF)) {
   npDF$groupName[i] <- unlist(strsplit(npDF$groupId[i], "_"))[1]
@@ -39,11 +42,12 @@ aaDF$rankDiscrete <- as.factor(aaDF$groupRank)
 idfDF$rankDiscrete <- as.factor(idfDF$groupRank)
 npDF$rankDiscrete <- as.factor(npDF$groupRank)
 
-par(mfrow=c(1,2))
+#par(mfrow=c(1,2))
 ### BY GROUP
 ggplot(aaDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
 ggplot(idfDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
 ggplot(npDF, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+ggplot(npDF[npDF$groupName=='ISIS' | npDF$groupName=='WBC',], aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("ISIS vs. WBC")
 
 ggplot(aaDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
 ggplot(idfDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
