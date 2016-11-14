@@ -214,7 +214,8 @@ class lingualObject(object):
         self.tokens={}
         self.sentences={}
         self.judgements={}
-
+        self.pronoun_sentences={}
+        
         #set the groupId
         path = fileList[0]
         path = path.split('/')
@@ -273,11 +274,12 @@ class lingualObject(object):
                             nounFlag=True
                 #Check for Pronouns
                 for tag in taglist:
-                    if tag[1] == 'PRP':
-                        print(tag)
+                    if (tag[1] == 'PRP') | (tag[1] == 'PRP$'):
+                        pronoun_sentence_list.append(sent)
+                        break
 
             self.judgements[fileName]=judgementList
-            
+            self.pronoun_sentences[fileName] = pronoun_sentence_list
             #Create tokens
             #Convert all text to lower case
             textList=[word.lower() for word in tokenList]
