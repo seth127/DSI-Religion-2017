@@ -38,7 +38,7 @@ import pandas as pd
 from datetime import datetime
 sys.path.append('./prototype_python/')
 #import lingual as la
-import writeSignals as la ############################# THIS IS THE BIG CHANGE!!!!!
+import writeSignals_Pronoun as la ############################# THIS IS THE BIG CHANGE!!!!!
 import nltk
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
@@ -102,6 +102,9 @@ def textAnalysis(paramList):
 
     print('GETTING JUDGEMENTS')
     loTest.writeJudgements()
+
+    print('GETTING PRONOUN SENTENCES')
+    loTest.writePronounJudgements()
 
     #Get coco
     #loTest.getCoco(cocoWindow)

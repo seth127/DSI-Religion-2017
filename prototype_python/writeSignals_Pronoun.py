@@ -196,6 +196,9 @@ class lingualObject(object):
         judgements:
             Dictionary of judgements with filenames as keys and list of judgements as values
         '''
+
+        self.uniqueID = id_generator(3)
+        
         #Define parameters
         self.fileList=fileList       
         self.useStem=useStem
@@ -273,7 +276,7 @@ class lingualObject(object):
                         if tag[1] in nounList:
                             nounFlag=True
                 #Check for Pronouns
-                for tag in taglist:
+                for tag in tagList:
                     if (tag[1] == 'PRP') | (tag[1] == 'PRP$'):
                         pronoun_sentence_list.append(sent)
                         break
@@ -310,7 +313,7 @@ class lingualObject(object):
      ###########################
      ##Pronoun_Keyword Sentences#
      ############################
-     def get_pronoun_sentence_count( text, keywords, pronouns):
+    def get_pronoun_sentence_count( text, keywords, pronouns):
         keywords = self.keywords
         sent_keywords = []
         #for key in keywords:        
@@ -494,15 +497,15 @@ class lingualObject(object):
             #Create keywords based on startCount and wordCount
             #keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
             #print(keyRaw)
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
             # stem keywords
-            #keyStem=[stemmer.stem(word) for word in keyRaw] 
+            keyStem=[stemmer.stem(word) for word in keyRaw] 
             #print(keyStem)
 
-            #self.keywords = keyStem
+            self.keywords = keyStem
 
         elif method=='tfidf':
             # get all tokens for the fileList
@@ -539,9 +542,9 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            #self.keywords = keywords
+            self.keywords = keywords
             targetDF = freqit.ix[keywords]
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
@@ -587,9 +590,9 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            #self.keywords = keywords
+            self.keywords = keywords
             targetDF = freqit.ix[keywords]
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
@@ -792,7 +795,7 @@ class lingualObject(object):
                     [fileName,judgements] for fileName, judgements in self.judgements.items()
                 ], columns = ['fileName', 'judgements'])
 
-        judgementsSaveName = self.group + '-' + id_generator(3) + '-JUDGEMENTS.csv'
+        judgementsSaveName = self.group + '-' + self.uniqueID + '-JUDGEMENTS.csv'
         print(judgementsSaveName)
         jdf.to_csv(saveDir + judgementsSaveName)
 
@@ -803,18 +806,19 @@ class lingualObject(object):
             winners = []
             for sent in sentences:
                 sent_stems = [stemmer.stem(word) for word in nltk.word_tokenize(sent)]
+                if len(self.keywords) < 1:
+                    print("NO KEYWORDS. YOU SUCK.")
+                    break
                 for key in self.keywords:
                     if key in sent_stems:
                         winners.append(sent)
-                        print('$$$$\n' + key) ############# delete this
-                        print(sent + '\n$$$$') ############## delete this
                         break
             winner_dict[fileName] = winners           
         pdf = pd.DataFrame([
                     [fileName,winners] for fileName, winners in winner_dict.items()
                 ], columns = ['fileName', 'sentence'])
 
-        pronounsSaveName = self.group + '-' + id_generator(3) + '-PRONOUNS_SENT.csv'
+        pronounsSaveName = self.group + '-' + self.uniqueID + '-PRONOUNS_SENT.csv'
         print(pronounsSaveName)
         pdf.to_csv(saveDir + pronounsSaveName)
 
