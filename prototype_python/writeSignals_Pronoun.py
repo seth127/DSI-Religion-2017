@@ -215,7 +215,7 @@ class lingualObject(object):
         self.sentences={}
         self.judgements={}
         self.pronoun_sentences={}
-        
+
         #set the groupId
         path = fileList[0]
         path = path.split('/')
@@ -796,6 +796,27 @@ class lingualObject(object):
         print(judgementsSaveName)
         jdf.to_csv(saveDir + judgementsSaveName)
 
+
+    def writePronounJudgements(self):
+        winner_dict = {}
+        for fileName, sentences in self.pronoun_sentences.items():
+            winners = []
+            for sent in sentences:
+                sent_stems = [stemmer.stem(word) for word in nltk.word_tokenize(sent)]
+                for key in self.keywords:
+                    if key in sent_stems:
+                        winners.append(sent)
+                        print('$$$$\n' + key) ############# delete this
+                        print(sent + '\n$$$$') ############## delete this
+                        break
+            winner_dict[fileName] = winners           
+        pdf = pd.DataFrame([
+                    [fileName,winners] for fileName, winners in winner_dict.items()
+                ], columns = ['fileName', 'sentence'])
+
+        pronounsSaveName = self.group + '-' + id_generator(3) + '-PRONOUNS_SENT.csv'
+        print(pronounsSaveName)
+        pdf.to_csv(saveDir + pronounsSaveName)
 
     def getJudgements(self):
         '''
