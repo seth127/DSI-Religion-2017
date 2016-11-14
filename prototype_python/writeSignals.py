@@ -14,6 +14,14 @@ improve processing speeds and make analysis easier.
 ###Package import and local variable assignment###
 ##################################################
 
+saveDir = './sampleSignals/'
+
+#for generating id's for different test runs
+import random
+import string
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
 #Import packages
 import os
 import nltk
@@ -405,7 +413,7 @@ class lingualObject(object):
     #####################
     ###Set Up keywords###
     #####################
-    def setKeywords(self,method='adjAdv',wordCount=10,startCount=0):
+    def writeKeywords(self,method='adjAdv',wordCount=20,startCount=0):
         '''
         function to automatically assign keywords if manual ones have not been assigned
         
@@ -429,7 +437,7 @@ class lingualObject(object):
         '''
         #Save input values
         self.keywordCount=wordCount
-        self.keywordStar=startCount
+        self.keywordStart=startCount
         
   
         #Default to 'adjAdv'
@@ -459,16 +467,17 @@ class lingualObject(object):
             targetDF.sort(['count'],inplace=True,ascending=False)
             
             #Create keywords based on startCount and wordCount
-            ##self.keywords=list(targetDF['word'])[startCount:wordCount+startCount]
-
-                        ###
-            keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
+            #keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
             #print(keyRaw)
+            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            print(keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
-            keyStem=[stemmer.stem(word) for word in keyRaw] 
+            # stem keywords
+            #keyStem=[stemmer.stem(word) for word in keyRaw] 
             #print(keyStem)
 
-            self.keywords = keyStem
+            #self.keywords = keyStem
 
         elif method=='tfidf':
             # get all tokens for the fileList
@@ -505,7 +514,12 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            self.keywords = keywords
+            #self.keywords = keywords
+            targetDF = freqit.ix[keywords]
+            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            print(keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
+
 
         elif method=='tfidfNoPro':
             # get all tokens for the fileList
@@ -548,7 +562,11 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            self.keywords = keywords
+            #self.keywords = keywords
+            targetDF = freqit.ix[keywords]
+            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            print(keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
 
         elif method=='manual':
@@ -744,6 +762,16 @@ class lingualObject(object):
     ##########################################
     ###Get Judgement counts and percentages###
     ##########################################
+    def writeJudgements(self):
+        jdf = pd.DataFrame([
+                    [fileName,judgements] for fileName, judgements in self.judgements.items()
+                ], columns = ['fileName', 'judgements'])
+
+        judgementsSaveName = self.group + '-' + id_generator(3) + '-JUDGEMENTS.csv'
+        print(judgementsSaveName)
+        jdf.to_csv(saveDir + judgementsSaveName)
+
+
     def getJudgements(self):
         '''
         Function to estimate number of judgements and the percent of sentences
