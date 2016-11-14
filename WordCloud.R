@@ -43,3 +43,20 @@ wordcloud(words = BahaitfIdf$term, freq = BahaitfIdf$logtfidf, min.freq = 1,
 wordcloud(words = BahaiadAdv$word, freq = BahaiadAdv$count, min.freq = 1,
           max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
           colors = c("darkorange3", "royalblue4"))
+
+# Dorothy Day
+DaynoPro <- read.csv("DorothyDay-3AS-KEYWORDS-tfidfNoPro.csv")
+DaytfIdf <- read.csv("DorothyDay-2CD-KEYWORDS-tfidf.csv")
+DayadjAdv <- read.csv("DorothyDay-62Z-KEYWORDS-adjAdv.csv")
+
+wordcloud(words = DaynoPro$term, freq = DaynoPro$logtfidf, min.freq = 1,
+          max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
+          colors = c("darkorange3", "royalblue4"))
+
+wordcloud(words = DaytfIdf$term, freq = DaytfIdf$logtfidf, min.freq = 1,
+          max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
+          colors = c("darkorange3", "royalblue4"))
+
+wordcloud(words = DayadjAdv$word, freq = DayadjAdv$count, min.freq = 1,
+          max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
+          colors = c("darkorange3", "royalblue4"))
