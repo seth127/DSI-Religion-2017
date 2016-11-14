@@ -19,7 +19,7 @@ wordcloud(words = WBCnoPro$term, freq = WBCnoPro$logtfidf, min.freq = 1,
           max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
           colors = c("darkorange3", "royalblue4"))
 
-wordcloud(words = WBCtfIdf$term, freq = WBCitfIdf$logtfidf, min.freq = 1,
+wordcloud(words = WBCtfIdf$term, freq = WBCtfIdf$logtfidf, min.freq = 1,
           max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
           colors = c("darkorange3", "royalblue4"))
 
@@ -36,7 +36,7 @@ wordcloud(words = BahainoPro$term, freq = BahainoPro$logtfidf, min.freq = 1,
           max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
           colors = c("darkorange3", "royalblue4"))
 
-wordcloud(words = BahaitfIdf$term, freq = BahaiitfIdf$logtfidf, min.freq = 1,
+wordcloud(words = BahaitfIdf$term, freq = BahaitfIdf$logtfidf, min.freq = 1,
           max.words = 100, random.order = FALSE, rot.per=0.00, random.color = TRUE,
           colors = c("darkorange3", "royalblue4"))
 
