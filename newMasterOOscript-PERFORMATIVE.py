@@ -185,7 +185,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'signalOutput' + paramPath + '-' + runID + '.csv') 
+    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv') 
     #print(outputDF)
     return outputDF
 
@@ -352,4 +352,4 @@ if __name__ == '__main__':
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     BIGEND = time.time()
     print('full process took '+str(BIGEND-BIGSTART)+' seconds')
-    signalTestDF.to_csv(outputName)
+    signalTestDF[['groupId','files','timeRun','keywords'] + xList + ['rank','rfPred', 'svmPred']].to_csv(outputName)

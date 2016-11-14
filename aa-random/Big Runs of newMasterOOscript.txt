@@ -25,3 +25,20 @@ ALL DONE!
 ./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-TBXLWF.csv
 (118, 16)
 %%%%%%
+
+
+############ ONLY PERFORMATIVE SIGNALS ##########
+
+### ? this is a maybe (it's the first one and I didn't write the data frame right)
+#### plus I included the new groups.
+%%%%%% 
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-RCEVQJ.csv
+(118, 16)
+%%%%%%
+
+%%%%%%
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-H3Z53F.csv
+(111, 16)
+%%%%%%

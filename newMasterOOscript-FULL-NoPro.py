@@ -185,7 +185,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'signalOutput' + paramPath + '-' + runID + '.csv') 
+    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv') 
     #print(outputDF)
     return outputDF
 
