@@ -103,17 +103,14 @@ def textAnalysis(paramList):
     #Set keywords
     #loTest.setKeywords('adjAdv',targetWordCount,startCount)
 
-    if sys.argv[2] != 'auto':
-        print('%%%%\nUSING ' + keywordMethod + ' KEYWORDS')
-        loTest.setKeywords(keywordMethod,targetWordCount,startCount)
-        print(loTest.keywords)
-    else:
-        print('%%%%\nUSING TFIDF (auto) KEYWORDS')
-        loTest.setKeywords('tfidf',targetWordCount,startCount)
-        print(loTest.keywords)
 
-    #keywordPicks = ', '.join(loTest.keywords) # this broke when I switched to tokenList.append(unicode(token)) in lingual.py
-    keywordPicks = keywordMethod + ' (unicode)' + ' :: ' + judgementMethod + ' judgements' # switched to this as placeholder
+    print('%%%%\nUSING ' + keywordMethod + ' KEYWORDS')
+    loTest.setKeywords(keywordMethod,targetWordCount,startCount)
+    print(loTest.keywords)
+ 
+
+    keywordPicks = ', '.join(loTest.keywords) # this broke when I switched to tokenList.append(unicode(token)) in lingual.py
+    #keywordPicks = keywordMethod + ' (unicode)' + ' :: ' + judgementMethod + ' judgements' # switched to this as placeholder
 
     #######################            
     ###Semantic analysis###
@@ -188,7 +185,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv') 
+    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
     return outputDF
 
@@ -363,4 +360,4 @@ if __name__ == '__main__':
     signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    signalTestDF.to_csv(outputName)
+    signalTestDF.to_csv(outputName, encoding = 'utf-8')

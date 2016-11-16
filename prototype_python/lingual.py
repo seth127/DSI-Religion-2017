@@ -222,7 +222,11 @@ class lingualObject(object):
             for token in textList:
                 try:
                     #tokenList.append(str(token))
-                    tokenList.append(unicode(token)) #### changed this to get rid of 
+                    #tokenList.append(unicode(token)) #### changed this to get rid of most CODEC ERRORs
+                    thisToken = unicode(token)
+                    uselessUnicode = [u'\u2013', u'\u201d'] ### unicode characters that we don't want to include
+                    if thisToken not in uselessUnicode:
+                        tokenList.append(thisToken)
                 except:
                     tokenList.append('**CODEC_ERROR**')
                     # #######################prints word on CODEC ERROR
