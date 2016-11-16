@@ -221,18 +221,19 @@ class lingualObject(object):
             tokenList=[]
             for token in textList:
                 try:
-                    tokenList.append(str(token))
+                    #tokenList.append(str(token))
+                    tokenList.append(unicode(token)) #### changed this to get rid of 
                 except:
-                    try:
-                        print('**CODEC_ERROR**')
-                        print(token) #######################prints word on CODEC ERROR
-                        print('****')
                     tokenList.append('**CODEC_ERROR**')
-            
+                    # #######################prints word on CODEC ERROR
+                    print('**CODEC_ERROR**')
+                    print(token) 
+                    print('****')
+
             #Create clean text string and save as rawText
             txtString=' '.join(tokenList)
             self.rawText[fileName]=txtString
-            
+
             #Break text into sentences and extract as sentences
             sentList=list(sentTokenizer.tokenize(txtString))
             self.sentences[fileName]=sentList
@@ -498,7 +499,7 @@ class lingualObject(object):
             
             ## merge freqDF with idf data frame
             freqit = freqDF.join(self.idf[['idf', 'logidf']])
-            # replace null values with max
+            # replace null values with max (i.e. if word isn't found, give it the value of the most unique word in IDF)
             maxidf = max(freqit['idf'].dropna())
             maxlogidf = max(freqit['logidf'].dropna())
             freqit.loc[pd.isnull(freqit['idf']), 'idf'] = maxidf
@@ -779,9 +780,9 @@ class lingualObject(object):
                 judgementCount=len(self.judgements[fileName])
             elif method == 'pronoun':
                 judgementCount=len(self.pronoun_sentences[fileName])
-                if judgementCount > 0: #################################JUST TO TEST, DELETE THIS IF BLOCK LATER
-                    print('using pronoun judgements')
-                    print(self.pronoun_sentences[fileName][0])
+                #if judgementCount > 0: #################################JUST TO TEST, DELETE THIS IF BLOCK LATER
+                    #print('using pronoun judgements')
+                    #print(self.pronoun_sentences[fileName][0])
             else:
                 print('$$$$$$\nINVALID JUDGEMENT METHOD SUPPLIED\nusing default: pronoun\n$$$$$$$')
                 judgementCount=len(self.pronoun_sentences[fileName])

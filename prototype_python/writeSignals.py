@@ -232,12 +232,12 @@ class lingualObject(object):
             tokenList=[]
             for token in textList:
                 try:
-                    tokenList.append(str(token))
+                    #tokenList.append(str(token))
+                    tokenList.append(unicode(token)) ########## added this to get rid of CODEC ERRORS (bad idea?)
                 except:
-                    try:
-                        print('**CODEC_ERROR**')
-                        print(token) #######################prints word on CODEC ERROR
-                        print('****')
+                    print('**CODEC_ERROR**')
+                    print(token) #######################prints word on CODEC ERROR
+                    print('****')
                     tokenList.append('**CODEC_ERROR**')
             
             #Create clean text string and save as rawText

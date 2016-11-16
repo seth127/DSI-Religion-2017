@@ -23,7 +23,9 @@ import time
 start=time.time()
 import sys, os
 
-os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
+# set working directory to directory containing prototype_python/ and the folder with the data, etc.
+#os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
+os.chdir(sys.path[0]) # by default, sets it to the directory of this file
 
 #from joblib import Parallel, delayed
 #import multiprocessing as mp
