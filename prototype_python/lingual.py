@@ -45,7 +45,7 @@ posFilePath='./refData/positive-words.txt'
 negFilePath='./refData/negative-words.txt'
 #Get manual keywords
 manualKeywordFilePath='./refData/manualKeywords.csv'
-#unicode doesn't work (is this in Python 2?!)
+#get sentiment words
 posWords=list(set(unicode(open(posFilePath).read(), "utf-8", errors="ignore")))
 negWords=list(set(unicode(open(negFilePath).read(), "utf-8", errors="ignore")))
 

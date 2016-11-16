@@ -103,16 +103,17 @@ def textAnalysis(paramList):
     #Set keywords
     #loTest.setKeywords('adjAdv',targetWordCount,startCount)
 
-    if sys.argv[1] != 'auto':
-        print('%%%%\nUSING ' + sys.argv[5] + ' KEYWORDS')
-        loTest.setKeywords(sys.argv[5],targetWordCount,startCount)
+    if sys.argv[2] != 'auto':
+        print('%%%%\nUSING ' + keywordMethod + ' KEYWORDS')
+        loTest.setKeywords(keywordMethod,targetWordCount,startCount)
         print(loTest.keywords)
     else:
         print('%%%%\nUSING TFIDF (auto) KEYWORDS')
         loTest.setKeywords('tfidf',targetWordCount,startCount)
         print(loTest.keywords)
 
-    keywordPicks = ', '.join(loTest.keywords)
+    #keywordPicks = ', '.join(loTest.keywords) # this broke when I switched to tokenList.append(unicode(token)) in lingual.py
+    keywordPicks = keywordMethod + ' (unicode)' + ' :: ' + judgementMethod + ' judgements' # switched to this as placeholder
 
     #######################            
     ###Semantic analysis###
@@ -127,7 +128,7 @@ def textAnalysis(paramList):
     ########################################
     ###POS Tagging and Judgement Analysis###
     ########################################
-    judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements()]),axis=0))
+    judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
     
     ########################
     ###Sentiment Analysis###
@@ -159,7 +160,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     fileDF=gnd.newDocsToDF('./data_dsicap/', bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
-    print('%%%%%%\nrunID: ' + runID + '\n%%%%%%')
+    print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
     
     #Write file splits to runDirectory
     fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
@@ -222,20 +223,28 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
 
 if __name__ == '__main__':
     startTimeTotal=time.time()
-    rawPath = './data_dsicap/' ###############change this eventually
+    #rawPath = './data_dsicap/' ###############change this eventually
+    rawPath = './' + sys.argv[1] + '/'
     runDirectory='./modelOutput/'
 
     # set parameters 
-    if sys.argv[1] == 'auto':
+    if sys.argv[2] == 'auto':
         cocoWindow=3
         cvWindow=3
         netAngle=30
         startCount=0
+        keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
+        judgementMethod = 'pronoun' # options are 'pronoun' 'tobe'
+        binSize = 10 # the number of docs per bin, set to 1 for individual docs
+
     else:
-        cocoWindow=int(sys.argv[1])
-        cvWindow=int(sys.argv[2])
-        netAngle=int(sys.argv[3])
-        startCount=int(sys.argv[4])
+        cocoWindow=int(sys.argv[2])
+        cvWindow=int(sys.argv[3])
+        netAngle=int(sys.argv[4])
+        startCount=int(sys.argv[5])
+        keywordMethod=sys.argv[6]
+        judgementMethod=sys.argv[7]
+        binSize=int(sys.argv[8])
 
     #testSplit=.3
     targetWordCount=10
@@ -251,7 +260,8 @@ if __name__ == '__main__':
     sys.stdout.flush()
 
     # define the file path with identifying parameters
-    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)
+    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)\
+        +'_'+keywordMethod+'_'+judgementMethod+'_bin_'+str(binSize)
     # define the random ID for this run
     runID = id_generator()
 
