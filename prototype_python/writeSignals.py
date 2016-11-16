@@ -196,6 +196,9 @@ class lingualObject(object):
         judgements:
             Dictionary of judgements with filenames as keys and list of judgements as values
         '''
+
+        self.uniqueID = id_generator(3)
+        
         #Define parameters
         self.fileList=fileList       
         self.useStem=useStem
@@ -214,6 +217,7 @@ class lingualObject(object):
         self.tokens={}
         self.sentences={}
         self.judgements={}
+        self.pronoun_sentences={}
 
         #set the groupId
         path = fileList[0]
@@ -242,9 +246,11 @@ class lingualObject(object):
             
             #Loop through sentences and add to judgement dictionary if meets criteria
             judgementList=[]
+            pronoun_sentence_list = []
             for sent in sentList:
                 tagList=tagger.tag(nltk.word_tokenize(sent))
                 
+                #Checking for judgements
                 #Look for combination of noun-adj-to_be verb in order  
                 #Initialize search flags
                 nounFlag=False
@@ -269,8 +275,14 @@ class lingualObject(object):
                     else:
                         if tag[1] in nounList:
                             nounFlag=True
+                #Check for Pronouns
+                for tag in tagList:
+                    if (tag[1] == 'PRP') | (tag[1] == 'PRP$'):
+                        pronoun_sentence_list.append(sent)
+                        break
+
             self.judgements[fileName]=judgementList
-            
+            self.pronoun_sentences[fileName] = pronoun_sentence_list
             #Create tokens
             #Convert all text to lower case
             textList=[word.lower() for word in tokenList]
@@ -298,7 +310,23 @@ class lingualObject(object):
             
             #Extract tokens
             self.tokens[fileName]=textList
-            
+     ###########################
+     ##Pronoun_Keyword Sentences#
+     ############################
+    def get_pronoun_sentence_count( text, keywords, pronouns):
+        keywords = self.keywords
+        sent_keywords = []
+        #for key in keywords:        
+        for sentence in sentences:        
+            #print(sentence)
+            for key in keywords:
+                #print(key)
+                if key in sentence:
+                    #print('yes')
+                    for pronoun in pronouns:
+                        if pronoun in sentence:
+                            sent_keywords.append(sentence)
+                            break       
     ########################
     ###Create cocoDict,TF###
     ########################
@@ -469,15 +497,15 @@ class lingualObject(object):
             #Create keywords based on startCount and wordCount
             #keyRaw=list(targetDF['word'])[startCount:wordCount+startCount]
             #print(keyRaw)
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
             # stem keywords
-            #keyStem=[stemmer.stem(word) for word in keyRaw] 
+            keyStem=[stemmer.stem(word) for word in keyRaw] 
             #print(keyStem)
 
-            #self.keywords = keyStem
+            self.keywords = keyStem
 
         elif method=='tfidf':
             # get all tokens for the fileList
@@ -514,9 +542,9 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            #self.keywords = keywords
+            self.keywords = keywords
             targetDF = freqit.ix[keywords]
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
@@ -562,9 +590,9 @@ class lingualObject(object):
                     keywords = keywords + [word]
 
             ##
-            #self.keywords = keywords
+            self.keywords = keywords
             targetDF = freqit.ix[keywords]
-            keywordsSaveName = self.group + '-' + id_generator(3) + '-KEYWORDS-' + method + '.csv'
+            keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
             targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
 
@@ -767,10 +795,32 @@ class lingualObject(object):
                     [fileName,judgements] for fileName, judgements in self.judgements.items()
                 ], columns = ['fileName', 'judgements'])
 
-        judgementsSaveName = self.group + '-' + id_generator(3) + '-JUDGEMENTS.csv'
+        judgementsSaveName = self.group + '-' + self.uniqueID + '-JUDGEMENTS.csv'
         print(judgementsSaveName)
         jdf.to_csv(saveDir + judgementsSaveName)
 
+
+    def writePronounJudgements(self):
+        winner_dict = {}
+        for fileName, sentences in self.pronoun_sentences.items():
+            winners = []
+            for sent in sentences:
+                sent_stems = [stemmer.stem(word) for word in nltk.word_tokenize(sent)]
+                if len(self.keywords) < 1:
+                    print("NO KEYWORDS. YOU SUCK.")
+                    break
+                for key in self.keywords:
+                    if key in sent_stems:
+                        winners.append(sent)
+                        break
+            winner_dict[fileName] = winners           
+        pdf = pd.DataFrame([
+                    [fileName,winners] for fileName, winners in winner_dict.items()
+                ], columns = ['fileName', 'sentence'])
+
+        pronounsSaveName = self.group + '-' + self.uniqueID + '-PRONOUNS_SENT.csv'
+        print(pronounsSaveName)
+        pdf.to_csv(saveDir + pronounsSaveName)
 
     def getJudgements(self):
         '''

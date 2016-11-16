@@ -59,6 +59,5 @@ dependencies:
   - jupyter-client==4.4.0
   - jupyter-core==4.2.0
   - prompt-toolkit==1.0.3
-  - python-igraph==0.7.1.post6
 prefix: /Users/Seth/anaconda/envs/py27
 
