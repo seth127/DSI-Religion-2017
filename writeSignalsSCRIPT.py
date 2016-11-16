@@ -16,9 +16,11 @@ Created on Thu Jun  2 15:23:11 2016
 #
 # PASS AS ARGS:
 #
-# 1) KEYWORD METHOD
+# 1) DIRECTORY WHERE RAW TEXT FILES ARE (starting from script directory as './' -- Can give 'default' for './data_dsicap/')
 #
-# 2) COUNT OF WORDS TO SAVE
+# 2) KEYWORD METHOD
+#
+# 3) COUNT OF WORDS TO SAVE
 #
 #
 ###############3
@@ -28,7 +30,9 @@ import time
 start=time.time()
 import sys, os
 
-os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
+# set working directory to directory containing prototype_python/ and the folder with the data, etc.
+#os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
+os.chdir(sys.path[0]) # by default, sets it to the directory of this file
 
 #from joblib import Parallel, delayed
 #import multiprocessing as mp
@@ -227,7 +231,7 @@ if __name__ == '__main__':
     if sys.argv[1] == 'default':
         rawPath = './data_dsicap/'
     else:
-        rawPath = sys.argv[1] ################# THE DIRECTORY FULL OF RAW FILES: default is './data_dsicap/'
+        rawPath = './' + sys.argv[1] +'/' ################# THE DIRECTORY FULL OF RAW FILES: default is './data_dsicap/'
     runDirectory='./modelOutput/'
 
     # set parameters 

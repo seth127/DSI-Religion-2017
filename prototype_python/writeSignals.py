@@ -503,7 +503,7 @@ class lingualObject(object):
             #print(keyRaw)
             keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
-            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName, encoding = 'utf-8')
 
             # stem keywords
             keyStem=[stemmer.stem(word) for word in keyRaw] 
@@ -550,7 +550,7 @@ class lingualObject(object):
             targetDF = freqit.ix[keywords]
             keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
-            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName, encoding = 'utf-8')
 
 
         elif method=='tfidfNoPro':
@@ -598,7 +598,7 @@ class lingualObject(object):
             targetDF = freqit.ix[keywords]
             keywordsSaveName = self.group + '-' + self.uniqueID + '-KEYWORDS-' + method + '.csv'
             print(keywordsSaveName)
-            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName)
+            targetDF[startCount:wordCount+startCount].to_csv(saveDir + keywordsSaveName, encoding = 'utf-8')
 
 
         elif method=='manual':
@@ -801,7 +801,7 @@ class lingualObject(object):
 
         judgementsSaveName = self.group + '-' + self.uniqueID + '-JUDGEMENTS.csv'
         print(judgementsSaveName)
-        jdf.to_csv(saveDir + judgementsSaveName)
+        jdf.to_csv(saveDir + judgementsSaveName, encoding = 'utf-8')
 
 
     def writePronounJudgements(self):
@@ -824,7 +824,7 @@ class lingualObject(object):
 
         pronounsSaveName = self.group + '-' + self.uniqueID + '-PRONOUNS_SENT.csv'
         print(pronounsSaveName)
-        pdf.to_csv(saveDir + pronounsSaveName)
+        pdf.to_csv(saveDir + pronounsSaveName, encoding = 'utf-8')
 
     def getJudgements(self):
         '''
