@@ -206,6 +206,7 @@ class lingualObject(object):
         self.tokens={}
         self.sentences={}
         self.judgements={}
+        self.pronoun_sentences={}
 
         #set the groupId
         path = fileList[0]
@@ -222,6 +223,10 @@ class lingualObject(object):
                 try:
                     tokenList.append(str(token))
                 except:
+                    try:
+                        print('**CODEC_ERROR**')
+                        print(token) #######################prints word on CODEC ERROR
+                        print('****')
                     tokenList.append('**CODEC_ERROR**')
             
             #Create clean text string and save as rawText
@@ -234,9 +239,11 @@ class lingualObject(object):
             
             #Loop through sentences and add to judgement dictionary if meets criteria
             judgementList=[]
+            pronoun_sentence_list = []
             for sent in sentList:
                 tagList=tagger.tag(nltk.word_tokenize(sent))
                 
+                #Checking for judgements
                 #Look for combination of noun-adj-to_be verb in order  
                 #Initialize search flags
                 nounFlag=False
@@ -261,8 +268,15 @@ class lingualObject(object):
                     else:
                         if tag[1] in nounList:
                             nounFlag=True
+                #Check for Pronouns
+                for tag in tagList:
+                    if (tag[1] == 'PRP') | (tag[1] == 'PRP$'):
+                        pronoun_sentence_list.append(sent)
+                        break
+
             self.judgements[fileName]=judgementList
-            
+            self.pronoun_sentences[fileName] = pronoun_sentence_list
+
             #Create tokens
             #Convert all text to lower case
             textList=[word.lower() for word in tokenList]
@@ -744,7 +758,7 @@ class lingualObject(object):
     ##########################################
     ###Get Judgement counts and percentages###
     ##########################################
-    def getJudgements(self):
+    def getJudgements(self, method = 'pronoun'):
         '''
         Function to estimate number of judgements and the percent of sentences
         that are judgements for each document in the filelist
@@ -761,7 +775,16 @@ class lingualObject(object):
         #Loop through each document
         for fileName in self.fileList:
             #Get count of judgements
-            judgementCount=len(self.judgements[fileName])
+            if method == 'tobe':
+                judgementCount=len(self.judgements[fileName])
+            elif method == 'pronoun':
+                judgementCount=len(self.pronoun_sentences[fileName])
+                if judgementCount > 0: #################################JUST TO TEST, DELETE THIS IF BLOCK LATER
+                    print('using pronoun judgements')
+                    print(self.pronoun_sentences[fileName][0])
+            else:
+                print('$$$$$$\nINVALID JUDGEMENT METHOD SUPPLIED\nusing default: pronoun\n$$$$$$$')
+                judgementCount=len(self.pronoun_sentences[fileName])
             
             #Calculate percent of sentences that are judgements
             judgementPercent=float(judgementCount)/len(self.sentences[fileName])

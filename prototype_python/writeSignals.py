@@ -234,6 +234,10 @@ class lingualObject(object):
                 try:
                     tokenList.append(str(token))
                 except:
+                    try:
+                        print('**CODEC_ERROR**')
+                        print(token) #######################prints word on CODEC ERROR
+                        print('****')
                     tokenList.append('**CODEC_ERROR**')
             
             #Create clean text string and save as rawText
