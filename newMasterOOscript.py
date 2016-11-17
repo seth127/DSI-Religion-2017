@@ -12,12 +12,15 @@ Created on Thu Jun  2 15:23:11 2016
 @author: nmvenuti
 """
 
-################
+#########
 #
-# 1) need to make this take in all the docs and split into training and testing
+# THE DEFAULT SETTINGS (called manually) ARE
 #
+# python newMasterOOscript.py data_dsicap 3 3 30 10 tfidfNoPro pronoun 10
 #
-###############3
+# rawPath cocoWindow cvWindow netAngle targetWordCount keywordMethod judgementMethod binSize
+# 
+#########
 
 import time
 start=time.time()
@@ -154,7 +157,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,co
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF('./data_dsicap/', bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF(rawPath, bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
@@ -229,7 +232,7 @@ if __name__ == '__main__':
         cocoWindow=3
         cvWindow=3
         netAngle=30
-        startCount=0
+        targetWordCount=10
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
         judgementMethod = 'pronoun' # options are 'pronoun' 'tobe'
         binSize = 10 # the number of docs per bin, set to 1 for individual docs
@@ -238,13 +241,13 @@ if __name__ == '__main__':
         cocoWindow=int(sys.argv[2])
         cvWindow=int(sys.argv[3])
         netAngle=int(sys.argv[4])
-        startCount=int(sys.argv[5])
+        targetWordCount=int(sys.argv[5])
         keywordMethod=sys.argv[6]
         judgementMethod=sys.argv[7]
         binSize=int(sys.argv[8])
 
     #testSplit=.3
-    targetWordCount=10
+    startCount=0
     svdInt=50
     simCount=1000
     print('cocoWindow '+str(cocoWindow))
@@ -257,7 +260,7 @@ if __name__ == '__main__':
     sys.stdout.flush()
 
     # define the file path with identifying parameters
-    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_sc_'+str(startCount)\
+    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_twc_'+str(targetWordCount)\
         +'_'+keywordMethod+'_'+judgementMethod+'_bin_'+str(binSize)
     # define the random ID for this run
     runID = id_generator()
