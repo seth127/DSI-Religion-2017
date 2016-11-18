@@ -1,6 +1,0 @@
-,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
-1,Bahai_test0,10,3.35713887215,"baha'i, abdu'lbaha, baha'u'llah, fear, perfect, evil, uniti, imagin, skin, p",0.0243001735734,0.0243001735734,0.0,1.0,20.9,0.609722737954,0.751125841988,0.631203915135,Bahai,6,6.0,5.55109002121
-2,Bahai_test1,10,3.86503887177,"thi, baha'i, thou, abdu'lbaha, prejudic, thee, baha'u'llah, ye, heal, skin",0.0182951662828,0.0182951662828,0.0,1.0,21.8,0.566986272681,0.704516510517,0.668374221106,Bahai,6,4.2,5.60174101933
-5,ISIS_test0,10,11.5730400085,"allah, tandhīm, abū, faction, jihād, ﻿, regim, camp, yarmūk, crusad",0.0180954818215,0.0180954818215,0.0,1.0,78.1,0.665470783787,0.754791573838,0.818006002612,ISIS,1,1.1,1.70016701405
-9,ISIS_test1,10,12.0326731205,"allah, crusad, wa, ibn, apost, ﻿, plot, alayhi, mubāhalah, sallam",0.0149604726048,0.0149604726048,0.0,1.0,75.5,0.735067197389,0.82303696634,0.781086070333,ISIS,1,1.0,1.18493516712
-10,SeaShepherds_test0,10,2.87656903267,"whale, shepherd, illeg, seaworld, net, save, hsus, orca, danish, whaler",0.0213408740426,0.0213408740426,0.0,1.0,18.8,0.569111617203,0.762374413584,0.725569072539,SeaShepherds,2,6.0,6.17832338369

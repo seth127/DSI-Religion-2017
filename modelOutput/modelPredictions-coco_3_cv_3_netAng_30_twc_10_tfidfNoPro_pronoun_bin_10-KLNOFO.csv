@@ -1,6 +1,0 @@
-,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
-0,SeaShepherds_test0,10,3.54295396805,"whale, shepherd, seaworld, illeg, fish, net, slaughter, hsus, danish, whaler",0.0220527994607,0.0220527994607,0.0,1.0,23.7,0.553004564132,0.680925957267,0.506589601227,SeaShepherds,2,5.2,4.03288757871
-3,IntegralYoga_test0,10,4.20917892456,"yoga, mind, don't, arjuna, should, want, feel, yogavill, krishna, dedic",0.0211319181078,0.0211319181078,0.0,1.0,59.5,0.628712028357,0.69190553994,0.627502417785,IntegralYoga,7,5.8,3.97480094735
-5,IntegralYoga_test1,10,5.49818110466,"mind, yoga, medit, om, want, everyth, don't, whi, say, clean",0.0226704131249,0.0226704131249,0.0,1.0,83.3,0.647834053603,0.73360169598,0.741267127059,IntegralYoga,7,3.9,3.70730095522
-11,ISIS_test0,10,20.6168320179,"allah, wa, ibn, tandhīm, alayhi, sallam, sallallāhu, jihād, crusad, abū",0.0132068558355,0.0132068558355,0.0,1.0,113.9,0.751125516363,0.841255520515,0.814104189724,ISIS,1,1.7,2.45610236527
-12,ISIS_test1,10,6.66813492775,"allah, crusad, ﻿, mujāhidīn, khilāfah, apost, dabiq, abū, bay'ah, ibn",0.0197293473411,0.0197293473411,0.0,1.0,33.3,0.699139948493,0.734115476181,0.886093951992,ISIS,1,1.8,3.78522743505

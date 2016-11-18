@@ -1,2 +1,0 @@
-,groupId,files,timeRun,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
-369,NaumanKhan_test-3EKMF5,1,2.32594513893,0.0248936170213,0.0248936170213,0.0,1.0,50.0,0.42735042735,0.629052395345,0.685443028165,NaumanKhan,3,3.0,3.94444772919

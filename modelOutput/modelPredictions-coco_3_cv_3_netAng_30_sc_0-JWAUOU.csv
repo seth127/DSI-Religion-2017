@@ -1,6 +1,0 @@
-,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
-0,SeaShepherds_test0,10,2.39695811272,"we, whale, greenpeac, shepherd, seal, , fish, illeg, diminish",0.0269865099369,0.0269865099369,0.0,1.0,3.9,0.146939959639,0.70129554777,0.696371118261,SeaShepherds,2,7.0,6.66089212763
-3,Bahai_test0,10,2.84186506271,"fear, we, spirit, your, you, heaven, god, divin, realiti",0.0210534801514,0.0210534801514,0.0,1.0,6.4,0.212498470653,0.749650029645,0.587234550847,Bahai,6,5.5,4.99367109667
-4,Bahai_test1,10,3.3243560791,"you, your, courag, ye, we, p, uniti, heal, talk",0.0176033242985,0.0176033242985,0.0,1.0,4.3,0.124180437067,0.734595679474,0.579105361165,Bahai,6,5.8,5.94911698583
-8,IntegralYoga_test0,10,4.16809511185,"you, your, we, yoga, mind, want, yogavill, happi, everyth",0.0223559689193,0.0223559689193,0.0,1.0,6.8,0.0969209330739,0.688602244244,0.759429270271,IntegralYoga,7,6.0,6.93344790075
-10,IntegralYoga_test1,10,5.48858690262,"you, your, mind, we, yoga, happi, me, sri, arjuna",0.0260668815976,0.0260668815976,0.0,1.0,8.6,0.102611523222,0.632361920158,0.582738703545,IntegralYoga,7,6.3,6.41877442512
