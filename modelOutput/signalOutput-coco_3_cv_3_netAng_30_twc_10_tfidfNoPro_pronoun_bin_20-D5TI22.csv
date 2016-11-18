@@ -1,0 +1,13 @@
+,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC
+0,Bahai_train4,10,3.17431306839,"baha'i, abdu'lbaha, baha'u'llah, courag, love, p, spirit, spank, punish, prophet",0.0177655619492,0.0177655619492,0.0,1.0,17.3,0.596173363265,0.801578068382,0.680147385398
+1,ISIS_test0,10,11.5730400085,"allah, tandhīm, abū, faction, jihād, ﻿, regim, camp, yarmūk, crusad",0.0180954818215,0.0180954818215,0.0,1.0,78.1,0.665470783787,0.754791573838,0.818006002612
+2,SeaShepherds_test0,10,2.87656903267,"whale, shepherd, illeg, seaworld, net, save, hsus, orca, danish, whaler",0.0213408740426,0.0213408740426,0.0,1.0,18.8,0.569111617203,0.762374413584,0.725569072539
+3,ISIS_train3,10,10.1361310482,"allah, ribāt, ibn, prophet, ﻿, yemen, wa, jihād, sallam, alayhi",0.01552827021,0.01552827021,0.0,1.0,53.1,0.661239773187,0.722786205384,0.721396551587
+4,ISIS_train2,10,13.9469630718,"allah, wa, ibn, sallallāhu, sallam, alayhi, ﻿, prophet, rahimahullāh, kufr",0.0160920503426,0.0160920503426,0.0,1.0,83.6,0.727641128877,0.826551445326,0.82175528817
+5,ISIS_train4,8,8.67860984802,"allah, ibn, wa, alayhi, sallam, sallallāhu, jihād, messeng, ﻿, abū",0.0187520223636,0.0187520223636,0.0,1.0,78.25,0.816028956584,0.835776131116,0.814925724148
+6,Bahai_test0,10,3.35713887215,"baha'i, abdu'lbaha, baha'u'llah, fear, perfect, evil, uniti, imagin, skin, p",0.0243001735734,0.0243001735734,0.0,1.0,20.9,0.609722737954,0.751125841988,0.631203915135
+7,SeaShepherds_train1,10,3.13448095322,"shepherd, whale, seal, costa, greenpeac, rican, fish, coco, slaughter, illeg",0.0270961877975,0.0270961877975,0.0,1.0,22.3,0.659749351063,0.71916855288,0.84923233834
+8,Bahai_test1,10,3.86503887177,"thi, baha'i, thou, abdu'lbaha, prejudic, thee, baha'u'llah, ye, heal, skin",0.0182951662828,0.0182951662828,0.0,1.0,21.8,0.566986272681,0.704516510517,0.668374221106
+9,Bahai_train2,10,3.58539605141,"baha'i, abdu'lbaha, perfect, realiti, spirit, tree, color, faith, baha'u'llah, parent",0.0212091057528,0.0212091057528,0.0,1.0,20.4,0.576978232043,0.688921044444,0.764134589818
+10,Bahai_train3,10,3.75253796577,"baha'i, baha'u'llah, sick, prophet, abdu'lbaha, —, heal, uniti, thing, christ",0.0245690568189,0.0245690568189,0.0,1.0,21.2,0.537666650729,0.708039147384,0.664256103141
+11,ISIS_test1,10,12.0326731205,"allah, crusad, wa, ibn, apost, ﻿, plot, alayhi, mubāhalah, sallam",0.0149604726048,0.0149604726048,0.0,1.0,75.5,0.735067197389,0.82303696634,0.781086070333

@@ -2,27 +2,6 @@ setwd("~/Documents/DSI/Capstone/DSI-Religion-2017")
 library(ggplot2)
 library(gridExtra)
 
-
-#### COMPARE NEW TFIDF METHODS
-idfDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
-
-for (i in 1:nrow(idfDF)) {
-  idfDF$groupName[i] <- unlist(strsplit(idfDF$groupId[i], "_"))[1]
-}
-
-#### NoPro TFIDF (pronouns removed)
-# new groups included
-npDFnew <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-TBXLWF.csv', stringsAsFactors = F)
-# just old groups
-npDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv', stringsAsFactors = F)
-
-for (i in 1:nrow(npDF)) {
-  npDF$groupName[i] <- unlist(strsplit(npDF$groupId[i], "_"))[1]
-}
-for (i in 1:nrow(npDFnew)) {
-  npDFnew$groupName[i] <- unlist(strsplit(npDFnew$groupId[i], "_"))[1]
-}
-
 ##########
 accuracy <- function(df, returnDF = F) {
   RFscores <- logical(nrow(df))
@@ -44,7 +23,45 @@ accuracy <- function(df, returnDF = F) {
   }
 }
 
-######
+#### COMPARE NEW TFIDF METHODS
+idfDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv', stringsAsFactors = F)
+
+for (i in 1:nrow(idfDF)) {
+  idfDF$groupName[i] <- unlist(strsplit(idfDF$groupId[i], "_"))[1]
+}
+
+#### NoPro TFIDF (pronouns removed)
+# new groups included
+npDFnew <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-TBXLWF.csv', stringsAsFactors = F)
+# just old groups
+npDF <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv', stringsAsFactors = F)
+
+for (i in 1:nrow(npDF)) {
+  npDF$groupName[i] <- unlist(strsplit(npDF$groupId[i], "_"))[1]
+}
+for (i in 1:nrow(npDFnew)) {
+  npDFnew$groupName[i] <- unlist(strsplit(npDFnew$groupId[i], "_"))[1]
+}
+
+##### pronoun judgments
+# new groups included
+pn10 <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_10-9VXA7R.csv', stringsAsFactors = F)
+# just old groups
+pn20 <- read.csv('./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronoun_bin_10-PCZKXX.csv', stringsAsFactors = F)
+
+for (i in 1:nrow(pn10)) {
+  pn10$groupName[i] <- unlist(strsplit(pn10$groupId[i], "_"))[1]
+}
+for (i in 1:nrow(pn20)) {
+  pn20$groupName[i] <- unlist(strsplit(pn20$groupId[i], "_"))[1]
+}
+
+##
+
+accuracy(pn10)
+accuracy(pn20)
+
+###########
 accuracy(idfDF)
 #[1] 0.8468468 0.8468468
 # on 0.5 #[1] 0.7387387 0.6036036

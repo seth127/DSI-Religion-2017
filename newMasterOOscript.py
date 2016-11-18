@@ -128,6 +128,7 @@ def textAnalysis(paramList):
     ########################################
     ###POS Tagging and Judgement Analysis###
     ########################################
+    #judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
     judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
     
     ########################
@@ -334,6 +335,7 @@ if __name__ == '__main__':
 
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
+
     #Predict New Data
     yPred=rfModel.predict(signalTestDF[xList])
 
@@ -358,9 +360,33 @@ if __name__ == '__main__':
     #Get accuracy
     svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     svmMAE=np.mean(np.abs(yActual-yPred))
+
+    #Save model stats
+    # print feature importance
+
+    binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
+    paramStats = [runID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
+    accuracyStats = [rfAccuracy, rfMAE, svmAccuracy, svmMAE]
+    varsStats = rfModel.feature_importances_
+    #
+    statsNames = ["runID", "binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
+    print(statsNames)
+    newStats = paramStats + accuracyStats + varsStats.tolist()
+    print(newStats)
+    #
+    try:
+        modelStats = pd.read_csv('modelOutput/modelStats.csv')
+        modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
+        print("added row to modelStats.csv")
+    except:
+        modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
+        print("created modelStats.csv file")
+    #
+    modelStats.to_csv('modelOutput/modelStats.csv', index=False)
                 
     # create output csv
     signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     signalTestDF.to_csv(outputName, encoding = 'utf-8')
+

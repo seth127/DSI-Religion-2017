@@ -1,0 +1,6 @@
+,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
+0,SeaShepherds_test0,10,3.20815181732,"whale, shepherd, illeg, save, costa, seaworld, greenpeac, orca, hsus, vessel",0.0224023699911,0.0224023699911,0.0,1.0,22.4,0.670043640517,0.671973827523,0.747335403724,SeaShepherds,2,5.8,6.11093167152
+3,IntegralYoga_test0,10,3.14484882355,"mind, yogavill, let, should, yoga, heaven, don't, everyth, job, dedic",0.023734129578,0.023734129578,0.0,1.0,47.9,0.687411689647,0.689321215342,0.783242271685,IntegralYoga,7,7.0,7.2154716499
+5,IntegralYoga_test1,10,4.80080294609,"mind, medit, yoga, want, happi, whi, don't, everyth, get, will",0.0216422462645,0.0216422462645,0.0,1.0,63.4,0.633036423494,0.654536446457,0.623932614908,IntegralYoga,7,5.9,6.6122919381
+11,ISIS_test0,10,9.94240283966,"allah, wa, ﻿, alayhi, sallam, abū, ibn, sallallāhu, prophet, messeng",0.015095829324,0.015095829324,0.0,1.0,53.7,0.733991917199,0.831509714438,0.61864210318,ISIS,1,4.6,1.79151157297
+12,ISIS_test1,10,11.636138916,"allah, crusad, wa, ﻿, ibn, prophet, sallallāhu, sallam, abū, alayhi",0.0173170075866,0.0173170075866,0.0,1.0,80.7,0.737493188361,0.820544282887,0.733733677868,ISIS,1,4.6,0.923078914297

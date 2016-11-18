@@ -224,8 +224,9 @@ class lingualObject(object):
                     #tokenList.append(str(token))
                     #tokenList.append(unicode(token)) #### changed this to get rid of most CODEC ERRORs
                     thisToken = unicode(token)
-                    uselessUnicode = [u'\u2013', u'\u201d'] ### unicode characters that we don't want to include
+                    uselessUnicode = [u'\u2013', u'\u201d'] ### don't include these when they are alone
                     if thisToken not in uselessUnicode:
+                        thisToken = thisToken.replace(u'\u201d','') # delete this (unicode quote)
                         tokenList.append(thisToken)
                 except:
                     tokenList.append('**CODEC_ERROR**')
@@ -784,9 +785,7 @@ class lingualObject(object):
                 judgementCount=len(self.judgements[fileName])
             elif method == 'pronoun':
                 judgementCount=len(self.pronoun_sentences[fileName])
-                #if judgementCount > 0: #################################JUST TO TEST, DELETE THIS IF BLOCK LATER
-                    #print('using pronoun judgements')
-                    #print(self.pronoun_sentences[fileName][0])
+            #
             else:
                 print('$$$$$$\nINVALID JUDGEMENT METHOD SUPPLIED\nusing default: pronoun\n$$$$$$$')
                 judgementCount=len(self.pronoun_sentences[fileName])

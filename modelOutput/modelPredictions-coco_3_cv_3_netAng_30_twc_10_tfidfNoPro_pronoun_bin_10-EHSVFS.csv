@@ -1,0 +1,6 @@
+,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC,groupName,rank,rfPred,svmPred
+0,SeaShepherds_test0,10,2.55236983299,"whale, seal, shepherd, greenpeac, illeg, danish, fish, slaughter, save, net",0.0268137819617,0.0268137819617,0.0,1.0,16.3,0.630390146554,0.736322822261,0.700535013396,SeaShepherds,2,7.0,3.73126337876
+3,IntegralYoga_test0,10,3.36819005013,"mantra, mind, yoga, happi, breath, want, don't, prana, feel, vibrat",0.0212505546155,0.0212505546155,0.0,1.0,42.9,0.63448262104,0.662182497177,0.77652324595,IntegralYoga,7,3.7,3.95078271575
+5,IntegralYoga_test1,10,4.88911414146,"mind, medit, yoga, want, arjuna, whi, get, don't, happi, say",0.0220901992035,0.0220901992035,0.0,1.0,61.4,0.651921338442,0.707674027405,0.557237466017,IntegralYoga,7,3.5,4.69679373977
+11,ISIS_test0,10,5.45121693611,"allah, jihād, abū, wa, sallam, alayhi, sallallāhu, syrian, ﻿, said",0.0230676413198,0.0230676413198,0.0,1.0,38.7,0.687514098203,0.733267848897,0.78824943594,ISIS,1,6.0,4.21732561626
+12,ISIS_test1,10,17.702023983,"allah, tandhīm, ibn, ﻿, wa, abū, faction, crusad, regim, ’s",0.0135865861704,0.0135865861704,0.0,1.0,113.2,0.745534483826,0.766726730324,0.680526944375,ISIS,1,1.0,2.1149618841

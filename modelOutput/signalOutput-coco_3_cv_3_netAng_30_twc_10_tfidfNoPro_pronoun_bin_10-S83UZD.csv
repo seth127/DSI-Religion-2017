@@ -1,0 +1,14 @@
+,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC
+0,SeaShepherds_test0,10,3.20815181732,"whale, shepherd, illeg, save, costa, seaworld, greenpeac, orca, hsus, vessel",0.0224023699911,0.0224023699911,0.0,1.0,22.4,0.670043640517,0.671973827523,0.747335403724
+1,IntegralYoga_train3,10,5.45677399635,"yoga, mind, om, gurudev, sri, whi, want, say, get, medit",0.0253525457359,0.0253525457359,0.0,1.0,68.9,0.664078884466,0.681844065829,0.557458738317
+2,IntegralYoga_test0,10,3.14484882355,"mind, yogavill, let, should, yoga, heaven, don't, everyth, job, dedic",0.023734129578,0.023734129578,0.0,1.0,47.9,0.687411689647,0.689321215342,0.783242271685
+3,IntegralYoga_train2,10,4.21228098869,"yoga, mantra, happi, mind, breath, prana, get, anyth, don't, hear",0.0171353421089,0.0171353421089,0.0,1.0,48.2,0.665967220268,0.686660183039,0.772437982943
+4,IntegralYoga_test1,10,4.80080294609,"mind, medit, yoga, want, happi, whi, don't, everyth, get, will",0.0216422462645,0.0216422462645,0.0,1.0,63.4,0.633036423494,0.654536446457,0.623932614908
+5,ISIS_train4,8,12.4309780598,"allah, ibn, wa, sallallāhu, sallam, alayhi, jihād, rahimahullāh, ﻿, faction",0.018978159796,0.018978159796,0.0,1.0,94.375,0.671051296773,0.846170735505,0.881576670908
+6,ISIS_train3,10,10.3970301151,"allah, ibn, ribāt, wa, ﻿, alayhi, sallam, crusad, jihād, sallallāhu",0.0175265738066,0.0175265738066,0.0,1.0,66.3,0.718796608053,0.789015540648,0.668452967614
+7,SeaShepherds_train1,10,3.00059390068,"whale, shepherd, danish, slaughter, fish, seal, dolphin, eat, dog, illeg",0.0260346918491,0.0260346918491,0.0,1.0,18.7,0.558817327749,0.643397677064,0.542081066832
+8,ISIS_train2,10,11.7820529938,"allah, tandhīm, abū, ﻿, camp, wa, faction, regim, mujāhidīn, waziristan",0.0145559543159,0.0145559543159,0.0,1.0,76.7,0.715119297476,0.779555714633,0.911640822453
+9,IntegralYoga_train5,9,4.12003397942,"mind, yoga, don't, pain, want, everyth, medit, get, say, whi",0.0239423025639,0.0239423025639,0.0,1.0,61.5555555556,0.675779283449,0.708148916622,0.797903158637
+10,IntegralYoga_train4,10,4.01922011375,"yoga, mind, don't, want, guru, arjuna, everyth, will, know, should",0.035198930681,0.035198930681,0.0,1.0,57.6,0.722435252169,0.654773462383,0.679489926676
+11,ISIS_test0,10,9.94240283966,"allah, wa, ﻿, alayhi, sallam, abū, ibn, sallallāhu, prophet, messeng",0.015095829324,0.015095829324,0.0,1.0,53.7,0.733991917199,0.831509714438,0.61864210318
+12,ISIS_test1,10,11.636138916,"allah, crusad, wa, ﻿, ibn, prophet, sallallāhu, sallam, abū, alayhi",0.0173170075866,0.0173170075866,0.0,1.0,80.7,0.737493188361,0.820544282887,0.733733677868
