@@ -129,8 +129,30 @@ def textAnalysis(paramList):
     ###POS Tagging and Judgement Analysis###
     ########################################
     #judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
-    judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
-    
+    if judgementMethod == 'both':
+        toBeAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('tobe')]),axis=0))
+        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
+        print('toBeAverage')
+        print(toBeAverage)
+        print('pronounAverage')
+        print(pronounAverage)
+        # assign fraction score from each
+        judgementAvg = [toBeAverage[1]] + [pronounAverage[1]]
+    elif judgementMethod == 'bothAll':
+        toBeAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('tobe')]),axis=0))
+        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
+        print('toBeAverage')
+        print(toBeAverage)
+        print('pronounAverage')
+        print(pronounAverage)
+        # assign both scores from each
+        judgementAvg = toBeAverage + pronounAverage
+    else:   
+        judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
+        print(judgementMethod)
+        print(judgementAvg)
+
+
     ########################
     ###Sentiment Analysis###
     ########################
@@ -152,13 +174,13 @@ def textAnalysis(paramList):
     #Append outputs to masterOutput
     return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+judgementAvg+[avgSD]+[avgEVC])   
 
-def runMaster(rawPath,binSize,runDirectory,paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
+def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
     #####Raw File List Extract#####
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF(rawPath, bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
@@ -187,7 +209,7 @@ def runMaster(rawPath,binSize,runDirectory,paramPath,runID,targetWordCount,start
     #Run calculation 
     masterOutput=[textAnalysis(x) for x in paramList]  
     #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc','judgementCount','judgementFrac','avgSD','avgEVC'])
+    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + ['avgSD','avgEVC'])
     #Write that file for reference
     outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
@@ -235,7 +257,7 @@ if __name__ == '__main__':
         netAngle=30
         targetWordCount=10
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
-        judgementMethod = 'pronoun' # options are 'pronoun' 'tobe'
+        judgementMethod = 'both' # options are 'both' 'pronoun' 'tobe'
         binSize = 10 # the number of docs per bin, set to 1 for individual docs
 
     else:
@@ -265,9 +287,16 @@ if __name__ == '__main__':
         +'_'+keywordMethod+'_'+judgementMethod+'_bin_'+str(binSize)
     # define the random ID for this run
     runID = id_generator()
+    #
+    if judgementMethod == 'both':
+        judgementCols = ['toBeFrac','pronounFrac']
+    elif judgementMethod == 'bothAll':
+        judgementCols = ['toBeFrac', 'toBeCount','pronounFrac', 'pronounCount']
+    else:   
+        judgementCols = ['judgementCount','judgementFrac']
 
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-    signalDF = runMaster(rawPath,binSize,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    signalDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
@@ -304,7 +333,7 @@ if __name__ == '__main__':
     signalDF=addRank(signalDF)
 
     #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc','judgementFrac','judgementCount','avgSD', 'avgEVC']
+    xList=['perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + ['avgSD', 'avgEVC']
     yList=['rank']
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]

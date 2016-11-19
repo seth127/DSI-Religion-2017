@@ -46,8 +46,12 @@ negFilePath='./refData/negative-words.txt'
 #Get manual keywords
 manualKeywordFilePath='./refData/manualKeywords.csv'
 #get sentiment words
-posWords=list(set(unicode(open(posFilePath).read(), "utf-8", errors="ignore")))
-negWords=list(set(unicode(open(negFilePath).read(), "utf-8", errors="ignore")))
+#posWords=list(set(unicode(open(posFilePath).read(), "utf-8", errors="ignore")))
+#negWords=list(set(unicode(open(negFilePath).read(), "utf-8", errors="ignore")))
+posRaw = unicode(open(posFilePath).read(), "utf-8", errors="ignore")
+posWords = posRaw.split()
+negRaw = unicode(open(negFilePath).read(), "utf-8", errors="ignore")
+negWords = negRaw.split()
 
 #Assign user defined lists
 #Tokenization lists
