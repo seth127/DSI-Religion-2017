@@ -1,0 +1,45 @@
+,groupId,files,timeRun,keywords,perPos,perNeg,perPosDoc,perNegDoc,judgementCount,judgementFrac,avgSD,avgEVC
+0,Rabbinic_train14,1,1.75043797493,"we, hope, courag, our, moment, shall, better, forward, “what, “we",0.0299401197605,0.0336250575772,0.0,1.0,92.0,0.736,0.659757294292,0.590146845898
+1,SeaShepherds_train12,1,1.09611916542,"greenpeac, seal, fur, whale, endors, sealer, brutal, risk, betray, revel",0.0230326295585,0.0518234165067,0.0,1.0,17.0,0.62962962963,0.705541645229,0.594419516164
+2,Rabbinic_test4,1,1.65533900261,"privileg, fortgang, circumst, samson, advantag, check, jewish, persecut, mcintosh, “check",0.0182320441989,0.021546961326,0.0,1.0,65.0,0.866666666667,0.64150857614,0.609904016194
+3,SeaShepherds_test1,1,1.40271806717,"shepherd, net, illeg, whale, crew, gill, cut, happi, anyth, worri",0.0394524959742,0.0185185185185,1.0,0.0,53.0,0.883333333333,0.709125266501,0.664432651124
+4,Rabbinic_train23,1,1.75790905952,"synagogu, want, templ, presenc, answer, communal, kaplan, dwell, prayer, jewri",0.020295202952,0.0119926199262,1.0,0.0,61.0,0.598039215686,0.642506341541,0.603580255932
+5,Rabbinic_train18,1,2.66543483734,"israel, cousin, jew, benji, want, jonathan, am, defend, summer, jewish",0.0231503579952,0.0221957040573,1.0,0.0,137.0,0.810650887574,0.668488475948,0.565979481023
+6,SeaShepherds_train16,1,1.58919000626,"costa, rican, coco, shepherd, arrest, illeg, guatemalan, vessel, charg, rica",0.0115321252059,0.0219659527732,0.0,1.0,56.0,0.674698795181,0.691889553451,0.628273480924
+7,Rabbinic_test0,1,1.31649422646,"isra, jewish, jew, judaism, diaspora, israel, anxieti, hanukkah, fear, ident",0.019248395967,0.012832263978,1.0,0.0,36.0,0.765957446809,0.752591045538,0.620207475279
+8,Rabbinic_train11,1,1.53236222267,"torah, learn, philtrum, jewish, want, moment, familiar, sinai, rabbi, rabbin",0.0199878861296,0.00726832222895,1.0,0.0,51.0,0.784615384615,0.692979015204,0.724279049578
+9,Rabbinic_train15,1,1.83061408997,"jerusalem, jew, templ, lapid, night, get, peoplehood, bless, “i, wall",0.013698630137,0.0128684101287,1.0,0.0,76.0,0.745098039216,0.725250513923,0.768358832292
+10,SeaShepherds_train11,1,1.11871099472,"eat, taboo, fish, ecolog, we, swim, enforc, trawler, salmon",0.0204081632653,0.0430839002268,0.0,1.0,18.0,0.58064516129,0.700292646228,0.631625263284
+11,SeaShepherds_test2,1,1.20442891121,"shepherd, danish, whale, slaughter, faroes, boat, thank, crew, arrest, wonder",0.0433673469388,0.0408163265306,1.0,0.0,6.0,0.352941176471,0.76169889356,0.55158115701
+12,Rabbinic_train22,1,1.6591489315,"jew, jewish, sandler, jewri, rabbin, say, chapter, judaism, magid, isra",0.0146886016451,0.0129259694477,1.0,0.0,51.0,0.6375,0.695736569199,0.689917689469
+13,Rabbinic_train19,1,1.70079302788,"menorah, jewish, hanukkah, jew, rabbi, jacob, display, joseph, egyptian, hidden",0.0256278831369,0.0138390568939,1.0,0.0,68.0,0.76404494382,0.670794891144,0.575507782153
+14,SeaShepherds_train15,1,0.990243911743,"danish, denmark, whale, faro, shepherd, dolphin, pilot, slaughter, cruis, boycott",0.0167785234899,0.0369127516779,0.0,1.0,3.0,0.230769230769,0.752693981939,0.359276085611
+15,Rabbinic_test7,1,1.87551188469,"rebb, prison, alter, frankl, imprison, timerman, chabad, endur, sharanski, hope",0.0180972078594,0.0284384694933,0.0,1.0,55.0,0.833333333333,0.812363984279,0.711924369146
+16,Rabbinic_train12,1,1.82035183907,"bless, jacob, jewish, nonjewish, jewri, cohen, judaism, want, happen, glori",0.0294117647059,0.00871459694989,1.0,0.0,50.0,0.657894736842,0.713513934006,0.543765237736
+17,SeaShepherds_train7,1,1.0449860096,"dolphin, captiv, tank, sorri, am, orca, shepherd, endur, taiji, sought",0.00902934537246,0.0632054176072,0.0,1.0,24.0,0.96,0.706574772137,0.617284266911
+18,SeaShepherds_train19,1,1.08589816093,"vaquita, gift, illeg, shepherd, marin, save, countless, whale, gill, porpois",0.020325203252,0.0182926829268,1.0,0.0,13.0,0.65,0.740851375458,0.588484581691
+19,Rabbinic_test3,1,1.96368503571,"jew, wasserstein, tri, know, don't, israel, fate, moment, choic, chapter",0.014329580348,0.0204708290686,0.0,1.0,60.0,0.625,0.692318393057,0.522618667611
+20,Rabbinic_train16,1,1.58826708794,"jacob, joseph, brother, sibl, know, kippur, yom, sin, relationship, forgiv",0.0223266745006,0.027027027027,0.0,1.0,64.0,0.876712328767,0.66695215691,0.673089494544
+21,SeaShepherds_train10,1,0.9838950634,"whale, contamin, pollut, shepherd, toxicolog, ecosystem, microplast, expedit, scientist, california",0.0245398773006,0.0122699386503,1.0,0.0,8.0,0.571428571429,0.806506830243,0.582645206635
+22,Rabbinic_train8,1,1.84648799896,"cave, bar, yochai, plato, everyday, mystic, rabbi, allegori, journey, talmud",0.0210166177908,0.0298142717498,0.0,1.0,61.0,0.7625,0.715120806391,0.674249686191
+23,SeaShepherds_test3,1,1.6816110611,"whale, seal, “human, “sustain, slaughter, harvest, club, “conserv, eat, fish",0.0180754917597,0.0425305688464,0.0,1.0,65.0,0.596330275229,0.689681331619,0.507854515709
+24,SeaShepherds_train14,1,1.01335287094,"turtl, shepherd, save, gift, donat, pollut, jairo, campaign, amaz, threat",0.0374639769452,0.0230547550432,1.0,0.0,15.0,0.882352941176,0.674056378808,0.437815293664
+25,Rabbinic_test6,1,1.53532195091,"eve, adam, garden, fruit, tree, eat, serpent, genesi, sin, wrong",0.0224422442244,0.026402640264,0.0,1.0,46.0,0.666666666667,0.696379717775,0.667574077902
+26,Rabbinic_train13,1,1.74711084366,"patient, ego, samson, nazirit, physician, hurt, “hate, grove, doctor, kamsa",0.0178055822907,0.0317613089509,0.0,1.0,64.0,0.79012345679,0.732215247358,0.731104206183
+27,Rabbinic_train21,1,1.6392800808,"jewri, ben, gurion, israel, blaustein, isra, diaspora, ajc, jewish, jew",0.0163646990064,0.0116890707189,1.0,0.0,44.0,0.602739726027,0.762199667779,0.456068737832
+28,SeaShepherds_train6,1,1.21052289009,"diminish, oxygen, phytoplankton, whale, plankton, fish, fishmeal, carbon, dioxid, feed",0.0109356014581,0.0218712029162,0.0,1.0,17.0,0.326923076923,0.743839985633,0.755369135196
+29,SeaShepherds_train18,1,1.43337512016,"whale, shepherd, whaler, save, japanes, injunct, quota, japan, vessel, illeg",0.0123171670516,0.0246343341032,0.0,1.0,32.0,0.484848484848,0.691209798642,0.747693114453
+30,SeaShepherds_train9,1,1.27079296112,"seaworld, hsus, orca, manbi, pacell, keiko, condemn, profit, will, dolphin",0.0274949083503,0.0336048879837,0.0,1.0,34.0,0.59649122807,0.677276980044,0.527094275498
+31,Rabbinic_test2,1,1.69539999962,"ben, zakkai, zoom, worri, jewish, commit, judaism, promis, moment, gurion",0.0267676767677,0.0121212121212,1.0,0.0,62.0,0.704545454545,0.761153890189,0.565708969644
+32,Rabbinic_train17,1,1.34462404251,"israel, messag, knesset, thank, isra, synagogu, serious, judaism, rabbin, threat",0.0272804774084,0.0213128729753,1.0,0.0,43.0,0.754385964912,0.644806506028,0.645922241612
+33,Rabbinic_train9,1,1.70566892624,"gratitud, giver, give, grate, mine, “what, bless, rabbi, s, fruit",0.027027027027,0.0142784293728,1.0,0.0,62.0,0.639175257732,0.68939431935,0.676167493222
+34,SeaShepherds_test4,1,1.0274579525,"seaworld, breed, sharehold, orca, permit, room, pool, expans, care, steadi",0.0121654501217,0.0413625304136,0.0,1.0,11.0,0.478260869565,0.72593207083,0.652933237691
+35,SeaShepherds_train13,1,1.02967905998,"vessel, thunder, poacher, crew, chase, gear, endur, thank, illeg, rescu",0.0356234096692,0.030534351145,1.0,0.0,17.0,0.809523809524,0.824790998852,0.687724572704
+36,Rabbinic_test5,1,1.64479899406,"evil, eichmann, amalek, abnorm, amalekut, absolut, arendt, wyschogrod, banal, deed",0.012323943662,0.037558685446,0.0,1.0,46.0,0.621621621622,0.719594762645,0.585213651362
+37,SeaShepherds_test0,1,1.07107400894,"shepherd, pamela, anderson, slaughter, seal, newfoundland, babi, dolphin, orca, whale",0.0155763239875,0.0155763239875,0.0,1.0,10.0,0.909090909091,0.793314711622,0.659458358688
+38,Rabbinic_train20,1,1.71048903465,"bless, sibl, esau, jacob, biblic, dinner, know, sit, thanksgiv, noth",0.0288770053476,0.0133689839572,1.0,0.0,61.0,0.743902439024,0.741454942085,0.438863639611
+39,SeaShepherds_train17,1,0.903709888458,"marineland, orca, valentin, flood, deni, prison, shut, confirm, die",0.0217391304348,0.0724637681159,0.0,1.0,7.0,0.411764705882,0.720479120924,0.693728605479
+40,SeaShepherds_train8,1,1.09699392319,"net, totoaba, illeg, gear, farley, weather, mowat, endang, find, fish",0.0282828282828,0.030303030303,0.0,1.0,14.0,0.583333333333,0.792408699805,0.801489295722
+41,Rabbinic_test1,1,1.68007397652,"mose, introvert, whi, am, goe, get, choos, tell, extrovert, ask",0.0297805642633,0.0114942528736,1.0,0.0,59.0,0.702380952381,0.679057249274,0.584831052026
+42,Rabbinic_train10,1,1.75634694099,"rebecca, zerizut, woman, ask, servant, biblic, abraham, patton, isaac, camel",0.0266733769502,0.0150981378963,1.0,0.0,69.0,0.831325301205,0.622161254616,0.546560188151
+43,SeaShepherds_test5,1,1.11316299438,"dog, galapago, shark, wildlif, “sniffer, shepherd, remark, cristob, agreement, ecuador",0.0112570356473,0.0187617260788,0.0,1.0,12.0,0.631578947368,0.710422850746,0.682025241827
