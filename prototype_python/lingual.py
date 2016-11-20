@@ -43,15 +43,15 @@ tagger = PerceptronTagger()
 #Get sentimentWord dict and remove duplicates. Store in lists
 posFilePath='./refData/positive-words.txt'
 negFilePath='./refData/negative-words.txt'
-#Get manual keywords
-manualKeywordFilePath='./refData/manualKeywords.csv'
+
 #get sentiment words
-#posWords=list(set(unicode(open(posFilePath).read(), "utf-8", errors="ignore")))
-#negWords=list(set(unicode(open(negFilePath).read(), "utf-8", errors="ignore")))
 posRaw = unicode(open(posFilePath).read(), "utf-8", errors="ignore")
 posWords = posRaw.split()
 negRaw = unicode(open(negFilePath).read(), "utf-8", errors="ignore")
 negWords = negRaw.split()
+
+#Get manual keywords
+manualKeywordFilePath='./refData/manualKeywords.csv'
 
 #Assign user defined lists
 #Tokenization lists
@@ -198,7 +198,7 @@ class lingualObject(object):
         self.useStopwords=useStopwords
         #
         self.idfFile = 'wiki-test-5-IDF.csv'
-        self.idf = pd.read_csv('./wiki-IDF/' + self.idfFile)
+        self.idf = pd.read_csv('./refData/' + self.idfFile)
         self.idf = self.idf.set_index('term')
         
         ######################
