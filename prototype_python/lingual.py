@@ -306,6 +306,7 @@ class lingualObject(object):
             
             #Remove blanks
             textList=[word for word in textList if word!= ' ']
+            textList=[word for word in textList if word!= '']
              
             #Remove stopwords if useStopwords ==False
             if not useStopwords: 

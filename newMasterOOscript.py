@@ -174,13 +174,13 @@ def textAnalysis(paramList):
     #Append outputs to masterOutput
     return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+judgementAvg+[avgSD]+[avgEVC])   
 
-def runMaster(rawPath,runDirectory,paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
+def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
     #####Raw File List Extract#####
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF(rawPath, bin=10, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='tt') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
@@ -296,7 +296,7 @@ if __name__ == '__main__':
         judgementCols = ['judgementCount','judgementFrac']
 
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-    signalDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
