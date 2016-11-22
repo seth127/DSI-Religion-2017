@@ -147,6 +147,12 @@ def textAnalysis(paramList):
         print(pronounAverage)
         # assign both scores from each
         judgementAvg = toBeAverage + pronounAverage
+    elif judgementMethod == 'pronounFrac':
+        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
+        print('pronounAverage')
+        print([pronounAverage[1]])
+        # assign both scores from each
+        judgementAvg = [pronounAverage[1]]
     else:   
         judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
         print(judgementMethod)
@@ -257,7 +263,7 @@ if __name__ == '__main__':
         netAngle=30
         targetWordCount=10
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
-        judgementMethod = 'pronoun' # options are 'both' 'bothAll' 'pronoun' 'tobe'
+        judgementMethod = 'pronoun' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
         binSize = 10 # the number of docs per bin, set to 1 for individual docs
 
     else:
@@ -292,7 +298,14 @@ if __name__ == '__main__':
         judgementCols = ['toBeFrac','pronounFrac']
     elif judgementMethod == 'bothAll':
         judgementCols = ['toBeFrac', 'toBeCount','pronounFrac', 'pronounCount']
+    elif judgementMethod == 'pronounFrac':
+        judgementCols = ['pronounFrac']
+    elif judgementMethod == 'pronoun':
+        judgementCols = ['pronounCount','pronounFrac']
+    elif judgementMethod == 'tobe':
+        judgementCols = ['toBeCount','toBeFrac']
     else:   
+        print("NOT SURE ABOUT JUDGEMENT METHOD, labeling may be wrong")
         judgementCols = ['judgementCount','judgementFrac']
 
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
