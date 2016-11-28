@@ -1,3 +1,4 @@
+# started 11/21 at 12:30 pm
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidfNoPro both 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 30 tfidfNoPro both 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 15 tfidfNoPro both 10
@@ -5,7 +6,7 @@ python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidf both 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 30 tfidf both 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 15 tfidf both 10
 
-
+# started 11/22 at 9:30 am
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 30 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 15 tfidfNoPro pronounFrac 10
@@ -13,6 +14,8 @@ python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidf pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 30 tfidf pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 15 tfidf pronounFrac 10
 #
+
+# started 11/22 10pm
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 10 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 10 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 10 tfidfNoPro pronounFrac 10
