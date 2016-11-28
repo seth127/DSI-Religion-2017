@@ -212,6 +212,8 @@ class lingualObject(object):
         self.judgements={}
         self.pronoun_sentences={}
 
+        self.pronounCols = ['nous', 'vous', 'je', 'ils']
+
         #set the groupId
         path = fileList[0]
         path = path.split('/')
@@ -914,3 +916,45 @@ class lingualObject(object):
         #Get mean eigenvector centrality for words in target list
         meanEVC=np.mean([ev_centrality[i] for i in range(len(self.DSM.keys())) if self.DSM.keys()[i] in self.keywords])
         return(meanEVC)
+
+
+    def getPronouns(self):
+        #print(textList)
+
+        textList = []
+        #naw = [self.tokens[x] for x in self.tokens]
+        for x in [self.tokens[x] for x in self.tokens]:
+            textList = textList + x
+
+        textList=[word for word in textList if word!= '']
+        try:
+            tags = tagger.tag(textList)
+            #print(tags)
+        except:
+            #print("%%%%%%\n!!!!!!!!!!!\nTAGGER FAILED\n!!!!!!!!!!!\n%%%%%%")
+            #print(textList)
+            #return textList
+            print('oops')
+        
+        keep = []
+        pronouns = []
+        for i in range(0,len(textList)):
+            #print(tags[i][1])
+            if (tags[i][1] == 'PRP') | (tags[i][1] == 'PRP$'):
+                pronouns.append(tags[i][0])
+                keep = keep + [i]
+        #print(keep)
+        #return [textList[i] for i in keep]
+        #return pronouns
+        p = FreqDist(pronouns)
+        counts = {}
+        counts['nous'] = p['we'] + p['our'] + p['us']
+        counts['vous'] = p['you'] + p['your'] + p['yourself']
+        counts['je'] = p['me'] + p['my'] + p['myself'] + p['i']
+        counts['ils'] = p['their'] + p['them'] + p['they']
+        #print(p)
+        print(counts)
+        return [counts[x] for x in self.pronounCols]
+
+        # SHOULD BE PERCENTAGE!!!!!!!!!!
+
