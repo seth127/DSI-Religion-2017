@@ -309,7 +309,7 @@ if __name__ == '__main__':
     else:   
         judgementCols = ['judgementCount','judgementFrac']
 
-    pronounCols = ['nous', 'vous', 'je', 'ils']
+    pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
     signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 

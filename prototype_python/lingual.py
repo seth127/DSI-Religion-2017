@@ -212,7 +212,7 @@ class lingualObject(object):
         self.judgements={}
         self.pronoun_sentences={}
 
-        self.pronounCols = ['nous', 'vous', 'je', 'ils']
+        self.pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
 
         #set the groupId
         path = fileList[0]
@@ -919,42 +919,50 @@ class lingualObject(object):
 
 
     def getPronouns(self):
-        #print(textList)
-
+        # get single list of all words in bin
         textList = []
-        #naw = [self.tokens[x] for x in self.tokens]
         for x in [self.tokens[x] for x in self.tokens]:
             textList = textList + x
-
-        textList=[word for word in textList if word!= '']
+        # filter out blanks (they make the tagger throw an error)
+        textList=[word for word in textList if word!= ''] 
+        # get count of total words
+        totalWords = len(textList)
+        print(str(totalWords) + " total words in bin")
+        
+        # tag every word
         try:
             tags = tagger.tag(textList)
             #print(tags)
         except:
-            #print("%%%%%%\n!!!!!!!!!!!\nTAGGER FAILED\n!!!!!!!!!!!\n%%%%%%")
+            print("%%%%%%\n!!!!!!!!!!!\nTAGGER FAILED\n!!!!!!!!!!!\n%%%%%%")
             #print(textList)
             #return textList
             print('oops')
         
-        keep = []
+        # filter our only the pronouns
         pronouns = []
         for i in range(0,len(textList)):
             #print(tags[i][1])
-            if (tags[i][1] == 'PRP') | (tags[i][1] == 'PRP$'):
+            if (tags[i][1] == 'PRP') | (tags[i][1] == 'PRP$') | (tags[i][0] == 'i'):
                 pronouns.append(tags[i][0])
-                keep = keep + [i]
-        #print(keep)
-        #return [textList[i] for i in keep]
-        #return pronouns
+                #print(set(pronouns)) # prints all the pronouns it finds
+        
+        # count the pronouns and bin them
         p = FreqDist(pronouns)
         counts = {}
-        counts['nous'] = p['we'] + p['our'] + p['us']
-        counts['vous'] = p['you'] + p['your'] + p['yourself']
-        counts['je'] = p['me'] + p['my'] + p['myself'] + p['i']
-        counts['ils'] = p['their'] + p['them'] + p['they']
+        counts['nous'] = float(p['we'] + p['our'] + p['us']) / totalWords
+        counts['vous'] = float(p['you'] + p['your'] + p['yourself']) / totalWords
+        counts['je'] = float(p['me'] + p['my'] + p['myself'] + p['i']) / totalWords
+        counts['ils'] = float(p['their'] + p['them'] + p['they']) / totalWords
+        counts['il'] = float(p['he'] + p['him'] + p['himself'] + p['his']) / totalWords
+        counts['elle'] = float(p['she'] + p['her'] + p['herself'] + p['i']) / totalWords
+        counts['le'] = float(p['it'] + p[''] + p['itself'] + p['oneself']) / totalWords
+
+        
+        # return bin counts as a list
         #print(p)
         print(counts)
         return [counts[x] for x in self.pronounCols]
 
-        # SHOULD BE PERCENTAGE!!!!!!!!!!
+
 
