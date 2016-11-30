@@ -432,7 +432,7 @@ class lingualObject(object):
     #####################
     ###Set Up keywords###
     #####################
-    def setKeywords(self,method='adjAdv',wordCount=10,startCount=0):
+    def setKeywords(self,method='tfidfNoPro',wordCount=10,startCount=0):
         '''
         function to automatically assign keywords if manual ones have not been assigned
         

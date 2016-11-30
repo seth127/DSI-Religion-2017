@@ -2,6 +2,14 @@ setwd("~/Documents/DSI/Capstone/DSI-Religion-2017")
 library(ggplot2)
 library(dplyr)
 
+# FANCY FONTS
+#https://www.r-bloggers.com/how-to-use-your-favorite-fonts-in-r-charts/
+#install.packages("extrafont")
+# library(extrafont)
+# font_import() # this takes a minute or two
+# fonts()
+theme_set(theme_grey(base_size = 16))
+
 df <- read.csv('modelOutput/modelStats.csv', stringsAsFactors = T)
 View(df)
 
@@ -100,8 +108,20 @@ ggplot(df, aes(x = binSize, y = svmAccuracy, colour = judgementMethod)) + geom_p
 signalDF <- read.csv('modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidfNoPro_both_bin_10-5Z4U8N.csv', stringsAsFactors = T)
 
 # ils
-ggplot(signalDF, aes(x=rank, y=ils, colour = pronounFrac)) + geom_point(size=5)
+#ggplot(signalDF, aes(x=rank, y=ils, colour = groupName)) + geom_point(size=5) + ggtitle("They") + theme(text=element_text(size=16, family="Comic Sans MS"))
+# ils
+ggplot(signalDF, aes(x=rank, y=ils, colour = groupName)) + geom_point(size=5) + ggtitle("They")
+
+# nous
+ggplot(signalDF, aes(x=rank, y=nous, colour = groupName)) + geom_point(size=5) + ggtitle("We")
+
+# vous
+ggplot(signalDF, aes(x=rank, y=vous, colour = groupName)) + geom_point(size=5) + ggtitle("You")
+
+# it
+ggplot(signalDF, aes(x=rank, y=le, colour = groupName)) + geom_point(size=5) + ggtitle("It")
+
 
 # pronounFrac
-ggplot(signalDF, aes(x=rank, y=pronounFrac)) + geom_point(size=5)
+ggplot(signalDF, aes(x=rank, y=pronounFrac, colour=perNeg)) + geom_point(size=5)
 
