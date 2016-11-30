@@ -104,7 +104,7 @@ def textAnalysis(paramList):
     loTest.getDSM(svdInt)
     
     #Set keywords
-    #loTest.setKeywords('adjAdv',targetWordCount,startCount)
+    loTest.setKeywords('adjAdv',targetWordCount,startCount)
 
 
     print('%%%%\nUSING ' + keywordMethod + ' KEYWORDS')
@@ -196,6 +196,29 @@ def textAnalysis(paramList):
     #Append outputs to masterOutput
     return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
 
+def pronounAnalysis(paramList):
+    startTime=time.time()
+    groupId=paramList[0]
+    fileList=paramList[1]  
+    
+    #Get list of subfiles
+    subFileList=[x[1] for x in fileList if x[0]==groupId[0] and x[2]==groupId[1]]
+
+    #Create lingual object
+    loTest=la.lingualObject(subFileList)
+
+
+    pronounCounts = loTest.getPronouns()
+
+    endTime=time.time()
+    timeRun=endTime-startTime
+    print('finished running'+'_'.join(groupId)+' in '+str(end-start)+' seconds')
+    sys.stdout.flush()
+
+    #Append outputs to masterOutput
+    return(['_'.join(groupId)]+[len(subFileList),timeRun]+pronounCounts)   
+
+
 def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
     #####Raw File List Extract#####
@@ -228,10 +251,17 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     #Create paramList
     paramList=[[x,fileList,targetWordCount,cocoWindow,svdInt,cvWindow,simCount,startCount,netAngle] for x in subgroupList]
     
+    # create pronoun paramList
+    pronounParamList=[[x,fileList] for x in subgroupList]
+    
     #Run calculation 
-    masterOutput=[textAnalysis(x) for x in paramList]  
+    #masterOutput=[textAnalysis(x) for x in paramList]  
+    masterOutput=[pronounAnalysis(x) for x in pronounParamList]  
+
     #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
+    #outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
+    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun'] + pronounCols)
+    
     #Write that file for reference
     outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
@@ -305,8 +335,9 @@ if __name__ == '__main__':
     sys.stdout.flush()
 
     # define the file path with identifying parameters
-    paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_twc_'+str(targetWordCount)\
-        +'_'+keywordMethod+'_'+judgementMethod+'_bin_'+str(binSize)
+    #paramPath = 'coco_'+str(cocoWindow)+'_cv_'+str(cvWindow)+'_netAng_'+str(netAngle)+'_twc_'+str(targetWordCount)\
+    #    +'_'+keywordMethod+'_'+judgementMethod+'_bin_'+str(binSize)
+    paramPath = 'pronouns_only'
     # define the random ID for this run
     runID = id_generator()
     #
@@ -358,7 +389,9 @@ if __name__ == '__main__':
     signalDF=addRank(signalDF)
 
     #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    #xList=['perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    xList=pronounCols
+    
     yList=['rank']
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
