@@ -30,7 +30,7 @@ rownames(df) <- NULL
 ggplot(df[is.na(df$nous),], aes(x=as.numeric(row.names(df[is.na(df$nous),])), fill=judgementMethod, y=svmAccuracy)) + geom_bar(stat="identity", position=position_dodge()) + ggtitle('SVM -WITHOUT- Pronoun Counts') + ylim(0,1) + xlab('')
 
 # with PRONOUN COUNTS
-ggplot(df[!is.na(df$nous),], aes(x=as.numeric(row.names(df[!is.na(df$nous),])), fill=judgementMethod, y=svmAccuracy)) + geom_bar(stat="identity", position=position_dodge()) + ggtitle('SVM -WITH- Pronoun Counts') + xlab('')
+ggplot(df[!is.na(df$nous),], aes(x=as.numeric(row.names(df[!is.na(df$nous),])), fill=keywordMethod, y=svmAccuracy)) + geom_bar(stat="identity", position=position_dodge()) + ggtitle('SVM -WITH- Pronoun Counts') + xlab('')
 
 # with ALL
 df$didWeCountPronouns <- ifelse(is.na(df$nous), F,T)
