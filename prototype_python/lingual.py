@@ -956,7 +956,7 @@ class lingualObject(object):
         counts['ils'] = float(p['their'] + p['them'] + p['they']) / totalWords
         counts['il'] = float(p['he'] + p['him'] + p['himself'] + p['his']) / totalWords
         counts['elle'] = float(p['she'] + p['her'] + p['herself'] + p['hers']) / totalWords
-        counts['le'] = float(p['it'] + p[''] + p['itself'] + p['oneself']) / totalWords
+        counts['le'] = float(p['it'] + p['itself'] + p['oneself']) / totalWords
 
         
         # return bin counts as a list
