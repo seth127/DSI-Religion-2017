@@ -212,7 +212,7 @@ class lingualObject(object):
         self.sentences={}
         self.judgements={}
         self.pronoun_sentences={}
-
+        self.keyword_pronouns_sentences ={}
         self.pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
 
         #set the groupId
@@ -656,6 +656,18 @@ class lingualObject(object):
         else:
             print('ERROR: Method not found')
     
+    ################################################
+    ### Count Sentences with Keyword and Pronouns##
+    ###############################################
+
+    def getkeywordpronounfraction(self):
+        keyword.pronouns.sentences = []
+        for key in self.keywords:
+            for sentence in self.pronoun_sentence_list:
+                if key in self.pronoun_sentence_list:
+                    keyword.pronouns.sentences.append(pronoun_sentence_list[sentence])
+        self.keyword.pronouns.sentences = keyword.pronouns.sentences
+
     ######################################
     ###Get context vectors for keywords###
     ######################################
