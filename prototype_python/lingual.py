@@ -126,6 +126,46 @@ def drop_pronouns(textList):
             keep = keep + [i]
     return [textList[i] for i in keep]
 
+def rawToTokenList(rawData):
+    textList=nltk.word_tokenize(rawData)
+    tokenList=[]
+    for token in textList:
+        try:
+            #tokenList.append(str(token))
+            #tokenList.append(unicode(token)) #### changed this to get rid of most CODEC ERRORs
+            thisToken = unicode(token)
+            uselessUnicode = [u'\u2013', u'\u201d'] ### don't include these when they are alone
+            if thisToken not in uselessUnicode:
+                thisToken = thisToken.replace(u'\u201d','') # delete this (unicode quote)
+                tokenList.append(thisToken)
+        except:
+            tokenList.append('**CODEC_ERROR**')
+            # #######################prints word on CODEC ERROR
+            print('**CODEC_ERROR**')
+            print(token) 
+            print('****')
+    return tokenList
+
+def cleanTokens(tokenList):
+    #Convert all text to lower case
+    textList=[word.lower() for word in tokenList]
+    
+    #Remove punctuation
+    textList=[word for word in textList if word not in punctuation]
+    textList=["".join(c for c in word if c not in punctuation) for word in textList ]
+    
+    #convert digits into NUM
+    textList=[re.sub("\d+", "NUM", word) for word in textList]  
+    
+    #Stem words 
+    textList=[stemmer.stem(word) for word in textList]
+    
+    #Remove blanks
+    textList=[word for word in textList if word!= ' ']
+    textList=[word for word in textList if word!= '']
+    
+    #Extract tokens
+    return textList
 
 #Define main class
 class lingualObject(object):
@@ -224,6 +264,8 @@ class lingualObject(object):
         for fileName in fileList:   
             #Extract raw text and update for encoding issues            
             rawData=unicode(open(fileName).read(), "utf-8", errors="ignore")
+            
+            '''
             textList=nltk.word_tokenize(rawData)
             tokenList=[]
             for token in textList:
@@ -243,6 +285,10 @@ class lingualObject(object):
                     print('****')
 
             #Create clean text string and save as rawText
+            txtString=' '.join(tokenList)
+            '''
+
+            tokenList = rawToTokenList(rawData)
             txtString=' '.join(tokenList)
             self.rawText[fileName]=txtString
 
@@ -290,7 +336,9 @@ class lingualObject(object):
             self.judgements[fileName]=judgementList
             self.pronoun_sentences[fileName] = pronoun_sentence_list
 
+
             #Create tokens
+            '''
             #Convert all text to lower case
             textList=[word.lower() for word in tokenList]
             
@@ -315,9 +363,10 @@ class lingualObject(object):
             if not useStopwords: 
                 newStopWords.append("")
                 textList=[word for word in textList if word not in newStopWords]
-            
+            '''
+
             #Extract tokens
-            self.tokens[fileName]=textList
+            self.tokens[fileName]=cleanTokens(tokenList)
             
     ########################
     ###Create cocoDict,TF###
