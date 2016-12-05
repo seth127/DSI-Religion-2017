@@ -710,12 +710,20 @@ class lingualObject(object):
     ###############################################
 
     def getkeywordpronounfraction(self):
-        keyword.pronouns.sentences = []
-        for key in self.keywords:
-            for sentence in self.pronoun_sentence_list:
-                if key in self.pronoun_sentence_list:
-                    keyword.pronouns.sentences.append(pronoun_sentence_list[sentence])
-        self.keyword.pronouns.sentences = keyword.pronouns.sentences
+        for fileName in self.fileList: 
+            keyword_pronouns_sentences = []
+            for key in self.keywords:
+                for sentence in self.pronoun_sentences[fileName]:
+                    #print (sentence)
+                    sentencetokens = la.cleanTokens(la.rawToTokenList(sentence))
+                    #print(sentencetokens)
+                    if key in sentencetokens:
+                        #print (key)
+                        #print (sentencetokens)
+                        #print(sentence)
+                        keyword_pronouns_sentences.append(sentence)
+            self.keyword_pronouns_sentences[fileName] = np.unique(keyword_pronouns_sentences)
+        #return(self.keyword_pronouns_sentences)
 
     ######################################
     ###Get context vectors for keywords###
@@ -890,7 +898,7 @@ class lingualObject(object):
         for fileName in self.fileList:
             #Get count of judgements
 
-            judgementCount=len(self.pronoun_sentences[fileName])
+            judgementCount=len(self.keyword_pronouns_sentences[fileName])
  
             
             #Calculate percent of sentences that are judgements
