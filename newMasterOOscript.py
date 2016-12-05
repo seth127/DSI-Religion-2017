@@ -129,7 +129,8 @@ def textAnalysis(paramList):
     ########################################
 
     # Pronoun Specific Judgments
-    PSJudge=list(np.mean(np.array([x[2] for x in loTest.pronounSpecificJudgements()]),axis=0))
+    PSJudgeWithCount=list(np.mean(np.array([[x[1],x[2]] for x in loTest.pronounSpecificJudgements()]),axis=0))
+    PSJudge = PSJudgeWithCount[1]
     print('Printing Pronoun Specific Judgments')
     print(PSJudge)
 
@@ -204,7 +205,7 @@ def textAnalysis(paramList):
     sys.stdout.flush()
 
     #Append outputs to masterOutput
-    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+PSJudge+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
+    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
 
 def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################

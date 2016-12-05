@@ -715,7 +715,7 @@ class lingualObject(object):
             for key in self.keywords:
                 for sentence in self.pronoun_sentences[fileName]:
                     #print (sentence)
-                    sentencetokens = la.cleanTokens(la.rawToTokenList(sentence))
+                    sentencetokens = cleanTokens(rawToTokenList(sentence))
                     #print(sentencetokens)
                     if key in sentencetokens:
                         #print (key)
@@ -890,7 +890,10 @@ class lingualObject(object):
         judgementList: list
             List of lists containing document filepath, count of judgements, and percent
             of sentences in document that are judgements
-        '''     
+        '''
+        if len(self.keyword_pronouns_sentences.keys()) == 0:
+            self.getkeywordpronounfraction()
+
         #Define judgement list
         judgementList=[]
         
