@@ -128,9 +128,28 @@ ggplot(signalDF, aes(x=rank, y=pronounFrac, colour=perNeg)) + geom_point(size=5)
 ####
 # NOW WITH KEYWORD+PRONOUN JUDGEMENTS
 #
-signalDF <- read.csv('modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_pronounFrac_bin_10-YNJG3G.csv', stringsAsFactors = T)
+files <- c("modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidf_pronounFrac_bin_10-Y6DDDX.csv",
+           #"modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_both_bin_10-RO610D.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-7J7LBO.csv",
+           #"modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronounFrac_bin_10-7B7C2E.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidf_pronounFrac_bin_10-BZ2OB7.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidfNoPro_pronounFrac_bin_10-XYVISL.csv"
+           )
 
-ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_point(size=5) + ggtitle("PSJudge")
+signalDF <- read.csv("modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_pronounFrac_bin_10-YNJG3G.csv", stringsAsFactors = T)
+for (file in files) {
+  newDF <- read.csv(file, stringsAsFactors = T)
+  signalDF <- rbind(signalDF, newDF)
+  print(file)
+  print(dim(newDF))
+}
+dim(signalDF)
+
+ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_point(size=5) + ggtitle("Keyword + Pronoun Judgements")
+
+ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_boxplot() + ggtitle("Keyword + Pronoun Judgements")
+ggplot(signalDF, aes(x=as.factor(rank), y=PSJudge)) + geom_boxplot() + xlab("rank") + ggtitle("Keyword + Pronoun Judgements")
 
 # by number of keywords selected
 for (i in 1:nrow(signalDF)){
