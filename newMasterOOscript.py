@@ -257,12 +257,13 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
 
 def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFORE YOU TEST THEM
     #Add in group ranking
-    groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-    'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai','ISIS']
-    groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6,1]
-    
-    groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
-    
+    #groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
+    #'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai']
+    #groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6]
+    ##
+    #groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
+    groupRankDF=pd.read_csv('./refData/groupRanks.csv')
+
 
     signalDF['groupName']=signalDF['groupId'].map(lambda x: x.split('_')[0]) # splits the name off the groupID column value
     
