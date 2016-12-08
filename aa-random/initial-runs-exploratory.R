@@ -11,7 +11,7 @@ library(dplyr)
 theme_set(theme_grey(base_size = 16))
 
 df <- read.csv('modelOutput/modelStats.csv', stringsAsFactors = T)
-View(df)
+#View(df)
 
 # summaries by judgementMethod (BORING)
 judgeDF <- group_by(df, judgementMethod)
@@ -124,4 +124,19 @@ ggplot(signalDF, aes(x=rank, y=le, colour = groupName)) + geom_point(size=5) + g
 
 # pronounFrac
 ggplot(signalDF, aes(x=rank, y=pronounFrac, colour=perNeg)) + geom_point(size=5)
+
+####
+# NOW WITH KEYWORD+PRONOUN JUDGEMENTS
+#
+signalDF <- read.csv('modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_pronounFrac_bin_10-YNJG3G.csv', stringsAsFactors = T)
+
+ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_point(size=5) + ggtitle("PSJudge")
+
+# by number of keywords selected
+for (i in 1:nrow(signalDF)){
+  keys <- unlist(strsplit(as.character(signalDF$keywords[i]), ', '))
+  #print(length(keys))
+  signalDF$keywordCount[i] <- length(keys)
+}
+ggplot(signalDF, aes(x=keywordCount, y=PSJudge, colour = rank)) + geom_point(size=5) + ggtitle("PSJudge")
 
