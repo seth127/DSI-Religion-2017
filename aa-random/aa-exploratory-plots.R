@@ -209,3 +209,24 @@ accplot <- accplot + geom_hline(yintercept = 84, linetype = "longdash")
 #accplot <- accplot + geom_vline(xintercept = 66, linetype = "longdash") 
 accplot
 
+###################
+#   scores BY BINSIZE
+##################
+
+df$id <- as.numeric(row.names(df))
+rs1 <- data.frame(id = df$id, binSize = as.factor(df$binSize), Accuracy = df$svmAccuracy, Model = rep("SVM", nrow(df)))
+rs2 <- data.frame(id = df$id, binSize = as.factor(df$binSize), Accuracy = df$rfAccuracy, Model = rep("Random Forest", nrow(df)))
+rsdf <- rbind(rs1, rs2)
+rsdf$Accuracy <- rsdf$Accuracy * 100
+# accplot <- ggplot(rsdf[rsdf$id > 66 ,], aes(x=id, y=Accuracy, colour = Model)) + geom_line() + ggtitle("Model Accuracy") + xlab('Run ID Number')
+# accplot <- accplot + geom_hline(yintercept = 84, linetype = "longdash") 
+# accplot
+binplot <- ggplot(rsdf[rsdf$id > 66 ,], aes(x=binSize, y=Accuracy, colour = Model)) + geom_point(size=5) + ggtitle("Model Accuracy (new methods)") + xlab('Number of docs in each Bin') + ylim(55,100)
+binplot <- binplot + geom_hline(yintercept = 84, linetype = "longdash") 
+binplot
+
+# with old methods
+binplot <- ggplot(rsdf[rsdf$id < 66 ,], aes(x=binSize, y=Accuracy, colour = Model)) + geom_point(size=5) + ggtitle("Model Accuracy (old methods)") + xlab('Number of docs in each Bin') + ylim(55,100)
+binplot <- binplot + geom_hline(yintercept = 84, linetype = "longdash") 
+binplot
+
