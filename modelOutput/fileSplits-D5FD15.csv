@@ -1,0 +1,646 @@
+,group,filepath,subgroup
+0,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_1-FromHijrahtoKhilafah.txt,train7
+1,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_5-RemainingAndExpanding.txt,test1
+2,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-It_sEitherTheIslamicStateorTheFlood.txt,test2
+3,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-HijrahFromHypocrisyToSincerity.txt,test2
+4,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-TheFloodoftheMubahalah.txt,train7
+5,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-TheIslamicStateBeforeAl-Malhamah.txt,train7
+6,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_1-Introduction.txt,test2
+7,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-IslamicStateReports.txt,train3
+8,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_1-TheConceptofImamah.txt,test0
+9,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-Interview.txt,test1
+10,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-ConspiracyTheory.txt,train4
+11,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-InTheWordsOfTheEnemy.txt,train4
+12,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-ThePerfectStorm.txt,train6
+13,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-TheAlliesOfAlqaidahInSham.txt,test1
+14,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-Foreward.txt,train3
+15,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-HijrahandJihad.txt,train7
+16,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-InTheWordsofTheEnemy.txt,train8
+17,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-IjraTheMostDangerousBidah.txt,test2
+18,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-Interview.txt,test0
+19,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_5-Foreword.txt,train9
+20,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_5-LessonsFromAShahid.txt,test1
+21,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-AmongTheBelieversAreMen.txt,train8
+22,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-History.txt,train6
+23,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-ThePunishingofShu_aytatForTreachery.txt,train7
+24,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_1-TheEnemysWords.txt,train9
+25,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-TheEnemy_sWords.txt,test1
+26,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-InTheWordsOfTheEnemy.txt,train4
+27,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_1-HalabTribalAssemblies.txt,train4
+28,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-InTheWordsofTheEnemy.txt,train8
+29,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-FromThePagesOfHistory.txt,train4
+30,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-TheFightAgainstthePKK.txt,test2
+31,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-TheAlliesofAlqaidahInSham.txt,train8
+32,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-TheQa_idah.txt,train5
+33,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-PerfectingOne_sIslam.txt,train5
+34,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-Foley_sBloodIsOnObama_sHands.txt,train5
+35,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-ParadigmShift.txt,train3
+36,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-Foreword.txt,test0
+37,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-Foreword.txt,test0
+38,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_5-TheFightForWilayatAl-Anbar.txt,train6
+39,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-AdviceForSoldiersofTheIslamicState.txt,test0
+40,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-LessonsFromTheQuran.txt,train9
+41,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_2-Foreward.txt,train8
+42,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-Foreword.txt,train5
+43,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_9-News.txt,train3
+44,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_8-ToOurSisters.txt,train5
+45,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_5-TheEnemy_sWords.txt,train6
+46,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_3-HijrahandForgiveness.txt,train3
+47,ISIS,./data_dsicap_EVEN/ISIS/raw/Issue_6-ATestimonyFromWithin.txt,train6
+48,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS10.txt,train2
+49,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS20.txt,test0
+50,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS03.txt,train2
+51,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS05.txt,test1
+52,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS01.txt,test0
+53,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS18.txt,test0
+54,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS02.txt,train2
+55,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS19.txt,train3
+56,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS11.txt,test1
+57,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS12.txt,test1
+58,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS06.txt,train2
+59,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS16.txt,test1
+60,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS08.txt,train3
+61,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS13.txt,test0
+62,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS14.txt,test1
+63,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS09.txt,train3
+64,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS15.txt,train3
+65,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS04.txt,train2
+66,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS07.txt,train3
+67,SeaShepherds,./data_dsicap_EVEN/SeaShepherds/raw/SS17.txt,test0
+68,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2003-06-15 A Timely Homely on What I Never Seem to Have, Rev. Mark Belletini.htm.txt",test1
+69,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2004-09-12 Water Sunday, Rev. Mark Belletini.PDF.txt",test2
+70,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-01-13 Throwing Out the Bible with the Baptismal Water, Rev. Mark Belletini.htm.txt",test2
+71,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2013-03-17 God and Gaps, Rev. Mark Belletini.pdf.txt",test2
+72,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-01-16 Competing Oppressions, Rev. Mark Belletini.PDF.txt",train8
+73,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2010-05-23 Edges, Rev. Mark Belletini.pdf.txt",test0
+74,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-01-27 Whole Persons, Tattered Lives, Rev. Mark Belletini.htm.txt",test0
+75,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-05-26 Celebration of Life for Memorial Day Sunday, Rev. Mark Belletini.htm.txt",train9
+76,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2012-03-04 Remembering Josseline, Rev. Eric Meter.pdf.txt",train7
+77,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-03-09 Rediscovering Unitarianism in Transylvania, Rev. Scott Gerard Prinster.PDF.txt",train9
+78,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2006-04-30 Anger Hot and Cold, Rev. Mark Belletini.PDF.txt",train8
+79,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2012-01-15 Resisting Being Co-Opted (MLK Sunday), Rev. Mark Belletini.pdf.txt",test2
+80,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2004-02-01 Blues Without Music, Revs. Mark Belletini and Wendy Fish.PDF.txt",train4
+81,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2007-12-24 Christmas Eve, Rev. Mark Belletini.txt",test0
+82,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-12-24 Christmas Eve Compline, Rev. Mark Belletini.pdf.txt",train4
+83,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2011-12-11 Hope Not Hype, Rev. Mark Belletini.pdf.txt",train3
+84,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-02-06 How and Why To Sing, Rev. Mark Belletini.PDF.txt",train7
+85,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-04-24 The Eternal Mystery Story, Rev. Mark Belletini.PDF.txt",train6
+86,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-08-24 Knoxville, Rev. Mark Belletini.pdf.txt",train4
+87,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2007-01-07 Along the Way, Joy, Rev. Mark Belletini.PDF.txt",train5
+88,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-04-06 Accountability, Rev. Mark Belletini.txt",train6
+89,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2003-02-02 Anatomy of Sex and Power, Rev. Mark Belletini.htm.txt",train9
+90,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-03-24 Salvation--Saved from What, Rev. Mark Belletini.htm.txt",train4
+91,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-03-10 Soul--Sermon and Celebration, Rev. Mark Belletini.htm.txt",train8
+92,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2007-11-18 Crumbs, Rev. Mark Belletini.PDF.txt",train3
+93,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-01-27 Grief as a Spiritual Path, Rev. Mark Belletini.pdf.txt",train5
+94,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2004-11-07 Democracy--A Post-Election Sermon, Rev. Mark Belletini.PDF.txt",train6
+95,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2002-03-17 Surrender, Rev. Mark Belletini.htm.txt",train7
+96,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-12-07 Hope, Rev. Mark Belletini.pdf.txt",train4
+97,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2004-03-14 Fear,  Rev. Mark Belletini.PDF.txt",test0
+98,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2006-01-22 Healing our Hurt, Rev. Mark Belletini.PDF.txt",train6
+99,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2007-04-06 War and Peace, Rev. Mark Belletini.PDF.txt",train3
+100,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-02-13 Impact and Intimacy, Rev. Mark Belletini.PDF.txt",train5
+101,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-07-10 Promoting Acceptance and Spiritual Growth, James Bailey.PDF.txt",train8
+102,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2010-04-25 Fear of Life and Death, Rev. Mark Belletini.pdf.txt",test1
+103,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-06-26 The Inherent Worth and Dignity of Every Person, Bob Gordon.PDF.txt",train7
+104,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2014-03-02 Like-Minded Like-Hearted Like-Storied, Rev. Mark Belletini.pdf.txt",train7
+105,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2003-01-19 Nocturn in Black and White, Rev. Mark Belletini.htm.txt",train9
+106,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-03-20 On Evil, Rev. Mark Belletini.PDF.txt",test1
+107,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2014-08-24 Under the Sun, Rev. Mark Belletini.txt",test1
+108,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2006-06-11 Gay Pride Sermon, Rev. Mark Belletini.PDF.txt",train3
+109,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2003-02-23 The Most Famous and Influential Member of this Congregation in Sixty-Three Years, Rev. Mark Belletini.htm.txt",train9
+110,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2013-04-21 Life and Death Beyond These Walls, Rev. Mark Belletini.pdf.txt",train6
+111,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2011-02-13 Listening to the Evolution Symphony, Rev. Dr. Mark Belletini.pdf.txt",test1
+112,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2010-03-28 Literalism, Rev. Mark Belletini.pdf.txt",train3
+113,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2003-06-08 On Making Decisions, Rev. Mark Belletini.htm.txt",test2
+114,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2014-01-05 Authority and Fear, Rev. Mark Belletini.pdf.txt",train5
+115,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2005-07-24 The Power to Be, Kay Fisher.PDF.txt",test0
+116,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2011-04-24 Wanting to Rise Up, Rev. Dr. Mark Belletini.pdf.txt",train5
+117,Unitarian,"./data_dsicap_EVEN/Unitarian/raw/2008-10-05 Leftovers, Rev. Mark Belletini.pdf.txt",train8
+118,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/569.html.txt,test0
+119,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/865.html.txt,train3
+120,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/268.html.txt,test1
+121,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/527.html.txt,train9
+122,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/227.html.txt,train7
+123,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/716.html.txt,train4
+124,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/533.html.txt,train8
+125,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/466.html.txt,train5
+126,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/860.html.txt,train3
+127,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/150.html.txt,train9
+128,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/720.html.txt,test2
+129,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/503.html.txt,train9
+130,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/673.html.txt,train3
+131,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/12.html.txt,train7
+132,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/53.html.txt,train8
+133,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/792.html.txt,test0
+134,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/724.html.txt,train6
+135,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/331.html.txt,test0
+136,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/631.html.txt,train7
+137,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/397.html.txt,test2
+138,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/657.html.txt,train6
+139,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/300.html.txt,train4
+140,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/630.html.txt,train5
+141,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/41.html.txt,train6
+142,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/610.html.txt,test2
+143,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/730.html.txt,test1
+144,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/575.html.txt,train7
+145,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/709.html.txt,train5
+146,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/398.html.txt,train9
+147,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/161.html.txt,train3
+148,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/565.html.txt,test0
+149,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/308.html.txt,test1
+150,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/899.html.txt,train4
+151,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/554.html.txt,train5
+152,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/672.html.txt,train4
+153,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/330.html.txt,train3
+154,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/212.html.txt,train9
+155,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/849.html.txt,test1
+156,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/590.html.txt,test2
+157,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/553.html.txt,train5
+158,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/217.html.txt,train6
+159,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/216.html.txt,test2
+160,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/649.html.txt,train6
+161,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/589.html.txt,test0
+162,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/678.html.txt,test1
+163,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/472.html.txt,train8
+164,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/279.html.txt,train4
+165,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/757.html.txt,train8
+166,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/694.html.txt,train8
+167,DorothyDay,./data_dsicap_EVEN/DorothyDay/raw/748.html.txt,train7
+168,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090906.pdf.txt,train6
+169,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110807.pdf.txt,train9
+170,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110529.pdf.txt,test1
+171,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20120805.pdf.txt,train7
+172,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20120318.pdf.txt,train5
+173,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130310.pdf.txt,train6
+174,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20091004.pdf.txt,train6
+175,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20101017.pdf.txt,train5
+176,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110522.pdf.txt,test0
+177,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20120617.pdf.txt,train6
+178,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20140413.pdf.txt,train3
+179,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110102.pdf.txt,train7
+180,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20140608.pdf.txt,train7
+181,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130414.pdf.txt,train8
+182,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20111002.pdf.txt,train5
+183,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20150215.pdf.txt,test2
+184,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130901.pdf.txt,train9
+185,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20141228.pdf.txt,train6
+186,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20120610.pdf.txt,test1
+187,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20140525.pdf.txt,train4
+188,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110320.pdf.txt,train7
+189,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20131020.pdf.txt,train5
+190,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20111120.pdf.txt,test2
+191,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20140727.pdf.txt,train8
+192,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090111.pdf.txt,train4
+193,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20081005.pdf.txt,test2
+194,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20100110.pdf.txt,train5
+195,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20150607.pdf.txt,test2
+196,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130421.pdf.txt,train9
+197,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20120701.pdf.txt,train8
+198,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20150510.pdf.txt,test0
+199,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20091213.pdf.txt,train8
+200,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20150614.pdf.txt,test1
+201,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090809.pdf.txt,train8
+202,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090104.pdf.txt,test0
+203,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090607.pdf.txt,train3
+204,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110619.pdf.txt,test0
+205,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20100919.pdf.txt,train4
+206,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110123.pdf.txt,train9
+207,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20080511.pdf.txt,test0
+208,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20070916.pdf.txt,test2
+209,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090125.pdf.txt,train4
+210,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20140720.pdf.txt,train3
+211,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110227.pdf.txt,test1
+212,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20150201.pdf.txt,train3
+213,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110220.pdf.txt,train4
+214,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130818.pdf.txt,train7
+215,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20110626.pdf.txt,train3
+216,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20090201.pdf.txt,test1
+217,WBC,./data_dsicap_EVEN/WBC/raw/WestboroBaptist_Sermon_20130630.pdf.txt,train9
+218,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/hidden-question.txt,test1
+219,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-33.txt,train6
+220,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/tipping-balance.txt,train5
+221,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-43.txt,train8
+222,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/radical-hospitality.txt,test1
+223,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/liberty-and-its-limits.txt,train3
+224,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/why-synagogue.txt,test0
+225,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/abnormal-evil.txt,train9
+226,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/form-message.txt,test2
+227,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-48.txt,test1
+228,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-35.txt,train5
+229,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/fate-awaits-us-all.txt,train3
+230,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/light-one-candle.txt,train9
+231,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/life-we-have-chosen.txt,train8
+232,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-69.txt,train5
+233,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-12.txt,train4
+234,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/doing-jewish-other-jews.txt,train6
+235,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/torahs-intent.txt,train6
+236,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-42.txt,test0
+237,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/615th-commandment.txt,train8
+238,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/arevut.txt,train7
+239,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/partings-sweet-sorrow-0.txt,train3
+240,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-47.txt,train9
+241,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/two-worlds-judaism.txt,test2
+242,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/enlarging-your-heart.txt,train3
+243,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/nothing-%E2%80%9Cjust-happens%E2%80%9D.txt,train4
+244,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/model-ministry.txt,train7
+245,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-68.txt,train9
+246,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/hyphen-within.txt,test1
+247,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/keep-moving.txt,train7
+248,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-16.txt,train5
+249,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/what-comes-next.txt,test2
+250,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-45.txt,train8
+251,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/freedom%E2%80%99s-journey.txt,train4
+252,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/true-grit.txt,train3
+253,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/will-believe.txt,train9
+254,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-36.txt,train4
+255,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-6.txt,test0
+256,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/keter.txt,train7
+257,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-2.txt,test0
+258,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/blessed-are-introverts.txt,test2
+259,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/god-enough-sometimes.txt,test2
+260,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/counterfactual.txt,train5
+261,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-3.txt,train6
+262,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/rules-rabbis.txt,test0
+263,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-37.txt,train7
+264,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-11.txt,train8
+265,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/these-things-i-will-never-forget.txt,train6
+266,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/brother-can-you-spare-blessing.txt,test1
+267,Rabbinic,./data_dsicap_EVEN/Rabbinic/raw/%5Bfield_dateline-date%5D-51.txt,train4
+268,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-AfterTheBombing.txt,train2
+269,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-MessagetotheGrassRoots.txt,test0
+270,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-ProspectsForFreedomin1965.txt,train1
+271,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-ADeclarationofIndependence.txt,train1
+272,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-AtTheAudubon.txt,test0
+273,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-TheBallotortheBullet.txt,train2
+274,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-ToMississippiYouth.txt,train2
+275,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-LettersFromAbroad.txt,train2
+276,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-ConfrontationWithAnExpert.txt,test0
+277,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-AtTheAudubon2.txt,train1
+278,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-WithMrsFannieLouHamer.txt,train2
+279,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-LastAnswersAndInterviews.txt,train1
+280,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-TheHarlemHateGang.txt,train1
+281,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-AnAppealToAfricanHeadsofState.txt,test0
+282,MalcolmX,./data_dsicap_EVEN/MalcolmX/raw/MalcolmX-TheBlackRevolution.txt,test0
+283,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_2thess_2.html.txt,train8
+284,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_net_cast_sea.html.txt,train7
+285,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_sos_5.html.txt,train7
+286,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_dearborn.html.txt,train4
+287,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_sins_tongue.html.txt,train3
+288,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_repentance_acts.html.txt,test2
+289,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_col_2.html.txt,train4
+290,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_blessed_readeth.html.txt,train6
+291,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_loving_truth.html.txt,train3
+292,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/realjews.html.txt,train8
+293,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_raising_godly_children.html.txt,train5
+294,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_example.html.txt,test2
+295,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_zechariah_4.html.txt,train4
+296,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_heartily.html.txt,train3
+297,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_back_bethel.html.txt,test2
+298,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/hinduism_in_light_of_the_bible.html.txt,train9
+299,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_godly_sorrow.html.txt,train5
+300,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/once_saved_always_saved.html.txt,train4
+301,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_substitutes.html.txt,test1
+302,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_2thess_1.html.txt,train5
+303,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_departing_faith.html.txt,test1
+304,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_marriage_advice.html.txt,train3
+305,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_messiah_old.html.txt,train5
+306,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_sins_7_churches2.html.txt,train8
+307,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/repentance_and_salvation.html.txt,test2
+308,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_nakedness.html.txt,train4
+309,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_name_of_god.html.txt,train6
+310,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_cost_serving_jesus.html.txt,test0
+311,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_galatians_3.html.txt,train8
+312,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_using_right_words.html.txt,test1
+313,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_temptations.html.txt,test1
+314,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_zechariah_3.html.txt,test0
+315,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_restoring.html.txt,train3
+316,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_sw_instruction1.html.txt,test2
+317,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_galatians_2.html.txt,test0
+318,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_left_behind.html.txt,train7
+319,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/lust.html.txt,train9
+320,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_defending_name_of_jesus.html.txt,train6
+321,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_ramsey.html.txt,test0
+322,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_denying_self.html.txt,test0
+323,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_insanity.html.txt,test1
+324,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_stammering.html.txt,train6
+325,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_dont_matter.html.txt,train5
+326,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_commonism.html.txt,train9
+327,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_berzins_camping.html.txt,train8
+328,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_defying_god.html.txt,train9
+329,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_new_morality.html.txt,train9
+330,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_having_a_plan.html.txt,train7
+331,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_zechariah_1.html.txt,train7
+332,PastorAnderson,./data_dsicap_EVEN/PastorAnderson/raw/transcript_truth_sodomites.html.txt,train6
+333,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.06.10.txt,test1
+334,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_5-4.txt,train5
+335,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_1-11.txt,train3
+336,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_2-9.txt,test2
+337,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.12.01.txt,train8
+338,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_2-9.txt,test0
+339,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.04.11.txt,test1
+340,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.11.09.txt,test0
+341,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.9.04.txt,test0
+342,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.9.03.txt,train7
+343,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n2-2.txt,test1
+344,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.07.05.txt,train4
+345,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_3-4.txt,train5
+346,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n10.01.txt,train7
+347,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.07.txt,train8
+348,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n1-2.txt,train6
+349,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_3-2.txt,train4
+350,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.10.05.txt,train3
+351,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.06.04.txt,train9
+352,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.03.txt,train6
+353,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_4-9.txt,train5
+354,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.07.07.txt,train8
+355,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_2-12.txt,train7
+356,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.11.txt,train9
+357,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n07.01.txt,train6
+358,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.9.06.txt,train6
+359,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.07.02.txt,train8
+360,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_2-1.txt,train7
+361,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_4-17.txt,test2
+362,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.05.03.txt,test2
+363,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.9.10.txt,train6
+364,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.09.txt,train3
+365,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.13.txt,train4
+366,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_3-6.txt,train5
+367,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.10.06.txt,test2
+368,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_3-16.txt,test0
+369,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.9.07.txt,test2
+370,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.04.07.txt,test1
+371,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_1-10.txt,test0
+372,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.01.08.08.txt,train9
+373,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_3-8.txt,train3
+374,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.1.12.04.txt,train3
+375,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal.02.05.05.txt,train8
+376,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n9.01.txt,train5
+377,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/wgV1n5-2.txt,train4
+378,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_6-4.txt,train9
+379,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_3-12.txt,train7
+380,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_1-5.txt,train9
+381,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_1_1-6.txt,train4
+382,MehrBaba,./data_dsicap_EVEN/MehrBaba/raw/journal_2_1-3.txt,test1
+383,Ghandi,./data_dsicap_EVEN/Ghandi/raw/17 October 1931_his spiritual message_London.txt,test0
+384,Ghandi,"./data_dsicap_EVEN/Ghandi/raw/21 April 1915_Reception In Madras_Victoria Public Hall, Madras.txt",train1
+385,Ghandi,./data_dsicap_EVEN/Ghandi/raw/8 August 1942_ Quit India Speeches Hindustani II_Bombay.txt,train1
+386,Ghandi,./data_dsicap_EVEN/Ghandi/raw/4 January 1948_Kashmir Issue_Prayer Meeting.txt,test0
+387,Ghandi,./data_dsicap_EVEN/Ghandi/raw/11 February 1916_Gandhi's Speech at Benaras Hindu University_UNK.txt,train1
+388,Ghandi,./data_dsicap_EVEN/Ghandi/raw/18 March 1922_Statement during The Great Trial of 1922_Ahmedabad.txt,test0
+389,Ghandi,./data_dsicap_EVEN/Ghandi/raw/2 April 1947_Speech Before Inter-Asian Relations Conference_Inter-Asian Relations Conference.txt,train2
+390,Ghandi,./data_dsicap_EVEN/Ghandi/raw/11 March 1930_On The Eve of Historic Dandi March_Ahmedabad.txt,test0
+391,Ghandi,./data_dsicap_EVEN/Ghandi/raw/30 November 1931_Speech At The Round Table Conference_UNK.txt,test0
+392,Ghandi,./data_dsicap_EVEN/Ghandi/raw/8 August 1942_ Quit India Speeches English_Bombay.txt,train1
+393,Ghandi,./data_dsicap_EVEN/Ghandi/raw/12 January 1948_Speech On The Eve of The Last Fast_UNK.txt,train1
+394,Ghandi,./data_dsicap_EVEN/Ghandi/raw/8 August 1942_ Quit India Speeches Hindustani_Bombay.txt,train2
+395,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 09-04-94.txt,train8
+396,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 02-06-94.txt,train4
+397,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper97 8-3-97.txt,test0
+398,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper81 061481m.txt,test1
+399,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper87 jp870023.txt,test0
+400,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper96 06-23-96.txt,test2
+401,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper87 jp870042.txt,train7
+402,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper90 11-25-90.txt,train4
+403,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper96 10-06-96.txt,train8
+404,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper89 4-7-89.txt,train4
+405,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper97 2-16-97.txt,test1
+406,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper85 pn850017.txt,train3
+407,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper85 pn85002b.txt,train6
+408,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper87 jp870034.txt,train4
+409,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper85 pn850004.txt,test2
+410,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper96 09-01-96.txt,train9
+411,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper2k 2-13-00.txt,test0
+412,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper82 042582m.txt,train6
+413,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper86 jp860006.txt,test1
+414,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper93 07-18-93.txt,train6
+415,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper98 6-21-98.txt,train9
+416,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper98 11-22-98.txt,train6
+417,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper98 4-12-98.txt,train5
+418,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper91 02-17-91.txt,train8
+419,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper96 02-25-96.txt,test0
+420,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper92 09-20-92.txt,train3
+421,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 04-24-94.txt,test1
+422,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper99 1-24-99.txt,test2
+423,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper97 8-31-97.txt,train9
+424,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper90 12-23-90.txt,train5
+425,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper91 04-07-91.txt,train6
+426,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper92 04-05-92.txt,train4
+427,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 01-23-94.txt,test1
+428,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper98 6-14-98.txt,train8
+429,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper87 jp870044.txt,test2
+430,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper97 11-09-97.txt,train7
+431,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper89 5-21-89.txt,train9
+432,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper85 pn85001a.txt,train5
+433,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper86 jp86001c.txt,test0
+434,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper89 06-28-89.txt,train3
+435,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper95 06-11-95.txt,train7
+436,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper89 10-15-89.txt,train5
+437,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper91 03-31-91.txt,train3
+438,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper96 03-17-96.txt,train5
+439,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper87 jp870027.txt,train3
+440,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 10-23-94.txt,test2
+441,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper94 02-27-94.txt,train7
+442,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper99 11-21-99.txt,train8
+443,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper90 09-30-90.txt,train7
+444,JohnPiper,./data_dsicap_EVEN/JohnPiper/raw/piper97 6-1-97.txt,train9
+445,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/blueprint_transcipction.docx.txt,train3
+446,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/are_you_living_a_dream.txt,train7
+447,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/wmwt4_nak_voicing_your_concern2.docx.txt,train7
+448,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/al_furqan_being_peaceful_and_greatful.docx.txt,test2
+449,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/leniency_in_leadership.docx.txt,test2
+450,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/distinctions_and_resp_of_muslim_ummah.docx.txt,test0
+451,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/islam_and_ego_transcribed.txt,train5
+452,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/nak-1.txt,train5
+453,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/nak_-_the_story_of_robert_davila.docx.txt,train5
+454,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/nouman._the_want_of_plenty_distracted_you..docx.txt,train3
+455,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/lessons_from_a_bird-2.docx.txt,test0
+456,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/lessons_from_surah_ar_rehman.docx.txt,train7
+457,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/sexual_desires.docx.txt,test1
+458,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/thelegacyofibrahimas-noumanalikhan.pdf.txt,train9
+459,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/following-the-lizard-nak.docx.txt,train4
+460,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/dawahandyou.docx.txt,train7
+461,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/moses.docx.txt,train7
+462,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/heart_mind_and_soulquranic_view_1.docx.txt,train9
+463,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/the-man-of-two-gardens.txt,test2
+464,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/be_like_the_bee.docx.txt,train3
+465,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/ramadan_a_gift_for_muslims.docx.txt,train6
+466,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/level_of_faith_by_naumaan_ali_khan.docx.txt,test0
+467,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/how_to_straighten_our_priorities__nouman_ali_khan_-_nouman_ali_khan_collection.docx.txt,train4
+468,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/when_muslims_work_together_7_transcript.docx.txt,test0
+469,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/putting_life_in_perspective_khutbah_04-11-2014.docx.txt,test1
+470,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/believers_response_by_nouman_ali_khan.txt,test0
+471,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/taking_back_our_narrative.txt,train8
+472,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/from_darkness_to_light__-_a_quranic_perspective.txt,train9
+473,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/InthefootstepsfAbrahamNAK.docx.txt,test2
+474,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/returning_to_allah.docx.txt,train9
+475,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/importance_of_jummah_prayer-nouman_ali_khan_proof_read.docx.txt,train6
+476,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/time_love_praise_and_encouragement_in_relationship.docx.txt,train6
+477,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/khutbah_suruh_yusuf_dealing_with_grief_and_sadness.docx.txt,train8
+478,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/surah_fatiha_points_to_ponder.txt,train9
+479,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/khutbah.docx.txt,test1
+480,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/signs_of_a_hypocrite.docx.txt,train6
+481,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/contradicting_community.docx.txt,train6
+482,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/divine_speech_prologue_part_ii.txt,train8
+483,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/why_should_i_believe_in_god_nak.docx.txt,test1
+484,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/nak_transcript_3.docx.txt,test2
+485,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/islam_and_why_muslim_men_and_women_can.docx.txt,train8
+486,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/controlling_anger.docx.txt,train4
+487,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/punishments_versus_tests.docx.txt,test1
+488,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/nak_money_matters.docx.txt,train4
+489,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/ghaflah.txt,train3
+490,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/happiness_fun_doc.txt,train5
+491,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/the_rights_and_responsibilities_of_marriage_by_nak.docx.txt,train8
+492,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/brilliance_of_the_book.docx.txt,train5
+493,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/flybacktoallah.txt,train3
+494,NaumanKhan,./data_dsicap_EVEN/NaumanKhan/raw/the_search_for_the_sound_of_the_soul.docx.txt,train4
+495,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV32.txt,train5
+496,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV09.txt,train4
+497,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV04.txt,test2
+498,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV12.txt,test2
+499,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV11.txt,train7
+500,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV23.txt,test1
+501,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV58.txt,train6
+502,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV24.txt,train4
+503,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV38.txt,train3
+504,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV03.txt,train7
+505,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV44.txt,test1
+506,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV53.txt,train9
+507,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV41.txt,test0
+508,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV18.txt,train3
+509,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV57.txt,train7
+510,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV17.txt,train4
+511,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV28.txt,train9
+512,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV36.txt,train6
+513,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV26.txt,test1
+514,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV15.txt,test0
+515,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV51.txt,train9
+516,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV14.txt,train4
+517,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV16.txt,train6
+518,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV39.txt,train5
+519,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV20.txt,test0
+520,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV13.txt,train8
+521,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV30.txt,train8
+522,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV19.txt,test1
+523,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV21.txt,train3
+524,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV59.txt,test0
+525,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV06.txt,train5
+526,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV47.txt,train5
+527,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV05.txt,train3
+528,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV56.txt,train9
+529,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV40.txt,test0
+530,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV07.txt,train7
+531,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV31.txt,train8
+532,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV50.txt,train4
+533,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV46.txt,train6
+534,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV48.txt,train8
+535,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV55.txt,train9
+536,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV22.txt,train7
+537,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV49.txt,train8
+538,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV54.txt,test1
+539,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV52.txt,test2
+540,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV25.txt,test2
+541,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV34.txt,train3
+542,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV45.txt,test2
+543,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV27.txt,train6
+544,IntegralYoga,./data_dsicap_EVEN/IntegralYoga/raw/YV10.txt,train5
+545,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai12.txt,train6
+546,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai14.txt,train6
+547,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai18.txt,train3
+548,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai06.txt,train9
+549,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai25.txt,test1
+550,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai29.txt,train8
+551,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai23.txt,train5
+552,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai24.txt,train8
+553,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai40.txt,train9
+554,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai04.txt,train3
+555,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai02.txt,train8
+556,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai34.txt,train7
+557,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai30.txt,train7
+558,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai38.txt,train6
+559,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai21.txt,test0
+560,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai11.txt,train4
+561,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai49.txt,test2
+562,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai47.txt,test2
+563,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai07.txt,train5
+564,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai39.txt,train4
+565,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai05.txt,train7
+566,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai27.txt,test0
+567,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai44.txt,train4
+568,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai26.txt,test1
+569,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai03.txt,train5
+570,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai48.txt,test1
+571,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai13.txt,test0
+572,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai35.txt,test0
+573,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai31.txt,train6
+574,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai15.txt,train4
+575,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai22.txt,train8
+576,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai08.txt,test2
+577,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai09.txt,train6
+578,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai41.txt,test2
+579,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai16.txt,train3
+580,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai46.txt,train9
+581,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai42.txt,test0
+582,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai37.txt,test2
+583,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai33.txt,train3
+584,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai43.txt,train5
+585,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai36.txt,test1
+586,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai45.txt,train9
+587,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai19.txt,train7
+588,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai20.txt,train7
+589,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai32.txt,train9
+590,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai17.txt,train5
+591,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai50.txt,train4
+592,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai28.txt,train3
+593,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai10.txt,test1
+594,Bahai,./data_dsicap_EVEN/Bahai/raw/Bahai01.txt,train8
+595,Shepherd,./data_dsicap_EVEN/Shepherd/raw/safe-guidelines-for-life-steve-shepherd-sermon-on-doing-gods-will-35857.asp.txt,test1
+596,Shepherd,./data_dsicap_EVEN/Shepherd/raw/last-words-and-last-sighting-steve-shepherd-sermon-on-jesus-teachings-105889.asp.txt,train4
+597,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-only-hope-for-america-steve-shepherd-sermon-on-america-148019.asp.txt,train8
+598,Shepherd,./data_dsicap_EVEN/Shepherd/raw/five-were-wise-and-five-were-foolish-steve-shepherd-sermon-on-jesus-ministry-104185.asp.txt,test2
+599,Shepherd,./data_dsicap_EVEN/Shepherd/raw/adultery-and-the-adulterous-woman-steve-shepherd-sermon-on-sexual-immorality-191772.asp.txt,train6
+600,Shepherd,./data_dsicap_EVEN/Shepherd/raw/one-heart-and-mind-steve-shepherd-sermon-on-unity-109141.asp.txt,test1
+601,Shepherd,./data_dsicap_EVEN/Shepherd/raw/silence-the-ignorant-talk-of-foolish-men-steve-shepherd-sermon-on-authority-138370.asp.txt,train6
+602,Shepherd,./data_dsicap_EVEN/Shepherd/raw/concerning-this-salvation-steve-shepherd-sermon-on-angels-133594.asp.txt,train5
+603,Shepherd,./data_dsicap_EVEN/Shepherd/raw/i-cried-out-to-god-steve-shepherd-sermon-on-affliction-173147.asp.txt,train6
+604,Shepherd,./data_dsicap_EVEN/Shepherd/raw/making-the-best-out-of-life--part-iii-steve-shepherd-sermon-on-christian-love-49964.asp.txt,train9
+605,Shepherd,./data_dsicap_EVEN/Shepherd/raw/tis-the-season-to-live-and-give-steve-shepherd-sermon-on-christmas-129751.asp.txt,train7
+606,Shepherd,./data_dsicap_EVEN/Shepherd/raw/i-was-i-did-i-will-steve-shepherd-sermon-on-paul-124911.asp.txt,train5
+607,Shepherd,./data_dsicap_EVEN/Shepherd/raw/feeding-five-thousand-and-then-some-steve-shepherd-sermon-on-miracles-of-jesus-98621.asp.txt,test0
+608,Shepherd,./data_dsicap_EVEN/Shepherd/raw/bringing-home-the-bacon-steve-shepherd-sermon-on-fathers-day-158047.asp.txt,train6
+609,Shepherd,./data_dsicap_EVEN/Shepherd/raw/avoiding-hell-steve-shepherd-sermon-on-jesus-teachings-98375.asp.txt,train3
+610,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-partys-over-steve-shepherd-sermon-on-doing-gods-will-42306.asp.txt,test0
+611,Shepherd,./data_dsicap_EVEN/Shepherd/raw/a-memorial-to-my-mother-juanita-shepherd-steve-shepherd-sermon-on-christian-love-48324.asp.txt,test0
+612,Shepherd,./data_dsicap_EVEN/Shepherd/raw/help-from-on-high-steve-shepherd-sermon-on-gods-forgiveness-51078.asp.txt,train4
+613,Shepherd,./data_dsicap_EVEN/Shepherd/raw/drink-your-own-water-steve-shepherd-sermon-on-sexual-immorality-191442.asp.txt,train4
+614,Shepherd,./data_dsicap_EVEN/Shepherd/raw/what-the-church-should-be-steve-shepherd-sermon-on-church-body-of-christ-48372.asp.txt,train5
+615,Shepherd,./data_dsicap_EVEN/Shepherd/raw/old-time-gospel-beliefs-steve-shepherd-sermon-on-doing-gods-will-36086.asp.txt,test0
+616,Shepherd,./data_dsicap_EVEN/Shepherd/raw/building-the-church-building-you-steve-shepherd-sermon-on-evangelism-how-to-32137.asp.txt,train5
+617,Shepherd,./data_dsicap_EVEN/Shepherd/raw/commitment-to-thanksgiving-steve-shepherd-sermon-on-thanksgiving-holiday-85066.asp.txt,test0
+618,Shepherd,./data_dsicap_EVEN/Shepherd/raw/holiday-attitudes-steve-shepherd-sermon-on-giving-general-63780.asp.txt,train7
+619,Shepherd,./data_dsicap_EVEN/Shepherd/raw/proverbial-wisdom-steve-shepherd-sermon-on-bible-influence-66261.asp.txt,train8
+620,Shepherd,./data_dsicap_EVEN/Shepherd/raw/commitment-to-the-truth-steve-shepherd-sermon-on-bible-truth-85406.asp.txt,train7
+621,Shepherd,./data_dsicap_EVEN/Shepherd/raw/for-granted-or-gratitude-steve-shepherd-sermon-on-knowing-gods-will-32146.asp.txt,test1
+622,Shepherd,./data_dsicap_EVEN/Shepherd/raw/proverbial-wisdom-steve-shepherd-sermon-on-growth-in-christ-72280.asp.txt,train3
+623,Shepherd,./data_dsicap_EVEN/Shepherd/raw/christmas-concerns-steve-shepherd-sermon-on-christmas-64147.asp.txt,test1
+624,Shepherd,./data_dsicap_EVEN/Shepherd/raw/who-may-live-on-gods-holy-hill-steve-shepherd-sermon-on-heaven-170777.asp.txt,train7
+625,Shepherd,./data_dsicap_EVEN/Shepherd/raw/you-adulterous-people-steve-shepherd-sermon-on-adultery-165397.asp.txt,train3
+626,Shepherd,./data_dsicap_EVEN/Shepherd/raw/when-christians-disagree-steve-shepherd-sermon-on-forgiveness-general-58951.asp.txt,train4
+627,Shepherd,./data_dsicap_EVEN/Shepherd/raw/good-days--bad-days-steve-shepherd-sermon-on-easter-palm-sunday-120161.asp.txt,test1
+628,Shepherd,./data_dsicap_EVEN/Shepherd/raw/gods-approved-worker-steve-shepherd-sermon-on-evangelism-how-to-161020.asp.txt,test2
+629,Shepherd,./data_dsicap_EVEN/Shepherd/raw/jesus-is-the-one-steve-shepherd-sermon-on-christmas-163062.asp.txt,train9
+630,Shepherd,./data_dsicap_EVEN/Shepherd/raw/in-this-you-greatly-rejoice-steve-shepherd-sermon-on-joy-131090.asp.txt,train9
+631,Shepherd,./data_dsicap_EVEN/Shepherd/raw/redeemed--oh-yes-steve-shepherd-sermon-on-salvation-137668.asp.txt,test2
+632,Shepherd,./data_dsicap_EVEN/Shepherd/raw/all-in-the-family-steve-shepherd-sermon-on-children-110063.asp.txt,train8
+633,Shepherd,./data_dsicap_EVEN/Shepherd/raw/remembering-honoring-trusting-steve-shepherd-sermon-on-forgiveness-general-50131.asp.txt,train8
+634,Shepherd,./data_dsicap_EVEN/Shepherd/raw/godless-dreamers-steve-shepherd-sermon-on-false-teaching-127853.asp.txt,train5
+635,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-burden-god-laid-on-us-steve-shepherd-sermon-on-heaven-89895.asp.txt,train3
+636,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-game-of-life-steve-shepherd-sermon-on-doing-gods-will-32143.asp.txt,train6
+637,Shepherd,./data_dsicap_EVEN/Shepherd/raw/how-to-behave-in-church-steve-shepherd-sermon-on-church-body-of-christ-32814.asp.txt,train7
+638,Shepherd,./data_dsicap_EVEN/Shepherd/raw/what-must-be-taught-steve-shepherd-sermon-on-doctrine-161709.asp.txt,train9
+639,Shepherd,./data_dsicap_EVEN/Shepherd/raw/making-things-right-when-things-go-wrong-steve-shepherd-sermon-on-30200.asp.txt,test2
+640,Shepherd,./data_dsicap_EVEN/Shepherd/raw/committed-to-doing-something-part-ii-steve-shepherd-sermon-on-gifts-encouragement-87877.asp.txt,train3
+641,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-pattern-steve-shepherd-sermon-on-doctrine-160695.asp.txt,test2
+642,Shepherd,./data_dsicap_EVEN/Shepherd/raw/the-faithfulness-of-god-steve-shepherd-sermon-on-god-the-father-32142.asp.txt,train8
+643,Shepherd,./data_dsicap_EVEN/Shepherd/raw/dont-be-ashamed-steve-shepherd-sermon-on-faith-160637.asp.txt,train4
+644,Shepherd,./data_dsicap_EVEN/Shepherd/raw/righteousness-delivers-from-death-steve-shepherd-sermon-on-righteousness-192619.asp.txt,train9
