@@ -16,15 +16,21 @@ Created on Thu Jun  2 15:23:11 2016
 #
 # THE DEFAULT SETTINGS (called manually) ARE
 #
-# python newMasterOOscript.py data_dsicap 3 3 30 10 tfidfNoPro pronoun 10
+# the old docs
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv 10 10 auto
 #
-# rawPath cocoWindow cvWindow netAngle targetWordCount keywordMethod judgementMethod binSize
+# the new docs
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 10 10 auto
 # 
+# the best so far on the new docs (62%)
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 1000 None .8
+#
 #########
 
 import time
 start=time.time()
 import sys, os
+from sys import argv
 
 # set working directory to directory containing prototype_python/ and the folder with the data, etc.
 #os.chdir('/Users/Seth/Documents/DSI/Capstone/DSI-Religion-2017')
@@ -281,10 +287,10 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
 if __name__ == '__main__':
     startTimeTotal=time.time()
     
+    runDirectory='./modelOutput/'
     '''
     #rawPath = './data_dsicap/' ###############change this eventually
     rawPath = './' + sys.argv[1] + '/'
-    runDirectory='./modelOutput/'
 
     # set parameters 
     if sys.argv[2] == 'auto':
@@ -337,9 +343,11 @@ if __name__ == '__main__':
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
     signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
     '''
-    signalDF = pd.read_csv()
+    signalFile = sys.argv[1]
+    paramPath = signalFile.split('-')[1]
 
-    
+    signalDF = pd.read_csv(runDirectory + 'logs/' + signalFile, index_col=0)
+
 
     ################################
     ### ########
@@ -347,32 +355,37 @@ if __name__ == '__main__':
     ###########
     ################################
 
+    ### THE PARAMETERS TO THE RANDOM FOREST
+    # number of trees
+    trees=int(argv[2])
+    # max depth
+    if argv[3] == 'None':
+        depth=None
+    else:
+        depth=int(argv[3])
+    # max features
+    if argv[4] == 'None':
+        features=None
+    elif (argv[4] == 'auto') | (argv[4] == 'sqrt') | (argv[4] == 'log2'):
+        features=argv[4]
+    else:
+        if float(argv[4]) > 1:
+            features=int(argv[4])
+        else:
+            features=float(argv[4])
+
     startTime=time.time()
-
-
-#######################
-### THE OLD WAY
-#######################
-
-#    #Get data frame for each cut
-#    #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-#    #signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-#    signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/' + paramPath + '/run0/masterOutput.csv', index_col=0)
-#
-#    ### MAKES THEM ALL TRAINING
-#    signalDF['groupId'].replace('test','train1', regex=True, inplace=True) 
-#
-#    ######## NOW COMINE WITH NEW TESTING DF (signalDFL and newTestDF)
-#    signalDF = signalDF.append(newTestDF)
-
-#######################
-#######################
 
     #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
     signalDF=addRank(signalDF)
 
     #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    allCols = signalDF.columns.tolist()
+    print(allCols)
+    nawCols = ['groupId', 'files', 'timeRun', 'keywords','rank', 'groupName']
+    xList = [x for x in allCols if x not in nawCols]
+    print(xList)
+
     yList=['rank']
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
@@ -397,9 +410,12 @@ if __name__ == '__main__':
                             
 
     #Random Forest Regressor
-    rfModel=RandomForestRegressor(n_estimators=10,max_depth=10,
-                                  min_samples_split=1, max_features='auto',
-                                  random_state=0,n_jobs=-1)
+    rfModel=RandomForestRegressor(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
 
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
@@ -408,11 +424,12 @@ if __name__ == '__main__':
     yPred=rfModel.predict(signalTestDF[xList])
 
     # save predictions in TestDF
-    signalTestDF.loc[:,'rfPred'] = yPred.tolist()
+    #signalTestDF.loc[:,'rfPred'] = yPred.tolist()
 
     #Get accuracy
     rfAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
-    rfMAE=np.mean(np.abs(yActual-yPred))        
+    rfMAE=np.mean(np.abs(yActual-yPred))  
+
     #Perform same analysis with scaled data
     #Scale the data
     sc = StandardScaler()
@@ -428,38 +445,43 @@ if __name__ == '__main__':
     #Get accuracy
     svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     svmMAE=np.mean(np.abs(yActual-yPred))
+ 
 
     #Save model stats
     # print feature importance
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
-    paramStats = [runID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
+    paramStats = [paramPath, binCount, trees, depth, features]
     accuracyStats = [rfAccuracy, rfMAE, svmAccuracy, svmMAE]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
+    statsNames = ["runID", "binCount", "trees", "depth", "features", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
     print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
     print(newStats)
     #
     try:
-        modelStats = pd.read_csv('modelOutput/modelStats.csv')
+        modelStats = pd.read_csv(runDirectory + 'rfStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
-        print("added row to modelStats.csv")
+        print("added row to rfStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
-        print("created modelStats.csv file")
+        print("created rfStats.csv file")
     #
-    modelStats.to_csv('modelOutput/modelStats.csv', index=False)
+    modelStats.to_csv(runDirectory + 'rfStats.csv', index=False)
                 
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
+    print("$$$$$\nRANDOM FOREST ACCURACY\n$$$$$")    
+    print(rfAccuracy)  
+    print("$$$$$\nSVM ACCURACY\n$$$$$")    
+    print(svmAccuracy) 
     sys.stdout.flush()
                 
     # create output csv
-    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-    outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
-    print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    signalTestDF.to_csv(outputName, encoding = 'utf-8')
+    #signalTestDF.loc[:,'svmPred'] = yPred.tolist()
+    #outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
+    #print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
+    #signalTestDF.to_csv(outputName, encoding = 'utf-8')
 
