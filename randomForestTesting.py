@@ -263,11 +263,6 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
 
 def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFORE YOU TEST THEM
     #Add in group ranking
-    #groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-    #'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai']
-    #groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6]
-    ##
-    #groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
     groupRankDF=pd.read_csv('./refData/groupRanks.csv')
 
 
@@ -382,7 +377,9 @@ if __name__ == '__main__':
     #Set up modeling parameters
     allCols = signalDF.columns.tolist()
     print(allCols)
-    nawCols = ['groupId', 'files', 'timeRun', 'keywords','rank', 'groupName']
+    nawCols = ['groupId', 'files', 'timeRun', 'keywords','rank', 'groupName', 
+                    #'ils',
+                    'Unnamed: 0']
     xList = [x for x in allCols if x not in nawCols]
     print(xList)
 
