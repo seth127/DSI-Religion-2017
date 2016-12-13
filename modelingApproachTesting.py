@@ -14,7 +14,7 @@ Created on Thu Jun  2 15:23:11 2016
 
 #########
 #
-# THE DEFAULT SETTINGS (called manually) ARE
+# SOME DEFAULT SETTINGS:
 #
 # the old docs
 # python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv 10 10 auto
@@ -24,8 +24,12 @@ Created on Thu Jun  2 15:23:11 2016
 # the new docs
 # python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 10 10 auto
 # 
-# the best so far on the new docs (62%)
+# the best so far on the new docs (62% on rf, 96% on svmClass!!!)
 # python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 300 None .8
+#
+# now with 5 and 3 binSize
+# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_5-ILRYRH.csv 300 None .8
+# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_3-JK3E53.csv 300 None .8
 #
 #########
 
@@ -272,10 +276,10 @@ if __name__ == '__main__':
     signalTestDF.loc[:,'rfClassPred'] = yPred.tolist()
 
     #Get accuracy
-    rfClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<=1])/float(len(yPred)))
+    rfClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-int(yPred[i]))<=1])/float(len(yPred)))
     rfClassMAE=np.mean(np.abs(yActual-yPred))  
     #getting exact classification accuracy
-    rfClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-yPred[i])==0])/float(len(yPred)))
+    rfClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-int(yPred[i]))==0])/float(len(yPred)))
     
 
     #Perform same analysis with scaled data
@@ -356,9 +360,9 @@ if __name__ == '__main__':
     print("$$$$$\nSVM ACCURACY\n$$$$$")    
     print(svmAccuracy) 
     print("$$$$$\nSVM CLASSIFIER ACCURACY\n$$$$$")    
-    print(rfClassAccuracy) 
+    print(svmClassAccuracy) 
     print("$$$$$\nSVM CLASSIFIER EXACT ACCURACY\n$$$$$")    
-    print(rfClassExact) 
+    print(svmClassExact) 
     sys.stdout.flush()
                 
     # create output csv
