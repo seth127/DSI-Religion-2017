@@ -125,16 +125,8 @@ def textAnalysis(paramList):
     avgSD=np.mean([x[1] for x in loTest.getSD(simCount)])
     
     ########################################
-    ###POS Tagging and Judgment Analysis###
+    ###POS Tagging and Judgement Analysis###
     ########################################
-
-    # Pronoun Specific Judgments
-    PSJudgeWithCount=list(np.mean(np.array([[x[1],x[2]] for x in loTest.pronounSpecificJudgements()]),axis=0))
-    PSJudge = PSJudgeWithCount[1]
-    print('Printing Pronoun Specific Judgments')
-    print(PSJudge)
-
-
     #judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
     if judgementMethod == 'both':
         toBeAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('tobe')]),axis=0))
@@ -164,9 +156,6 @@ def textAnalysis(paramList):
         judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
         print(judgementMethod)
         print(judgementAvg)
-
-
-
 
     ############################
     ####PRONOUN COUNTS##########
@@ -205,7 +194,7 @@ def textAnalysis(paramList):
     sys.stdout.flush()
 
     #Append outputs to masterOutput
-    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
+    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
 
 def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
@@ -219,7 +208,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
     
     #Write file splits to runDirectory
-    fileDF.to_csv(runDirectory+'logs/fileSplits-' + runID + '.csv')
+    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
 
     # create fileList and subgroupList
     fileList=fileDF.values.tolist()
@@ -242,9 +231,9 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     #Run calculation 
     masterOutput=[textAnalysis(x) for x in paramList]  
     #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
+    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'logs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
+    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
     return outputDF
 
@@ -257,13 +246,12 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
 
 def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFORE YOU TEST THEM
     #Add in group ranking
-    #groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-    #'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai']
-    #groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6]
-    ##
-    #groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
-    groupRankDF=pd.read_csv('./refData/groupRanks.csv')
-
+    groupNameList=['WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
+    'Rabbinic', 'Unitarian', 'MehrBaba','NawDawg','SeaShepherds','IntegralYoga','Bahai','ISIS']
+    groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6,1]
+    
+    groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
+    
 
     signalDF['groupName']=signalDF['groupId'].map(lambda x: x.split('_')[0]) # splits the name off the groupID column value
     
@@ -370,7 +358,7 @@ if __name__ == '__main__':
     signalDF=addRank(signalDF)
 
     #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    xList=['perPos','perNeg','perPosDoc','perNegDoc'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
     yList=['rank']
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
@@ -441,18 +429,18 @@ if __name__ == '__main__':
     print(newStats)
     #
     try:
-        modelStats = pd.read_csv(runDirectory + 'modelStats.csv')
+        modelStats = pd.read_csv('modelOutput/modelStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
         print("added row to modelStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
         print("created modelStats.csv file")
     #
-    modelStats.to_csv(runDirectory + 'modelStats.csv', index=False)
+    modelStats.to_csv('modelOutput/modelStats.csv', index=False)
                 
     # create output csv
     signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-    outputName = runDirectory + 'logs/modelPredictions-' + paramPath + '-' + runID + '.csv'
+    outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     signalTestDF.to_csv(outputName, encoding = 'utf-8')
 

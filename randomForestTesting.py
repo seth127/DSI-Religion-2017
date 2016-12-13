@@ -75,7 +75,7 @@ def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
 # GETTING SIGNALS (copied from masterOOscript.py)
 ###########
 ################################
-
+'''
 ##########################
 #####Define Functions#####
 ##########################
@@ -219,7 +219,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
     
     #Write file splits to runDirectory
-    fileDF.to_csv(runDirectory+'logs/fileSplits-' + runID + '.csv')
+    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
 
     # create fileList and subgroupList
     fileList=fileDF.values.tolist()
@@ -244,11 +244,11 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'logs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
+    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
     return outputDF
 
-
+'''
 
 
 ################################
@@ -280,6 +280,8 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
 
 if __name__ == '__main__':
     startTimeTotal=time.time()
+    
+    '''
     #rawPath = './data_dsicap/' ###############change this eventually
     rawPath = './' + sys.argv[1] + '/'
     runDirectory='./modelOutput/'
@@ -330,14 +332,14 @@ if __name__ == '__main__':
         judgementCols = ['pronounFrac']
     else:   
         judgementCols = ['judgementCount','judgementFrac']
-
+    
     pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
     #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
     signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    '''
+    signalDF = pd.read_csv()
 
-    endTimeTotal=time.time()
-    print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
-    sys.stdout.flush()
+    
 
     ################################
     ### ########
@@ -441,18 +443,23 @@ if __name__ == '__main__':
     print(newStats)
     #
     try:
-        modelStats = pd.read_csv(runDirectory + 'modelStats.csv')
+        modelStats = pd.read_csv('modelOutput/modelStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
         print("added row to modelStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
         print("created modelStats.csv file")
     #
-    modelStats.to_csv(runDirectory + 'modelStats.csv', index=False)
+    modelStats.to_csv('modelOutput/modelStats.csv', index=False)
+                
+
+    endTimeTotal=time.time()
+    print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
+    sys.stdout.flush()
                 
     # create output csv
     signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-    outputName = runDirectory + 'logs/modelPredictions-' + paramPath + '-' + runID + '.csv'
+    outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     signalTestDF.to_csv(outputName, encoding = 'utf-8')
 
