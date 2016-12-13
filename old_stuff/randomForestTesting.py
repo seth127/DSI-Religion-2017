@@ -14,22 +14,16 @@ Created on Thu Jun  2 15:23:11 2016
 
 #########
 #
-# SOME DEFAULT SETTINGS:
+# THE DEFAULT SETTINGS (called manually) ARE
 #
 # the old docs
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv 10 10 auto
-# or with the good settings
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv 300 None .8
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv 10 10 auto
 #
 # the new docs
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 10 10 auto
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 10 10 auto
 # 
-# the best so far on the new docs (62% on rf, 96% on svmClass!!!)
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 300 None .8
-#
-# now with 5 and 3 binSize
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_5-ILRYRH.csv 300 None .8
-# python modelingApproachTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_3-JK3E53.csv 300 None .8
+# the best so far on the new docs (62%)
+# python randomForestTesting.py signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv 1000 None .8
 #
 #########
 
@@ -195,8 +189,6 @@ if __name__ == '__main__':
         else:
             features=float(argv[4])
 
-    svmC = 3 #### could make this an argument if you wanted to test it
-
     startTime=time.time()
 
     #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
@@ -233,9 +225,8 @@ if __name__ == '__main__':
     yActual=signalTestDF['rank'].tolist()
 
                             
-    ###########
-    #Random Forest REGRESSOR
-    ###########
+
+    #Random Forest Regressor
     rfModel=RandomForestRegressor(n_estimators=trees,
                                     max_depth=depth, 
                                     max_features=features,
@@ -258,7 +249,6 @@ if __name__ == '__main__':
 
     ###########
     #Random Forest CLASSIFIER
-    ###########
     rfClassModel=RandomForestClassifier(n_estimators=trees,
                                     max_depth=depth, 
                                     max_features=features,
@@ -270,16 +260,16 @@ if __name__ == '__main__':
 
 
     #Predict New Data
-    yPred=rfClassModel.predict(signalTestDF[xList])
+    yClassPred=rfClassModel.predict(signalTestDF[xList])
 
     # save predictions in TestDF
-    signalTestDF.loc[:,'rfClassPred'] = yPred.tolist()
+    signalTestDF.loc[:,'rfClassPred'] = yClassPred.tolist()
 
     #Get accuracy
-    rfClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-int(yPred[i]))<=1])/float(len(yPred)))
-    rfClassMAE=np.mean(np.abs(yActual-yPred))  
+    rfClassAccuracy=float(len([i for i in range(len(yClassPred)) if abs(yActual[i]-yClassPred[i])<=1])/float(len(yClassPred)))
+    rfClassMAE=np.mean(np.abs(yActual-yClassPred))  
     #getting exact classification accuracy
-    rfClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-int(yPred[i]))==0])/float(len(yPred)))
+    rfClassExact=float(len([i for i in range(len(yClassPred)) if (yActual[i]-yClassPred[i])==0])/float(len(yClassPred)))
     
 
     #Perform same analysis with scaled data
@@ -288,11 +278,7 @@ if __name__ == '__main__':
     sc=sc.fit(signalTrainDF[xList])
     signalStdTrainDF= pd.DataFrame(sc.transform(signalTrainDF[xList]),columns=xList)
     signalStdTestDF = pd.DataFrame(sc.transform(signalTestDF[xList]),columns=xList)
-
-    ###########
-    # SVM REGRESSION
-    ###########
-    signalSVR=svm.SVR(C=svmC,epsilon=0.1,kernel='rbf',max_iter=100000)
+    signalSVR=svm.SVR(C=3,epsilon=0.1,kernel='rbf',max_iter=100000)
     signalSVR.fit(signalStdTrainDF[xList],signalTrainDF[yList])
 
     #Predict New Data
@@ -301,28 +287,6 @@ if __name__ == '__main__':
     #Get accuracy
     svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     svmMAE=np.mean(np.abs(yActual-yPred))
-
-    # save predictions
-    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
- 
-    ###########
-    # SVM CLASSIFICATION
-    ###########
-    signalSVC=svm.SVC(C=svmC,kernel='rbf',max_iter=100000)
-    signalSVC.fit(signalStdTrainDF[xList],signalTrainDF[yList])
-
-    #Predict New Data
-    yPred=signalSVC.predict(signalStdTestDF[xList])
-
-    #Get accuracy
-    svmClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<=1])/float(len(yPred)))
-    svmClassMAE=np.mean(np.abs(yActual-yPred))
-    #getting exact classification accuracy
-    svmClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-yPred[i])==0])/float(len(yPred)))
-    
-
-    # save predictions
-    signalTestDF.loc[:,'svmClassPred'] = yPred.tolist()
  
 
     #Save model stats
@@ -330,23 +294,23 @@ if __name__ == '__main__':
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
     paramStats = [paramPath, binCount, trees, depth, features]
-    accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE, svmClassAccuracy, svmClassMAE, svmClassExact]
+    accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "binCount", "trees", "depth", "features", "rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE", "svmClassAccuracy", "svmClassMAE", "svmClassExact"] + xList
+    statsNames = ["runID", "binCount", "trees", "depth", "features", "rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE"] + xList
     print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
     print(newStats)
     #
     try:
-        modelStats = pd.read_csv(runDirectory + 'modelingApproachStats.csv')
+        modelStats = pd.read_csv(runDirectory + 'rfStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
-        print("added row to modelingApproachStats.csv")
+        print("added row to rfStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
-        print("created modelingApproachStats.csv file")
+        print("created rfStats.csv file")
     #
-    modelStats.to_csv(runDirectory + 'modelingApproachStats.csv', index=False)
+    modelStats.to_csv(runDirectory + 'rfStats.csv', index=False)
                 
 
     endTimeTotal=time.time()
@@ -359,17 +323,14 @@ if __name__ == '__main__':
     print(rfClassExact) 
     print("$$$$$\nSVM ACCURACY\n$$$$$")    
     print(svmAccuracy) 
-    print("$$$$$\nSVM CLASSIFIER ACCURACY\n$$$$$")    
-    print(svmClassAccuracy) 
-    print("$$$$$\nSVM CLASSIFIER EXACT ACCURACY\n$$$$$")    
-    print(svmClassExact) 
     sys.stdout.flush()
                 
     # create output csv
+    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     #outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     #print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    outputName = runDirectory + 'MODTESTING-output.csv'
+    outputName = runDirectory + 'RFTESTING-output.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + 
                 '\nNOTE: file is overwritten each time' + '\n%%%%%%')
-    signalTestDF[['groupName','rank','rfPred','rfClassPred','svmPred', 'svmClassPred']].to_csv(outputName, encoding = 'utf-8')
+    signalTestDF[['groupName','rank','rfPred','rfClassPred','svmPred']].to_csv(outputName, encoding = 'utf-8')
 
