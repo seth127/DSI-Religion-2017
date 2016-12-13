@@ -67,6 +67,7 @@ import getNewDocs as gnd
 from sklearn.preprocessing import StandardScaler
 from sklearn import svm
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 import time
 #from sknn import mlp
 
@@ -75,187 +76,6 @@ import random
 import string
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
-
-################################
-### ########
-# GETTING SIGNALS (copied from masterOOscript.py)
-###########
-################################
-'''
-##########################
-#####Define Functions#####
-##########################
-def textAnalysis(paramList):
-    startTime=time.time()
-    groupId=paramList[0]
-    fileList=paramList[1]
-    targetWordCount=paramList[2]
-    cocoWindow=paramList[3]
-    svdInt=paramList[4]
-    cvWindow=paramList[5]
-    simCount=paramList[6]
-    startCount=paramList[7]
-    netAngle=paramList[8]    
-    
-    #Get list of subfiles
-    subFileList=[x[1] for x in fileList if x[0]==groupId[0] and x[2]==groupId[1]]
-
-    #Create lingual object
-    loTest=la.lingualObject(subFileList)
-
-    #Get coco
-    loTest.getCoco(cocoWindow)
-    
-    #Get DSM
-    loTest.getDSM(svdInt)
-    
-    #Set keywords
-    #loTest.setKeywords('adjAdv',targetWordCount,startCount)
-
-
-    print('%%%%\nUSING ' + keywordMethod + ' KEYWORDS')
-    loTest.setKeywords(keywordMethod,targetWordCount,startCount)
-    print(loTest.keywords)
- 
-
-    keywordPicks = ', '.join(loTest.keywords) 
-
-    #######################            
-    ###Semantic analysis###
-    #######################
-    
-    #Get context vectors
-    loTest.getContextVectors(cvWindow)
-    
-    #Get average semantic density
-    avgSD=np.mean([x[1] for x in loTest.getSD(simCount)])
-    
-    ########################################
-    ###POS Tagging and Judgment Analysis###
-    ########################################
-
-    # Pronoun Specific Judgments
-    PSJudgeWithCount=list(np.mean(np.array([[x[1],x[2]] for x in loTest.pronounSpecificJudgements()]),axis=0))
-    PSJudge = PSJudgeWithCount[1]
-    print('Printing Pronoun Specific Judgments')
-    print(PSJudge)
-
-
-    #judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
-    if judgementMethod == 'both':
-        toBeAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('tobe')]),axis=0))
-        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
-        print('toBeAverage')
-        print(toBeAverage)
-        print('pronounAverage')
-        print(pronounAverage)
-        # assign fraction score from each
-        judgementAvg = [toBeAverage[1]] + [pronounAverage[1]]
-    elif judgementMethod == 'bothAll':
-        toBeAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('tobe')]),axis=0))
-        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
-        print('toBeAverage')
-        print(toBeAverage)
-        print('pronounAverage')
-        print(pronounAverage)
-        # assign both scores from each
-        judgementAvg = toBeAverage + pronounAverage
-    elif judgementMethod == 'pronounFrac':
-        pronounAverage=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements('pronoun')]),axis=0))
-        print('pronounAverage')
-        print([pronounAverage[1]])
-        # assign both scores from each
-        judgementAvg = [pronounAverage[1]]
-    else:   
-        judgementAvg=list(np.mean(np.array([[x[1],x[2]] for x in loTest.getJudgements(judgementMethod)]),axis=0))
-        print(judgementMethod)
-        print(judgementAvg)
-
-
-
-
-    ############################
-    ####PRONOUN COUNTS##########
-    ############################
-
-    pronounCounts = loTest.getPronouns()
-
-
-    ##########################################
-    #### PRONOUN SPECIFIC JUDGEMENTS #########
-    ##########################################
-
-    #pronounSpecificJudgements = loTest.pronounSpecificJudgements()
-
-    # NEED TO PUT IN THE COLUMNS NAMES VECTOR TOO
-    
-
-    ########################
-    ###Sentiment Analysis###
-    ########################
-
-    sentimentList=loTest.sentimentLookup()
-    
-    ############################
-    ###Network Quantification###
-    ############################
-    loTest.setNetwork(netAngle)
-    
-    avgEVC=loTest.evc()
-
-
-    
-    endTime=time.time()
-    timeRun=endTime-startTime
-    print('finished running'+'_'.join(groupId)+' in '+str(end-start)+' seconds')
-    sys.stdout.flush()
-
-    #Append outputs to masterOutput
-    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
-
-def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
-    ###############################
-    #####Raw File List Extract#####
-    ###############################
-                    
-    ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='tt') ########################### WHERE THE NEW FILES ARE
-    
-    #print randomly generated ID for later reference
-    print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
-    
-    #Write file splits to runDirectory
-    fileDF.to_csv(runDirectory+'fileSplits-' + runID + '.csv')
-
-    # create fileList and subgroupList
-    fileList=fileDF.values.tolist()
-
-    fileList=[[fileList[i][0],fileList[i][1],fileList[i][2]] for i in range(len(fileList))]
-    
-    #Get set of subgroups
-    subgroupList=[ list(y) for y in set((x[0],x[2]) for x in fileList) ]
-    print('$$$ subgroupList $$$')
-    print(subgroupList)
-    
-    
-    ################################
-    #####Perform group analysis#####
-    ################################
-    
-    #Create paramList
-    paramList=[[x,fileList,targetWordCount,cocoWindow,svdInt,cvWindow,simCount,startCount,netAngle] for x in subgroupList]
-    
-    #Run calculation 
-    masterOutput=[textAnalysis(x) for x in paramList]  
-    #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
-    #Write that file for reference
-    outputDF.to_csv(runDirectory+'signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
-    #print(outputDF)
-    return outputDF
-
-'''
-
 
 ################################
 #####Import and clean data######
@@ -381,11 +201,11 @@ if __name__ == '__main__':
                     #'ils',
                     'Unnamed: 0']
     xList = [x for x in allCols if x not in nawCols]
+    #xList = ['avgSD','avgEVC', 'PSJudge'] # TESTING HOW IT WOULD WORK WITH JUST THESE 3 (not good)
     print(xList)
 
     yList=['rank']
-    #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
-    #signalDF=signalDF[signalDF['files']>5]
+
     signalDF=signalDF.dropna()
 
     #Set up test train splits
@@ -421,11 +241,36 @@ if __name__ == '__main__':
     yPred=rfModel.predict(signalTestDF[xList])
 
     # save predictions in TestDF
-    #signalTestDF.loc[:,'rfPred'] = yPred.tolist()
+    signalTestDF.loc[:,'rfPred'] = yPred.tolist()
 
     #Get accuracy
     rfAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     rfMAE=np.mean(np.abs(yActual-yPred))  
+
+    ###########
+    #Random Forest CLASSIFIER
+    rfClassModel=RandomForestClassifier(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
+
+    rfClassModel.fit(signalTrainDF[xList],signalTrainDF[yList])
+
+
+    #Predict New Data
+    yClassPred=rfClassModel.predict(signalTestDF[xList])
+
+    # save predictions in TestDF
+    signalTestDF.loc[:,'rfClassPred'] = yClassPred.tolist()
+
+    #Get accuracy
+    rfClassAccuracy=float(len([i for i in range(len(yClassPred)) if abs(yActual[i]-yClassPred[i])<=1])/float(len(yClassPred)))
+    rfClassMAE=np.mean(np.abs(yActual-yClassPred))  
+    #getting exact classification accuracy
+    rfClassExact=float(len([i for i in range(len(yClassPred)) if (yActual[i]-yClassPred[i])==0])/float(len(yClassPred)))
+    
 
     #Perform same analysis with scaled data
     #Scale the data
@@ -449,10 +294,10 @@ if __name__ == '__main__':
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
     paramStats = [paramPath, binCount, trees, depth, features]
-    accuracyStats = [rfAccuracy, rfMAE, svmAccuracy, svmMAE]
+    accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "binCount", "trees", "depth", "features", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
+    statsNames = ["runID", "binCount", "trees", "depth", "features", "rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE"] + xList
     print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
     print(newStats)
@@ -470,15 +315,22 @@ if __name__ == '__main__':
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
-    print("$$$$$\nRANDOM FOREST ACCURACY\n$$$$$")    
+    print("$$$$$\nRANDOM FOREST REGRESSOR ACCURACY\n$$$$$")    
     print(rfAccuracy)  
+    print("$$$$$\nRANDOM FOREST CLASSIFIER ACCURACY\n$$$$$")    
+    print(rfClassAccuracy) 
+    print("$$$$$\nRANDOM FOREST CLASSIFIER EXACT ACCURACY\n$$$$$")    
+    print(rfClassExact) 
     print("$$$$$\nSVM ACCURACY\n$$$$$")    
     print(svmAccuracy) 
     sys.stdout.flush()
                 
     # create output csv
-    #signalTestDF.loc[:,'svmPred'] = yPred.tolist()
+    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     #outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     #print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    #signalTestDF.to_csv(outputName, encoding = 'utf-8')
+    outputName = runDirectory + 'RFTESTING-output.csv'
+    print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + 
+                '\nNOTE: file is overwritten each time' + '\n%%%%%%')
+    signalTestDF[['groupName','rank','rfPred','rfClassPred','svmPred']].to_csv(outputName, encoding = 'utf-8')
 
