@@ -452,8 +452,6 @@ if __name__ == '__main__':
                                     #random_state=0,
                                     n_jobs=-1)
 
-    print("print xList on 457")
-    print(xList)
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
 

@@ -61,6 +61,7 @@ import getNewDocs as gnd
 from sklearn.preprocessing import StandardScaler
 from sklearn import svm
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 import time
 #from sknn import mlp
 
@@ -370,11 +371,15 @@ if __name__ == '__main__':
     signalDF=addRank(signalDF)
 
     #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    allCols = signalDF.columns.tolist()
+    nawCols = ['groupId', 'files', 'timeRun', 'keywords','rank', 'groupName', 
+                    #'ils',
+                    'Unnamed: 0']
+    xList = [x for x in allCols if x not in nawCols]
+    print('printing xList')
+    print(xList)
+    #xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
     yList=['rank']
-    #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
-    #signalDF=signalDF[signalDF['files']>5]
-    signalDF=signalDF.dropna()
 
     #Set up test train splits
     trainIndex=[x for x in signalDF['groupId'] if 'train' in x]
@@ -392,12 +397,25 @@ if __name__ == '__main__':
 
     yActual=signalTestDF['rank'].tolist()
 
-                            
+    ################
+    # SET MODELING PARAMETERS
+    ################
+    #RF
+    trees = 300
+    depth = None
+    features = 0.8
+    #SVM
+    svmC = 3                     
 
-    #Random Forest Regressor
-    rfModel=RandomForestRegressor(n_estimators=10,max_depth=10,
-                                  min_samples_split=1, max_features='auto',
-                                  random_state=0,n_jobs=-1)
+    ###########
+    #Random Forest REGRESSOR
+    ###########
+    rfModel=RandomForestRegressor(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
 
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
@@ -410,14 +428,45 @@ if __name__ == '__main__':
 
     #Get accuracy
     rfAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
-    rfMAE=np.mean(np.abs(yActual-yPred))        
+    rfMAE=np.mean(np.abs(yActual-yPred))  
+
+    ###########
+    #Random Forest CLASSIFIER
+    ###########
+    rfClassModel=RandomForestClassifier(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
+
+    rfClassModel.fit(signalTrainDF[xList],signalTrainDF[yList])
+
+
+    #Predict New Data
+    yPred=rfClassModel.predict(signalTestDF[xList])
+
+    # save predictions in TestDF
+    signalTestDF.loc[:,'rfClassPred'] = yPred.tolist()
+
+    #Get accuracy
+    rfClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-int(yPred[i]))<=1])/float(len(yPred)))
+    rfClassMAE=np.mean(np.abs(yActual-yPred))  
+    #getting exact classification accuracy
+    rfClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-int(yPred[i]))==0])/float(len(yPred)))
+    
+
     #Perform same analysis with scaled data
     #Scale the data
     sc = StandardScaler()
     sc=sc.fit(signalTrainDF[xList])
     signalStdTrainDF= pd.DataFrame(sc.transform(signalTrainDF[xList]),columns=xList)
     signalStdTestDF = pd.DataFrame(sc.transform(signalTestDF[xList]),columns=xList)
-    signalSVR=svm.SVR(C=3,epsilon=0.1,kernel='rbf',max_iter=100000)
+
+    ###########
+    # SVM REGRESSION
+    ###########
+    signalSVR=svm.SVR(C=svmC,epsilon=0.1,kernel='rbf',max_iter=100000)
     signalSVR.fit(signalStdTrainDF[xList],signalTrainDF[yList])
 
     #Predict New Data
@@ -427,15 +476,39 @@ if __name__ == '__main__':
     svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     svmMAE=np.mean(np.abs(yActual-yPred))
 
+    # save predictions
+    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
+ 
+    ###########
+    # SVM CLASSIFICATION
+    ###########
+    signalSVC=svm.SVC(C=svmC,kernel='rbf',max_iter=100000)
+    signalSVC.fit(signalStdTrainDF[xList],signalTrainDF[yList])
+
+    #Predict New Data
+    yPred=signalSVC.predict(signalStdTestDF[xList])
+
+    #Get accuracy
+    svmClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<=1])/float(len(yPred)))
+    svmClassMAE=np.mean(np.abs(yActual-yPred))
+    #getting exact classification accuracy
+    svmClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-yPred[i])==0])/float(len(yPred)))
+    
+
+    # save predictions
+    signalTestDF.loc[:,'svmClassPred'] = yPred.tolist()
+ 
+    ##################
     #Save model stats
-    # print feature importance
+    ##################
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
     paramStats = [runID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
-    accuracyStats = [rfAccuracy, rfMAE, svmAccuracy, svmMAE]
+    accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE, svmClassAccuracy, svmClassMAE, svmClassExact]
+    accStatsNames = ["rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE", "svmClassAccuracy", "svmClassMAE", "svmClassExact"]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
+    statsNames = ["runID", "binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod"] + accStatsNames + xList
     print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
     print(newStats)
