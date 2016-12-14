@@ -247,6 +247,7 @@ def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,sta
     masterOutput=[textAnalysis(x) for x in paramList]  
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
+    
     #Write that file for reference
     outputDF.to_csv(writeDirectory+'newDocsLogs/newDocsSignalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
@@ -299,7 +300,7 @@ if __name__ == '__main__':
         netAngle=30
         targetWordCount=15
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
-        judgementMethod = 'pronounFrac' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
+        judgementMethod = 'both' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
 
 
     else:
@@ -397,15 +398,23 @@ if __name__ == '__main__':
     #
     signalDF.to_csv(writeDirectory+'newDocsLogs/TESTsignalDF.csv', encoding = 'utf-8') 
       
-
-    #Set up modeling parameters
-    xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
-    yList=['rank']
     
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
-    #drop any observations with NA values
-    #signalDF=signalDF.dropna()
+    
+    #drop any columns with NA values
+    signalDF=signalDF.dropna(axis=1)
+
+    #Set up modeling parameters
+    allCols = signalDF.columns.tolist()
+    nawCols = ['groupId', 'files', 'timeRun', 'keywords','rank', 'groupName', 
+                    #'ils',
+                    'Unnamed: 0']
+    xList = [x for x in allCols if x not in nawCols]
+    print('printing xList')
+    print(xList)
+    #xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
+    yList=['rank']
 
     #Set up test train splits
     trainIndex=[x for x in signalDF['groupId'] if 'train' in x]
@@ -443,6 +452,8 @@ if __name__ == '__main__':
                                     #random_state=0,
                                     n_jobs=-1)
 
+    print("print xList on 457")
+    print(xList)
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
 
