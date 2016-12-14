@@ -598,7 +598,8 @@ class lingualObject(object):
 
             ## drop the pronouns
             terms = freqDF['term'].values.tolist()
-            noPro = drop_pronouns(terms[1:])
+            #noPro = drop_pronouns(terms[1:])
+            noPro = drop_pronouns(terms)
             freqDF = freqDF.set_index('term')
             freqDF = freqDF.ix[noPro]
             
@@ -618,14 +619,15 @@ class lingualObject(object):
             freqit = freqit.sort_values(by='tfidf', ascending=False) 
 
             #filter out codecerror
-            keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
+            #keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
+            keyslist = freqit.index.tolist()
             keywords = []
             for word in keyslist:
-                if (word != 'codecerror') & (word != ''):
+                if (word != 'codecerror') & (word != '') & (len(word)>2):
                     keywords = keywords + [word]
 
             ##
-            self.keywords = keywords
+            self.keywords = keywords[startCount:wordCount+startCount]
 
 
         elif method=='manual':
