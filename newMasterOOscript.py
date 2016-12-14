@@ -524,7 +524,6 @@ if __name__ == '__main__':
     modelStats.to_csv(writeDirectory + 'modelStats.csv', index=False)
                 
     # create output csv
-    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
     outputName = writeDirectory + 'logs/modelPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     signalTestDF.to_csv(outputName, encoding = 'utf-8')
