@@ -64,6 +64,7 @@ import getNewDocs as gnd
 from sklearn.preprocessing import StandardScaler
 from sklearn import svm
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 import time
 #from sknn import mlp
 
@@ -247,7 +248,7 @@ def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,sta
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
     #Write that file for reference
-    #outputDF.to_csv(writeDirectory+'newDocsLogs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
+    outputDF.to_csv(writeDirectory+'newDocsLogs/newDocsSignalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
     return outputDF
 
@@ -285,7 +286,7 @@ if __name__ == '__main__':
     startTimeTotal=time.time()
     #rawPath = './data_dsicap/' 
     rawPath = './' + sys.argv[1] + '/' #### WHERE YOUR NEW DOCS ARE
-    binSize = sys.argv[2] ##### the number of new docs per bin, set to 1 for individual docs
+    binSize = int(sys.argv[2]) ##### the number of new docs per bin, set to 1 for individual docs
     signalFile = sys.argv[3] ######## THE FILE NAME OF THE SIGNALS FOR YOUR TRAINING SET
 
     signalSourceID = signalFile.split('-')[2][0:6]
@@ -296,17 +297,17 @@ if __name__ == '__main__':
         cocoWindow=3
         cvWindow=3
         netAngle=30
-        targetWordCount=10
+        targetWordCount=15
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
-        judgementMethod = 'pronoun' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
+        judgementMethod = 'pronounFrac' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
 
 
     else:
-        cocoWindow=int(sys.argv[4])
-        cvWindow=int(sys.argv[5])
-        netAngle=int(sys.argv[6])
-        targetWordCount=int(sys.argv[7])
-        keywordMethod=sys.argv[8]
+        cocoWindow=int(sys.argv[4]) 
+        cvWindow=int(sys.argv[5]) 
+        netAngle=int(sys.argv[6]) 
+        targetWordCount=int(sys.argv[7]) 
+        keywordMethod=sys.argv[8] 
         judgementMethod=sys.argv[9]
 
 
@@ -374,7 +375,6 @@ if __name__ == '__main__':
     #
     signalDF = signalDF.append(newTestDF)
     print('%%%%%%\n signalDF POST-MERGE\n' + str(signalDF.shape) + '\n%%%%%%')
-  
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
@@ -394,6 +394,10 @@ if __name__ == '__main__':
     #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
     signalDF=addRank(signalDF)
 
+    #
+    signalDF.to_csv(writeDirectory+'newDocsLogs/TESTsignalDF.csv', encoding = 'utf-8') 
+      
+
     #Set up modeling parameters
     xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
     yList=['rank']
@@ -401,7 +405,7 @@ if __name__ == '__main__':
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
     #drop any observations with NA values
-    signalDF=signalDF.dropna()
+    #signalDF=signalDF.dropna()
 
     #Set up test train splits
     trainIndex=[x for x in signalDF['groupId'] if 'train' in x]
@@ -419,7 +423,15 @@ if __name__ == '__main__':
 
     yActual=signalTestDF['rank'].tolist()
 
-                            
+    ################
+    # SET MODELING PARAMETERS
+    ################
+    #RF
+    trees = 300
+    depth = None
+    features = 0.8
+    #SVM
+    svmC = 3                     
 
     ###########
     #Random Forest REGRESSOR
@@ -517,12 +529,12 @@ if __name__ == '__main__':
     ##################
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
-    paramStats = [runID, signalSouceID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
+    paramStats = [runID, signalSourceID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
     accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE, svmClassAccuracy, svmClassMAE, svmClassExact]
     accStatsNames = ["rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE", "svmClassAccuracy", "svmClassMAE", "svmClassExact"]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "signalSouceID","binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod"] + accStatsNames + xList
+    statsNames = ["runID", "signalSourceID","binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod"] + accStatsNames + xList
     #print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
     #print(newStats)
