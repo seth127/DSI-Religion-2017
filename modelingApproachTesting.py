@@ -108,7 +108,7 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
 if __name__ == '__main__':
     startTimeTotal=time.time()
     
-    runDirectory='./modelOutput/'
+    writeDirectory='./modelOutput/'
     '''
     #rawPath = './data_dsicap/' ###############change this eventually
     rawPath = './' + sys.argv[1] + '/'
@@ -161,13 +161,13 @@ if __name__ == '__main__':
         judgementCols = ['judgementCount','judgementFrac']
     
     pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
-    #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-    signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    #newTestDF = runMaster(rawPath,writeDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    signalDF = runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
     '''
     signalFile = sys.argv[1]
     paramPath = signalFile.split('-')[1]
 
-    signalDF = pd.read_csv(runDirectory + 'logs/' + signalFile, index_col=0)
+    signalDF = pd.read_csv(writeDirectory + 'logs/' + signalFile, index_col=0)
 
 
     ################################
@@ -339,14 +339,14 @@ if __name__ == '__main__':
     print(newStats)
     #
     try:
-        modelStats = pd.read_csv(runDirectory + 'modelingApproachStats.csv')
+        modelStats = pd.read_csv(writeDirectory + 'modelingApproachStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
         print("added row to modelingApproachStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
         print("created modelingApproachStats.csv file")
     #
-    modelStats.to_csv(runDirectory + 'modelingApproachStats.csv', index=False)
+    modelStats.to_csv(writeDirectory + 'modelingApproachStats.csv', index=False)
                 
 
     endTimeTotal=time.time()
@@ -366,9 +366,9 @@ if __name__ == '__main__':
     sys.stdout.flush()
                 
     # create output csv
-    #outputName = runDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
+    #outputName = writeDirectory + 'modelPredictions-' + paramPath + '-' + runID + '.csv'
     #print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
-    outputName = runDirectory + 'MODTESTING-output.csv'
+    outputName = writeDirectory + 'MODTESTING-output.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + 
                 '\nNOTE: file is overwritten each time' + '\n%%%%%%')
     signalTestDF[['groupName','rank','rfPred','rfClassPred','svmPred', 'svmClassPred']].to_csv(outputName, encoding = 'utf-8')

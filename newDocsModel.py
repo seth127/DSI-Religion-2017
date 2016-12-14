@@ -14,11 +14,14 @@ Created on Thu Jun  2 15:23:11 2016
 
 #########
 #
-# THE DEFAULT SETTINGS (called manually) ARE
+# SOME DEFAULT SETTINGS (with signalFiles) ARE
 #
-# python newMasterOOscript.py data_dsicap 3 3 30 10 tfidfNoPro pronoun 10
+# for only 2016 docs
+# python newDocsModel.py newDocs 1 signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv auto
 #
-# rawPath cocoWindow cvWindow netAngle targetWordCount keywordMethod judgementMethod binSize
+# for even distribution of new and old groups 
+# python newDocsModel.py newDocs 1 signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-QWTZPL.csv auto
+#
 # 
 #########
 
@@ -207,19 +210,19 @@ def textAnalysis(paramList):
     #Append outputs to masterOutput
     return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
 
-def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
+def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
     #####Raw File List Extract#####
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='test') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
     
-    #Write file splits to runDirectory
-    fileDF.to_csv(runDirectory+'logs/fileSplits-' + runID + '.csv')
+    #Write file splits to writeDirectory
+    fileDF.to_csv(writeDirectory+'newDocsLogs/newDocsFileSplits-' + runID + '.csv')
 
     # create fileList and subgroupList
     fileList=fileDF.values.tolist()
@@ -244,7 +247,7 @@ def runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,start
     #Create output file
     outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
     #Write that file for reference
-    outputDF.to_csv(runDirectory+'logs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
+    #outputDF.to_csv(writeDirectory+'newDocsLogs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
     return outputDF
 
@@ -280,28 +283,32 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
 
 if __name__ == '__main__':
     startTimeTotal=time.time()
-    #rawPath = './data_dsicap/' ###############change this eventually
-    rawPath = './' + sys.argv[1] + '/'
-    runDirectory='./modelOutput/'
+    #rawPath = './data_dsicap/' 
+    rawPath = './' + sys.argv[1] + '/' #### WHERE YOUR NEW DOCS ARE
+    binSize = sys.argv[2] ##### the number of new docs per bin, set to 1 for individual docs
+    signalFile = sys.argv[3] ######## THE FILE NAME OF THE SIGNALS FOR YOUR TRAINING SET
+
+    signalSourceID = signalFile.split('-')[2][0:6]
+    writeDirectory='./modelOutput/'
 
     # set parameters 
-    if sys.argv[2] == 'auto':
+    if sys.argv[4] == 'auto':
         cocoWindow=3
         cvWindow=3
         netAngle=30
         targetWordCount=10
         keywordMethod = 'tfidfNoPro' # options are 'adjAdv' 'tfidf' 'tfidfNoPro'
         judgementMethod = 'pronoun' # options are 'both' 'bothAll' 'pronoun' 'pronounFrac' 'tobe'
-        binSize = 10 # the number of docs per bin, set to 1 for individual docs
+
 
     else:
-        cocoWindow=int(sys.argv[2])
-        cvWindow=int(sys.argv[3])
-        netAngle=int(sys.argv[4])
-        targetWordCount=int(sys.argv[5])
-        keywordMethod=sys.argv[6]
-        judgementMethod=sys.argv[7]
-        binSize=int(sys.argv[8])
+        cocoWindow=int(sys.argv[4])
+        cvWindow=int(sys.argv[5])
+        netAngle=int(sys.argv[6])
+        targetWordCount=int(sys.argv[7])
+        keywordMethod=sys.argv[8]
+        judgementMethod=sys.argv[9]
+
 
     #testSplit=.3
     startCount=0
@@ -332,14 +339,14 @@ if __name__ == '__main__':
         judgementCols = ['judgementCount','judgementFrac']
 
     pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
-    #newTestDF = runMaster(rawPath,runDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
-    #signalDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    #newTestDF = runMaster(rawPath,writeDirectory, paramPath,runID,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    #signalDF = runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 
     ##########
     ## THE MONEY SECTION
     ##########
 
-    newTestDF = runMaster(rawPath,runDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
+    newTestDF = runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount)
 
     endTimeTotal=time.time()
     print('finished entire run in :'+str((endTimeTotal-startTimeTotal)/60)+' minutes')
@@ -354,9 +361,9 @@ if __name__ == '__main__':
     startTime=time.time()
 
     #Get data frame for each cut
-    #signalDF=pd.read_csv('./github/nmvenuti/DSI_Religion/pythonOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-    #signalDF=pd.read_csv('/Users/Seth/Documents/DSI/Capstone/2016-group/cloneOf2016Code/pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv')
-    signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/' + paramPath + '/run0/masterOutput.csv', index_col=0)
+    #signalDF=pd.read_csv('./pythonOutput/run1/cleanedOutput/' + paramPath + '/run0/masterOutput.csv', index_col=0)
+    signalDF = pd.read_csv(writeDirectory + 'logs/' + signalFile, index_col=0)
+
 
     ### MAKES THEM ALL TRAINING
     signalDF['groupId'].replace('test','train1', regex=True, inplace=True) 
@@ -390,8 +397,10 @@ if __name__ == '__main__':
     #Set up modeling parameters
     xList=['perPos','perNeg','perPosDoc','perNegDoc','PSJudge'] + judgementCols + pronounCols + ['avgSD', 'avgEVC']
     yList=['rank']
+    
     #remove groups with less than 5 files #### WE CANCELLED THIS TO TEST SINGLE DOCS
     #signalDF=signalDF[signalDF['files']>5]
+    #drop any observations with NA values
     signalDF=signalDF.dropna()
 
     #Set up test train splits
@@ -412,10 +421,15 @@ if __name__ == '__main__':
 
                             
 
-    #Random Forest Regressor
-    rfModel=RandomForestRegressor(n_estimators=10,max_depth=10,
-                                  min_samples_split=1, max_features='auto',
-                                  random_state=0,n_jobs=-1)
+    ###########
+    #Random Forest REGRESSOR
+    ###########
+    rfModel=RandomForestRegressor(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
 
     rfModel.fit(signalTrainDF[xList],signalTrainDF[yList])
 
@@ -428,14 +442,45 @@ if __name__ == '__main__':
 
     #Get accuracy
     rfAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
-    rfMAE=np.mean(np.abs(yActual-yPred))        
+    rfMAE=np.mean(np.abs(yActual-yPred))  
+
+    ###########
+    #Random Forest CLASSIFIER
+    ###########
+    rfClassModel=RandomForestClassifier(n_estimators=trees,
+                                    max_depth=depth, 
+                                    max_features=features,
+                                    min_samples_split=1,
+                                    #random_state=0,
+                                    n_jobs=-1)
+
+    rfClassModel.fit(signalTrainDF[xList],signalTrainDF[yList])
+
+
+    #Predict New Data
+    yPred=rfClassModel.predict(signalTestDF[xList])
+
+    # save predictions in TestDF
+    signalTestDF.loc[:,'rfClassPred'] = yPred.tolist()
+
+    #Get accuracy
+    rfClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-int(yPred[i]))<=1])/float(len(yPred)))
+    rfClassMAE=np.mean(np.abs(yActual-yPred))  
+    #getting exact classification accuracy
+    rfClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-int(yPred[i]))==0])/float(len(yPred)))
+    
+
     #Perform same analysis with scaled data
     #Scale the data
     sc = StandardScaler()
     sc=sc.fit(signalTrainDF[xList])
     signalStdTrainDF= pd.DataFrame(sc.transform(signalTrainDF[xList]),columns=xList)
     signalStdTestDF = pd.DataFrame(sc.transform(signalTestDF[xList]),columns=xList)
-    signalSVR=svm.SVR(C=3,epsilon=0.1,kernel='rbf',max_iter=100000)
+
+    ###########
+    # SVM REGRESSION
+    ###########
+    signalSVR=svm.SVR(C=svmC,epsilon=0.1,kernel='rbf',max_iter=100000)
     signalSVR.fit(signalStdTrainDF[xList],signalTrainDF[yList])
 
     #Predict New Data
@@ -445,32 +490,55 @@ if __name__ == '__main__':
     svmAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<1])/float(len(yPred)))
     svmMAE=np.mean(np.abs(yActual-yPred))
 
+    # save predictions
+    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
+ 
+    ###########
+    # SVM CLASSIFICATION
+    ###########
+    signalSVC=svm.SVC(C=svmC,kernel='rbf',max_iter=100000)
+    signalSVC.fit(signalStdTrainDF[xList],signalTrainDF[yList])
+
+    #Predict New Data
+    yPred=signalSVC.predict(signalStdTestDF[xList])
+
+    #Get accuracy
+    svmClassAccuracy=float(len([i for i in range(len(yPred)) if abs(yActual[i]-yPred[i])<=1])/float(len(yPred)))
+    svmClassMAE=np.mean(np.abs(yActual-yPred))
+    #getting exact classification accuracy
+    svmClassExact=float(len([i for i in range(len(yPred)) if (yActual[i]-yPred[i])==0])/float(len(yPred)))
+    
+
+    # save predictions
+    signalTestDF.loc[:,'svmClassPred'] = yPred.tolist()
+ 
+    ##################
     #Save model stats
-    # print feature importance
+    ##################
 
     binCount = signalTrainDF.shape[0] + signalTestDF.shape[0]
-    paramStats = [runID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
-    accuracyStats = [rfAccuracy, rfMAE, svmAccuracy, svmMAE]
+    paramStats = [runID, signalSouceID, binCount, binSize, cocoWindow, cvWindow, netAngle, targetWordCount, keywordMethod, judgementMethod]
+    accuracyStats = [rfAccuracy, rfMAE, rfClassAccuracy, rfClassMAE, rfClassExact, svmAccuracy, svmMAE, svmClassAccuracy, svmClassMAE, svmClassExact]
+    accStatsNames = ["rfAccuracy", "rfMAE", "rfClassAccuracy", "rfClassMAE", "rfClassExact", "svmAccuracy", "svmMAE", "svmClassAccuracy", "svmClassMAE", "svmClassExact"]
     varsStats = rfModel.feature_importances_
     #
-    statsNames = ["runID", "binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod", "rfAccuracy", "rfMAE", "svmAccuracy", "svmMAE"] + xList
-    print(statsNames)
+    statsNames = ["runID", "signalSouceID","binCount", "binSize", "cocoWindow", "cvWindow", "netAngle", "targetWordCount", "keywordMethod", "judgementMethod"] + accStatsNames + xList
+    #print(statsNames)
     newStats = paramStats + accuracyStats + varsStats.tolist()
-    print(newStats)
+    #print(newStats)
     #
     try:
-        modelStats = pd.read_csv(runDirectory + 'modelStats.csv')
+        modelStats = pd.read_csv(writeDirectory + 'newDocsModelStats.csv')
         modelStats = modelStats.append(pd.DataFrame([tuple(newStats)], columns = statsNames))
-        print("added row to modelStats.csv")
+        print("added row to newDocsModelStats.csv")
     except:
         modelStats = pd.DataFrame([tuple(newStats)], columns = statsNames)
-        print("created modelStats.csv file")
+        print("created newDocsModelStats.csv file")
     #
-    modelStats.to_csv(runDirectory + 'modelStats.csv', index=False)
+    modelStats.to_csv(writeDirectory + 'newDocsModelStats.csv', index=False)
                 
     # create output csv
-    signalTestDF.loc[:,'svmPred'] = yPred.tolist()
-    outputName = runDirectory + 'logs/modelPredictions-' + paramPath + '-' + runID + '.csv'
+    outputName = writeDirectory + 'newDocsLogs/newDocsPredictions-' + paramPath + '-' + runID + '.csv'
     print('%%%%%%\nALL DONE!\n' + outputName + '\n' + str(signalTestDF.shape) + '\n%%%%%%')
     signalTestDF.to_csv(outputName, encoding = 'utf-8')
 
