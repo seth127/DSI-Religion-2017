@@ -1,5 +1,7 @@
 python newMasterOOscript.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 10
+#signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronounFrac_bin_10-2BRVHT.csv
+#signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronounFrac_bin_10-Z10HBZ.csv
 
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 10
 python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 10
