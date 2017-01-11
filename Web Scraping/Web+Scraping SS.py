@@ -14,12 +14,12 @@ import time
 # In[2]:
 
 #Save website that has urls that I want
-page = urlopen('http://www.seashepherd.org/news-and-media/commentary-and-editorial.html')
+page = urlopen('http://www.theafricanamericanlectionary.org/readings2008.asp')
 
 
 # In[3]:
 
-soup = BeautifulSoup(page) 
+soup = BeautifulSoup(page, 'lxml') 
 
 
 # In[4]:
