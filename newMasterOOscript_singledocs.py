@@ -16,7 +16,7 @@ Created on Thu Jun  2 15:23:11 2016
 #
 # THE DEFAULT SETTINGS (called manually) ARE
 #
-# python newMasterOOscript.py data_dsicap 3 3 30 10 tfidfNoPro pronoun 10
+# python newMasterOOscript_singledocs.py data_dsicap_single 3 3 30 10 tfidfNoPro pronoun 1
 #
 # rawPath cocoWindow cvWindow netAngle targetWordCount keywordMethod judgementMethod binSize
 # 
@@ -54,7 +54,7 @@ sys.stdout.flush()
 stemmer = nltk.stem.snowball.EnglishStemmer()
 
 #
-import getNewDocs_single as gnd
+import getNewDocs as gnd
 
 
 ##### FOR THE MODELING
