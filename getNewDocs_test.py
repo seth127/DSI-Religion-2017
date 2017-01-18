@@ -80,7 +80,7 @@ def newSingleDocsToDF(rawPath,tt="tt"): ### rawPath is where you folders of docu
 			## create subgroups
 			filecount = len(filenames) # how many files are there in this groupId
 			print(filecount)
-			bincount = math.ceil(filecount/float(bin)) # how many bins do we need
+			#bincount = math.ceil(filecount/float(bin)) # how many bins do we need
 			# create bin labels
 			if tt == 'test':
 				#subgroups = ['test' + str(num) for num in range(0,int(bincount))] # create bins
@@ -118,7 +118,7 @@ def newSingleDocsToDF(rawPath,tt="tt"): ### rawPath is where you folders of docu
 			#for filename in filenames:
 			#    rawFileList.append([groupId,os.path.join(dirpath, filename), 't'])
 			for i in range(0,filecount):
-				rawFileList.append([groupId,os.path.join(dirpath, filenames[i]), sglist[i]])
+				rawFileList.append([groupId,os.path.join(dirpath, filenames[i]), sglist])
 
     # create data frame
 	newDocsDF = pd.DataFrame(rawFileList, columns=["group","filepath","subgroup"])

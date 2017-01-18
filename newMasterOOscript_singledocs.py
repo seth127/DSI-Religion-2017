@@ -54,7 +54,7 @@ sys.stdout.flush()
 stemmer = nltk.stem.snowball.EnglishStemmer()
 
 #
-import getNewDocs as gnd
+import getNewDocs_test as gnd
 
 
 ##### FOR THE MODELING
@@ -214,7 +214,7 @@ def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,sta
     ###############################
                     
     ##### GET THE FILES SPLITS FOR THE NEW RAW DATA (set bin to desired bin size or 1 for single docs)
-    fileDF=gnd.newDocsToDF(rawPath, bin=binSize, tt='tt') ########################### WHERE THE NEW FILES ARE
+    fileDF=gnd.newSingleDocsToDF(rawPath, tt='tt') ########################### WHERE THE NEW FILES ARE
     
     #print randomly generated ID for later reference
     print('%%%%%%\nrunID: ' + runID + '\n' + paramPath + '\n%%%%%%')
@@ -369,6 +369,9 @@ if __name__ == '__main__':
 
     #add rankings # NOTE: if a group isn't included in the addRank() def above, the observation is DELETED
     signalDF=addRank(signalDF)
+    print('%%%%%%\nsignalDF\n%%%%%%')
+    print(signalDF.shape)
+
 
     #Set up modeling parameters
     allCols = signalDF.columns.tolist()
