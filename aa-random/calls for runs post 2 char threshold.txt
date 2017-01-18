@@ -13,3 +13,15 @@ python newMasterOOscript.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 3
 
 
 #python newMasterOOscript.py data_dsicap 3 3 30 20 tfidfNoPro pronounFrac 10
+
+python ensemble2.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 10
+python ensemble2.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 10
+
+python ensemble2.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 10
+python ensemble2.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 10
+
+python ensemble2.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 5
+python ensemble2.py data_dsicap_EVEN 3 3 30 20 tfidfNoPro pronounFrac 3
+python ensemble2.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 5
+python ensemble2.py data_dsicap_FULL 3 3 30 20 tfidfNoPro pronounFrac 3
+
