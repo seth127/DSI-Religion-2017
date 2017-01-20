@@ -118,7 +118,7 @@ def newSingleDocsToDF(rawPath,tt="tt"): ### rawPath is where you folders of docu
 			#for filename in filenames:
 			#    rawFileList.append([groupId,os.path.join(dirpath, filename), 't'])
 			for i in range(0,filecount):
-				rawFileList.append([groupId,os.path.join(dirpath, filenames[i]), sglist[i]])
+				rawFileList.append([groupId,os.path.join(dirpath, filenames[i]), sglist])
 
     # create data frame
 	newDocsDF = pd.DataFrame(rawFileList, columns=["group","filepath","subgroup"])
