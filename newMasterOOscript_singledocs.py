@@ -283,7 +283,7 @@ if __name__ == '__main__':
     startTimeTotal=time.time()
     #rawPath = './data_dsicap/' ###############change this eventually
     rawPath = './' + sys.argv[1] + '/'
-    writeDirectory='./modelOutput/'
+    writeDirectory='./modelOutputSingleDocs/'
 
     # set parameters 
     if sys.argv[2] == 'auto':
