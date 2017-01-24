@@ -115,4 +115,15 @@ for file in clean_files:
     currentPath = (path + file + '.txt')
     os.rename(currentPath, '/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/data_dsicap_single/' + file + '/raw/' + file + '.txt')
 
+os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/data_dsicap_single/')
 
+#Delete Extra files
+
+all_files = os.listdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/data_dsicap_single/')
+all_files
+for file in all_files:
+    if '.txt' in file:
+        os.remove(file)
+
+os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/')
+df_scored.to_csv('docRanks.csv')
