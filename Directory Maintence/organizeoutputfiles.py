@@ -17,4 +17,5 @@ for file in predictions:
     data = pd.read_csv(file)
     model_predictions = model_predictions.append(data)
 
-model_predictions.to_csv('All SingleDoc Runs.csv')
+clean_model = model_predictions[['groupName', 'rank', 'rfPred', 'rfClassPred', 'svmPred', 'svmClassPred']]
+clean_model.to_csv('All SingleDoc Runs.csv')
