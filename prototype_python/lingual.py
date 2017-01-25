@@ -258,7 +258,7 @@ class lingualObject(object):
         #set the groupId
         path = fileList[0]
         path = path.split('/')
-        #self.group = path[path.index('raw')-1]
+        self.group = path[path.index('raw')-1]
         
         #extract raw text from each file in fileList and create tokens
         for fileName in fileList:   
