@@ -1,0 +1,44 @@
+Big Runs of newMasterOOscript
+
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-NQRDMF.csv
+
+##### with a few new groups
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-5MGNIX.csv
+(118, 16)
+%%%%%%
+full process took 4233.0825479 seconds
+
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-T5ROD8.csv
+(118, 16)
+%%%%%%
+full process took 4161.06609607 seconds
+
+######### NoPro ##############
+%%%%%%
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-159PNO.csv
+(111, 16)
+%%%%%%
+
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-TBXLWF.csv
+(118, 16)
+%%%%%%
+
+
+############ ONLY PERFORMATIVE SIGNALS ##########
+
+### ? this is a maybe (it's the first one and I didn't write the data frame right)
+#### plus I included the new groups.
+%%%%%% 
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-RCEVQJ.csv
+(118, 16)
+%%%%%%
+
+%%%%%%
+ALL DONE!
+./modelOutput/modelPredictions-coco_3_cv_3_netAng_30_sc_0-H3Z53F.csv
+(111, 16)
+%%%%%%
