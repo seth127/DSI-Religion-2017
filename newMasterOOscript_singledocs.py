@@ -176,6 +176,11 @@ def textAnalysis(paramList):
     pronounCounts = loTest.getPronouns()
 
 
+    ############################
+    ##### UNIQUE WORD COUNT#####
+    ############################
+
+    wordCounts = loTest.getUniqueWordCount()
     ##########################################
     #### PRONOUN SPECIFIC JUDGEMENTS #########
     ##########################################
@@ -206,7 +211,7 @@ def textAnalysis(paramList):
     sys.stdout.flush()
 
     #Append outputs to masterOutput
-    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[avgSD]+[avgEVC])   
+    return(['_'.join(groupId)]+[len(subFileList),timeRun]+[keywordPicks]+sentimentList+[PSJudge]+judgementAvg+pronounCounts+[wordCounts]+[avgSD]+[avgEVC])   
 
 def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,startCount,cocoWindow,svdInt,cvWindow,netAngle,simCount):
     ###############################
@@ -243,7 +248,7 @@ def runMaster(rawPath,writeDirectory,paramPath,runID,binSize,targetWordCount,sta
     #Run calculation 
     masterOutput=[textAnalysis(x) for x in paramList]  
     #Create output file
-    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['avgSD','avgEVC'])
+    outputDF=pd.DataFrame(masterOutput,columns=['groupId','files','timeRun','keywords','perPos','perNeg','perPosDoc','perNegDoc', 'PSJudge'] + judgementCols + pronounCols + ['UniqueWordCount', 'avgSD','avgEVC'])
     #Write that file for reference
     outputDF.to_csv(writeDirectory+'logs/signalOutput-' + paramPath + '-' + runID + '.csv', encoding = 'utf-8') 
     #print(outputDF)
