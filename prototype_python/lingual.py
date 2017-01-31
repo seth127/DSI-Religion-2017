@@ -1073,5 +1073,26 @@ class lingualObject(object):
         print(counts)
         return [counts[x] for x in self.pronounCols]
 
+    def getUniqueWordCount(self):
+        # get single list of all words in bin
+        wordList = []
+        for x in [self.tokens[x] for x in self.tokens]:
+            wordList = wordList + x
+        # filter out blanks (they make the tagger throw an error)
+        wordList=[word for word in wordList if word!= ''] 
+        # get count of total words
+        totalWords = float(len(wordList))
+        
+        #get count of unique words
+        uniqueWords = set(wordList)
+        uniqueWordsCount = float(len(uniqueWords))
+        #Get Fraction of Unique Words
 
+        uniqueWordCount = uniqueWordsCount/totalWords
+        
+        return uniqueWordCount
+
+
+        
+        
 
