@@ -1,0 +1,176 @@
+,group,filepath,subgroup
+0,12.html,./data_dsicap_single/12.html/raw/12.html.txt,train
+1,188.html,./data_dsicap_single/188.html/raw/188.html.txt,train
+2,200.html,./data_dsicap_single/200.html/raw/200.html.txt,train
+3,"2001-11-11 Microbes and Peter Rabbit, Rev. Mark Belletini.htm","./data_dsicap_single/2001-11-11 Microbes and Peter Rabbit, Rev. Mark Belletini.htm/raw/2001-11-11 Microbes and Peter Rabbit, Rev. Mark Belletini.htm.txt",train
+4,"2003-01-05 A Simple Faith, Rev. Mark Belletini.htm","./data_dsicap_single/2003-01-05 A Simple Faith, Rev. Mark Belletini.htm/raw/2003-01-05 A Simple Faith, Rev. Mark Belletini.htm.txt",train
+5,"2004-08-29 Set Theory for Moderns, Rev. Mark Belletini.PDF","./data_dsicap_single/2004-08-29 Set Theory for Moderns, Rev. Mark Belletini.PDF/raw/2004-08-29 Set Theory for Moderns, Rev. Mark Belletini.PDF.txt",train
+6,"2005-07-10 Promoting Acceptance and Spiritual Growth, James Bailey.PDF","./data_dsicap_single/2005-07-10 Promoting Acceptance and Spiritual Growth, James Bailey.PDF/raw/2005-07-10 Promoting Acceptance and Spiritual Growth, James Bailey.PDF.txt",train
+7,"2006-04-09 Jesus, Rev. Mark Belletini.PDF","./data_dsicap_single/2006-04-09 Jesus, Rev. Mark Belletini.PDF/raw/2006-04-09 Jesus, Rev. Mark Belletini.PDF.txt",train
+8,"2007-11-11 Spiritual Claustrophobia, Rev. Mark Belletini.PDF","./data_dsicap_single/2007-11-11 Spiritual Claustrophobia, Rev. Mark Belletini.PDF/raw/2007-11-11 Spiritual Claustrophobia, Rev. Mark Belletini.PDF.txt",test
+9,"2011-12-11 Hope Not Hype, Rev. Mark Belletini.pdf","./data_dsicap_single/2011-12-11 Hope Not Hype, Rev. Mark Belletini.pdf/raw/2011-12-11 Hope Not Hype, Rev. Mark Belletini.pdf.txt",train
+10,"2014-03-16 Guns Directness Controlling Sensitivity, Rev. Mark Belletini.pdf","./data_dsicap_single/2014-03-16 Guns Directness Controlling Sensitivity, Rev. Mark Belletini.pdf/raw/2014-03-16 Guns Directness Controlling Sensitivity, Rev. Mark Belletini.pdf.txt",train
+11,"2014-12-07 Is Hope Simply Wishful Thinking, Rev. Mark Belletini","./data_dsicap_single/2014-12-07 Is Hope Simply Wishful Thinking, Rev. Mark Belletini/raw/2014-12-07 Is Hope Simply Wishful Thinking, Rev. Mark Belletini.txt",test
+12,"2015-07-05 Privilege Unpacking the Knapsack, Morgan Patten","./data_dsicap_single/2015-07-05 Privilege Unpacking the Knapsack, Morgan Patten/raw/2015-07-05 Privilege Unpacking the Knapsack, Morgan Patten.txt",train
+13,214.html,./data_dsicap_single/214.html/raw/214.html.txt,test
+14,225.html,./data_dsicap_single/225.html/raw/225.html.txt,train
+15,291.html,./data_dsicap_single/291.html/raw/291.html.txt,train
+16,296.html,./data_dsicap_single/296.html/raw/296.html.txt,test
+17,339.html,./data_dsicap_single/339.html/raw/339.html.txt,train
+18,409.html,./data_dsicap_single/409.html/raw/409.html.txt,test
+19,535.html,./data_dsicap_single/535.html/raw/535.html.txt,train
+20,551.html,./data_dsicap_single/551.html/raw/551.html.txt,train
+21,558.html,./data_dsicap_single/558.html/raw/558.html.txt,train
+22,564.html,./data_dsicap_single/564.html/raw/564.html.txt,test
+23,651.html,./data_dsicap_single/651.html/raw/651.html.txt,train
+24,712.html,./data_dsicap_single/712.html/raw/712.html.txt,train
+25,721.html,./data_dsicap_single/721.html/raw/721.html.txt,train
+26,768.html,./data_dsicap_single/768.html/raw/768.html.txt,test
+27,824.html,./data_dsicap_single/824.html/raw/824.html.txt,train
+28,836.html,./data_dsicap_single/836.html/raw/836.html.txt,train
+29,a-different-gospel-steve-shepherd-sermon-on-false-teaching-161833.asp,./data_dsicap_single/a-different-gospel-steve-shepherd-sermon-on-false-teaching-161833.asp/raw/a-different-gospel-steve-shepherd-sermon-on-false-teaching-161833.asp.txt,train
+30,aba-gate,./data_dsicap_single/aba-gate/raw/aba-gate.txt,train
+31,ACLU01,./data_dsicap_single/ACLU01/raw/ACLU01.txt,test
+32,ACLU02,./data_dsicap_single/ACLU02/raw/ACLU02.txt,train
+33,ACLU03,./data_dsicap_single/ACLU03/raw/ACLU03.txt,test
+34,ACLU04,./data_dsicap_single/ACLU04/raw/ACLU04.txt,train
+35,ACLU05,./data_dsicap_single/ACLU05/raw/ACLU05.txt,test
+36,ACLU06,./data_dsicap_single/ACLU06/raw/ACLU06.txt,train
+37,ACLU07,./data_dsicap_single/ACLU07/raw/ACLU07.txt,train
+38,ACLU08,./data_dsicap_single/ACLU08/raw/ACLU08.txt,train
+39,ACLU09,./data_dsicap_single/ACLU09/raw/ACLU09.txt,test
+40,ACLU10,./data_dsicap_single/ACLU10/raw/ACLU10.txt,train
+41,ACLU11,./data_dsicap_single/ACLU11/raw/ACLU11.txt,test
+42,ACLU12,./data_dsicap_single/ACLU12/raw/ACLU12.txt,train
+43,AEU-Call For Unity Following Belgium and Turkey Tragedies,./data_dsicap_single/AEU-Call For Unity Following Belgium and Turkey Tragedies/raw/AEU-Call For Unity Following Belgium and Turkey Tragedies.txt,train
+44,AEU-Enough is Enough,./data_dsicap_single/AEU-Enough is Enough/raw/AEU-Enough is Enough.txt,test
+45,AEU-Founding Address,./data_dsicap_single/AEU-Founding Address/raw/AEU-Founding Address.txt,train
+46,AEU-Honoring World Human Rights Day All Year,./data_dsicap_single/AEU-Honoring World Human Rights Day All Year/raw/AEU-Honoring World Human Rights Day All Year.txt,train
+47,AEU-Let Love Overcome Hate in Orlando,./data_dsicap_single/AEU-Let Love Overcome Hate in Orlando/raw/AEU-Let Love Overcome Hate in Orlando.txt,train
+48,AEU-Some Characteristics of the American Ethical Movement,./data_dsicap_single/AEU-Some Characteristics of the American Ethical Movement/raw/AEU-Some Characteristics of the American Ethical Movement.txt,test
+49,AEU-The Essential Difference Between Ethical Societies and The Churches,./data_dsicap_single/AEU-The Essential Difference Between Ethical Societies and The Churches/raw/AEU-The Essential Difference Between Ethical Societies and The Churches.txt,train
+50,AEU-Treating Each Other Well,./data_dsicap_single/AEU-Treating Each Other Well/raw/AEU-Treating Each Other Well.txt,test
+51,"AEU-Waterlogged in Flint, Michigan or What is Government For Anyway?","./data_dsicap_single/AEU-Waterlogged in Flint, Michigan or What is Government For Anyway?/raw/AEU-Waterlogged in Flint, Michigan or What is Government For Anyway?.txt",train
+52,"AEU-We Stand with Ferguson, Missouri in Peaceful Action Against Racism","./data_dsicap_single/AEU-We Stand with Ferguson, Missouri in Peaceful Action Against Racism/raw/AEU-We Stand with Ferguson, Missouri in Peaceful Action Against Racism.txt",train
+53,ayekha,./data_dsicap_single/ayekha/raw/ayekha.txt,train
+54,best-defense,./data_dsicap_single/best-defense/raw/best-defense.txt,train
+55,forget-not-all-your-benefits-steve-shepherd-sermon-on-remember-blessings-178073.asp,./data_dsicap_single/forget-not-all-your-benefits-steve-shepherd-sermon-on-remember-blessings-178073.asp/raw/forget-not-all-your-benefits-steve-shepherd-sermon-on-remember-blessings-178073.asp.txt,train
+56,good-news-bad-news-steve-shepherd-sermon-on-doing-gods-will-32921.asp,./data_dsicap_single/good-news-bad-news-steve-shepherd-sermon-on-doing-gods-will-32921.asp/raw/good-news-bad-news-steve-shepherd-sermon-on-doing-gods-will-32921.asp.txt,train
+57,how-to-bless-america-steve-shepherd-sermon-on-independence-day-69779.asp,./data_dsicap_single/how-to-bless-america-steve-shepherd-sermon-on-independence-day-69779.asp/raw/how-to-bless-america-steve-shepherd-sermon-on-independence-day-69779.asp.txt,train
+58,imagining-past,./data_dsicap_single/imagining-past/raw/imagining-past.txt,train
+59,Issue_1-FromHijrahtoKhilafah,./data_dsicap_single/Issue_1-FromHijrahtoKhilafah/raw/Issue_1-FromHijrahtoKhilafah.txt,train
+60,Issue_1-HalabTribalAssemblies,./data_dsicap_single/Issue_1-HalabTribalAssemblies/raw/Issue_1-HalabTribalAssemblies.txt,train
+61,Issue_1-Introduction,./data_dsicap_single/Issue_1-Introduction/raw/Issue_1-Introduction.txt,train
+62,Issue_1-TheConceptofImamah,./data_dsicap_single/Issue_1-TheConceptofImamah/raw/Issue_1-TheConceptofImamah.txt,train
+63,Issue_1-TheEnemysWords,./data_dsicap_single/Issue_1-TheEnemysWords/raw/Issue_1-TheEnemysWords.txt,train
+64,Issue_2-Foreward,./data_dsicap_single/Issue_2-Foreward/raw/Issue_2-Foreward.txt,test
+65,Issue_2-HijrahandJihad,./data_dsicap_single/Issue_2-HijrahandJihad/raw/Issue_2-HijrahandJihad.txt,train
+66,Issue_2-It_sEitherTheIslamicStateorTheFlood,./data_dsicap_single/Issue_2-It_sEitherTheIslamicStateorTheFlood/raw/Issue_2-It_sEitherTheIslamicStateorTheFlood.txt,train
+67,Issue_2-TheEnemy_sWords,./data_dsicap_single/Issue_2-TheEnemy_sWords/raw/Issue_2-TheEnemy_sWords.txt,train
+68,Issue_2-TheFightAgainstthePKK,./data_dsicap_single/Issue_2-TheFightAgainstthePKK/raw/Issue_2-TheFightAgainstthePKK.txt,test
+69,Issue_2-TheFloodoftheMubahalah,./data_dsicap_single/Issue_2-TheFloodoftheMubahalah/raw/Issue_2-TheFloodoftheMubahalah.txt,train
+70,Issue_3-Foley_sBloodIsOnObama_sHands,./data_dsicap_single/Issue_3-Foley_sBloodIsOnObama_sHands/raw/Issue_3-Foley_sBloodIsOnObama_sHands.txt,test
+71,its-not-about-you,./data_dsicap_single/its-not-about-you/raw/its-not-about-you.txt,test
+72,journal.01.07.05,./data_dsicap_single/journal.01.07.05/raw/journal.01.07.05.txt,test
+73,journal.02.04.09,./data_dsicap_single/journal.02.04.09/raw/journal.02.04.09.txt,train
+74,journal.02.06.10,./data_dsicap_single/journal.02.06.10/raw/journal.02.06.10.txt,train
+75,journal.1.10.10,./data_dsicap_single/journal.1.10.10/raw/journal.1.10.10.txt,train
+76,journal.1.11.07,./data_dsicap_single/journal.1.11.07/raw/journal.1.11.07.txt,train
+77,journal.1.12.11,./data_dsicap_single/journal.1.12.11/raw/journal.1.12.11.txt,train
+78,journal_1_2-11,./data_dsicap_single/journal_1_2-11/raw/journal_1_2-11.txt,train
+79,journal_1_4-15,./data_dsicap_single/journal_1_4-15/raw/journal_1_4-15.txt,test
+80,journal_2_3-4,./data_dsicap_single/journal_2_3-4/raw/journal_2_3-4.txt,test
+81,keep-moving,./data_dsicap_single/keep-moving/raw/keep-moving.txt,train
+82,MalcolmX-ADeclarationofIndependence,./data_dsicap_single/MalcolmX-ADeclarationofIndependence/raw/MalcolmX-ADeclarationofIndependence.txt,test
+83,MalcolmX-AfterTheBombing,./data_dsicap_single/MalcolmX-AfterTheBombing/raw/MalcolmX-AfterTheBombing.txt,test
+84,MalcolmX-AnAppealtoAfricanHeadsofState,./data_dsicap_single/MalcolmX-AnAppealtoAfricanHeadsofState/raw/MalcolmX-AnAppealtoAfricanHeadsofState.txt,test
+85,MalcolmX-AtTheAudubon,./data_dsicap_single/MalcolmX-AtTheAudubon/raw/MalcolmX-AtTheAudubon.txt,test
+86,MalcolmX-ConfrontationWithAnExpert,./data_dsicap_single/MalcolmX-ConfrontationWithAnExpert/raw/MalcolmX-ConfrontationWithAnExpert.txt,train
+87,MalcolmX-LastAnswersAndInterviews,./data_dsicap_single/MalcolmX-LastAnswersAndInterviews/raw/MalcolmX-LastAnswersAndInterviews.txt,train
+88,MalcolmX-LettersFromAbroad,./data_dsicap_single/MalcolmX-LettersFromAbroad/raw/MalcolmX-LettersFromAbroad.txt,train
+89,MalcolmX-MessagetotheGrassRoots,./data_dsicap_single/MalcolmX-MessagetotheGrassRoots/raw/MalcolmX-MessagetotheGrassRoots.txt,test
+90,MalcolmX-ProspectsForFreedomin1965,./data_dsicap_single/MalcolmX-ProspectsForFreedomin1965/raw/MalcolmX-ProspectsForFreedomin1965.txt,test
+91,MalcolmX-TheBallotortheBullet,./data_dsicap_single/MalcolmX-TheBallotortheBullet/raw/MalcolmX-TheBallotortheBullet.txt,test
+92,MalcolmX-TheBlackRevolution,./data_dsicap_single/MalcolmX-TheBlackRevolution/raw/MalcolmX-TheBlackRevolution.txt,test
+93,MalcolmX-TheHarlemHateGang,./data_dsicap_single/MalcolmX-TheHarlemHateGang/raw/MalcolmX-TheHarlemHateGang.txt,test
+94,mapping-out-the-new-year-steve-shepherd-sermon-on-new-years-day-142575.asp,./data_dsicap_single/mapping-out-the-new-year-steve-shepherd-sermon-on-new-years-day-142575.asp/raw/mapping-out-the-new-year-steve-shepherd-sermon-on-new-years-day-142575.asp.txt,train
+95,overcoming-lifes-problems-steve-shepherd-sermon-on-endurance-32141.asp,./data_dsicap_single/overcoming-lifes-problems-steve-shepherd-sermon-on-endurance-32141.asp/raw/overcoming-lifes-problems-steve-shepherd-sermon-on-endurance-32141.asp.txt,train
+96,partings-sweet-sorrow-0,./data_dsicap_single/partings-sweet-sorrow-0/raw/partings-sweet-sorrow-0.txt,test
+97,piper2k 1-23-00,./data_dsicap_single/piper2k 1-23-00/raw/piper2k 1-23-00.txt,train
+98,piper2k 3-5-00,./data_dsicap_single/piper2k 3-5-00/raw/piper2k 3-5-00.txt,train
+99,piper80 071380m,./data_dsicap_single/piper80 071380m/raw/piper80 071380m.txt,test
+100,piper80 122480,./data_dsicap_single/piper80 122480/raw/piper80 122480.txt,test
+101,piper81 041781,./data_dsicap_single/piper81 041781/raw/piper81 041781.txt,test
+102,piper81 071981m,./data_dsicap_single/piper81 071981m/raw/piper81 071981m.txt,test
+103,piper85 pn850005,./data_dsicap_single/piper85 pn850005/raw/piper85 pn850005.txt,train
+104,piper85 pn850026,./data_dsicap_single/piper85 pn850026/raw/piper85 pn850026.txt,test
+105,piper85 pn850027,./data_dsicap_single/piper85 pn850027/raw/piper85 pn850027.txt,test
+106,piper89 4-7-89,./data_dsicap_single/piper89 4-7-89/raw/piper89 4-7-89.txt,train
+107,piper89 6-4-89,./data_dsicap_single/piper89 6-4-89/raw/piper89 6-4-89.txt,train
+108,piper90 01-28-90,./data_dsicap_single/piper90 01-28-90/raw/piper90 01-28-90.txt,train
+109,piper92 09-27-92,./data_dsicap_single/piper92 09-27-92/raw/piper92 09-27-92.txt,train
+110,piper94 07-10-94,./data_dsicap_single/piper94 07-10-94/raw/piper94 07-10-94.txt,train
+111,piper94 09-11-94,./data_dsicap_single/piper94 09-11-94/raw/piper94 09-11-94.txt,train
+112,piper95 12-03-95,./data_dsicap_single/piper95 12-03-95/raw/piper95 12-03-95.txt,test
+113,piper97 10-19-97,./data_dsicap_single/piper97 10-19-97/raw/piper97 10-19-97.txt,test
+114,piper99 1-31-99,./data_dsicap_single/piper99 1-31-99/raw/piper99 1-31-99.txt,test
+115,piper99 12-12-99,./data_dsicap_single/piper99 12-12-99/raw/piper99 12-12-99.txt,train
+116,piper99 4-4-99,./data_dsicap_single/piper99 4-4-99/raw/piper99 4-4-99.txt,test
+117,remembering-9-11-steve-shepherd-sermon-on-america-160100.asp,./data_dsicap_single/remembering-9-11-steve-shepherd-sermon-on-america-160100.asp/raw/remembering-9-11-steve-shepherd-sermon-on-america-160100.asp.txt,test
+118,revisitations-yizkor,./data_dsicap_single/revisitations-yizkor/raw/revisitations-yizkor.txt,train
+119,round-%E2%80%98em-mantle,./data_dsicap_single/round-%E2%80%98em-mantle/raw/round-%E2%80%98em-mantle.txt,test
+120,speaking_with_tongues.html,./data_dsicap_single/speaking_with_tongues.html/raw/speaking_with_tongues.html.txt,test
+121,SS01,./data_dsicap_single/SS01/raw/SS01.txt,test
+122,SS02,./data_dsicap_single/SS02/raw/SS02.txt,train
+123,SS03,./data_dsicap_single/SS03/raw/SS03.txt,train
+124,SS04,./data_dsicap_single/SS04/raw/SS04.txt,train
+125,SS05,./data_dsicap_single/SS05/raw/SS05.txt,train
+126,SS06,./data_dsicap_single/SS06/raw/SS06.txt,train
+127,SS07,./data_dsicap_single/SS07/raw/SS07.txt,test
+128,SS08,./data_dsicap_single/SS08/raw/SS08.txt,train
+129,SS09,./data_dsicap_single/SS09/raw/SS09.txt,test
+130,SS10,./data_dsicap_single/SS10/raw/SS10.txt,test
+131,SS11,./data_dsicap_single/SS11/raw/SS11.txt,train
+132,SS12,./data_dsicap_single/SS12/raw/SS12.txt,test
+133,SS13,./data_dsicap_single/SS13/raw/SS13.txt,train
+134,SS14,./data_dsicap_single/SS14/raw/SS14.txt,train
+135,towers-heavens,./data_dsicap_single/towers-heavens/raw/towers-heavens.txt,train
+136,transcript_being_friendly.html,./data_dsicap_single/transcript_being_friendly.html/raw/transcript_being_friendly.html.txt,test
+137,transcript_defending_name_of_jesus.html,./data_dsicap_single/transcript_defending_name_of_jesus.html/raw/transcript_defending_name_of_jesus.html.txt,train
+138,transcript_galatians_2.html,./data_dsicap_single/transcript_galatians_2.html/raw/transcript_galatians_2.html.txt,train
+139,transcript_galatians_6.html,./data_dsicap_single/transcript_galatians_6.html/raw/transcript_galatians_6.html.txt,train
+140,transcript_jesus_book_revelation.html,./data_dsicap_single/transcript_jesus_book_revelation.html/raw/transcript_jesus_book_revelation.html.txt,train
+141,transcript_net_cast_sea.html,./data_dsicap_single/transcript_net_cast_sea.html/raw/transcript_net_cast_sea.html.txt,train
+142,transcript_polygamy.html,./data_dsicap_single/transcript_polygamy.html/raw/transcript_polygamy.html.txt,test
+143,transcript_psalm119_aleph.html,./data_dsicap_single/transcript_psalm119_aleph.html/raw/transcript_psalm119_aleph.html.txt,train
+144,transcript_zechariah_5.html,./data_dsicap_single/transcript_zechariah_5.html/raw/transcript_zechariah_5.html.txt,test
+145,WestboroBaptist_Sermon_20080316.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20080316.pdf/raw/WestboroBaptist_Sermon_20080316.pdf.txt,train
+146,WestboroBaptist_Sermon_20090809.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20090809.pdf/raw/WestboroBaptist_Sermon_20090809.pdf.txt,train
+147,WestboroBaptist_Sermon_20100718.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20100718.pdf/raw/WestboroBaptist_Sermon_20100718.pdf.txt,train
+148,WestboroBaptist_Sermon_20110529.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20110529.pdf/raw/WestboroBaptist_Sermon_20110529.pdf.txt,test
+149,WestboroBaptist_Sermon_20111204.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20111204.pdf/raw/WestboroBaptist_Sermon_20111204.pdf.txt,train
+150,WestboroBaptist_Sermon_20120819.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20120819.pdf/raw/WestboroBaptist_Sermon_20120819.pdf.txt,test
+151,WestboroBaptist_Sermon_20130310.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20130310.pdf/raw/WestboroBaptist_Sermon_20130310.pdf.txt,train
+152,WestboroBaptist_Sermon_20131110.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20131110.pdf/raw/WestboroBaptist_Sermon_20131110.pdf.txt,train
+153,WestboroBaptist_Sermon_20140420.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20140420.pdf/raw/WestboroBaptist_Sermon_20140420.pdf.txt,train
+154,WestboroBaptist_Sermon_20150712.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20150712.pdf/raw/WestboroBaptist_Sermon_20150712.pdf.txt,train
+155,WestboroBaptist_Sermon_20150906.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20150906.pdf/raw/WestboroBaptist_Sermon_20150906.pdf.txt,test
+156,WestboroBaptist_Sermon_20150927.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20150927.pdf/raw/WestboroBaptist_Sermon_20150927.pdf.txt,test
+157,WestboroBaptist_Sermon_20160501.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20160501.pdf/raw/WestboroBaptist_Sermon_20160501.pdf.txt,train
+158,WestboroBaptist_Sermon_20160703.pdf,./data_dsicap_single/WestboroBaptist_Sermon_20160703.pdf/raw/WestboroBaptist_Sermon_20160703.pdf.txt,test
+159,wgV2n3-2,./data_dsicap_single/wgV2n3-2/raw/wgV2n3-2.txt,train
+160,whats-love-got-to-do-with-it-steve-shepherd-sermon-on-christian-love-118439.asp,./data_dsicap_single/whats-love-got-to-do-with-it-steve-shepherd-sermon-on-christian-love-118439.asp/raw/whats-love-got-to-do-with-it-steve-shepherd-sermon-on-christian-love-118439.asp.txt,test
+161,you-adulterous-people-steve-shepherd-sermon-on-adultery-165397.asp,./data_dsicap_single/you-adulterous-people-steve-shepherd-sermon-on-adultery-165397.asp/raw/you-adulterous-people-steve-shepherd-sermon-on-adultery-165397.asp.txt,train
+162,YV01,./data_dsicap_single/YV01/raw/YV01.txt,train
+163,YV02,./data_dsicap_single/YV02/raw/YV02.txt,train
+164,YV03,./data_dsicap_single/YV03/raw/YV03.txt,train
+165,YV04,./data_dsicap_single/YV04/raw/YV04.txt,train
+166,YV05,./data_dsicap_single/YV05/raw/YV05.txt,train
+167,YV06,./data_dsicap_single/YV06/raw/YV06.txt,train
+168,YV07,./data_dsicap_single/YV07/raw/YV07.txt,train
+169,YV08,./data_dsicap_single/YV08/raw/YV08.txt,test
+170,YV09,./data_dsicap_single/YV09/raw/YV09.txt,train
+171,YV10,./data_dsicap_single/YV10/raw/YV10.txt,train
+172,YV11,./data_dsicap_single/YV11/raw/YV11.txt,train
+173,YV12,./data_dsicap_single/YV12/raw/YV12.txt,test
+174,YV13,./data_dsicap_single/YV13/raw/YV13.txt,train
