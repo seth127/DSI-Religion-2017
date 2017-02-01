@@ -96,6 +96,14 @@ head(files)
 new_names <- paste("Schizophrenia", formatC(seq(length(files)), width = 3, flag = "0"), ".txt", sep = "")
 file.rename(from = files, to = new_names)
 
+# SeaShepherds
+setwd("~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/SeaShepherds/raw")
+startingDir <- "~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/SeaShepherds/raw"
+files <- list.files(startingDir, pattern = ".txt")
+head(files)
+new_names <- paste("SeaShepherds", formatC(seq(length(files)), width = 3, flag = "0"), ".txt", sep = "")
+file.rename(from = files, to = new_names)
+
 # Shepherd
 setwd("~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/Shepherd/raw")
 startingDir <- "~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/Shepherd/raw"
