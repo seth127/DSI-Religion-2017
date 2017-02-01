@@ -110,12 +110,67 @@ ggplot(full_runs, aes(x=as.factor(rank), y=(abs(scaledSvm-rank)))) + geom_boxplo
 #svm
 ggplot(full_runs, aes(x=as.factor(rank), y=scaledSvm, colour=rank)) + geom_boxplot()
 
+ggplot(full_runs, aes(x = as.factor(rank), y = rfPred, colour=rank)) + geom_boxplot()
 mean(full_runs$svmPred)
 
 scale_pred <- function(pred, scale = 1.8) {
-  miss <- pred - mean(full_runs$svmPred)
-  scaled_miss <- miss * scale
+  miss <- round((pred - mean(full_runs$svmPred)),3)
+  scaled_miss <- miss^scale
   return(mean(full_runs$svmPred) + scaled_miss)
 }
 
+Old_MSE<- (sum((full_runs$svmPred-full_runs$rank)^2))/5928
+New_MSE<- (sum((full_runs$scaledSvm-full_runs$rank)^2))/5928
+
+
+accuracy <- function(df, returnDF = F) {
+  RFscores <- logical(nrow(df))
+  SVMscores <- logical(nrow(df))
+  for (i in 1:nrow(df)) {
+    #RFscores[i] <- df$rank[i] >= (df$rfPred[i] - .5) & df$rank[i] <= (df$rfPred[i] + .5)
+    #SVMscores[i] <- df$rank[i] >= (df$svmPred[i] - .5) & df$rank[i] <= (df$svmPred[i] + .5)
+    RFscores[i] <- abs(df$rank[i] - df$rfPred[i]) <= 1 
+    SVMscores[i] <- abs(df$rank[i] - df$svmPred[i]) <= 1 
+
+  }
+  scores <- c((sum(RFscores)/length(RFscores)), (sum(SVMscores)/length(SVMscores)))
+  # return data frame
+  if (returnDF == T) {
+    print(scores)
+    data.frame(df$groupId, RFscores, SVMscores)
+  } else {
+    print(scores)
+  }
+}
+accuracy(full_runs)
+
+scaled_accuracy <- function(df, returnDF = F) {
+  RFscores <- logical(nrow(df))
+  SVMscores <- logical(nrow(df))
+  for (i in 1:nrow(df)) {
+    #RFscores[i] <- df$rank[i] >= (df$rfPred[i] - .5) & df$rank[i] <= (df$rfPred[i] + .5)
+    #SVMscores[i] <- df$rank[i] >= (df$svmPred[i] - .5) & df$rank[i] <= (df$svmPred[i] + .5)
+    #RFscores[i] <- abs(df$rank[i] - df$rfPred[i]) <= 1 
+    SVMscores[i] <- abs(df$rank[i] - df$scaledSvm[i]) <= 1 
+    
+  }
+  scores <- c((sum(SVMscores)/length(SVMscores)))
+  # return data frame
+  if (returnDF == T) {
+    print(scores)
+    data.frame(df$groupId,SVMscores)
+  } else {
+    print(scores)
+  }
+}
+
+scaled_accuracy(full_runs)
+
+
 full_runs$scaledSvm <- scale_pred(full_runs$svmPred, scale = 1.8)
+
+single_docs_reg<- lm(full_runs$rank ~full_runs$rfPred)
+single_docs_reg
+summary(single_docs_reg)
+
+full_runs$new_pred<- (full_runs$rfPred + 0.3514)*0.8931
