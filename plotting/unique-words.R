@@ -1,133 +1,137 @@
 setwd("~/Documents/DSI/Capstone/DSI-Religion-2017")
 library(ggplot2)
-library(gridExtra)
+library(dplyr)
 
-### RANKINGS
-# ranks <- data.frame(groupName=c('WBC', 'PastorAnderson', 'NaumanKhan', 'DorothyDay', 'JohnPiper', 'Shepherd',
-#                                 'Rabbinic', 'Unitarian', 'MehrBaba','SeaShepherds',
-#                                 'IntegralYoga','Bahai','ISIS'), 
-#                     groupRank=c(1,2,3,4,4,4,6,7,8,2,7,6,1))
+# FANCY FONTS
+#https://www.r-bloggers.com/how-to-use-your-favorite-fonts-in-r-charts/
+#install.packages("extrafont")
+# library(extrafont)
+# font_import() # this takes a minute or two
+# fonts()
+theme_set(theme_grey(base_size = 16))
 
-ranks <- read.csv('refData/docRanks.csv')
-ranks <- ranks[,3:4]
+signalDF <- read.csv('modelOutputSingleDocs/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidfNoPro_both_bin_10-SUSAWD', stringsAsFactors = T)
 
-### PLOTIFY THE DATAFRAME
-plotify <- function(df) {
-  df$groupId <- as.character(df$groupId)
-  for (i in 1:nrow(df)) {
-    df$groupName[i] <- unlist(strsplit(df$groupId[i], "_"))[1]
-  }
-  df <- merge(df, ranks, by = "groupName")
-  df$rankDiscrete <- as.factor(df$groupRank)
-  df
+# ils
+#ggplot(signalDF, aes(x=rank, y=ils, colour = groupName)) + geom_point(size=5) + ggtitle("They") + theme(text=element_text(size=16, family="Comic Sans MS"))
+# ils
+ggplot(signalDF, aes(x=rank, y=ils, colour = groupName)) + geom_point(size=5) + ggtitle("They")
+
+# nous
+ggplot(signalDF, aes(x=rank, y=nous, colour = groupName)) + geom_point(size=5) + ggtitle("We")
+
+# vous
+ggplot(signalDF, aes(x=rank, y=vous, colour = groupName)) + geom_point(size=5) + ggtitle("You")
+
+# it
+ggplot(signalDF, aes(x=rank, y=le, colour = groupName)) + geom_point(size=5) + ggtitle("It")
+
+
+# pronounFrac
+ggplot(signalDF, aes(x=rank, y=pronounFrac, colour=perNeg)) + geom_point(size=5)
+
+####
+# NOW WITH KEYWORD+PRONOUN JUDGEMENTS
+#
+files <- c("modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidf_pronounFrac_bin_10-Y6DDDX.csv",
+           #"modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_both_bin_10-RO610D.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidf_pronounFrac_bin_10-7J7LBO.csv",
+           #"modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronounFrac_bin_10-7B7C2E.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidf_pronounFrac_bin_10-BZ2OB7.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_30_tfidfNoPro_pronounFrac_bin_10-XYVISL.csv"
+           )
+
+signalDF <- read.csv("modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_pronounFrac_bin_10-YNJG3G.csv", stringsAsFactors = T)
+for (file in files) {
+  newDF <- read.csv(file, stringsAsFactors = T)
+  signalDF <- rbind(signalDF, newDF)
+  print(file)
+  print(dim(newDF))
 }
+dim(signalDF)
 
-aaDF <- plotify(read.csv('./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv'))
+# KEYWORD + PRONOUN JUDGEMENTS
+ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_point(size=5) + ggtitle("Keyword + Pronoun Judgements")
+ggplot(signalDF, aes(x=rank, y=PSJudge, colour = groupName)) + geom_boxplot() + ggtitle("Keyword + Pronoun Judgements")
+ggplot(signalDF, aes(x=as.factor(rank), y=PSJudge)) + geom_boxplot() + xlab("rank") + ggtitle("Keyword + Pronoun Judgements")
 
-# 
-# ### THE 2016 group data (just a random sample from their optimal model runs)
-# aaDF <- plotify(read.csv('./pythonOutput/run1/cleanedOutput/coco_3_cv_3_netAng_30_sc_0/run0/masterOutput.csv'))
-# 
-# #### COMPARE TO NEW TFIDF METHODS
-# idfDF <- plotify(read.csv('./modelOutput/signalOutputcoco_3_cv_3_netAng_30_sc_0-NQRDMF.csv'))
-# 
-# #### NoPro TFIDF (pronouns removed)
-# # new groups included
-# npDFnew <- plotify(read.csv('./modelOutput/signalOutputcoco_3_cv_3_netAng_30_sc_0-TBXLWF.csv'))
-# # just old groups
-# npDF <- plotify(read.csv('./modelOutput/signalOutputcoco_3_cv_3_netAng_30_sc_0-159PNO.csv'))
-# 
-# #### with pronoun judgements
-# pn10 <- plotify(read.csv('modelOutput/signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_10-9VXA7R.csv'))
-# 
-# pn20 <- plotify(read.csv('modelOutput/signalOutput-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_pronoun_bin_10-PCZKXX.csv'))
-# 
-
-######### PLOTTING
+# AVGSD 
+ggplot(signalDF, aes(x=rank, y=avgSD, colour = groupName)) + geom_boxplot() + ggtitle("Keyword + Pronoun Judgements")
 
 
-#par(mfrow=c(1,2))
-### BY GROUP
-g1 <- ggplot(pn10, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("10 keywords") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-g2 <- ggplot(pn20, aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("20 keywords") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-grid.arrange(g1,g2,ncol=2)
+# by number of keywords selected
+for (i in 1:nrow(signalDF)){
+  keys <- unlist(strsplit(as.character(signalDF$keywords[i]), ', '))
+  #print(length(keys))
+  signalDF$keywordCount[i] <- length(keys)
+}
+ggplot(signalDF, aes(x=keywordCount, y=PSJudge, colour = rank)) + geom_point(size=5) + ggtitle("PSJudge")
 
-# ## ISIS vs. WBC vs. 
-# ggplot(npDFnew[npDFnew$groupName %in% c('ISIS','WBC'),], aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("ISIS vs. WBC")
-# g1 <- ggplot(npDFnew[npDFnew$groupName %in% c('ISIS','WBC','Unitarian'),], aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("ISIS vs. WBC vs. Unitarian")
-# g2 <- ggplot(npDFnew[npDFnew$groupName %in% c('ISIS','WBC','DorothyDay'),], aes(x=avgSD, y =avgEVC, colour = groupName)) + geom_point() + ggtitle("ISIS vs. WBC vs. Dorothy Day")
-# grid.arrange(g1,g2,ncol=2)
+ggplot(signalDF, aes(x=keywordCount, y=avgSD, colour = rank)) + geom_point(size=5) + ggtitle("avgSD")
+ggplot(signalDF, aes(x=as.factor(keywordCount), y=avgSD, colour = groupName)) + geom_boxplot() + ggtitle("avgSD")
 
-###
-g1 <- ggplot(pn10, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("10 keywords") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-g2 <- ggplot(pn20, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("20 keywords") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-grid.arrange(g1,g2,ncol=2)
+#
+# with PSJUDGE vs pronouns
+vip = ggplot(df[!is.na(df$PSJudge),], aes(x=nous, y=svmAccuracy)) + geom_point(size=5, aes(colour='nous')) + ggtitle('') + xlab('variable importance')
+vip = vip + geom_point(size=5, aes(x=ils, y=svmAccuracy, colour = 'ils'))
+vip = vip + geom_point(size=5, aes(x=nous, y=svmAccuracy, colour = 'nous'))
+vip = vip + geom_point(size=5, aes(x=PSJudge, y=svmAccuracy, colour = 'PSJudge'))
+vip = vip + geom_point(size=5, aes(x=pronounFrac, y=svmAccuracy, colour = 'pronounFrac'))
+#vip = vip + geom_point(size=5, aes(x=avgSD, y=svmAccuracy, colour = 'avgSD'))
+#vip = vip + geom_point(size=5, aes(x=avgEVC, y=svmAccuracy, colour = 'avgEVC'))
+vip
 
-ggplot(aaDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("AdjAdv")
-ggplot(idfDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
-ggplot(npDF, aes(x=avgSD, y =judgementFrac, colour = groupName)) + geom_point() + ggtitle("TF-IDF")
+###################
+#   with toBe
+##################
+files <- c("modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_15_tfidfNoPro_both_bin_10-RO610D.csv",
+           "modelOutput/modelPredictions-coco_3_cv_3_netAng_30_twc_20_tfidfNoPro_both_bin_10-2YZAOL.csv"
+           )
 
-## RANKINGS discrete
-ggplot(aaDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("AdjAdv")
-ggplot(idfDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("TF-IDF")
-ggplot(npDF, aes(x=avgSD, y =judgementFrac, colour = rankDiscrete)) + geom_point() + ggtitle("TF-IDF")
+signalDF <- read.csv(files[1], stringsAsFactors = T)
+for (i in 2:length(files)) {
+  newDF <- read.csv(files[i], stringsAsFactors = T)
+  signalDF <- rbind(signalDF, newDF)
+  print(files[i])
+  print(dim(newDF))
+}
+dim(signalDF)
 
+ggplot(signalDF, aes(x=rank, y=toBeFrac, colour = groupName)) + geom_boxplot() + ggtitle("noun + 'to be' + adj Judgements")
 
-## RANKINGS continuous
-mid = 4
-## zoomed in
-g1 <- ggplot(pn10, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("10") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-g2 <- ggplot(pn20, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("20") + theme(legend.position="none") + xlim(.54,.85) + ylim(.38,.93)
-grid.arrange(g1,g2,ncol=2)
+###################
+#   scores
+##################
 
-## scaled to 0 and 1
-ggplot(aaDF, aes(x=avgSD, y =avgEVC, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + xlim(0,1) + ylim(0,1) + ggtitle("AdjAdv")
+df$id <- as.numeric(row.names(df))
+rs1 <- data.frame(id = df$id, Accuracy = df$svmAccuracy, Model = rep("SVM", nrow(df)))
+rs2 <- data.frame(id = df$id, Accuracy = df$rfAccuracy, Model = rep("Random Forest", nrow(df)))
+rsdf <- rbind(rs1, rs2)
+rsdf$Accuracy <- rsdf$Accuracy * 100
+accplot <- ggplot(rsdf[rsdf$id < 60 | rsdf$id > 66 ,], aes(x=id, y=Accuracy, colour = Model)) + geom_line() + ggtitle("Model Accuracy") + xlab('Run ID Number')
+accplot <- accplot + geom_hline(yintercept = 84, linetype = "longdash") 
+#accplot <- accplot + geom_vline(xintercept = 66, linetype = "longdash") 
+accplot
 
+###################
+#   scores BY BINSIZE
+##################
 
-##### OTHER VARIABLES
-## perPos vs. perNeg ######DIFFERENCE!!!!
-g1 <- ggplot(pn10, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("Sentiment") + theme(legend.position="none") 
-#PROBLEM!!! #ggplot(idfDF, aes(x=perPos, y =perNeg, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
+df$id <- as.numeric(row.names(df))
+rs1 <- data.frame(id = df$id, binSize = as.factor(df$binSize), Accuracy = df$svmAccuracy, Model = rep("SVM", nrow(df)))
+rs2 <- data.frame(id = df$id, binSize = as.factor(df$binSize), Accuracy = df$rfAccuracy, Model = rep("Random Forest", nrow(df)))
+rsdf <- rbind(rs1, rs2)
+rsdf$Accuracy <- rsdf$Accuracy * 100
+# accplot <- ggplot(rsdf[rsdf$id > 66 ,], aes(x=id, y=Accuracy, colour = Model)) + geom_line() + ggtitle("Model Accuracy") + xlab('Run ID Number')
+# accplot <- accplot + geom_hline(yintercept = 84, linetype = "longdash") 
+# accplot
+binplot <- ggplot(rsdf[rsdf$id > 66 ,], aes(x=binSize, y=Accuracy, colour = Model)) + geom_point(size=5) + ggtitle("Model Accuracy (new methods)") + xlab('Number of docs in each Bin') + ylim(55,100)
+binplot <- binplot + geom_hline(yintercept = 84, linetype = "longdash") 
+binplot
 
-## Judgements by RANK  ######DIFFERENCE!!!!
-g2 <- ggplot(pn10, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("Judgements") + theme(legend.position="none") 
-#ggplot(idfDF, aes(x=judgementCount, y =judgementFrac, colour = groupRank)) + geom_point() + scale_color_gradient2(midpoint=mid, low="red", mid="white", high="blue", space ="Lab" ) + ggtitle("TF-IDF")
-grid.arrange(g1,g2,ncol=2)
+# with old methods
+binplot <- ggplot(rsdf[rsdf$id < 66 ,], aes(x=binSize, y=Accuracy, colour = Model)) + geom_point(size=5) + ggtitle("Model Accuracy (old methods)") + xlab('Number of docs in each Bin') + ylim(55,100)
+binplot <- binplot + geom_hline(yintercept = 84, linetype = "longdash") 
+binplot
 
-## Judgements by Group ######DIFFERENCE!!!!
-ggplot(pn10, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("10")
-ggplot(pn20, aes(x=judgementFrac, y =judgementCount, colour = groupName)) + geom_point() + ggtitle("20")
-
-
-##### BOXPLOTS
-aa <- aaDF
-aa$Method <- "AdjAdv"
-idf <- subset(idfDF, select = -c(keywords))
-idf$Method <- "IDF raw"
-np <- subset(npDF, select = -c(keywords))
-np$Method <- "IDF NoPro"
-
-master <- rbind(aa,idf,np)
-
-ggplot(master, aes(x =rankDiscrete, y=avgSD, colour=Method)) + geom_boxplot() + ggtitle("Semantic Density") + xlab("")
-ggplot(master[master$Method != "IDF raw",], aes(x =rankDiscrete, y=avgSD, colour=Method)) + geom_boxplot() + ggtitle("Semantic Density") + xlab("")
-
-
-### ADJADV
-g1 <- ggplot(aaDF, aes(x =rankDiscrete, y=perPos)) + geom_boxplot() + ggtitle("Sentiment") + xlab("")
-#ggplot(aaDF, aes(x =rankDiscrete, y=judgementCount)) + geom_boxplot() + ggtitle("Judgements") + xlab("")
-g2 <- ggplot(aaDF, aes(x =rankDiscrete, y=judgementFrac)) + geom_boxplot() + ggtitle("Judgements") + xlab("")
-g3 <- ggplot(aaDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("Semantic Density") + xlab("")
-g4 <- ggplot(aaDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("EV Centrality") + xlab("")
-grid.arrange(g1,g2,g3,g4,ncol=2)
-
-### TFIDF
-ggplot(idfDF, aes(x =rankDiscrete, y=perPos)) + geom_boxplot() + ggtitle("TF-IDF")
-ggplot(idfDF, aes(x =rankDiscrete, y=judgementCount)) + geom_boxplot() + ggtitle("TF-IDF")
-ggplot(idfDF, aes(x =rankDiscrete, y=judgementFrac)) + geom_boxplot() + ggtitle("TF-IDF")
-ggplot(idfDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("TF-IDF")
-ggplot(idfDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("TF-IDF")
-
-### NoPro
-ggplot(npDF, aes(x =rankDiscrete, y=avgSD)) + geom_boxplot() + ggtitle("NoPro")
-ggplot(npDF, aes(x =rankDiscrete, y=avgEVC)) + geom_boxplot() + ggtitle("NoPro")
