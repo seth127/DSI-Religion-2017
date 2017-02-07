@@ -1,5 +1,5 @@
 import os
-
+import re
 os.chdir('./Desktop/DSI_Religion/Megan_Capstone/')
 
 
@@ -15,3 +15,10 @@ workingdir = '/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religio
 
 gsd.getSingleDocDirs(filepath, olddir, newdir, newcopy, workingdir)
 
+df = pd.read_csv('./refData/docRanks.csv')
+
+for i in range(0,len(df)):
+    file = re.sub('.txt', '', df['Filename'][i])
+    df['Filename'][i] = file
+
+df.to_csv('docRanks.csv')
