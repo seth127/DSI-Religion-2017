@@ -617,7 +617,7 @@ class lingualObject(object):
 
             ## order by tfidf weight
             freqit = freqit.sort_values(by='tfidf', ascending=False) 
-
+            freqit.to_csv('TFIDF/' + self.group + 'terms.csv', encoding = 'utf-8')
             #filter out codecerror
             #keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
             keyslist = freqit.index.tolist()
