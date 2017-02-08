@@ -617,7 +617,11 @@ class lingualObject(object):
 
             ## order by tfidf weight
             freqit = freqit.sort_values(by='tfidf', ascending=False) 
-            freqit.to_csv('TFIDF/' + self.group + 'terms.csv', encoding = 'utf-8')
+
+
+
+            ########
+
             #filter out codecerror
             #keyslist = freqit.iloc[startCount:wordCount+startCount].index.tolist()
             keyslist = freqit.index.tolist()
@@ -628,6 +632,24 @@ class lingualObject(object):
 
             ##
             self.keywords = keywords[startCount:wordCount+startCount]
+
+            ### SAVE ALL THE KEYWORDS FOR EACH DOC ####
+            #freqit.to_csv('TFIDF/' + self.group + 'terms.csv', encoding = 'utf-8')
+            #
+            # SCALE BY TOTAL WORDS
+            # get single list of all words in bin
+            wordList = []
+            for x in [self.tokens[x] for x in self.tokens]:
+                wordList = wordList + x
+            # filter out blanks (they make the tagger throw an error)
+            wordList=[word for word in wordList if word!= ''] 
+            # get count of total words
+            totalWords = float(len(wordList))
+            #
+            freqit['scaled_tfidf'] = (freqit['freq']/totalWords) * freqit['idf']
+            # 
+            freqit.loc[keywords].to_csv('TFIDF-SCALED/' + self.group + 'terms.csv', encoding = 'utf-8')
+
 
 
         elif method=='manual':
