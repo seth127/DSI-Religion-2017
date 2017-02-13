@@ -1,4 +1,8 @@
+# To clean up group's document names
+# Make sure you put all of the .txt files into a folder in the group's name in a folder called raw
+# By: Samantha Garofalo (smg7un)
 
+##############################################################################################
 
 # AEU
 setwd("~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/AEU/raw")
@@ -86,6 +90,14 @@ startingDir <- "~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_
 files <- list.files(startingDir, pattern = ".txt")
 head(files)
 new_names <- paste("PeterGomes", formatC(seq(length(files)), width = 3, flag = "0"), ".txt", sep = "")
+file.rename(from = files, to = new_names)
+
+# Rabbinic
+setwd("~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/Rabbinic/raw")
+startingDir <- "~/Documents/Data Science/Capstone/DSI-Religion-2017/data_dsicap_FULL/Rabbinic/raw"
+files <- list.files(startingDir, pattern = ".txt")
+head(files)
+new_names <- paste("Rabbinic", formatC(seq(length(files)), width = 3, flag = "0"), ".txt", sep = "")
 file.rename(from = files, to = new_names)
 
 # Schizophrenia
