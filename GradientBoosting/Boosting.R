@@ -2,19 +2,14 @@
 
 setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs/logs')
 
-#List files in directory
-files<- list.files()
-
-
-#extract signal output files
-signals<- files[grep('signalOutput', files)]
-
 #List output codes for files we want
 codes<- list( 'WWCH7S', 'DV6QAZ', 'OVDCHI', '90QZ3I', 'X055EX', '4XCVKI')
 name <- "modelPredictions-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_1-"
+
+#Read in initial file
 df<- read.csv(paste0(name, 'EOXXVP' , '.csv' ))
 
-#Read in Files and concatenate DF
+#Read in Files and append to DF
 for (i in 1:length(codes)) {
   code<- codes[i]
   filename<- paste0(name, code, '.csv')
@@ -33,7 +28,8 @@ df_clean<- df_clean[!duplicated(df_clean[,1]),]
 #gradient Boosting
 require(xgboost)
 library(caret)
-#Reset Rank Levels
+
+#Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
 df_clean$rank<- df_clean$rank - 1
 
 #Set Rank as Factor
@@ -46,7 +42,7 @@ folds<- createFolds(df_clean$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 param <- list("objective" = "multi:softprob",    
               "num_class" = 9,
-              'max_depth' = 10,
+              'max_depth' = 6,
               'eval_metric' = 'merror')
 
 
@@ -54,6 +50,7 @@ param <- list("objective" = "multi:softprob",
 raw_accuracy<- vector()
 difference<- vector()
 i=0
+j=0
 for (i in 1:10) {
   #Create testing indicies based on folds
   test.indices<- folds[[i]]
@@ -69,7 +66,7 @@ for (i in 1:10) {
   test_Y = as.matrix(test$rank)
   
   #train Model
-  model <- xgboost(param=param, data=train_X, label=train_Y, nrounds=5)
+  model <- xgboost(param=param, data=train_X, label=train_Y, nrounds=6)
   
   #Make predictions based on model for testing set
   predictions<- predict(model, test_X)
@@ -77,15 +74,16 @@ for (i in 1:10) {
   # reshape it to a num_class-columns matrix
   pred <- matrix(predictions, ncol=9, byrow=TRUE)
   
-  # convert the probabilities to softmax labels
+  # convert the probabilities to softmax labels (we have to subtract  one)
   pred_labels <- max.col(pred) - 1
   
+  #Find the difference between the predicted value and the actual value
   for (j in 1: length(test_Y)) {
     diff<- abs(as.numeric(test_Y[j]) - pred_labels[j])
     difference[j]<- diff
   }
   
-  #Calculate Accuracy
+  #Calculate Accuracy, we define accuracy as correctly predicting the class within 1
   miss<- table(difference)
   zero<-miss[names(miss)==0]
   one<- miss[names(miss)==1]
@@ -96,5 +94,5 @@ for (i in 1:10) {
   raw_accuracy[i]= accuracy
 }
 
-Total_Accuracy = mean(raw_accuracy)
-Total_Accuracy #0.99
+Avg_Accuracy = mean(raw_accuracy)
+Avg_Accuracy 
