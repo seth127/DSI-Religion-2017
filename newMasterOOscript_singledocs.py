@@ -42,7 +42,7 @@ sys.stdout.flush()
 stemmer = nltk.stem.snowball.EnglishStemmer()
 
 #
-import getNewDocs_test as gnd
+import getNewDocs_single as gnd
 
 
 ##### FOR THE MODELING
