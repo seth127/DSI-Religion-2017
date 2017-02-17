@@ -1,16 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 19 16:14:43 2016
 
-@author: nmvenuti
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun  2 15:23:11 2016
-
-@author: nmvenuti
-"""
 
 #########
 #
