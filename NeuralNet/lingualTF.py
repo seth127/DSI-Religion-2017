@@ -158,6 +158,19 @@ def cleanTokens(tokenList):
     #Extract tokens
     return textList
 
+def checkWord(word, vocab, keywords):
+    if word in keywords: ##### have to run self.setKeywords() first
+        return 'VAL'
+    elif word in vocab:  ###### need to set this globally
+        return word
+    else:
+        return 'UNK'
+
+def wordToInd(word, vocab, keywords):
+    return vocab.index(checkWord(word, vocab, keywords))
+    
+
+
 #Define main class
 class lingualObject(object):
     '''Class to extract lingusitic singals
@@ -225,13 +238,17 @@ class lingualObject(object):
             Dictionary of judgements with filenames as keys and list of judgements as values
         '''
         #Define parameters
-        self.fileList=fileList       
+        if type(fileList) == list:
+            self.fileList=fileList
+        else:
+            self.fileList=[fileList]  
+
         self.useStem=useStem
         self.useStopwords=useStopwords
         #
-        #self.idfFile = 'wiki-test-5-IDF.csv'
-        #self.idf = pd.read_csv('./refData/' + self.idfFile)
-        #self.idf = self.idf.set_index('term')
+        self.idfFile = 'wiki-test-5-IDF.csv'
+        self.idf = pd.read_csv('./refData/' + self.idfFile)
+        self.idf = self.idf.set_index('term')
         
         ######################
         ###Get text objects###
@@ -247,12 +264,13 @@ class lingualObject(object):
         self.pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
 
         #set the groupId
-        path = fileList[0]
+
+        path = self.fileList[0]
         path = path.split('/')
         self.group = path[path.index('raw')-1]
         
         #extract raw text from each file in fileList and create tokens
-        for fileName in fileList:   
+        for fileName in self.fileList:   
             #Extract raw text and update for encoding issues            
             rawData=unicode(open(fileName).read(), "utf-8", errors="ignore")
             
