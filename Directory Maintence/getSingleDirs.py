@@ -43,7 +43,7 @@ def getSingleDocDirs(filepath, olddir, newdir, newcopy, workingdir):
 
     #Make a copy of the directory will all the files
 
-    copy_tree(olddir, newcopy)
+    copy_tree(olddir,newcopy)
 
     groups = os.listdir(newcopy)
 
