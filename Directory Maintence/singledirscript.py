@@ -1,12 +1,12 @@
 import os
 import re
-os.chdir('./Desktop/DSI_Religion/Megan_Capstone/')
+os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religion-2017/Directory Maintence/')
 
 
 
 import getSingleDirs as gsd 
 
-os.chdir('./DSI-Religion-2017/')
+os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religion-2017/')
 filepath = 'Interns Scoring.xlsx'
 olddir = './data_dsicap_FULL/'
 newdir = 'data_dsicap_testagain'
