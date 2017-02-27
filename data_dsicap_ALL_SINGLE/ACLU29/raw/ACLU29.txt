@@ -1,0 +1,7 @@
+Yahoo Mail scanned all of its customers’ incoming messages under a secret order from the government, according to a report by Reuters.
+
+Patrick Toomey, a staff attorney with the American Civil Liberties Union, had this reaction:
+
+“Based on this report, the order issued to Yahoo appears to be unprecedented and unconstitutional. The government appears to have compelled Yahoo to conduct precisely the type of general, suspicionless search that the Fourth Amendment was intended to prohibit.
+
+“It is deeply disappointing that Yahoo declined to challenge this sweeping surveillance order, because customers are counting on technology companies to stand up to novel spying demands in court. If this surveillance was conducted under Section 702 of the Foreign Intelligence Surveillance Act, this story reinforces the urgent need for Congress to reform the law to prevent dragnet surveillance and require increased transparency.”

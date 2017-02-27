@@ -1,0 +1,644 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled emoji-size-boost is-u2f-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c64b206fb6104fd10a7b4f7460f970885149c62649a7414df084683d7a0f7bf3.css" integrity="sha256-xksgb7YQT9EKe090YPlwiFFJxiZJp0FN8IRoPXoPe/M=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-7a67c407baa2920f9b06dafc83f5c1b2dce09d48421c77ad18336888931edeb9.css" integrity="sha256-emfEB7qikg+bBtr8g/XBstzgnUhCHHetGDNoiJMe3rk=" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-0aa4f1a4bd9907ebd09f265a95d4856cabf513dd39b891f737b1b35c39f12564.css" integrity="sha256-CqTxpL2ZB+vQnyZaldSFbKv1E905uJH3N7GzXDnxJWQ=" media="all" rel="stylesheet" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>DSI_Religion/8 August 1942_ Quit India Speeches Hindustani II_Bombay.txt at master · nmvenuti/DSI_Religion · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars2.githubusercontent.com/u/13342284?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="nmvenuti/DSI_Religion" name="twitter:title" /><meta content="DSI_Religion - CLDS and GCR-ERT Continuation work" name="twitter:description" />
+      <meta content="https://avatars2.githubusercontent.com/u/13342284?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="nmvenuti/DSI_Religion" property="og:title" /><meta content="https://github.com/nmvenuti/DSI_Religion" property="og:url" /><meta content="DSI_Religion - CLDS and GCR-ERT Continuation work" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+    <meta name="request-id" content="89360D5E:2271:1B590657:583F02C1" data-pjax-transient>
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="89360D5E:2271:1B590657:583F02C1" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="ZDMwZDIyZjg2NzM0YTRkZmZmZDZhNmYxNmMzMGMyYzk4MjE2ODA4MmMwMmU3NjQyZDViOTc1MGFiNzBkOTg4Ynx7InJlbW90ZV9hZGRyZXNzIjoiMTM3LjU0LjEzLjk0IiwicmVxdWVzdF9pZCI6Ijg5MzYwRDVFOjIyNzE6MUI1OTA2NTc6NTgzRjAyQzEiLCJ0aW1lc3RhbXAiOjE0ODA1MjQ0ODQsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="3f56f51f1083daf6d18a137490947b134dd6352b">
+    <meta content="46830e523273906efd3fa4ef72a358dad95088a1" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="8660b3e3ee315fe0012b22d0eb42587f">
+    
+
+      
+  <meta name="description" content="DSI_Religion - CLDS and GCR-ERT Continuation work">
+  <meta name="go-import" content="github.com/nmvenuti/DSI_Religion git https://github.com/nmvenuti/DSI_Religion.git">
+
+  <meta content="13342284" name="octolytics-dimension-user_id" /><meta content="nmvenuti" name="octolytics-dimension-user_login" /><meta content="60101632" name="octolytics-dimension-repository_id" /><meta content="nmvenuti/DSI_Religion" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="60101632" name="octolytics-dimension-repository_network_root_id" /><meta content="nmvenuti/DSI_Religion" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/nmvenuti/DSI_Religion/commits/master.atom" rel="alternate" title="Recent Commits to DSI_Religion:master" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/nmvenuti/DSI_Religion/blob/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-out  env-production macintosh vis-public page-blob">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /showcases /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-1" href="/login?return_to=%2Fnmvenuti%2FDSI_Religion%2Fblob%2Fmaster%2Fprotest_temporalAnalysis%2Fdata_activists%2FGhandi%2Fraw%2F8%2520August%25201942_%2520Quit%2520India%2520Speeches%2520Hindustani%2520II_Bombay.txt" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary mr-md-3">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search GitHub</a>
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/nmvenuti/DSI_Religion/search" class="js-site-search-form" data-scoped-search-url="/nmvenuti/DSI_Religion/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/nmvenuti/DSI_Religion/watchers"
+     aria-label="1 user is watching this repository">
+    1
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/nmvenuti/DSI_Religion/stargazers"
+      aria-label="0 users starred this repository">
+      0
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/nmvenuti/DSI_Religion/network" class="social-count"
+       aria-label="3 users forked this repository">
+      3
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/nmvenuti" class="url fn" rel="author">nmvenuti</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/nmvenuti/DSI_Religion" data-pjax="#js-repo-pjax-container">DSI_Religion</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/nmvenuti/DSI_Religion" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /nmvenuti/DSI_Religion" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/nmvenuti/DSI_Religion/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /nmvenuti/DSI_Religion/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">0</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/nmvenuti/DSI_Religion/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /nmvenuti/DSI_Religion/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/nmvenuti/DSI_Religion/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /nmvenuti/DSI_Religion/projects">
+    <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+
+
+  <a href="/nmvenuti/DSI_Religion/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /nmvenuti/DSI_Religion/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/nmvenuti/DSI_Religion/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /nmvenuti/DSI_Religion/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/nmvenuti/DSI_Religion/blob/58300a3a0728d2d681a28f1351dd40789781976f/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:afed4539341160515f3869ce1d8b8c32 -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/nmvenuti/DSI_Religion/blob/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="BtnGroup float-right">
+    <a href="/nmvenuti/DSI_Religion/find/master"
+          class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion"><span>DSI_Religion</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis"><span>protest_temporalAnalysis</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists"><span>data_activists</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists/Ghandi"><span>Ghandi</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists/Ghandi/raw"><span>raw</span></a></span><span class="separator">/</span><strong class="final-path">8 August 1942_ Quit India Speeches Hindustani II_Bombay.txt</strong>
+  </div>
+</div>
+
+<include-fragment class="commit-tease" src="/nmvenuti/DSI_Religion/contributors/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt">
+  <div>
+    Fetching contributors&hellip;
+  </div>
+
+  <div class="commit-tease-contributors">
+    <img alt="" class="loader-loading float-left" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+    <span class="loader-error">Cannot retrieve contributors at this time</span>
+  </div>
+</include-fragment>
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a href="/nmvenuti/DSI_Religion/raw/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="/nmvenuti/DSI_Religion/blame/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt" class="btn btn-sm js-update-url-with-hash BtnGroup-item">Blame</a>
+      <a href="/nmvenuti/DSI_Religion/commits/master/protest_temporalAnalysis/data_activists/Ghandi/raw/8%20August%201942_%20Quit%20India%20Speeches%20Hindustani%20II_Bombay.txt" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://mac.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      36 lines (35 sloc)
+      <span class="file-info-divider"></span>
+    28.9 KB
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">I congratulate you on the resolution that you have just passed. I also congratulate the three comrades on the courage they have shown in pressing their amendments to a division, even though they knew that there was an overwhelming majority in favour of the resolution, and I congratulate the thirteen friends who voted against the resolution. In doing so, they had nothing to be ashamed of. For the last twenty years we have tried to learn not to lose courage even when we are in a hopeless minority and are laughed at. We have learned to hold on to our beliefs in the confidence that we are in the right. It behaves us to cultivate this courage of conviction, for it ennobles man and raises his moral stature.</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">I was, therefore, glad to see that these friends had imbibed the principle which I have tried to follow for the last fifty years and more.</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">Having congratulated them on their courage, let me say that what they asked this Committee to accept through their amendments was not the correct representation of the situation. These friends ought to have pondered over the appeal made to them by the Maulana to withdraw their amendments; they should have carefully followed the explanations given by Jawaharlal. Had they done so, it would have been clear to them that the right which they now want the Congress to concede has already been conceded by the Congress.</td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">Time was when every Mussalman claimed the whole of India as his motherland. During the years that the Ali brothers were with me, the assumption underlying all their talks and discussions was that India belonged as much to the Mussalmans as to the Hindus. I can testify to the fact that this was their innermost conviction and nor a mask; I lived with them for years. I spent days and nights in their company. And I make bold to say that their utterances were the honest expression of their beliefs. I know there are some who say that I take things too readily at their face value, that I am gullible. I do not think I am such a simpleton, nor am I so gullible as these friends take me to be. But their criticism does not hurt me. I should prefer to be considered gullible rather deceitful.</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">What these Communist friends proposed through their amendments is nothing new. It has been repeated from thousands of platforms. Thousands of Mussalmans have told me, that if Hindu-Muslim question was to be solved satisfactorily, it must be done in my lifetime. I should feel flattered at this; but how can I agree to proposal which does not appeal to my reason? Hindu-Muslim unity is not a new thing. Millions of Hindus and Mussalmans have sought after it. I consciously strove for its achievement from my boyhood. While at school, I made it a point to cultivate the friendship of Muslims and Parsi co-students. I believed even at that tender age that the Hindus in India, if they wished to live in peace and amity with the other communities, should assiduously cultivate the virtue of neighbourliness. It did not matter, I felt, if I made no special effort to cultivate the friendship with Hindus, but I must make friends with at least a few Mussalmans. It was as counsel for a Mussalmans merchant that I went to South Africa. I made friends with other Mussalmans there, even with the opponents of my client, and gained a reputation for integrity and good faith. I had among my friends and co-workers Muslims as well as Parsis. I captured their hearts and when I left finally for India, I left them sad and shedding tears of grief at the separation.</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">In India too I continued my efforts and left no stone unturned to achieve that unity. It was my life-long aspiration for it that made me offer my fullest co-operation to the Mussalmans in the Khilafat movement. Muslims throughout the country accepted me as their true friend.</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">How then is it that I have now come to be regarded as so evil and detestable? Had I any axe to grind in supporting the Khilafat movement? True, I did in my heart of hearts cherish a hope that it might enable me to save the cow. I am a worshipper of the cow. I believe the cow and myself to be the creation of the same God, and I am prepared to sacrifice my life in order to save the cow. But, whatever my philosophy of life and my ultimate hopes, I joined the movement in no spirit of bargain. I co-operated in the struggle for the Khilafat solely on order to discharge my obligation to my neighbour who, I saw, was in distress. The Ali brothers, had they been alive today, would have testified to the truth of this assertion. And so would many others bear me out in that it was not a bargain on my part for saving the cow. The cow like the Khilafat. Stood on her own merits. As an honest man, a true neighbour and a faithful friend, it was incumbent on me to stand by the Mussalmans in the hour of their trial.</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">In those days, I shocked the Hindus by dinning time they have now got used to it. Maulana Bari told me, however, that through he would not allow me dine with him, lest some day he should be accused of a sinister motive. And so, whenever I had occasion to stay with him, he called a Brahmana cook and made social arrangements for separate cooking. Firangi ,Mahal, his residence, was an old-styled structure with limited accommodation; yet he cheerfully bore all hardships and carried out his resolve from which I could not dislodge him. It was the spirit of courtesy, dignity and nobility that inspired us in those days. They respected one another’s religious feelings, and considered it a privilege to do so. Not a trace of suspicion lurked in anybody’s heart. Where has all that dignity, that nobility of spirit, disappeared now? I should ask all Mussalmans, including Quaid-I-Azam Jinnah, to recall those glorious days and to find out what has brought us to the present impasse. Quaid-i-Azam Jinnah himself was at one time a Congressman. If today the Congress has incurred his wrath, it is because the canker of suspicion has entered his heart. May God bless him with long life, but when I am gone, he will realize and admit that I had no designs on Mussalmans and that I had never betrayed their interests. Where is the escape for me, if I injure their cause or betray their interests? My life is entirely at their disposal. They are free to put an end to it, whenever they wish to do so. Assaults have been made on my life in the past, but God has spared me till now, and the assailants have repented for their action. But if someone were to shoot me in the belief that he was getting rid of a rascal, he would kill not the real Gandhi, but the one that appeared to him a rascal.</td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">To those who have been indulging in a campaign of a abuse and vilification I would say, “Islam enjoins you not to revile even an enemy. The Prophet treated even enemies with kindness and tried to win them over by his fairness and generosity. Are you followers of that Islam or of any other? If you are followers of the true Islam, does it behave you to distrust the words of one who makes a public declaration of his faith? You may take it from me that one day you will regret the fact that you distrusted and killed one who was a true and devoted friend of yours.” It cuts me to the quick to see that the more I appeal and the more the Maulana importunes, the more intense does the campaign of vilification grow. To me, these abuses are like bullets. They can kill me, even as a bullet can put an end to my life. You may kill me. That will not hurt me. But what of those who indulge in abusing? They bring discredit to Islam. For the fair name of Islam, I appeal to you to resist this unceasing campaign of abuse and vilification.</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">Maulana Saheb is being made a target for the filthiest abuse. Why? Because he refuses to exert on me the pressure of his friendship. He realizes that it is a misuse of friendship to seek up to compel a friend to accept as truth what he knows is an untruth.</td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">To the Quaid-Azam I would say: Whatever is true and valid in the claim for Pakistan is already in your hands. What is wrong and untenable is in nobody’s gift, so that it can be made over to you. Even if someone were to succeed in imposing an untruth on others, he would not be able to enjoy for long the fruits of such a coercion. God dislikes pride and keeps away from it. God would not tolerate a forcible imposition of an untruth.</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">The Quaid-Azam says that he is compelled to say bitter things but that he cannot help giving expression to his thoughts and his feelings. Similarly I would say : “I consider myself a friend of Mussalmans. Why should I then not give expression to the things nearest to my heart, even at the cost of displeasing them? How can I conceal my innermost thoughts from them? I should congratulate the Quaid-i-Azam on his frankness in giving expression to his thoughts and feelings, even if they sound bitter to his hearers. But even so why should the Mussalmans sitting here be reviled, if they do not see eye to eye with him? If millions of Mussalmans are with you can you not afford to ignore the handful of Mussalmans who may appear to you to be misguided? Why should one with the following of several millions be afraid of a majority community, or of the minority being swamped by the majority? How did the Prophet work among the Arabs and the Mussalmans? How did he propagate Islam? Did he say he would propagate Islam only when he commanded a majority? I appeal to you for the sake of Islam to ponder over what I say. There is neither fair play nor justice in saying that the Congress must accept a thing, even if it does not believe in it and even if it goes counter to principles it holds dear.</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">Rajaji said:“I do not believe in Pakistan. But Mussalmans ask for it, Mr. Jinnah asks for it, and it has become an obsession with them. Why not then say, “yes” to them just now? The same Mr. Jinnah will later on realize the disadvantages of Pakistan and will forgo the demand.” I said : “It is not fair to accept as true a thing which I hold to be untrue, and ask others to do say in the belief that the demand will not be pressed when the time comes for settling in finally. If I hold the demand to be just, I should concede it this very day. I should not agree to it merely in order to placate Jinnah Saheb. Many friends have come and asked me to agree to it for the time being to placate Mr. Jinnah, disarm his suspicious and to see how he reacts to it. But I cannot be party to a course of action with a false promise. At any rate, it is not my method.”</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">The Congress as no sanction but the moral one for enforcing its decisions. It believes that true democracy can only be the outcome of non-violence. The structure of a world federation can be raised only on a foundation of non-violence, and violence will have to be totally abjured from world affairs. If this is true, the solution of Hindu-Muslim question, too, cannot be achieved by a resort to violence. If the Hindus tyrannize over the Mussalmans, with what face will they talk of a world federation? It is for the same reason that I do not believe in the possibility of establishing world peace through violence as the English and American statesmen propose to do. The Congress has agreed to submitting all the differences to an impartial international tribunal and to abide by its decisions. If even this fairest of proposals is unacceptable, the only course that remains open is that of the sword, of violence. How can I persuade myself to agree to an impossibility? To demand the vivisection of a living organism is to ask for its very life. It is a call to war. The Congress cannot be party to such a fratricidal war. Those Hindus who, like Dr. Moonje and Shri Savarkar, believe in the doctrine of the sword may seek to keep the Mussalmans under Hindus domination. I do not represent that section. I represent the Congress. You want to kill the Congress which is the goose that lays golden eggs. If you distrust the Congress, you may rest assured that there is to be perpetual war between the Hindus and the Mussalmans, and the country will be doomed to continue warfare and bloodshed. If such warfare is to be our lot, I shall not live to witness it.</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">It is for that reason that I say to Jinnah Saheb, “You may take it from me that whatever in your demand for Pakistan accords with considerations of justice and equity is lying in your pocket; whatever in the demand is contrary to justice and equity you can take only by the sword and in no other manner.”</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">There is much in my heart that I would like to pour out before this assembly. One thing which was uppermost in my heart I have already dealt with. You may take it from me that it is with me a matter of life and death. If we Hindus and Mussalmans mean to achieve a heart unity, without the slightest mental reservation on the part of either, we must first unite in the effort to be free from the shackles of this empire. If Pakistan after all is to be a portion of India, what objection can there be for Mussalmans against joining this struggle for India’s freedom? The Hindus and Mussalmans must, therefore, unite in the first instance on the issue of fighting for freedom. Jinnah Saheb thinks the war will last long. I do not agree with him. If the war goes on for six months more, how shall we able to save China?</td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">I, therefore, want freedom immediately, this very night, before dawn, if it can be had. Freedom cannot now wait for the realization of communal unity. If that unity is not achieved, sacrifices necessary for it will have to be much greater than would have otherwise sufficed. But the Congress must win freedom or be wiped out in the effort. And forget not that the freedom which the Congress is struggling to achieve will not be for the Congressmen alone but for all the forty cores of the Indian people. Congressmen must for ever remain humble servants of the people.</td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">The Quaid-i-Azam has said that the Muslim League is prepared to take over the rule from the Britishers if they are prepared to hand it over to the Muslim League, for the British took over the empire from the hands of the Muslims. This, however, will be Muslim Raj. The offer made by Maulana Saheb and by me does not imply establishment of Muslim Raj or Muslim domination. The Congress does not believe in the domination of any group or any community. It believes in democracy which includes in its orpit Muslims, Hindus, Christians, Parsis, Jews-every one of the communities inhabiting this vast country. If Muslim Raj is invetable, then let it be; but how can we give it the stamp of our assent? How can we agree to the domination of one community over the others?</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">Millions of Mussalmans in this country come from Hindu stock. How can their homeland be any other than India? My eldest son embraced Islam some years back. What would his homeland be-Porbandar or the Punjab? I ask the Mussalmans: “If India is not your homeland, what other country do you belong to? In what separate homeland would you put my son who embraced Islam?” His mother wrote him a letter after his conversion, asking him if he had on embracing Islam given up drinking which Islam forbids to its follower. To those who gloated over the conversion, she wrote to say: “I do not mind his becoming a Mussalmans, so much as his drinking. Will you, as pious Mussalmans, tolerate his drinking even after his conversion? He has reduced himself to the state of a rake by drinking. If you are going to make a man of him again, his conversion will have been turned to good account. You will, therefore, please see that he as a Mussalman abjures wine and woman. If that change does not come about, his conversion goes in vain and our non-co-operation with him will have to continue.”</td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">India is without doubt the homeland of all the Mussalmans inhabiting this country. Every Mussalman should therefore co-operate in the fight for India’s freedom. The Congress does not belong to any one class or community; it belongs to the whole nation. It is open to Mussalmans to take possession of the Congress. They can, if they like, swamp the Congress by their numbers, and can steer it along the course which appeals to them. The Congress is fighting not on behalf of the Hindu but on behalf of the whole nation, including the minorities. It would hurt me to hear of a single instance of a Mussalman being killed by a Congressman. In the coming revolution, Congressmen will sacrifice their lives in order to protect the Mussalman against a Hindu’s attack and vice versa. It is a part of their creed, and is one of the essentials of non-violence. You will be excepted on occasions like these not to lose your heads. Every Congressman, whether a Hindu or a Mussalman, owes this duty to the organization to which will render a service to Islam. Mutual trust is essential for success in the final nation-wide struggle that is to come.</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">I have said that much greater sacrifice will have to be made this time in the wake of our struggle because of the opposition from the Muslim League and from Englishmen. You have seen the secret circular issued by Sir Frederick Puckle. It is a suicidal course that he has taken. It contains an open incitement to organizations which crop up like mushrooms to combine to fight the Congress. We have thus to deal with an empire whose ways are crooked. Ours is a straight path which we can tread even with our eyes closed. That is the beauty of Satyagraha.</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">In Satyagraha, there is no place for fraud or falsehood, or any kind of untruth. Fraud and untruth today are stalking the world. I cannot be a helpless witness to such a situation. I have traveled all over India as perhaps nobody in the present age has. The voiceless millions of the land saw in me their friend and representative, and I identified myself with them to an extent it was possible for a human being to do. I saw trust in their eyes, which I now want to turn to good account in fighting this empire upheld on untruth and violence. However gigantic the preparations that the empire has made, we must get out of its clutches. How can I remain silent at this supreme hour and hide my light under the bushel? Shall I ask the Japanese to tarry awhile? If today I sit quite and inactive, God will take me to task for not using up the treasure He had given me, in the midst of the conflagration that is enveloping the whole world. Had the condition been different, I should have asked you to wait yet awhile. But the situation now has become intolerable, and the Congress has no other course left for it.</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">Nevertheless, the actual struggle does not commence this moment. You have only placed all your powers in my hands. I will now wait upon the Viceroy and plead with him for the acceptance of the Congress demand. That process is likely to take two or three weeks. What would you do in the meanwhile? What is the programme, for the interval, in which all can participate? As you know, the spinning wheel is the first thing that occurs to me. I made the same answer to the Maulana. He would have none of it, though he understood its import later. The fourteen fold constructive programme is, of course, there for you to carry out. What more should you do? I will tell you. Every one of you should, from this moment onwards, consider yourself a free man or woman, and acts as if you are free and are no longer under the heel of this imperialism.</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">It is not a make-believe that I am suggesting to you. It is the very essence of freedom. The bond of the slave is snapped the moment he consider himself to be a free being. He will plainly tell the master: “I was your bond slave till this moment, but I am a slave no longer. You may kill me if you like, but if you keep me alive, I wish to tell you that if you release me from the bondage, of your own accord, I will ask for nothing more from you. You used to feed and cloth me, though I could have provided food and clothing for myself by my labour. I hitherto depended on you instead of on God, for food and raiment. But God has now inspired me with an urge for freedom and I am to day a free man, and will no longer depend on you.”</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">You may take it from me that I am not going to strike a bargain with the Viceroy for ministries and the like. I am not going to be satisfied with anything short of complete freedom. May be, he will propose the abolition of salt tax, the drink evil, etc. But I will say, “Nothing less than freedom.”</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">Here is a mantra, a short one, that I give you. You may imprint it on your hearts and let every breath of yours give expression to it. The mantra is : ‘Do or Die’. We shall either free India or die in the attempt; we shall not live to see the perpetuation of our slavery. Every true Congressman or woman will join the struggle with an inflexible determination not to remain alive to see the country in bondage and slavery. Let that be your pledge. Keep jails out of your consideration. If the Government keep me free, I will not put on the Government the strain of maintaining a large number of prisoners at a time, when it is in trouble. Let every man and woman live every moment of his or her life hereafter in the consciousness that he or she eats or lives for achieving freedom and will die, if need be, to attain that goal. Take a pledge, with God and your own conscience as witness, that you will no longer rest till freedom is achieved and will be prepared to lay down your lives in the attempt to achieve it. He who loses his life will gain it; he who will seek to save it shall lose it. Freedom is not for the coward or the faint-hearted. A word to the journalists. I congratulate you on the support you have hitherto given to the national demand. I know the restrictions and handicaps under which you have to labour. But I would now ask you to snap the chains that bind you. It should be the proud privilege of the newspapers to lead and set an example in laying down one’s life for freedom.</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">You have the pen which the Government can’t suppress. I know you have large properties in the form of printing presses, etc., and you would be afraid lest the Government should attach them. I do not ask you to invite an attachment of the printing-press voluntarily. For myself, I would not suppress my pen, even if the press was to be attached. As you know my press was attached in the past and returned later on. But I do not ask from you that final sacrifice. I suggest a middle way. You should now wind up your standing committee, and you may declare that you will give up the pen only when India has won her freedom. You may tell Sir Frederick Puckle that he can’t except from you a command performance, that his press notes are full of untruth, and that you will refuse to publish them. You will openly declare that you are wholeheartedly with the Congress. If you do this, you will have changed the atmosphere before the fight actually begins.</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">From the Princes I ask with all respect due to them a very small thing. I am a well-wisher of the Princes. I was born in a State. My grandfather refused to salute with his right hand any Prince other than his own. But he did not say to the Prince, as I fell he ought to have said, that even his own master could not compel him, his minister, to act against his conscience. I have eaten the Prince&#39;s salt and I would not be false to it. As a faithful servant, it is my duty to warn the Princes that if they will act while I am still alive, the Princes may come to occupy an honourable place in free India. In Jawaharlal’s scheme of free India, no privileges or the privileged classes have a place. Jawaharlal considers all property to be State-owned. He wants planned economy. He wants to reconstruct India according to plan. He likes to fly; I do not. I have kept a place for the Princes and the Zamindars1 in India that I envisage. I would ask the Princes in all humility to enjoy through renunciation. The Princes may renounce ownership over their properties and become their trustees in the true sense of the term. I visualize God in the assemblage of people. The Princes may say to their people : “You are the owners and masters of the State and we are your servants.” I would ask the Princes to become servants of the people and render to them an account of their own services. The empire too bestows power on the Princes, but they should prefer to derive power from their own people; and if they want to indulge in some innocent pleasures, they may seek to do so as servants of the people. I do not want the Princes to live as paupers. But I would ask them : “Do you want to remain slaves for all time? Why should you, instead of paying homage to a foreign power, not accept the sovereignty of your own people?” You may write to the Political Department : “The people are now awake. How are we to withstand an avalanche before which even the Large empire are crumbling? We, therefore, shall belong to the people from today onwards. We shall sink or swim with them.” Believe me, there is nothing unconstitutional in the course I am suggesting. There are, so far as I know, no treaties enabling the empire to coerce the Princes. The people of the States will also declare that though they are the Princes’ subjects, they arepart of the Indian nation and that they will accept the leadership of the Princes, if the latter cast their lot with the people, the latter will meet death bravely and unflinchingly, but will not go back on their word.</td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">Nothing, however, should be done secretly. This is an open rebellion. In this struggle secrecy is a sin. A free man would not engage in a secret movement. It is likely that when you gain freedom you will have a C.I.D. of your own, in spite of my advice to the contrary. But in the present struggle, we have to work openly and to receive bullets on our chest, without taking to heels.</td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">I have a word to say to Government servants also. They may not, if they like, resign their posts yet. The late Justice Ranade did not resign his post, but he openly declared that he belonged to the Congress. He said to the Government that though he was a judge, he was a Congressman and would openly attend the sessions of the Congress, but that at the same time he would not let his political views warp his impartiality on the bench. He held Social Reform Conference in the very Pandal1 of the Congress. I would ask all the Government servants to follow in the footsteps of Ranade and to declare their allegiance to the Congress as an answer to the secret circular issued by Sir Frederick Puckle.</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">This is all that I ask of you just now. I will now write to the Viceroy. You will be able to read the correspondence not just now but when I publish it with the Viceroy’s consent. But you are free to aver that you support the demand to be put forth in my letter. A judge came to me and said : “We get secret circulars from high quarters. What are we to do?” I replied, “If I were in your place, I would ignore the circulars. You may openly say to the Government : ‘I have received your secret circular. I am, however, with the Congress. Though I serve the Government for my livelihood, I am not going to obey these secret circulars or to employ underhand methods,’” Soldiers too are covered by the present programme. I do not ask them just now to resign their posts and to leave the army. The soldiers come to me, Jawaharlal and the Maulana and say : “We are wholly with you. We are tired of the Governmental tyranny.” To these soldiers I would say : You may say to the Government, “Our hearts are with the Congress. We are not going to leave our posts. We will serve you so long as we receive your salaries. We will obey your just orders, but will refuse to fire on our own people.”</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">To those who lack the courage to do this much I have nothing to say. They will go their own way. But if you can do this much, you may take it from me that the whole atmosphere will be electrified. Let the Government then shower bombs, if they like. But no power on earth will then be able to keep you in bondage any longer.</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">If the students want to join the struggle only to go back to their studies after a while, I would not invite them to it. For the present, however, till the time that I frame a programme for the struggle, I would ask the students to say to their professors : “We belong to the Congress. Do you belong to the Congress, or to the Government? If you belong to the Congress, you need not vacate your posts. You will remain at your posts but teach us and lead us unto freedom.” In all fights for freedom, the world over, the students have made very large contributions.</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">If in the interval that is left to us before the actual fight begins, you do even the little I have suggested to you, you will have changed the atmosphere and will have prepared the ground for the next step.</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">There is much I should et like to say. But my heart is heavy. I have already taken up much of your time. I have yet to say a few words in English also. I thank you for the patience and attention with which you have listened to me even at this late hour. It is just what true soldiers would do. For the last twenty-two years, I have controlled my speech and pen and have stored up my energy. He is a true Brahmacharri1 who does not fritter away his energy. He will, therefore, always control his speech. That has been my conscious effort all these years. But today the occasion has come when I had to unburden my heart before you. I have done so, even though it meant putting a strain on your patience; and I do not regret having done it. I have given you my message and through you I have delivered it to the whole of India.</td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.07795s from github-fe-5989992.cp1-iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-fjanzKa4+830KgspYm1AVfW3AW7BlFuO/ZxrAUZgpuY=" src="https://assets-cdn.github.com/assets/frameworks-7e36a7cca6b8fbcdf42a0b29626d4055f5b7016ec1945b8efd9c6b014660a6e6.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-AirLJsjYd+1dNB9rJnJTfSwlFXIhseqiFS5RIX097vo=" src="https://assets-cdn.github.com/assets/github-022acb26c8d877ed5d341f6b2672537d2c25157221b1eaa2152e51217d3deefa.js"></script>
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

@@ -1,17 +1,17 @@
 import os
 import re
-os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religion-2017/Directory Maintence/')
+os.chdir('/Users/samanthagarofalo/Documents/Data Science/Capstone/DSI-Religion-2017/Directory Maintence/')
 
 
-
+import pandas as pd
 import getSingleDirs as gsd 
 
-os.chdir('/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religion-2017/')
+os.chdir('/Users/samanthagarofalo/Documents/Data Science/Capstone/DSI-Religion-2017')
 filepath = 'Interns Scoring.xlsx'
 olddir = './data_dsicap_FULL/'
-newdir = 'data_dsicap_testagain'
-newcopy = './data_dsicap_FULL_2/'
-workingdir = '/Users/meganstiles/Desktop/DSI_Religion/Megan_Capstone/DSI-Religion-2017/'
+newdir = 'data_dsicap_ALL_SINGLE'
+newcopy = './data_dsicap_testing4/'
+workingdir = '/Users/samanthagarofalo/Documents/Data Science/Capstone/DSI-Religion-2017/'
 
 gsd.getSingleDocDirs(filepath, olddir, newdir, newcopy, workingdir)
 
