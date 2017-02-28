@@ -1,0 +1,572 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled emoji-size-boost is-u2f-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c64b206fb6104fd10a7b4f7460f970885149c62649a7414df084683d7a0f7bf3.css" integrity="sha256-xksgb7YQT9EKe090YPlwiFFJxiZJp0FN8IRoPXoPe/M=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-7a67c407baa2920f9b06dafc83f5c1b2dce09d48421c77ad18336888931edeb9.css" integrity="sha256-emfEB7qikg+bBtr8g/XBstzgnUhCHHetGDNoiJMe3rk=" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-0aa4f1a4bd9907ebd09f265a95d4856cabf513dd39b891f737b1b35c39f12564.css" integrity="sha256-CqTxpL2ZB+vQnyZaldSFbKv1E905uJH3N7GzXDnxJWQ=" media="all" rel="stylesheet" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>DSI_Religion/11 February 1916_Gandhi&#39;s Speech at Benaras Hindu University_UNK.txt at master · nmvenuti/DSI_Religion · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars2.githubusercontent.com/u/13342284?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="nmvenuti/DSI_Religion" name="twitter:title" /><meta content="DSI_Religion - CLDS and GCR-ERT Continuation work" name="twitter:description" />
+      <meta content="https://avatars2.githubusercontent.com/u/13342284?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="nmvenuti/DSI_Religion" property="og:title" /><meta content="https://github.com/nmvenuti/DSI_Religion" property="og:url" /><meta content="DSI_Religion - CLDS and GCR-ERT Continuation work" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+    <meta name="request-id" content="89360D5E:2273:20728FB6:583F028D" data-pjax-transient>
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="89360D5E:2273:20728FB6:583F028D" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="MTQwZDViZDRkYmZiMGZiMWM3OWIwOTAxZDMxNjRlMzU4MWE1MzJkNDIzN2NjOWE1ZjRiZDI0OGYxNzA0NjE0Ynx7InJlbW90ZV9hZGRyZXNzIjoiMTM3LjU0LjEzLjk0IiwicmVxdWVzdF9pZCI6Ijg5MzYwRDVFOjIyNzM6MjA3MjhGQjY6NTgzRjAyOEQiLCJ0aW1lc3RhbXAiOjE0ODA1MjQ0MzUsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="3f56f51f1083daf6d18a137490947b134dd6352b">
+    <meta content="46830e523273906efd3fa4ef72a358dad95088a1" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="8660b3e3ee315fe0012b22d0eb42587f">
+    
+
+      
+  <meta name="description" content="DSI_Religion - CLDS and GCR-ERT Continuation work">
+  <meta name="go-import" content="github.com/nmvenuti/DSI_Religion git https://github.com/nmvenuti/DSI_Religion.git">
+
+  <meta content="13342284" name="octolytics-dimension-user_id" /><meta content="nmvenuti" name="octolytics-dimension-user_login" /><meta content="60101632" name="octolytics-dimension-repository_id" /><meta content="nmvenuti/DSI_Religion" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="60101632" name="octolytics-dimension-repository_network_root_id" /><meta content="nmvenuti/DSI_Religion" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/nmvenuti/DSI_Religion/commits/master.atom" rel="alternate" title="Recent Commits to DSI_Religion:master" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/nmvenuti/DSI_Religion/blob/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-out  env-production macintosh vis-public page-blob">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /showcases /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-1" href="/login?return_to=%2Fnmvenuti%2FDSI_Religion%2Fblob%2Fmaster%2Fprotest_temporalAnalysis%2Fdata_activists%2FGhandi%2Fraw%2F11%2520February%25201916_Gandhi%27s%2520Speech%2520at%2520Benaras%2520Hindu%2520University_UNK.txt" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary mr-md-3">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search GitHub</a>
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/nmvenuti/DSI_Religion/search" class="js-site-search-form" data-scoped-search-url="/nmvenuti/DSI_Religion/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/nmvenuti/DSI_Religion/watchers"
+     aria-label="1 user is watching this repository">
+    1
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/nmvenuti/DSI_Religion/stargazers"
+      aria-label="0 users starred this repository">
+      0
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fnmvenuti%2FDSI_Religion"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/nmvenuti/DSI_Religion/network" class="social-count"
+       aria-label="3 users forked this repository">
+      3
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/nmvenuti" class="url fn" rel="author">nmvenuti</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/nmvenuti/DSI_Religion" data-pjax="#js-repo-pjax-container">DSI_Religion</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/nmvenuti/DSI_Religion" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /nmvenuti/DSI_Religion" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/nmvenuti/DSI_Religion/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /nmvenuti/DSI_Religion/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">0</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/nmvenuti/DSI_Religion/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /nmvenuti/DSI_Religion/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/nmvenuti/DSI_Religion/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /nmvenuti/DSI_Religion/projects">
+    <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+
+
+  <a href="/nmvenuti/DSI_Religion/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /nmvenuti/DSI_Religion/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/nmvenuti/DSI_Religion/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /nmvenuti/DSI_Religion/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/nmvenuti/DSI_Religion/blob/58300a3a0728d2d681a28f1351dd40789781976f/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:c28aaa997b61e31759b93fe6b5118014 -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/nmvenuti/DSI_Religion/blob/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="BtnGroup float-right">
+    <a href="/nmvenuti/DSI_Religion/find/master"
+          class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion"><span>DSI_Religion</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis"><span>protest_temporalAnalysis</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists"><span>data_activists</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists/Ghandi"><span>Ghandi</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/nmvenuti/DSI_Religion/tree/master/protest_temporalAnalysis/data_activists/Ghandi/raw"><span>raw</span></a></span><span class="separator">/</span><strong class="final-path">11 February 1916_Gandhi&#39;s Speech at Benaras Hindu University_UNK.txt</strong>
+  </div>
+</div>
+
+<include-fragment class="commit-tease" src="/nmvenuti/DSI_Religion/contributors/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt">
+  <div>
+    Fetching contributors&hellip;
+  </div>
+
+  <div class="commit-tease-contributors">
+    <img alt="" class="loader-loading float-left" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+    <span class="loader-error">Cannot retrieve contributors at this time</span>
+  </div>
+</include-fragment>
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a href="/nmvenuti/DSI_Religion/raw/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="/nmvenuti/DSI_Religion/blame/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt" class="btn btn-sm js-update-url-with-hash BtnGroup-item">Blame</a>
+      <a href="/nmvenuti/DSI_Religion/commits/master/protest_temporalAnalysis/data_activists/Ghandi/raw/11%20February%201916_Gandhi&#39;s%20Speech%20at%20Benaras%20Hindu%20University_UNK.txt" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://mac.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      17 lines (17 sloc)
+      <span class="file-info-divider"></span>
+    16 KB
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">Eminent persons from all over India had come. Many of them delivered addresses. On February 4, 1916 it was Gandhiji’s turn to address the audience, mostly consisting of impressionable youths. A galaxy of princes, bedecked and bejeweled, had occupied the dias. The Maharaja of Darbhanga was in the chair.</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">Gandhiji who was clad in a short, coarse dhoti, Kathiawadi cloak and turban rose to speak. The police precautions and the luxury around him hurt him deeply. Turning to the audience, Gandhiji said that he wanted to think audibly-speak without reserve:</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">I wish to tender my humble apology for the long delay that took place before I was able to reach this place. And you will readily accept the apology when I tell you that I am not responsible for the delay nor is any human agency responsible for it. The fact is that I am like an animal on show, and my keepers in their over kindness always manage to neglect a necessary chapter in this life, and, that is, pure accident. In this case, they did not provide for the series of accidents that happened to us-to me, keepers, and my carriers. Hence this delay.</td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">Friends, under the influence of the matchless eloquence of Mrs. Besant who has just sat down, pray, do not believe that our University has become a finished product, and that all the young men who are to come to the University, that has yet to rise and come into existence, have also come and returned from it finished citizens of a great empire. Do not go away with any such impression, and if you, the student world to which my remarks are supposed to be addressed this evening, consider for one moment that the spiritual life, for which this country is noted and for which this country has no rival, can be transmitted through the lip, pray, believe me, you are wrong. You will never be able merely through the lip, to give the message that India, I hope, will one day deliver to the world. I myself have been fed up with speeches and lectures. I except the lectures that have been delivered here during the last two days from this category, because they are necessary. But I do venture to suggest to you that we have now reached almost the end of our resources in speech-making; it is not enough that our ears are feasted, that our eyes are feasted, but it is necessary that our hearts have got to be touched and that out hands and feet have got to be moved.</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">We have been told during the last two days how necessary it is, if we are to retain our hold upon the simplicity of Indian character, that our hands and feet should move in unison with our hearts. But this is only by way of preface. I wanted to say it is a matter of deep humiliation and shame for us that I am compelled this evening under the shadow of this great college, in this sacred city, to address my countrymen in a language that is foreign to me. I know that if I was appointed an examiner, to examine all those who have been attending during these two days this series of lectures, most of those who might be examined upon these lectures would fail. And why? Because they have not been touched.</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">I was present at the sessions of the great Congress in the month of December. There was a much vaster audience, and will you believe me when I tell you that the only speeches that touched the huge audience in Bombay were the speeches that were delivered in Hindustani? In Bombay, mind you, not in Benaras where everybody speaks Hindi. But between the vernaculars of the Bombay Presidency on the one hand and Hindi on the other, no such great dividing line exists as there does between English and the sister language of India; and the Congress audience was better able to follow the speakers in Hindi. I am hoping that this University will see to it that the youths who come to it will receive their instruction through the medium of their vernaculars. Our languages the reflection of ourselves, and if you tell me that our languages are too poor to express the best thought, then say that the sooner we are wiped out of existence the better for us. Is there a man who dreams that English can ever become the national language of India? Why this handicap on the nation? Just consider for one moment what an equal race our lads have to run with every English lad.</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">I had the privilege of a close conversation with some Poona professors. They assured me that every Indian youth, because he reached his knowledge through the English language, lost at least six precious years of life. Multiply that by the numbers of students turned out by our schools and colleges, and find out for yourselves how many thousand years have been lost to the nation. The charge against us is that we have no initiative. How can we have any, if we are to devote the precious years of our life to the mastery of a foreign tongue? We fail in this attempt also. Was it possible for any speaker yesterday and today to impress his audience as was possible for Mr. Higginbotham? It was not the fault of the previous speakers that they could not engage the audience. They had more than substance enough for us in their addresses. But their addresses could not go home to us. I have heard it said that after all it is English educated India which is leading and which is leading and which is doing all the things for the nation. It would be monstrous if it were otherwise. The only education we receive is English education. Surely we must show something for it. But suppose that we had been receiving during the past fifty years education through our vernaculars, what should we have today? We should have today a free India, we should have our educated men, not as if they were foreigners in their own land but speaking to the heart of the nation; they would be working amongst the poorest of the poor, and whatever they would have gained during these fifty years would be a heritage for the nation. Today even our wives are not the sharers in our best thought. Look at Professor Bose and Professor Ray and their brilliant researches. Is it not a shame that their researches are not the common property of the masses?</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">Let us now turn to another subject.</td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">The Congress has passed a resolution about self-government, and I have no doubt that the All-India Congress Committee and the Muslim League will do their duty and come forward with some tangible suggestions. But I, for one, must frankly confess that I am not so much interested in what they will be able to produce as I am interested in anything that the student world is going to produce or the masses are going to produce. No paper contribution will ever give us self-government. No amount of speeches will ever make us fit for self-government. It is only our conduct that will fit for us it. And how are we trying to govern ourselves?</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">I want to think audibly this evening. I do not want to make a speech and if you find me this evening speaking without reserve, pray, consider that you are only sharing the thoughts of a man who allows himself to think audibly, and if you think that I seem to transgress the limits that courtesy imposes upon me, pardon me for the liberty I may be taking. I visited the Vishwanath temple last evening, and ad I was walking through those lanes, these were the thoughts that touched me. If a stranger dropped from above on to this great temple, and he had to consider what we as Hindus were, would he not be justified in condemning us? Is not this great temple a reflection of our own character? I speak feelingly, as a Hindu. Is it right that the lanes of our sacred temple should be as dirty as they are? The houses round about are built anyhow. The lanes are tortuous and narrow. If even our temples are not models of roominess and cleanliness, what can our self-government be? Shall our temples be abodes of holiness, cleanliness and peace as soon as the English have retired from India, either of their own pleasure or by compulsion, bag and baggage?</td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">I entirely agree with the President of the Congress that before we think of self-government, we shall have to do the necessary plodding. In every city there are two divisions, the cantonment and the city proper. The city mostly is a stinking den. But we are a people unused to city life. But if we want city life, we cannot reproduce the easy-going hamlet life. It is not comforting to think that people walk about the streets of Indian Bombay under the perpetual fear of dwellers in the storeyed building spitting upon them. I do a great deal of railway traveling. I observe the difficulty of third-class passengers. But the railway administration is by no means to blame for all their hard lot. We do not know the elementary laws of cleanliness. We spit anywhere on the carriage floor, irrespective of the thoughts that it is often used as sleeping space. We do not trouble ourselves as to how we use it; the result is indescribable filth in the compartment. The so-called better class passengers overawe their less fortunate brethren. Among them I have seen the student world also; sometimes they behave no better. They can speak English and they have worn Norfolk jackets and, therefore, claim the right to force their way in and command seating accommodation.</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">I have turned the searchlight all over, and as you have given me the privilege of speaking to you, I am laying my heart bare. Surely we must set these things right in our progress towards self-government. I now introduce you to another scene. His Highness the Maharaja who presided yesterday over our deliberations spoke about the poverty of India. Other speakers laid great stress upon it. But what did we witness in the great pandal in which the foundation ceremony was performed by the Viceroy? Certainly a most gorgeous show, an exhibition of jewellery, which made a splendid feast for the eyes of the greatest jeweler who chose to come from Paris. I compare with the richly bedecked noble men the millions of the poor. And I feel like saying to these noble men, “There is no salvation for India unless you strip yourselves of this jewellery and hold it in trust for your countrymen in India.” I am sure it is not the desire of the King-Emperor or Lord Hardinge that in order to show the truest loyalty to our King-Emperor, it is necessary for us to ransack our jewellery boxes and to appear bedecked from top to toe. I would undertake, at the peril of my life, to bring to you a message from King George himself that he excepts nothing of the kind.</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">Sir, whenever I hear of a great palace rising in any great city of India, be it in British India or be it in India which is ruled by our great chiefs, I become jealous at once, and say, “Oh, it is the money that has come from the agriculturists.” Over seventy-five per cent of the population are agriculturists and Mr. Higginbotham told us last night in his own felicitous language, that they are the men who grow two blades of grass in the place of one. But there cannot be much spirit of self-government about us, if we take away or allow others to take away from them almost the whole of the results of their labour. Our salvation can only come through the farmer. Neither the lawyers, nor the doctors, nor the rich landlords are going to secure it.</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">Now, last but not the least, it is my bounden duty to refer to what agitated our minds during these two or three days. All of us have had many anxious moments while the Viceroy was going through the streets of Banaras. There were detectives stationed in many places. We were horrified. We asked ourselves, “Why this distrust?” Is it not better that even Lord Hardinge should die than live a living death? But a representative of a mighty sovereign may not. He might find it necessary to impose these detectives on us? We may foam, we may fret, we may resent, but let us not forget that India of today in her impatience has produced an army of anarchists. I myself am an anarchist, but of another type. But there is a class of anarchists amongst us, and if I was able to reach this class, I would say to them that their anarchism has no room in India, if India is to conqueror. It is a sign of fear. If we trust and fear God, we shall have to fear no one, not the Maharajas, not the Viceroys, not the detectives, not even King George.</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">I honour the anarchist for his love of the country. I honour him for his bravery in being willing to die for his country; but I ask him-is killing honourable? Is the dagger of an assassin a fit precursor of an honourable death? I deny it. There is no warrant for such methods in any scriptures. If I found it necessary for the salvation of India that the English should retire, that they should be driven out, I would not hesitate to declare that they would have to go, and I hope I would be prepared to die in defense of that belief. That would, in my opinion, be an honourable death. The bomb-thrower creates secret plots, is afraid to come out into the open, and when caught pays the penalty of misdirected zeal.</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">I have been told, “Had we not done this, had some people not thrown bombs, we should never have gained what we have got with reference to the partition movement.” (Mrs. Besant : ‘Please stop it.’) This was what I said in Bengal when Mr. Lyon presided at the meeting. I think what I am saying is necessary. If I am told to stop I shall obey. (Turning to the Chairman) I await your orders. If you consider that by my speaking as I am, I am not serving the country and the empire I shall certainly stop. (Cries of ‘Go on.’) (The Chairman: ‘Please, explain your object.’) I am simply. . . (another interruption). My friends, please do not resent this interruption. If Mrs. Besant this evening suggests that I should stop, she does so because she loves India so well, and she considers that I am erring in thinking audibly before you young men. But even so, I simply say this, that I want to purge India of this atmosphere of suspicion on either side, if we are to reach our goal; we should have an empire which is to be based upon mutual love and mutual trust. Is it not better that we talk under the shadow of this college than that we should be talking irresponsibly in our homes? I consider that it is much better that we talk these things openly. I have done so with excellent results before now. I know that there is nothing that the students do not know. I am, therefore, turning the searchlight towards ourselves. I hold the name of my country so dear to me that I exchange these thoughts with you, and submit to you that there is no room for anarchism in India. Let us frankly and openly say whatever we want to say our rulers, and face the consequences if what we have to say does not please them. But let us not abuse. I was talking the other day to a member of the much-abused Civil Service. I have not very much in common with the members of that Service, but I could not help admiring the manner in which he was speaking to mw. He said : “Mr. Gandhi, do you for one moment suppose that all we, Civil Servants, are a bad lot, that we want to oppress the people whom we have come to govern?” “No,,” I said. “Then if you get an opportunity put in a word for the much-abused Civil Service.” And I am here to put in that word. Yes, many members of the Indian Civil Service are most decidedly overbearing; they are tyrannical, at times thoughtless. Many other adjectives may be used. I grant all these things and I grant also that after having lived in India for a certain number of years some of them become somewhat degraded. But what does that signify? They were gentlemen before they came here, and if they have lost some of the moral fiber, it is a reflection upon ourselves.</td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">Just think out for yourselves, if a man who was good yesterday has become bad after having come in contact with me, is he responsible that he has deteriorated or am I? The atmosphere of sycophancy and falsity that surrounds them on their coming to India demoralizes them, as it would many of us. It is well to take the blame sometimes. If we are to receive self-government, we shall have to take it. We shall never be granted self-government. Look at the history of the British Empire and the British nation; freedom loving as it is, it will not be a party to give freedom to a people who will not take it themselves. Learn your lesson if you wish to from the Boer War. Those who were enemies of that empire only a few years ago have now become friends...</td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.04804s from github-fe-13ea3e6.cp1-iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-fjanzKa4+830KgspYm1AVfW3AW7BlFuO/ZxrAUZgpuY=" src="https://assets-cdn.github.com/assets/frameworks-7e36a7cca6b8fbcdf42a0b29626d4055f5b7016ec1945b8efd9c6b014660a6e6.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-AirLJsjYd+1dNB9rJnJTfSwlFXIhseqiFS5RIX097vo=" src="https://assets-cdn.github.com/assets/github-022acb26c8d877ed5d341f6b2672537d2c25157221b1eaa2152e51217d3deefa.js"></script>
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

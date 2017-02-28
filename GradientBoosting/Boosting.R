@@ -42,7 +42,7 @@ folds<- createFolds(df_clean$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 param <- list("objective" = "multi:softprob",    
               "num_class" = 9,
-              'max_depth' = 6,
+              'max_depth' = 7,
               'eval_metric' = 'merror')
 
 
@@ -66,7 +66,7 @@ for (i in 1:10) {
   test_Y = as.matrix(test$rank)
   
   #train Model
-  model <- xgboost(param=param, data=train_X, label=train_Y, nrounds=6)
+  model <- xgboost(param=param, data=train_X, label=train_Y, nrounds=5)
   
   #Make predictions based on model for testing set
   predictions<- predict(model, test_X)
