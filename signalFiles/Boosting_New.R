@@ -5,14 +5,16 @@ setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs
 #gradient Boosting
 require(xgboost)
 library(caret)
-
-df_clean = read_csv('SingleDocSignals.csv')
+library(dplyr)
+df_clean = read.csv('SingleDocSignals.csv')
 #Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
 df_clean$rank<- df_clean$rank - 1
 
 #Set Rank as Factor
 df_clean$rank<- as.factor(df_clean$rank)
 
+#Drop Unneeded Variables:
+df_clean<- df_clean[,-c(1,2,3,6,7,18)]
 #10 fold CV
 
 #Create Folds
@@ -38,9 +40,9 @@ for (i in 1:10) {
   test = df_clean[test.indices,]
   
   #Convert to Matrix
-  train_X<-data.matrix(train[,3:20])
+  train_X<-data.matrix(train[,1:15])
   train_Y<- data.matrix(train$rank)
-  test_X<- data.matrix(test[,3:20])
+  test_X<- data.matrix(test[,1:15])
   test_Y = data.matrix(test$rank)
   
   #train Model
