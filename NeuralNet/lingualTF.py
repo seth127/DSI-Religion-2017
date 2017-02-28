@@ -31,6 +31,13 @@ import math
 #import scipy.spatial.distance as ssd
 
 
+### ### for POS from troll_clean ### ### ### #
+from nltk import pos_tag
+from nltk.corpus import wordnet #, stopwords
+nltk.download("wordnet")
+nltk.download("maxent_treebank_pos_tagger")
+##############################################
+
 #Local variable assignment
 
 #Set tokenizers, tagger and stemmer
@@ -65,6 +72,8 @@ nounList=['NN','NNS','NNP','NNPS']
 adjList=['JJ','JJR','JJS']
 toBeList=["is","was","am","are","were","been","be","being"]
 tagFilterList=['JJ','JJR','JJS','RB','RBR','RBS','WRB']
+
+allTags=['VAL','UNK','CC','CD','DT','EX','FW','IN','JJ','JJR','JJS','LS','MD','NN','NNS','NNP','NNPS','PDT','POS','PRP','PRP$','RB','RBR','RBS','RP','SYM','TO','UH','VB','VBD','VBG','VBN','VBP','VBZ','WDT','WP','WP$','WRB']
 
 
 #Define generic packages
@@ -257,11 +266,12 @@ class lingualObject(object):
         #define rawText, tokens, sentences, and judgements
         self.rawText={}
         self.tokens={}
-        self.sentences={}
-        self.judgements={}
-        self.pronoun_sentences={}
-        self.keyword_pronouns_sentences ={}
-        self.pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
+        self.uncleanTokens={}
+        #self.sentences={}
+        #self.judgements={}
+        #self.pronoun_sentences={}
+        #self.keyword_pronouns_sentences ={}
+        #self.pronounCols = ['nous', 'vous', 'je', 'ils', 'il', 'elle', 'le']
 
         #set the groupId
 
@@ -297,10 +307,14 @@ class lingualObject(object):
             txtString=' '.join(tokenList)
             '''
 
-            tokenList = rawToTokenList(rawData)
-            txtString=' '.join(tokenList)
+            self.uncleanTokens[fileName] = rawToTokenList(rawData)
+            txtString=' '.join(self.uncleanTokens[fileName])
             self.rawText[fileName]=txtString
 
+            #Extract tokens
+            self.tokens[fileName]=cleanTokens(self.uncleanTokens[fileName])
+
+            '''
             #Break text into sentences and extract as sentences
             sentList=list(sentTokenizer.tokenize(txtString))
             self.sentences[fileName]=sentList
@@ -344,38 +358,35 @@ class lingualObject(object):
 
             self.judgements[fileName]=judgementList
             self.pronoun_sentences[fileName] = pronoun_sentence_list
-
-
-            #Create tokens
-            '''
-            #Convert all text to lower case
-            textList=[word.lower() for word in tokenList]
-            
-            #Remove punctuation
-            textList=[word for word in textList if word not in punctuation]
-            textList=["".join(c for c in word if c not in punctuation) for word in textList ]
-            
-            #convert digits into NUM
-            textList=[re.sub("\d+", "NUM", word) for word in textList]  
-            
-            #Stem words if useStem True
-            newStopWords=stopWords
-            if useStem:
-                textList=[stemmer.stem(word) for word in textList]
-                newStopWords=[stemmer.stem(word) for word in stopWords]
-            
-            #Remove blanks
-            textList=[word for word in textList if word!= ' ']
-            textList=[word for word in textList if word!= '']
-             
-            #Remove stopwords if useStopwords ==False
-            if not useStopwords: 
-                newStopWords.append("")
-                textList=[word for word in textList if word not in newStopWords]
             '''
 
-            #Extract tokens
-            self.tokens[fileName]=cleanTokens(tokenList)
+    #################################
+    ## Part-of-speech with VAL tag ##
+    #################################
+
+    def pos_with_val(self, useVal=True, keywords=20):
+        # set keywords
+        self.setKeywords(wordCount=keywords)
+        #
+        self.tags = {}
+        for fileName in self.fileList:
+            # get pronoun tags
+            tags = [tag[1] for tag in nltk.pos_tag(self.uncleanTokens[fileName])]
+
+            # sub in VAL for value words
+            if useVal==True:
+                # get indices of keywords in tokens
+                keyInds = []
+                for i in range(0,len(self.tokens[fileName])):
+                    if self.tokens[fileName][i] in self.keywords:
+                        keyInds += [i]
+                
+                # replace those tags with VAL        
+                self.tags[fileName] = ['VAL' if i in keyInds else tags[i] for i in range(0,len(tags))]
+            else:
+                # if useVal==False, just return the tags
+                self.tags[fileName] = tags
+
             
     ########################
     ###Create cocoDict,TF###
