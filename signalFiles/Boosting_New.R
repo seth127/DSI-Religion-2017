@@ -1,6 +1,6 @@
 #Read In Files
 
-setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs/307 Signals/')
+setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/refData/')
 
 #gradient Boosting
 require(xgboost)
@@ -14,7 +14,7 @@ df_clean$rank<- df_clean$rank - 1
 df_clean$rank<- as.factor(df_clean$rank)
 
 #Drop Unneeded Variables:
-df_clean<- df_clean[,-c(1,2,3,6,7,18)]
+df_clean<- df_clean[,-c(1)]
 #10 fold CV
 
 #Create Folds
@@ -40,9 +40,9 @@ for (i in 1:10) {
   test = df_clean[test.indices,]
   
   #Convert to Matrix
-  train_X<-data.matrix(train[,1:15])
+  train_X<-data.matrix(train[,c(1:18, 20)])
   train_Y<- data.matrix(train$rank)
-  test_X<- data.matrix(test[,1:15])
+  test_X<- data.matrix(test[,c(1:18, 20)])
   test_Y = data.matrix(test$rank)
   
   #train Model
@@ -75,4 +75,4 @@ for (i in 1:10) {
 }
 
 Avg_Accuracy = mean(raw_accuracy)
-Avg_Accuracy 
+Avg_Accuracy #highest was 74% with 321 docs

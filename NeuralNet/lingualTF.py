@@ -146,7 +146,7 @@ def rawToTokenList(rawData):
             print('****')
     return tokenList
 
-def cleanTokens(tokenList):
+def cleanTokens(tokenList, stem = True):
     #Convert all text to lower case
     textList=[word.lower() for word in tokenList]
     
@@ -157,8 +157,9 @@ def cleanTokens(tokenList):
     #convert digits into NUM
     textList=[re.sub("\d+", "NUM", word) for word in textList]  
     
-    #Stem words 
-    textList=[stemmer.stem(word) for word in textList]
+    #Stem words
+    if stem == True:
+        textList=[stemmer.stem(word) for word in textList]
     
     #Remove blanks
     textList=[word for word in textList if word!= ' ']
