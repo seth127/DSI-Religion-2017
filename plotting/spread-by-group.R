@@ -6,6 +6,7 @@ library(ggplot2)
 
 runs <- read.csv('modelOutputSingleDocs/logs/Single Runs.csv', stringsAsFactors = F)
 
+
 ranks <- read.csv('refData/groupRanks.csv', stringsAsFactors = F)
 
 runs$docName <- runs$groupName
