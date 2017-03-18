@@ -10,7 +10,7 @@ os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/')
 filepath = 'Interns Scoring.xlsx'
 olddir = './data_dsicap_FULL/'
 newdir = 'data_dsicap_SINGLE'
-newcopy = './data_dsicap_testing1/'
+newcopy = './data_dsicap_testing/'
 workingdir = '/Users/meganstiles/Desktop/github/DSI-Religion-2017/'
 
 gsd.getSingleDocDirs(filepath, olddir, newdir, newcopy, workingdir)
