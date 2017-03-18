@@ -2,9 +2,9 @@ import os
 import pandas as pd
 import re
 
-os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs/307 Signals/')
+os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs/logs/')
 
-signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_1-20B770.csv')
+signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_1-1TAE35.csv')
 
 signals = signals.drop(signals.columns [[0,2,3,4,]], axis=1)
 
@@ -25,15 +25,20 @@ for i in range(0,len(ranks)):
     name = re.sub('.txt', '', name)
     ranks['groupId'][i] = name
 
+ranks= ranks.rename(columns=({'groupName': 'groupId'}))
 clean = pd.merge(signals, ranks, how = 'inner', on='groupId')    
     
 groups = ['ACLU', 'Rabbinic', 'SeaShepherds', 'Unitarian', 'WBC', 'MalcolmX', 'YV', 'JohnPiper',
-'Bahai', 'DorthyDay', 'LiberalJudaism', 'AEU', 'MehrBaba', 'ISIS', 'Shepherd', 'Anderson']
+'Bahai', 'DorothyDay', 'LiberalJudaism', 'AEU', 'MehrBaba', 'ISIS', 'Shepherd', 'Anderson']
 
+clean['groupName'] = ''
 for group in groups:
     for i in range(0,len(clean)):
         if group in clean['groupId'][i]:
             clean['groupName'][i] = group
+
+#Drop Unneeded Columns
+clean = clean.drop(clean.columns[[18,19]], axis=1)
 
 clean.to_csv('SingleDocSignals.csv')
 

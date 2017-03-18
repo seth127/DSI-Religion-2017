@@ -1,322 +1,343 @@
 ,Unnamed: 0,groupName,rank
-0,0,ACLU01,3.0
-1,1,ACLU02,3.0
-2,2,ACLU03,3.0
-3,3,ACLU04,3.0
-4,4,ACLU05,3.0
-5,5,ACLU06,3.0
-6,6,ACLU07,3.0
-7,7,ACLU08,3.0
-8,8,ACLU09,3.0
-9,9,ACLU10,3.0
-10,10,ACLU11,3.0
-11,11,ACLU12,3.0
-12,2,AEU003,8.0
-13,4,AEU005,8.0
-14,5,AEU006,6.0
-15,7,AEU008,8.0
-16,8,AEU009,8.0
-17,9,AEU010,8.0
-18,10,AEU011,8.0
-19,11,AEU012,8.0
-20,12,AEU013,8.0
-21,13,AEU014,7.0
-22,0,Bahai01,6.0
-23,1,Bahai02,5.0
-24,2,Bahai03,5.0
-25,3,Bahai04,6.0
-26,4,Bahai05,6.0
-27,5,Bahai06,5.0
-28,6,Bahai07,5.0
-29,7,Bahai08,6.0
-30,8,Bahai09,6.0
-31,9,Bahai10,6.0
-32,15,Bahai16,5.0
-33,20,Bahai21,4.0
-34,22,Bahai23,6.0
-35,23,Bahai24,4.0
-36,26,Bahai27,4.0
-37,29,Bahai30,4.0
-38,36,Bahai37,2.0
-39,41,Bahai42,6.0
-40,44,Bahai45,5.0
-41,45,Bahai46,1.0
-42,52,Bahai53,5.0
-43,57,Bahai58,6.0
-44,63,Bahai64,4.0
-45,65,Bahai66,5.0
-46,0,DorothyDay001,3.0
-47,43,DorothyDay044,3.0
-48,55,DorothyDay056,3.0
-49,69,DorothyDay070,5.0
-50,80,DorothyDay081,3.0
-51,141,DorothyDay142,4.0
-52,146,DorothyDay147,5.0
-53,188,DorothyDay189,3.0
-54,257,DorothyDay258,4.0
-55,382,DorothyDay383,5.0
-56,398,DorothyDay399,3.0
-57,405,DorothyDay406,4.0
-58,411,DorothyDay412,3.0
-59,496,DorothyDay497,4.0
-60,555,DorothyDay556,5.0
-61,564,DorothyDay565,4.0
-62,664,DorothyDay666,2.0
-63,676,DorothyDay678,4.0
-64,0,YV01,3.0
-65,1,YV02,6.0
-66,2,YV03,3.0
-67,3,YV04,3.0
-68,4,YV05,4.0
-69,5,YV06,5.0
-70,6,YV07,7.0
-71,7,YV08,6.0
-72,8,YV09,7.0
-73,9,YV10,8.0
-74,10,YV11,8.0
-75,11,YV12,6.0
-76,12,YV13,5.0
-77,13,YV14,4.0
-78,15,YV16,5.0
-79,16,YV17,4.0
-80,17,YV18,5.0
-81,18,YV19,6.0
-82,19,YV20,6.0
-83,20,YV21,4.0
-84,24,YV25,3.0
-85,26,YV27,5.0
-86,33,YV34,8.0
-87,38,YV39,1.0
-88,40,YV41,7.0
-89,41,YV42,5.0
-90,42,YV43,4.0
-91,44,YV45,7.0
-92,46,YV47,5.0
-93,48,YV49,4.0
-94,49,YV50,6.0
-95,51,YV52,5.0
-96,53,YV54,3.0
-97,55,YV56,5.0
-98,58,YV59,5.0
-99,0,ISIS001,1.0
-100,1,ISIS002,2.0
-101,2,ISIS003,1.0
-102,3,ISIS004,2.0
-103,4,ISIS006,1.0
-104,5,ISIS007,1.0
-105,6,ISIS008,1.0
-106,7,ISIS009,1.0
-107,8,ISIS010,1.0
-108,9,ISIS011,1.0
-109,10,ISIS012,1.0
-110,7,JohnPiper008,5.0
-111,17,JohnPiper018,3.5
-112,19,JohnPiper020,4.0
-113,30,JohnPiper031,3.0
-114,31,JohnPiper032,3.0
-115,37,JohnPiper038,5.0
-116,76,JohnPiper077,3.0
-117,102,JohnPiper103,3.0
-118,103,JohnPiper104,5.0
-119,249,JohnPiper250,5.0
-120,255,JohnPiper256,3.0
-121,264,JohnPiper265,4.0
-122,357,JohnPiper358,1.0
-123,412,JohnPiper413,2.0
-124,414,JohnPiper415,2.0
-125,458,JohnPiper459,2.5
-126,502,JohnPiper503,3.0
-127,558,JohnPiper559,4.0
-128,563,JohnPiper564,4.0
-129,571,JohnPiper572,3.0
-130,0,LiberalJudaism001,6.0
-131,15,LiberalJudaism016,6.0
-132,22,LiberalJudaism023,2.0
-133,33,LiberalJudaism034,2.0
-134,58,LiberalJudaism059,5.0
-135,59,LiberalJudaism060,1.0
-136,63,LiberalJudaism064,1.0
-137,65,LiberalJudaism066,3.0
-138,67,LiberalJudaism068,1.0
-139,68,LiberalJudaism069,4.0
-140,71,LiberalJudaism072,1.0
-141,74,LiberalJudaism075,4.0
-142,92,LiberalJudaism093,4.0
-143,96,LiberalJudaism097,2.0
-144,108,LiberalJudaism109,3.0
-145,114,LiberalJudaism115,2.0
-146,116,LiberalJudaism117,4.0
-147,119,LiberalJudaism120,4.0
-148,121,LiberalJudaism122,4.0
-149,128,LiberalJudaism129,3.0
-150,134,LiberalJudaism135,4.0
-151,137,LiberalJudaism138,3.0
-152,139,LiberalJudaism140,5.0
-153,143,LiberalJudaism144,2.0
-154,151,LiberalJudaism152,3.0
-155,152,LiberalJudaism153,3.0
-156,164,LiberalJudaism165,4.0
-157,0,MalcolmX001,2.0
-158,1,MalcolmX002,2.0
-159,2,MalcolmX003,2.0
-160,3,MalcolmX004,2.0
-161,5,MalcolmX006,2.0
-162,6,MalcolmX007,2.0
-163,7,MalcolmX008,3.0
-164,8,MalcolmX009,2.0
-165,9,MalcolmX010,2.0
-166,10,MalcolmX011,2.0
-167,11,MalcolmX012,2.0
-168,12,MalcolmX013,2.0
-169,Mehr Baba,MehrBaba001,5.5
-170,Mehr Baba,MehrBaba005,5.5
-171,Mehr Baba,MehrBaba007,7.0
-172,Mehr Baba,MehrBaba012,5.0
-173,Mehr Baba,MehrBaba017,6.0
-174,Mehr Baba,MehrBaba020,4.0
-175,Mehr Baba,MehrBaba024,6.0
-176,Mehr Baba,MehrBaba028,5.0
-177,Mehr Baba,MehrBaba031,5.0
-178,Mehr Baba,MehrBaba032,6.0
-179,Mehr Baba,MehrBaba036,7.0
-180,Mehr Baba,MehrBaba041,7.0
-181,Mehr Baba,MehrBaba046,6.0
-182,Mehr Baba,MehrBaba050,2.5
-183,Mehr Baba,MehrBaba054,2.5
-184,Mehr Baba,MehrBaba058,3.0
-185,Mehr Baba,MehrBaba064,6.0
-186,Mehr Baba,MehrBaba069,6.5
-187,Mehr Baba,MehrBaba074,4.0
-188,Mehr Baba,MehrBaba080,5.0
-189,Mehr Baba,MehrBaba081,7.0
-190,Mehr Baba,MehrBaba094,7.0
-191,Mehr Baba,MehrBaba097,5.0
-192,Mehr Baba,MehrBaba107,6.0
-193,Mehr Baba,MehrBaba119,7.0
-194,Mehr Baba,MehrBaba123,6.0
-195,Mehr Baba,MehrBaba125,9.0
-196,Mehr Baba,MehrBaba147,6.0
-197,Mehr Baba,MehrBaba156,6.0
-198,Mehr Baba,MehrBaba161,2.5
-199,Mehr Baba,MehrBaba162,3.0
-200,Mehr Baba,MehrBaba213,4.0
-201,Mehr Baba,MehrBaba228,3.5
-202,Mehr Baba,MehrBaba231,3.0
-203,Mehr Baba,MehrBaba260,5.0
-204,Mehr Baba,MehrBaba261,5.0
-205,Mehr Baba,MehrBaba263,5.0
-206,17,PastorAnderson018,1.0
-207,43,PastorAnderson044,2.0
-208,71,PastorAnderson072,1.0
-209,88,PastorAnderson089,1.0
-210,92,PastorAnderson093,1.0
-211,118,PastorAnderson119,1.0
-212,143,PastorAnderson144,1.0
-213,154,PastorAnderson155,1.0
-214,159,PastorAnderson160,1.0
-215,226,PastorAnderson227,1.0
-216,0,Rabbinic001,4.0
-217,1,Rabbinic002,4.0
-218,2,Rabbinic003,4.0
-219,3,Rabbinic004,4.0
-220,4,Rabbinic005,4.0
-221,5,Rabbinic006,4.0
-222,6,Rabbinic007,4.0
-223,7,Rabbinic008,4.0
-224,8,Rabbinic009,4.0
-225,9,Rabbinic010,4.0
-226,10,Rabbinic011,4.0
-227,11,Rabbinic012,4.0
-228,12,Rabbinic013,4.0
-229,13,Rabbinic014,4.0
-230,14,Rabbinic015,4.0
-231,15,Rabbinic016,4.0
-232,16,Rabbinic017,4.0
-233,17,Rabbinic018,4.0
-234,18,Rabbinic019,4.0
-235,19,Rabbinic020,4.0
-236,20,Rabbinic021,4.0
-237,21,Rabbinic022,4.0
-238,22,Rabbinic023,4.0
-239,23,Rabbinic024,4.0
-240,24,Rabbinic025,4.0
-241,25,Rabbinic026,4.0
-242,26,Rabbinic027,4.0
-243,27,Rabbinic028,4.0
-244,28,Rabbinic029,4.0
-245,29,Rabbinic030,4.0
-246,30,Rabbinic031,4.0
-247,31,Rabbinic032,4.0
-248,32,Rabbinic033,4.0
-249,33,Rabbinic034,4.0
-250,34,Rabbinic035,4.0
-251,35,Rabbinic036,4.0
-252,36,Rabbinic037,4.0
-253,37,Rabbinic038,4.0
-254,38,Rabbinic039,4.0
-255,39,Rabbinic040,4.0
-256,40,Rabbinic041,4.0
-257,41,Rabbinic042,4.0
-258,42,Rabbinic043,4.0
-259,43,Rabbinic044,4.0
-260,44,Rabbinic045,4.0
-261,45,Rabbinic046,4.0
-262,46,Rabbinic047,4.0
-263,47,Rabbinic048,4.0
-264,48,Rabbinic049,4.0
-265,49,Rabbinic050,4.0
-266,50,Rabbinic051,4.0
-267,51,Rabbinic052,4.0
-268,52,Rabbinic053,4.0
-269,53,Rabbinic054,4.0
-270,54,Rabbinic055,4.0
-271,55,Rabbinic056,4.0
-272,56,Rabbinic057,4.0
-273,57,Rabbinic058,4.0
-274,395,SeaShepherds396,1.0
-275,396,SeaShepherds397,1.0
-276,397,SeaShepherds398,2.0
-277,398,SeaShepherds399,3.0
-278,399,SeaShepherds400,2.0
-279,400,SeaShepherds401,2.0
-280,401,SeaShepherds402,2.0
-281,402,SeaShepherds403,1.0
-282,403,SeaShepherds404,2.0
-283,404,SeaShepherds405,1.0
-284,405,SeaShepherds406,1.0
-285,406,SeaShepherds407,1.0
-286,407,SeaShepherds408,1.0
-287,408,SeaShepherds409,3.0
-288,4,Shepherd005,1.0
-289,174,Shepherd175,4.0
-290,223,Shepherd224,4.0
-291,259,Shepherd260,3.0
-292,357,Shepherd358,5.0
-293,403,Shepherd404,3.0
-294,458,Shepherd459,3.0
-295,694,Shepherd695,4.0
-296,725,Shepherd726,2.0
-297,5,Unitarian006,2.0
-298,41,Unitarian042,5.0
-299,67,Unitarian068,3.0
-300,95,Unitarian096,5.0
-301,117,Unitarian118,6.0
-302,144,Unitarian145,7.0
-303,173,Unitarian174,5.0
-304,218,Unitarian219,4.0
-305,259,Unitarian260,5.0
-306,269,Unitarian270,5.0
-307,275,Unitarian276,3.0
-308,38,WBC039,2.0
-309,106,WBC107,2.0
-310,155,WBC156,2.0
-311,200,WBC201,1.0
-312,227,WBC228,1.0
-313,264,WBC265,1.0
-314,293,WBC294,1.0
-315,323,WBC324,1.0
-316,346,WBC347,2.0
-317,409,WBC410,1.0
-318,417,WBC418,1.0
-319,420,WBC421,1.0
-320,421,WBC422,1.0
+0,0,ACLU01,3
+1,1,ACLU02,3
+2,2,ACLU03,3
+3,3,ACLU04,3
+4,4,ACLU05,3
+5,5,ACLU06,3
+6,6,ACLU07,3
+7,7,ACLU08,3
+8,8,ACLU09,3
+9,9,ACLU10,3
+10,10,ACLU11,3
+11,11,ACLU12,3
+12,2,AEU003,8
+13,4,AEU005,8
+14,5,AEU006,6
+15,7,AEU008,8
+16,8,AEU009,8
+17,9,AEU010,8
+18,10,AEU011,8
+19,11,AEU012,8
+20,12,AEU013,8
+21,13,AEU014,7
+22,0,Bahai01,6
+23,1,Bahai02,5
+24,2,Bahai03,5
+25,3,Bahai04,6
+26,4,Bahai05,6
+27,5,Bahai06,5
+28,6,Bahai07,5
+29,7,Bahai08,6
+30,8,Bahai09,6
+31,9,Bahai10,6
+32,10,Bahai11,3
+33,13,Bahai14,4
+34,15,Bahai16,5
+35,16,Bahai17,2
+36,20,Bahai21,4
+37,22,Bahai23,6
+38,23,Bahai24,4
+39,26,Bahai27,4
+40,27,Bahai28,6
+41,29,Bahai30,4
+42,36,Bahai37,2
+43,41,Bahai42,6
+44,44,Bahai45,5
+45,45,Bahai46,1
+46,52,Bahai53,5
+47,53,Bahai54,5
+48,57,Bahai58,6
+49,63,Bahai64,4
+50,65,Bahai66,5
+51,69,Bahai70,6
+52,0,DorothyDay001,3
+53,43,DorothyDay044,3
+54,55,DorothyDay056,3
+55,69,DorothyDay070,5
+56,80,DorothyDay081,3
+57,141,DorothyDay142,4
+58,146,DorothyDay147,5
+59,188,DorothyDay189,3
+60,257,DorothyDay258,4
+61,382,DorothyDay383,5
+62,398,DorothyDay399,3
+63,405,DorothyDay406,4
+64,411,DorothyDay412,3
+65,496,DorothyDay497,4
+66,555,DorothyDay556,5
+67,564,DorothyDay565,4
+68,664,DorothyDay666,2
+69,676,DorothyDay678,4
+70,0,YV01,3
+71,1,YV02,6
+72,2,YV03,3
+73,3,YV04,3
+74,4,YV05,4
+75,5,YV06,5
+76,6,YV07,7
+77,7,YV08,6
+78,8,YV09,7
+79,9,YV10,8
+80,10,YV11,8
+81,11,YV12,6
+82,12,YV13,5
+83,13,YV14,4
+84,15,YV16,5
+85,16,YV17,4
+86,17,YV18,5
+87,18,YV19,6
+88,19,YV20,6
+89,20,YV21,4
+90,24,YV25,3
+91,26,YV27,5
+92,33,YV34,8
+93,38,YV39,1
+94,40,YV41,7
+95,41,YV42,5
+96,42,YV43,4
+97,44,YV45,7
+98,46,YV47,5
+99,48,YV49,4
+100,49,YV50,6
+101,51,YV52,5
+102,53,YV54,3
+103,55,YV56,5
+104,58,YV59,5
+105,0,ISIS001,1
+106,1,ISIS002,2
+107,2,ISIS003,1
+108,3,ISIS004,2
+109,4,ISIS006,1
+110,5,ISIS007,1
+111,6,ISIS008,1
+112,7,ISIS009,1
+113,8,ISIS010,1
+114,9,ISIS011,1
+115,10,ISIS012,1
+116,7,JohnPiper008,5
+117,17,JohnPiper018,3.5
+118,19,JohnPiper020,4
+119,30,JohnPiper031,3
+120,31,JohnPiper032,3
+121,37,JohnPiper038,5
+122,76,JohnPiper077,3
+123,102,JohnPiper103,3
+124,103,JohnPiper104,5
+125,249,JohnPiper250,5
+126,255,JohnPiper256,3
+127,264,JohnPiper265,4
+128,357,JohnPiper358,1
+129,412,JohnPiper413,2
+130,414,JohnPiper415,2
+131,458,JohnPiper459,2.5
+132,502,JohnPiper503,3
+133,558,JohnPiper559,4
+134,563,JohnPiper564,4
+135,571,JohnPiper572,3
+136,0,LiberalJudaism001,6
+137,15,LiberalJudaism016,6
+138,22,LiberalJudaism023,2
+139,30,LiberalJudaism031,2
+140,33,LiberalJudaism034,2
+141,45,LiberalJudaism046,4
+142,51,LiberalJudaism052,3
+143,58,LiberalJudaism059,5
+144,59,LiberalJudaism060,1
+145,63,LiberalJudaism064,1
+146,65,LiberalJudaism066,3
+147,67,LiberalJudaism068,1
+148,68,LiberalJudaism069,4
+149,71,LiberalJudaism072,1
+150,74,LiberalJudaism075,4
+151,90,LiberalJudaism091,3
+152,91,LiberalJudaism092,3
+153,92,LiberalJudaism093,4
+154,93,LiberalJudaism094,1
+155,96,LiberalJudaism097,2
+156,108,LiberalJudaism109,3
+157,114,LiberalJudaism115,2
+158,116,LiberalJudaism117,4
+159,119,LiberalJudaism120,4
+160,121,LiberalJudaism122,4
+161,126,LiberalJudaism127,3
+162,128,LiberalJudaism129,3
+163,134,LiberalJudaism135,4
+164,137,LiberalJudaism138,3
+165,139,LiberalJudaism140,5
+166,143,LiberalJudaism144,2
+167,151,LiberalJudaism152,3
+168,152,LiberalJudaism153,3
+169,164,LiberalJudaism165,4
+170,0,MalcolmX001,2
+171,1,MalcolmX002,2
+172,2,MalcolmX003,2
+173,3,MalcolmX004,2
+174,5,MalcolmX006,2
+175,6,MalcolmX007,2
+176,7,MalcolmX008,3
+177,8,MalcolmX009,2
+178,9,MalcolmX010,2
+179,10,MalcolmX011,2
+180,11,MalcolmX012,2
+181,12,MalcolmX013,2
+182,Mehr Baba,MehrBaba001,5.5
+183,Mehr Baba,MehrBaba002,5.5
+184,Mehr Baba,MehrBaba005,5.5
+185,Mehr Baba,MehrBaba007,7
+186,Mehr Baba,MehrBaba009,5.5
+187,Mehr Baba,MehrBaba012,5
+188,Mehr Baba,MehrBaba015,6.5
+189,Mehr Baba,MehrBaba017,6
+190,Mehr Baba,MehrBaba020,4
+191,Mehr Baba,MehrBaba024,6
+192,Mehr Baba,MehrBaba028,5
+193,Mehr Baba,MehrBaba031,5
+194,Mehr Baba,MehrBaba032,6
+195,Mehr Baba,MehrBaba036,7
+196,Mehr Baba,MehrBaba041,7
+197,Mehr Baba,MehrBaba044,7
+198,Mehr Baba,MehrBaba046,6
+199,Mehr Baba,MehrBaba048,5.5
+200,Mehr Baba,MehrBaba050,2.5
+201,Mehr Baba,MehrBaba052,5.5
+202,Mehr Baba,MehrBaba054,2.5
+203,Mehr Baba,MehrBaba058,3
+204,Mehr Baba,MehrBaba061,7.5
+205,Mehr Baba,MehrBaba064,6
+206,Mehr Baba,MehrBaba069,6.5
+207,Mehr Baba,MehrBaba074,4
+208,Mehr Baba,MehrBaba080,5
+209,Mehr Baba,MehrBaba081,7
+210,Mehr Baba,MehrBaba094,7
+211,Mehr Baba,MehrBaba097,5
+212,Mehr Baba,MehrBaba107,6
+213,Mehr Baba,MehrBaba119,7
+214,Mehr Baba,MehrBaba123,6
+215,Mehr Baba,MehrBaba125,9
+216,Mehr Baba,MehrBaba147,6
+217,Mehr Baba,MehrBaba156,6
+218,Mehr Baba,MehrBaba161,2.5
+219,Mehr Baba,MehrBaba162,3
+220,Mehr Baba,MehrBaba213,4
+221,Mehr Baba,MehrBaba228,3.5
+222,Mehr Baba,MehrBaba231,3
+223,Mehr Baba,MehrBaba260,5
+224,Mehr Baba,MehrBaba261,5
+225,Mehr Baba,MehrBaba263,5
+226,17,PastorAnderson018,1
+227,43,PastorAnderson044,2
+228,71,PastorAnderson072,1
+229,88,PastorAnderson089,1
+230,92,PastorAnderson093,1
+231,118,PastorAnderson119,1
+232,143,PastorAnderson144,1
+233,154,PastorAnderson155,1
+234,159,PastorAnderson160,1
+235,226,PastorAnderson227,1
+236,0,Rabbinic001,4
+237,1,Rabbinic002,4
+238,2,Rabbinic003,4
+239,3,Rabbinic004,4
+240,4,Rabbinic005,4
+241,5,Rabbinic006,4
+242,6,Rabbinic007,4
+243,7,Rabbinic008,4
+244,8,Rabbinic009,4
+245,9,Rabbinic010,4
+246,10,Rabbinic011,4
+247,11,Rabbinic012,4
+248,12,Rabbinic013,4
+249,13,Rabbinic014,4
+250,14,Rabbinic015,4
+251,15,Rabbinic016,4
+252,16,Rabbinic017,4
+253,17,Rabbinic018,4
+254,18,Rabbinic019,4
+255,19,Rabbinic020,4
+256,20,Rabbinic021,4
+257,21,Rabbinic022,4
+258,22,Rabbinic023,4
+259,23,Rabbinic024,4
+260,24,Rabbinic025,4
+261,25,Rabbinic026,4
+262,26,Rabbinic027,4
+263,27,Rabbinic028,4
+264,28,Rabbinic029,4
+265,29,Rabbinic030,4
+266,30,Rabbinic031,4
+267,31,Rabbinic032,4
+268,32,Rabbinic033,4
+269,33,Rabbinic034,4
+270,34,Rabbinic035,4
+271,35,Rabbinic036,4
+272,36,Rabbinic037,4
+273,37,Rabbinic038,4
+274,38,Rabbinic039,4
+275,39,Rabbinic040,4
+276,40,Rabbinic041,4
+277,41,Rabbinic042,4
+278,42,Rabbinic043,4
+279,43,Rabbinic044,4
+280,44,Rabbinic045,4
+281,45,Rabbinic046,4
+282,46,Rabbinic047,4
+283,47,Rabbinic048,4
+284,48,Rabbinic049,4
+285,49,Rabbinic050,4
+286,50,Rabbinic051,4
+287,51,Rabbinic052,4
+288,52,Rabbinic053,4
+289,53,Rabbinic054,4
+290,54,Rabbinic055,4
+291,55,Rabbinic056,4
+292,56,Rabbinic057,4
+293,57,Rabbinic058,4
+294,395,SeaShepherds396,1
+295,396,SeaShepherds397,1
+296,397,SeaShepherds398,2
+297,398,SeaShepherds399,3
+298,399,SeaShepherds400,2
+299,400,SeaShepherds401,2
+300,401,SeaShepherds402,2
+301,402,SeaShepherds403,1
+302,403,SeaShepherds404,2
+303,404,SeaShepherds405,1
+304,405,SeaShepherds406,1
+305,406,SeaShepherds407,1
+306,407,SeaShepherds408,1
+307,408,SeaShepherds409,3
+308,4,Shepherd005,1
+309,174,Shepherd175,4
+310,223,Shepherd224,4
+311,259,Shepherd260,3
+312,357,Shepherd358,5
+313,403,Shepherd404,3
+314,458,Shepherd459,3
+315,694,Shepherd695,4
+316,725,Shepherd726,2
+317,5,Unitarian006,2
+318,41,Unitarian042,5
+319,67,Unitarian068,3
+320,95,Unitarian096,5
+321,117,Unitarian118,6
+322,144,Unitarian145,7
+323,173,Unitarian174,5
+324,218,Unitarian219,4
+325,259,Unitarian260,5
+326,269,Unitarian270,5
+327,275,Unitarian276,3
+328,38,WBC039,2
+329,106,WBC107,2
+330,155,WBC156,2
+331,200,WBC201,1
+332,227,WBC228,1
+333,264,WBC265,1
+334,293,WBC294,1
+335,323,WBC324,1
+336,346,WBC347,2
+337,409,WBC410,1
+338,417,WBC418,1
+339,420,WBC421,1
+340,421,WBC422,1
+341,422,WBC423,1
