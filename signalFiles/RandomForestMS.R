@@ -1,6 +1,6 @@
 library(caret)
 library(randomForest)
-setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/refData/')
+setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/signalFiles/')
 
 list.files()
 

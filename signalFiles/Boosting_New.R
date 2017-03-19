@@ -1,6 +1,6 @@
 #Read In Files
 
-setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/refData/')
+setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/signalFiles/')
 
 #gradient Boosting
 require(xgboost)
@@ -22,7 +22,7 @@ folds<- createFolds(df_clean$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 param <- list("objective" = "multi:softprob",    
               "num_class" = 9,
-              'max_depth' = 5,
+              'max_depth' = 4,
               'eval_metric' = 'merror')
 
 
