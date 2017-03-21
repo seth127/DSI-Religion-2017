@@ -238,7 +238,8 @@ class lingualObject(object):
         self.useStem=useStem
         self.useStopwords=useStopwords
         #
-        self.idfFile = 'wiki-test-5-IDF.csv'
+        #self.idfFile = 'wiki-test-5-IDF.csv'
+        self.idfFile = 'wiki-30k-10-IDF.csv'
         self.idf = pd.read_csv('./refData/' + self.idfFile)
         self.idf = self.idf.set_index('term')
         
