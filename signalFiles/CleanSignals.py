@@ -4,7 +4,7 @@ import re
 
 os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutputSingleDocs/logs/')
 
-signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_1-1TAE35.csv')
+signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_1-FBXFZ0.csv')
 
 signals = signals.drop(signals.columns [[0,2,3,4,]], axis=1)
 
@@ -20,12 +20,15 @@ for i in range(0,len(signals)):
 os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/refData/')
 ranks = pd.read_csv('docRanks.csv') 
 
-for i in range(0,len(ranks)):
-    name = ranks['groupName'][i]
-    name = re.sub('.txt', '', name)
-    ranks['groupId'][i] = name
+#for i in range(0,len(ranks)):
+ #   name = ranks['groupName'][i]
+  #  name = re.sub('.txt', '', name)
+   # ranks['groupId'][i] = name
 
 ranks= ranks.rename(columns=({'groupName': 'groupId'}))
+#Drop unneeded Columns
+
+ranks = ranks.drop(ranks.columns [[0,1]], axis=1)
 clean = pd.merge(signals, ranks, how = 'inner', on='groupId')    
     
 groups = ['ACLU', 'Rabbinic', 'SeaShepherds', 'Unitarian', 'WBC', 'MalcolmX', 'YV', 'JohnPiper',
@@ -38,7 +41,7 @@ for group in groups:
             clean['groupName'][i] = group
 
 #Drop Unneeded Columns
-clean = clean.drop(clean.columns[[18,19]], axis=1)
+#clean = clean.drop(clean.columns[[18,19]], axis=1)
 
 clean.to_csv('SingleDocSignals.csv')
 

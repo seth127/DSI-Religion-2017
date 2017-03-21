@@ -22,7 +22,7 @@ folds<- createFolds(df_clean$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 param <- list("objective" = "multi:softprob",    
               "num_class" = 9,
-              'max_depth' = 4,
+              'max_depth' = 5,
               'eval_metric' = 'merror')
 
 
@@ -75,4 +75,43 @@ for (i in 1:10) {
 }
 
 Avg_Accuracy = mean(raw_accuracy)
-Avg_Accuracy #highest was 74% with 321 docs
+Avg_Accuracy #highest was 74% with 321 docs, 75% with 342 docs
+
+#Get Predictions for all Documents
+
+All_Docs<- read.csv('ALLDOCSIGNALS.csv')
+
+#Drop Unneeded Column
+
+All_Docs<- All_Docs[, -1]
+
+#Creating Training and Prediction Matricies
+
+train_X<-data.matrix(df_clean[,c(1:18, 20)])
+train_Y<- data.matrix(df_clean$rank)
+test_X<- data.matrix(All_Docs)
+
+
+#Set Model Parameters
+param <- list("objective" = "multi:softprob",    
+              "num_class" = 9,
+              'max_depth' = 5,
+              'eval_metric' = 'merror')
+#train Model
+model <- xgboost(param=param, data=train_X, label=train_Y, nrounds=5)
+
+#Make predictions based on model for testing set
+predictions<- predict(model, test_X)
+
+# reshape it to a num_class-columns matrix
+pred <- matrix(predictions, ncol=9, byrow=TRUE)
+
+# convert the probabilities to softmax labels
+pred_labels <- max.col(pred) 
+
+#Bind Prediction Labels to All_Docs DF
+All_Docs<- cbind(All_Docs, pred_labels)
+
+#Write out CSV
+
+write.csv(All_Docs, file = 'AllDocsPredictions.csv')
