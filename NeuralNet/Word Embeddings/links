@@ -1,0 +1,8 @@
+Google pre-trained word2vec Embeddings: 
+https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing
+News groups data set:
+http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-20/www/data/news20.html
+Multi-Channel CNN paper:
+https://arxiv.org/pdf/1408.5882v2.pdf
+Code modified from:
+https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras
