@@ -17,6 +17,8 @@ df_clean$rank<- as.factor(df_clean$rank)
 df_clean<- df_clean[,-c(1)]
 #10 fold CV
 
+#Set Seed
+set.seed(21)
 #Create Folds
 folds<- createFolds(df_clean$rank, k=10, list = TRUE, returnTrain = FALSE)
 

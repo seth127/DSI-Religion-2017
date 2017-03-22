@@ -13,6 +13,7 @@ signals<- signals[,-1]
 
 signals$rank<- as.factor(signals$rank)
 
+set.seed(21)
 folds<-createFolds(signals$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 raw_accuracy<- vector()
