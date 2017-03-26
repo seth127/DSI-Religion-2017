@@ -8,11 +8,13 @@ library(caret)
 library(dplyr)
 
 
-df_clean = read.csv('binnedSignals1.csv')
+df_clean = read.csv('binnedSignals3.csv')
 
 
 #Drop Unneeded Variables:
 df_clean<- df_clean[,-c(1)]
+
+clean<-df_clean
 
 #Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
 df_clean$rank<- df_clean$rank - 1
@@ -23,7 +25,7 @@ df_clean<-df_clean[!(df_clean$groupId=='SeaShepherds'| df_clean$groupId=='ISIS' 
                      | df_clean$groupId=='Bahai' | df_clean$groupId=='Schizophrenia' | df_clean$groupId=='AndrewMurray'
                      | df_clean$groupId=='Ghandi' | df_clean$groupId=='IntegralYoga' | df_clean$groupId=='MalcolmX' 
                      |df_clean$groupId=='PeterGomes'),]
-clean<-df_clean
+
 
 
 #Set Rank as Factor
@@ -57,9 +59,9 @@ for (i in 1:10) {
   test = df_clean[test.indices,]
   
   #Convert to Matrix
-  train_X<-data.matrix(train[,c(1:18, 20)])
+  train_X<-data.matrix(train[,c(2:17)])
   train_Y<- data.matrix(train$rank)
-  test_X<- data.matrix(test[,c(1:18, 20)])
+  test_X<- data.matrix(test[,c(2:17)])
   test_Y = data.matrix(test$rank)
   
   #train Model
@@ -102,8 +104,7 @@ library(randomForest)
 
 signals<-clean
 
-#Drop Unneeded Variables:
-signals<- signals[,-c(1)]
+
 
 
 #Set Rank as Factor Variable
@@ -188,7 +189,7 @@ for (i in 1:10) {
   miss<- table(difference)
   zero<-miss[names(miss)==0]
   one<- miss[names(miss)==1]
-  correct<- zero[[1]] + one[[1]]
+  correct<-  zero[[1]] + one[[1]]
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
