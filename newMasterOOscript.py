@@ -263,7 +263,7 @@ def addRank(signalDF):  ########## NEED TO ADD ANY NEW GROUPS TO THIS LIST BEFOR
     #groupRankList=[1,2,3,4,4,4,6,7,8,4,2,7,6]
     ##
     #groupRankDF=pd.DataFrame([[groupNameList[i],groupRankList[i]] for i in range(len(groupNameList))],columns=['groupName','rank'])
-    groupRankDF=pd.read_csv('./refData/groupRanks.csv')
+    groupRankDF=pd.read_csv('./refData/groupRanksBinned.csv')
 
 
     signalDF['groupName']=signalDF['groupId'].map(lambda x: x.split('_')[0]) # splits the name off the groupID column value
