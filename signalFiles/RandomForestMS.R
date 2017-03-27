@@ -42,10 +42,7 @@ for (i in 1:10) {
   }
   
   #Calculate Accuracy, we define accuracy as correctly predicting the class within 1
-  miss<- table(difference)
-  zero<-miss[names(miss)==0]
-  one<- miss[names(miss)==1]
-  correct<- zero[[1]] + one[[1]]
+  correct<-  sum(difference ==1 | difference ==0)
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
@@ -93,9 +90,7 @@ for (i in 1:10) {
   }
   
   #Calculate Accuracy, we define accuracy as correctly predicting the class within 1
-  miss<- table(difference)
-  one<- miss[names(miss)<=1]
-  correct<- length(one)
+  correct<-  sum(difference ==1 | difference ==0)
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
@@ -144,10 +139,7 @@ for (i in 1:10) {
   }
   
   #Calculate Accuracy, we define accuracy as correctly predicting the class within 1
-  miss<- table(difference)
-  zero<-miss[names(miss)==0]
-  one<- miss[names(miss)==1]
-  correct<- zero[[1]] + one[[1]]
+  correct<-  sum(difference ==1 | difference ==0)
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
