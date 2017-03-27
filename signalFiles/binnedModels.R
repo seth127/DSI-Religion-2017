@@ -8,25 +8,28 @@ library(caret)
 library(dplyr)
 
 
-df_clean = read.csv('binnedSignals3.csv')
+df_clean = read.csv('binnedSignals1.csv')
 
 
 #Drop Unneeded Variables:
 df_clean<- df_clean[,-c(1)]
 
-clean<-df_clean
-
-#Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
-df_clean$rank<- df_clean$rank - 1
 
 
-#Remove New Documents
+
+
+#Remove New Documents- only run this if you are testing old docs methods
 df_clean<-df_clean[!(df_clean$groupId=='SeaShepherds'| df_clean$groupId=='ISIS' | df_clean$groupId=='ACLU'
                      | df_clean$groupId=='Bahai' | df_clean$groupId=='Schizophrenia' | df_clean$groupId=='AndrewMurray'
                      | df_clean$groupId=='Ghandi' | df_clean$groupId=='IntegralYoga' | df_clean$groupId=='MalcolmX' 
                      |df_clean$groupId=='PeterGomes'),]
 
 
+clean<-df_clean
+
+
+#Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
+df_clean$rank<- df_clean$rank - 1
 
 #Set Rank as Factor
 df_clean$rank<- as.factor(df_clean$rank)
@@ -86,7 +89,7 @@ for (i in 1:10) {
   miss<- table(difference)
   zero<-miss[names(miss)==0]
   one<- miss[names(miss)==1]
-  correct<- zero[[1]] #+ one[[1]]
+  correct<- zero[[1]] + one[[1]]
   accuracy<-correct/length(test_Y)
   
   #Store accuracy for each run in vector
@@ -143,7 +146,7 @@ for (i in 1:10) {
   miss<- table(difference)
   zero<-miss[names(miss)==0]
   one<- miss[names(miss)==1]
-  correct<- zero[[1]] + one[[1]]
+  correct<- zero[[1]] #+ one[[1]]
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
@@ -156,6 +159,7 @@ mean(raw_accuracy) #95.37 old docs, 95.6% new docs
 ####SVM###################
 ##########################
 library(kernlab)
+
 
 # 10-Fold CV
 folds<-createFolds(signals$rank, k=10, list = TRUE, returnTrain = FALSE)
@@ -189,7 +193,7 @@ for (i in 1:10) {
   miss<- table(difference)
   zero<-miss[names(miss)==0]
   one<- miss[names(miss)==1]
-  correct<-  zero[[1]] + one[[1]]
+  correct<-  zero[[1]] #+ one[[1]]
   accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
