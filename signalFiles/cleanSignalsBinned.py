@@ -4,7 +4,7 @@ import re
 
 os.chdir('/Users/meganstiles/Desktop/github/DSI-Religion-2017/modelOutput/logs/')
 
-signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_10-E5XCKL.csv')
+signals = pd.read_csv('signalOutput-coco_3_cv_3_netAng_30_twc_10_tfidfNoPro_pronoun_bin_10-X7UCES.csv')
 
 signals = signals.drop(signals.columns [[0,2,3,4,]], axis=1)
 
@@ -21,6 +21,7 @@ for i in range(0,len(signals)):
     name = re.sub('_train[0-9]*', '', str(name))
     name = re.sub('_test[0-9]*', '', name)
     signals['groupId'][i] = name
+
 
 #Merge Group Ranks
 clean = pd.merge(signals, ranks, how = 'inner', on='groupId') 

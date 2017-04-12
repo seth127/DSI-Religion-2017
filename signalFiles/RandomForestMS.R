@@ -50,7 +50,30 @@ for (i in 1:10) {
 }
 raw_accuracy
 mean(raw_accuracy)
-  
+
+#Variable Importance
+
+importance(model)
+
+#                MeanDecreaseGini
+#perPos                 14.041060
+#perNeg                 13.273062
+#perPosDoc               1.881506
+#perNegDoc               1.993255
+#PSJudge                12.755123
+#judgementCount         13.344963
+#judgementFrac          19.395052
+#nous                   17.108875
+#vous                   11.321047
+#je                     11.359904
+#ils                    15.006078
+#il                     15.325472
+#elle                    7.268749
+#le                     12.425368
+#UniqueWordCount        17.579925
+#avgSD                  16.825747
+#avgEVC                 11.013572
+#groupName              42.639129
 
 ##### Regression Random Forest ########
 
