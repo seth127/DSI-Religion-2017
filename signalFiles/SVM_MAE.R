@@ -7,7 +7,7 @@ setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/signalFiles/')
 
 list.files()
 
-signals<- read.csv('SingleDocSignals.csv')
+signals<- read.csv('binnedSignals1.csv')
 
 #Drop Unneeded Columns
 signals<- signals[,-1]
@@ -54,4 +54,4 @@ for (i in 1:10) {
   raw_accuracy[i]= accuracy
 }
 raw_accuracy
-mean(raw_accuracy) #MAE = 1.095
+mean(raw_accuracy) #MAE = 1.095 (Single Documents) MAE = 0.222 (binned Documents)

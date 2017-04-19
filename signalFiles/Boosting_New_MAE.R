@@ -6,7 +6,7 @@ setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/signalFiles/')
 require(xgboost)
 library(caret)
 library(dplyr)
-df_clean = read.csv('SingleDocSignals.csv')
+df_clean = read.csv('binnedSignals1.csv')
 #Reset Rank Levels, for xgboost in multiclass classification, the classes are (0, num_class) so we subtract one from rank
 df_clean$rank<- df_clean$rank - 1
 
