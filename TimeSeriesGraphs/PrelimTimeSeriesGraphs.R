@@ -4,6 +4,9 @@
 # DSI-Religion-2017 Capstone
 
 ############################################################################################
+# Save all plots to one singular PDF
+pdf("TS_Graphs.pdf")
+
 # Scores
 setwd("~/Downloads")
 library(readxl)
@@ -177,4 +180,5 @@ Unitarian.lower <- Unitarian[,c("perPos", "perNeg", "nous", "vous", "je", "ils",
 d <- melt(Unitarian.lower, id.vars = "Date", variable.name = "series")
 ggplot(d, aes(Date, value)) + geom_line(aes(colour = series)) + ggtitle("Unitarian")
 
-
+# Turn PDF graph collection off
+dev.off()
