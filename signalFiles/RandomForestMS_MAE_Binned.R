@@ -48,7 +48,7 @@ for (i in 1:10) {
   raw_accuracy[i]= accuracy
 }
 raw_accuracy
-mean(raw_accuracy) #MAE = 0.805 (single Docs) , 0.2389 (binned Documents)
+mean(raw_accuracy) #MAE 0.2389 (binned Documents)
 
 #Variable Importance
 

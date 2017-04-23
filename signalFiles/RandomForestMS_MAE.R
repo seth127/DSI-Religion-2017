@@ -4,7 +4,7 @@ setwd('/Users/meganstiles/Desktop/github/DSI-Religion-2017/signalFiles/')
 
 list.files()
 
-signals<- read.csv('binnedSignals1.csv')
+signals<- read.csv('SingleDocSignals.csv')
 
 #Drop Unneeded Columns
 signals<- signals[,-1]
@@ -30,7 +30,7 @@ for (i in 1:10) {
   train$rank = factor(train$rank)
   test$rank = factor(test$rank)
   #train Model
-  model <- randomForest(rank ~. -groupId, data = train)
+  model <- randomForest(rank~. -groupId, data = train)
   
   #Make predictions based on model for testing set
   predictions<- predict(model, newdata = test)
@@ -48,7 +48,7 @@ for (i in 1:10) {
   raw_accuracy[i]= accuracy
 }
 raw_accuracy
-mean(raw_accuracy) #MAE = 0.805 (single Docs) , 0.2389 (binned Documents)
+mean(raw_accuracy) #MAE = 0.805 (single Docs) 
 
 #Variable Importance
 

@@ -1,0 +1,13 @@
+Mean Absolute Error
+
+		Binned Docs
+RF		0.239
+SVM		0.222
+Trees	0.246
+
+		Single Docs
+RF		0.805
+SVM		1.095
+Trees	1.084
+
+
