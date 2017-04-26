@@ -106,21 +106,15 @@ for (i in 1:10) {
   #Make predictions based on model for testing set
   predictions<- predict(model, newdata = test)
   
-  #Calculate Accuracy
-  for (j in 1: length(test)) {
-    diff<- abs(as.numeric(test$rank[j]) - as.numeric(predictions[j]))
-    difference[j]<- diff
-  }
+  #Calculate Error
+  Error = mean(abs(predictions - test$rank))
   
-  #Calculate Accuracy, we define accuracy as correctly predicting the class within 1
-  correct<-  sum(difference ==1 | difference ==0)
-  accuracy<-correct/length(test)
   
   #Store accuracy for each run in vector
-  raw_accuracy[i]= accuracy
+  raw_accuracy[i]= Error
 }
 raw_accuracy
-mean(raw_accuracy) #61.5
+mean(raw_accuracy) #0.85 MAE
 
 ####Classification Remove Variables
 
