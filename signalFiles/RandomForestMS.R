@@ -114,7 +114,7 @@ for (i in 1:10) {
   raw_accuracy[i]= Error
 }
 raw_accuracy
-mean(raw_accuracy) #61.5
+mean(raw_accuracy) #0.85 MAE
 
 ####Classification Remove Variables
 
