@@ -50,7 +50,7 @@ for (i in 1:10) {
   raw_accuracy[i]= accuracy
 }
 raw_accuracy
-mean(raw_accuracy)
+mean(raw_accuracy) )#0.775
 
 #Variable Importance
 
