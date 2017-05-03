@@ -6,5 +6,5 @@ The University of Virginia’s Computational Linguistics (CL) team created a sig
 
 Below is the breakdown of this repository:
 
-Presentations:
+* Presentations:
 * Various presentations the CL team gave throughout the 2016-2017 school year
