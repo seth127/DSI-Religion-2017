@@ -17,10 +17,11 @@ set.seed(21)
 folds<-createFolds(signals$rank, k=10, list = TRUE, returnTrain = FALSE)
 
 raw_accuracy<- vector()
-difference<- vector()
+
 i=0
 j=0
 for (i in 1:10) {
+  difference<- vector()
   #Create testing indicies based on folds
   test.indices<- folds[[i]]
   
