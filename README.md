@@ -5,5 +5,6 @@ In today’s global environment, effective communication between groups of diver
 The University of Virginia’s Computational Linguistics (CL) team created a signal processing model that closely replicates the manual process of the RPC team. And the team's results strengthen the evidence for the hypothesis of the effectiveness of computationally implemented performative analysis as predictive of linguistic rigidity. Current analysis includes investigating how an ideological group's use of language changes over time and what that predicts about a group's behavior.
 
 Below is the breakdown of this repository:
+
 Presentations:
--Various presentations the CL team gave throughout the 2016-2017 school year
+* Various presentations the CL team gave throughout the 2016-2017 school year
