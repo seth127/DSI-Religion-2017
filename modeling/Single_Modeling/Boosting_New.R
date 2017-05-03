@@ -30,11 +30,12 @@ param <- list("objective" = "multi:softprob",
 
 #initialzie empty vector to store accuracy
 raw_accuracy<- vector()
-difference<- vector()
+
 i=0
 j=0
 for (i in 1:10) {
   #Create testing indicies based on folds
+  difference<- vector()
   test.indices<- folds[[i]]
   
   #Create training and testing sets
@@ -74,7 +75,7 @@ for (i in 1:10) {
 }
 
 Avg_Accuracy = mean(raw_accuracy)
-Avg_Accuracy #highest was 74% with 321 docs, 75% with 342 docs
+Avg_Accuracy #0.688
 
 #Get Predictions for all Documents
 
