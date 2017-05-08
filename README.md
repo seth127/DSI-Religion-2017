@@ -23,4 +23,6 @@ Below is the breakdown of this repository:
   * contains signals, filesplits, and predicitons for single document runs
 * Presentations:
   * Various presentations the CL team gave throughout the 2016-2017 school year
+ * TFIDF
+   *Document-by-document TFIDF Matrix
 
