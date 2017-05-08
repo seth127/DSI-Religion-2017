@@ -19,6 +19,8 @@ Below is the breakdown of this repository:
   * Python Scripts for creating directories of all scored single documents. 
 * Modeling:
   * Scripts for running RF, Tree Boosting, SVM on Document Signals
+* Modeloutputsingledocs:
+  *contains signals, filesplits, and predicitons for single document runs
 * Presentations:
   * Various presentations the CL team gave throughout the 2016-2017 school year
 
