@@ -3,5 +3,6 @@
 *.pyc
 
 .Rhistory
+.RData
 
 ._MACOSX
